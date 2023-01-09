@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog>
+        <logs message="ERROR: [HLS 200-70] Pre-synthesis failed." projectName="MemBench" solutionName="solution1" date="2023-01-09T10:20:38.733+0100"/>
+        <logs message="ERROR: [HLS 200-1715] Encountered problem during source synthesis" projectName="MemBench" solutionName="solution1" date="2023-01-09T10:20:38.711+0100"/>
+        <logs message="ERROR: [HLS 200-970] Internal stream 'counterCmd' (MemBench/src/ddrbenchmark.cpp:68) failed dataflow checking: it must be produced and consumed exactly once." projectName="MemBench" solutionName="solution1" date="2023-01-09T10:20:38.666+0100"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-786] Detected dataflow-on-top in function  'ddrBenchmark' (MemBench/src/ddrbenchmark.cpp:59:1)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).&#xD;&#xA;Resolution: For help on HLS 200-786 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-786.html" projectName="MemBench" solutionName="solution1" date="2023-01-09T10:20:38.645+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-731] Internal stream variable 'counterCmd' (MemBench/src/ddrbenchmark.cpp:68) is invalid: it has no data consumer." projectName="MemBench" solutionName="solution1" date="2023-01-09T10:20:38.622+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5292] unused parameter 'res' (MemBench/src/ddrbenchmark.cpp:60:12)" projectName="MemBench" solutionName="solution1" date="2023-01-09T10:20:25.572+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file MemBench/src/ddrbenchmark.cpp&#xD;&#xA;Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-471.html" projectName="MemBench" solutionName="solution1" date="2023-01-09T10:20:25.539+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (MemBench/src/ddrbenchmark.cpp:64:41)&#xD;&#xA;Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=214-113.html" projectName="MemBench" solutionName="solution1" date="2023-01-09T10:20:22.744+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (MemBench/src/ddrbenchmark.cpp:64:2)&#xD;&#xA;Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=214-113.html" projectName="MemBench" solutionName="solution1" date="2023-01-09T10:20:22.717+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
