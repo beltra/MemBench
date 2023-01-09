@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
 
 	int64_t timeTaken;
 
-	/*
+
 #ifndef MULTIPLE_TEST
 	runHWTest(mem, TEST_DIM, WRITE);
 	runHWTest(mem, TEST_DIM, READ);
@@ -71,9 +71,6 @@ int main(int argc, char *argv[]) {
 	runHWTestMultiple(mem, TEST_DIM, WRITE, REPETITIONS);
 	runHWTestMultiple(mem, TEST_DIM, READ, REPETITIONS);
 #endif
-	*/
-
-	ddrBenchmark(mem, TEST_DIM, WRITE, &timeTaken);
 
 	std::cout << "** TB ended **" << std::endl;
 

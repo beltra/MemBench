@@ -8,15 +8,13 @@
 
 #define INPUT_BITWIDTH 512
 
-#define TEST_DIM 10000
+#define TEST_DIM 16384
 
 #define WRITE 1
 #define READ 0
 
-const unsigned int data_array_size_depth = TEST_DIM;
+void ddrBenchmark(ap_uint<INPUT_BITWIDTH> *mem, bool rw, int64_t *res);
 
-void ddrBenchmark(ap_uint<INPUT_BITWIDTH> *mem, int dataNum, bool rw,
-		int64_t *res);
 void writeData(ap_uint<INPUT_BITWIDTH> *mem, int dataNum);
 void readData(ap_uint<INPUT_BITWIDTH> *mem, int dataNum);
 

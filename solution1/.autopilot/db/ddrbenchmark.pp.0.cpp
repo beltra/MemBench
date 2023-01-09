@@ -30145,7 +30145,7 @@ struct ap_int_base : public ssdm_int<_AP_W, _AP_S> {
       int NZeros = 0;
       int i = 0;
       bool hitNonZero = false;
-      VITIS_LOOP_1257_1: for (i = 0; i < __N - 1; ++i) {
+      for (i = 0; i < __N - 1; ++i) {
         ap_int_base<64, false> t;
         t.V = ({ typename _ap_type::remove_const<typeof(this->V)>::type __Result__ = 0; typeof(this->V) __Val2__ = this->V; __builtin_bit_part_select((void*)(&__Result__), (void*)(&__Val2__), _AP_W - i * 64 - 64, _AP_W - i * 64 - 1); __Result__; });
         NZeros += hitNonZero ? 0 : __builtin_clzll(t.V);
@@ -31119,7 +31119,7 @@ struct ap_range_ref {
     bool reverse = l_index > h_index;
     unsigned low = reverse ? h_index : l_index;
     unsigned high = reverse ? l_index : h_index;
-    VITIS_LOOP_722_1: for (unsigned i = low; i != high; ++i) {
+    for (unsigned i = low; i != high; ++i) {
 
 #pragma HLS unroll
 
@@ -31133,7 +31133,7 @@ struct ap_range_ref {
     bool reverse = l_index > h_index;
     unsigned low = reverse ? h_index : l_index;
     unsigned high = reverse ? l_index : h_index;
-    VITIS_LOOP_736_1: for (unsigned i = low; i != high; ++i) {
+    for (unsigned i = low; i != high; ++i) {
 
 #pragma HLS unroll
 
@@ -31147,7 +31147,7 @@ struct ap_range_ref {
     bool reverse = l_index > h_index;
     unsigned low = reverse ? h_index : l_index;
     unsigned high = reverse ? l_index : h_index;
-    VITIS_LOOP_750_1: for (unsigned i = low; i != high; ++i) {
+    for (unsigned i = low; i != high; ++i) {
 
 #pragma HLS unroll
 
@@ -32758,7 +32758,7 @@ struct ap_fixed_base : ssdm_int<_AP_W, _AP_S> {
       int NZeros = 0;
       int i = 0;
       bool hitNonZero = false;
-      VITIS_LOOP_1291_1: for (i = 0; i < __N - 1; ++i) {
+      for (i = 0; i < __N - 1; ++i) {
         ap_int_base<64, false> t;
         t.range(0, 63) = this->range(_AP_W - i * 64 - 64, _AP_W - i * 64 - 1);
         NZeros += hitNonZero ? 0 : __builtin_clzll(t.V);
@@ -34675,7 +34675,7 @@ class stream : public stream<__STREAM_T__, 0> {
 
 const unsigned int data_array_size_depth = 10000;
 
-__attribute__((sdx_kernel("ddrBenchmark", 0))) void ddrBenchmark(ap_uint<512> *mem, int dataNum, bool rw,
+void ddrBenchmark(ap_uint<512> *mem, int dataNum, bool rw,
   int64_t *res);
 void writeData(ap_uint<512> *mem, int dataNum);
 void readData(ap_uint<512> *mem, int dataNum);
@@ -34742,19 +34742,12 @@ void runBench(ap_uint<512> *mem, hls::stream<int64_t> &cmd,
  }
 }
 
-__attribute__((sdx_kernel("ddrBenchmark", 0))) void ddrBenchmark(ap_uint<512> *mem, int dataNum, bool rw,
+void ddrBenchmark(ap_uint<512> *mem, int dataNum, bool rw,
   int64_t *res) {
-#line 15 "C:/Users/gbeve/Downloads/MemBench/solution1/csynth.tcl"
-#pragma HLSDIRECTIVE TOP name=ddrBenchmark
-# 60 "MemBench/src/ddrbenchmark.cpp"
-
-#line 6 "C:/Users/gbeve/Downloads/MemBench/solution1/directives.tcl"
-#pragma HLSDIRECTIVE TOP name=ddrBenchmark
-# 60 "MemBench/src/ddrbenchmark.cpp"
 
 
+#pragma HLS INTERFACE m_axi port=mem depth=TEST_DIM bundle=gmem offset=slave
 
-#pragma HLS INTERFACE m_axi port=mem bundle=gmem offset=slave
  std::cout << "** Started kernel **" << std::endl;
 
 #pragma HLS DATAFLOW
@@ -34762,5 +34755,5 @@ __attribute__((sdx_kernel("ddrBenchmark", 0))) void ddrBenchmark(ap_uint<512> *m
  hls::stream < int64_t > counterCmd;
 
  runBench(mem, counterCmd, dataNum, rw);
-
+ countCycles(counterCmd, res);
 }

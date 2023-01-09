@@ -1,16 +1,52 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../src/testbench/ddrbenchmark_testbench.cpp in debug mode
-   Generating csim.exe
-** Starting test **
-* Single test *
-- Time taken: 0 clock cycles
-- Mode: Write
-
-* Single test *
-- Time taken: 0 clock cycles
-- Mode: Read
-
-** Test ended **
-INFO: [SIM 1] CSim done with 0 errors.
+csim.mk:73: recipe for target 'obj/ddrbenchmark_testbench.o' failed
+In file included from D:/Xilinx/Vitis_HLS/2022.1/include/floating_point_v7_0_bitacc_cmodel.h:144:0,
+                 from D:/Xilinx/Vitis_HLS/2022.1/include/hls_fpo.h:189,
+                 from D:/Xilinx/Vitis_HLS/2022.1/include/hls_half_fpo.h:64,
+                 from D:/Xilinx/Vitis_HLS/2022.1/include/hls_half.h:71,
+                 from D:/Xilinx/Vitis_HLS/2022.1/include/etc/ap_private.h:98,
+                 from D:/Xilinx/Vitis_HLS/2022.1/include/ap_common.h:710,
+                 from D:/Xilinx/Vitis_HLS/2022.1/include/ap_int.h:56,
+                 from ../../../src/testbench/..\ddrbenchmark.hpp:6,
+                 from ../../../src/testbench/ddrbenchmark_testbench.cpp:1:
+D:/Xilinx/Vitis_HLS/2022.1/include/gmp.h:63:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from D:/Xilinx/Vitis_HLS/2022.1/include/hls_fpo.h:189:0,
+                 from D:/Xilinx/Vitis_HLS/2022.1/include/hls_half_fpo.h:64,
+                 from D:/Xilinx/Vitis_HLS/2022.1/include/hls_half.h:71,
+                 from D:/Xilinx/Vitis_HLS/2022.1/include/etc/ap_private.h:98,
+                 from D:/Xilinx/Vitis_HLS/2022.1/include/ap_common.h:710,
+                 from D:/Xilinx/Vitis_HLS/2022.1/include/ap_int.h:56,
+                 from ../../../src/testbench/..\ddrbenchmark.hpp:6,
+                 from ../../../src/testbench/ddrbenchmark_testbench.cpp:1:
+D:/Xilinx/Vitis_HLS/2022.1/include/floating_point_v7_0_bitacc_cmodel.h:136:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from ../../../src/testbench/ddrbenchmark_testbench.cpp:1:0:
+../../../src/testbench/ddrbenchmark_testbench.cpp: In function 'void runHWTest(ap_uint<512>*, int, bool)':
+../../../src/testbench/..\ddrbenchmark.hpp:11:18: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+ #define TEST_DIM 16384
+                  ^
+../../../src/testbench/ddrbenchmark_testbench.cpp:10:15: note: in expansion of macro 'TEST_DIM'
+  ddrBenchmark<TEST_DIM>(mem, rw, &timeTaken);
+               ^~~~~~~~
+../../../src/testbench/ddrbenchmark_testbench.cpp:10:44: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+  ddrBenchmark<TEST_DIM>(mem, rw, &timeTaken);
+                                            ^
+In file included from ../../../src/testbench/ddrbenchmark_testbench.cpp:1:0:
+../../../src/testbench/ddrbenchmark_testbench.cpp: In function 'void runHWTestMultiple(ap_uint<512>*, int, bool, int)':
+../../../src/testbench/..\ddrbenchmark.hpp:11:18: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+ #define TEST_DIM 16384
+                  ^
+../../../src/testbench/ddrbenchmark_testbench.cpp:34:16: note: in expansion of macro 'TEST_DIM'
+   ddrBenchmark<TEST_DIM>(mem,rw, &timeTaken);
+                ^~~~~~~~
+../../../src/testbench/ddrbenchmark_testbench.cpp:34:44: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+   ddrBenchmark<TEST_DIM>(mem,rw, &timeTaken);
+                                            ^
+make: *** [obj/ddrbenchmark_testbench.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
 INFO: [SIM 3] *************** CSIM finish ***************
