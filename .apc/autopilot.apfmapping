@@ -5,6 +5,6 @@
     <originFiles name="ddrbenchmark.cpp" path="C:\Users\gbeve\Downloads\ddrBench\src\ddrbenchmark.cpp"/>
   </source>
   <testbench>
-    <originFiles name="ddrbenchmark_testbench.cpp" path="C:\Users\gbeve\Downloads\ddrBench\src\testbench\ddrbenchmark_testbench.cpp"/>
+    <originFiles name="ddrbenchmark_testbench.cpp" path="C:\Users\gbeve\Downloads\MemBench\src\testbench\ddrbenchmark_testbench.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
