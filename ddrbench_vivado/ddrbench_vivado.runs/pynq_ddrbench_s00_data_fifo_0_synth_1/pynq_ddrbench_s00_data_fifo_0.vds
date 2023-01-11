@@ -1,0 +1,426 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Jan  9 22:58:21 2023
+# Process ID: 12260
+# Current directory: C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_s00_data_fifo_0_synth_1
+# Command line: vivado.exe -log pynq_ddrbench_s00_data_fifo_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pynq_ddrbench_s00_data_fifo_0.tcl
+# Log file: C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_s00_data_fifo_0_synth_1/pynq_ddrbench_s00_data_fifo_0.vds
+# Journal file: C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_s00_data_fifo_0_synth_1\vivado.jou
+# Running On: HpPC, OS: Windows, CPU Frequency: 2195 MHz, CPU Physical cores: 2, Host memory: 6333 MB
+#-----------------------------------------------------------
+source pynq_ddrbench_s00_data_fifo_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 1351.539 ; gain = 595.465
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/gbeve/Downloads/ddrBench/ddrbench_sol/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top pynq_ddrbench_s00_data_fifo_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5548
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:34 ; elapsed = 00:01:01 . Memory (MB): peak = 1351.539 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pynq_ddrbench_s00_data_fifo_0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_s00_data_fifo_0/synth/pynq_ddrbench_s00_data_fifo_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_axi_data_fifo' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1282]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1174]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (0#1) [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1174]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1058]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [D:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1058]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_axi_data_fifo' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1282]
+INFO: [Synth 8-6155] done synthesizing module 'pynq_ddrbench_s00_data_fifo_0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_s00_data_fifo_0/synth/pynq_ddrbench_s00_data_fifo_0.v:53]
+WARNING: [Synth 8-7129] Port ALMOST_FULL_I in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ALMOST_EMPTY_I in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_ACK_I in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port VALID_I in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port OVERFLOW_I in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port UNDERFLOW_I in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[9] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[8] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[7] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[6] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[5] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[4] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[3] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[2] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[1] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DATA_COUNT_I[0] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[9] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[8] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[7] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[6] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[5] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[4] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[3] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[2] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[1] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_DATA_COUNT_I[0] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[9] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[8] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[7] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[6] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[5] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[4] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[3] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[2] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[1] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_DATA_COUNT_I[0] in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SBITERR_I in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DBITERR_I in module output_blk__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[8] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[7] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[6] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[5] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[4] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[3] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[2] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[1] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH[0] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[8] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[7] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[6] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[5] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[4] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[3] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[2] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[1] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_ASSERT[0] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[8] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[7] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[6] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[5] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[4] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[3] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[2] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[1] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PROG_FULL_THRESH_NEGATE[0] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_CLK in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SRST in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_RST in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RST_FULL_GEN in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RST_FULL_FF in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SRST_FULL_FF in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_WR_EN in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FULL in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port EMPTY in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_RD_EN in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_ALMOST_FULL in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_ALMOST_EMPTY in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR[8] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR[7] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR[6] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR[5] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR[4] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR[3] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR[2] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR[1] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR[0] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS1[8] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS1[7] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS1[6] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS1[5] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS1[4] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS1[3] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS1[2] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS1[1] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WR_PNTR_PLUS1[0] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_PNTR_WR[8] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_PNTR_WR[7] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_PNTR_WR[6] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RD_PNTR_WR[5] in module wr_pf_ss__parameterized0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:39 ; elapsed = 00:03:58 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:40 ; elapsed = 00:03:59 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:40 ; elapsed = 00:03:59 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1633.527 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 57 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_s00_data_fifo_0/pynq_ddrbench_s00_data_fifo_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_s00_data_fifo_0/pynq_ddrbench_s00_data_fifo_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_s00_data_fifo_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_s00_data_fifo_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-1714] 7 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1633.527 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.869 . Memory (MB): peak = 1633.527 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:03:26 ; elapsed = 00:05:04 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:03:26 ; elapsed = 00:05:04 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_s00_data_fifo_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_fifo.fifo_gen_inst /inst_fifo_gen/\reset_gen_cc.rstblk_cc /\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_fifo.fifo_gen_inst /inst_fifo_gen/\gaxi_full_lite.gwrite_ch.gwach2.axi_wach /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_fifo.fifo_gen_inst /inst_fifo_gen/\gaxi_full_lite.gwrite_ch.gwach2.gawvld_pkt_fifo.wach_pkt_reg_slice /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_fifo.fifo_gen_inst /inst_fifo_gen/\gaxi_full_lite.gread_ch.grach2.axi_rach /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_fifo.fifo_gen_inst /inst_fifo_gen/\gaxi_full_lite.gread_ch.grach2.gaxi_arvld.rach_pkt_reg_slice /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_fifo.fifo_gen_inst /inst_fifo_gen/\gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\gen_fifo.fifo_gen_inst /inst_fifo_gen/\gaxi_full_lite.gread_ch.grdch2.axi_rdch /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:26 ; elapsed = 00:05:04 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft'
+INFO: [Synth 8-802] inferred FSM for state register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft__parameterized0'
+INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               10 |                               10
+       both_stages_valid |                               11 |                               11
+            stage2_valid |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-6159] Found Keep on FSM register 'gpregsm1.curr_fwft_state_reg' in module 'rd_fwft__parameterized0', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               10 |                               10
+       both_stages_valid |                               11 |                               11
+            stage2_valid |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:33 ; elapsed = 00:05:13 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   10 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 5     
+	   2 Input    5 Bit       Adders := 4     
++---XORs : 
+	   2 Input      1 Bit         XORs := 146   
++---Registers : 
+	              578 Bit    Registers := 1     
+	              517 Bit    Registers := 1     
+	               95 Bit    Registers := 6     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 8     
+	                5 Bit    Registers := 44    
+	                4 Bit    Registers := 7     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 210   
++---Muxes : 
+	   2 Input   10 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 41    
+	   5 Input    2 Bit        Muxes := 4     
+	   3 Input    1 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 31    
+	   4 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:47 ; elapsed = 00:05:31 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------------------------+-----------------------------------------------------------------------------------------------------------+----------------+----------------------+--------------+
+|Module Name                   | RTL Object                                                                                                | Inference      | Size (Depth x Width) | Primitives   | 
++------------------------------+-----------------------------------------------------------------------------------------------------------+----------------+----------------------+--------------+
+|inst/\gen_fifo.fifo_gen_inst  | inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 32 x 95              | RAM32M x 16  | 
+|inst/\gen_fifo.fifo_gen_inst  | inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg  | User Attribute | 32 x 95              | RAM32M x 16  | 
++------------------------------+-----------------------------------------------------------------------------------------------------------+----------------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:12 ; elapsed = 00:06:04 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:04:28 ; elapsed = 00:06:23 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:04:32 ; elapsed = 00:06:28 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:04:53 ; elapsed = 00:06:58 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:53 ; elapsed = 00:06:58 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:55 ; elapsed = 00:07:01 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:55 ; elapsed = 00:07:01 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:56 ; elapsed = 00:07:01 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:56 ; elapsed = 00:07:01 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name            | RTL Name                                                                                                                                                                                                                               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|fifo_generator_v13_2_7 | inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4]     | 4      | 18    | NO           | NO                 | YES               | 18     | 0       | 
+|fifo_generator_v13_2_7 | inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.ENA_NO_REG.ENA_dly_D_reg | 3      | 9     | NO           | NO                 | YES               | 9      | 0       | 
+|fifo_generator_v13_2_7 | inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4]      | 4      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|fifo_generator_v13_2_7 | inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.ENA_NO_REG.ENA_dly_D_reg  | 3      | 8     | NO           | NO                 | YES               | 8      | 0       | 
++-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    11|
+|2     |LUT1     |   111|
+|3     |LUT2     |    94|
+|4     |LUT3     |    50|
+|5     |LUT4     |    76|
+|6     |LUT5     |    57|
+|7     |LUT6     |    41|
+|8     |MUXCY    |    40|
+|9     |RAM32M   |    32|
+|10    |RAMB18E1 |     2|
+|11    |RAMB36E1 |    15|
+|12    |SRL16E   |    51|
+|13    |FDCE     |    51|
+|14    |FDPE     |    53|
+|15    |FDRE     |  1938|
+|16    |FDSE     |     6|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:56 ; elapsed = 00:07:01 . Memory (MB): peak = 1633.527 ; gain = 281.988
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 290 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:54 ; elapsed = 00:06:28 . Memory (MB): peak = 1633.527 ; gain = 281.988
+Synthesis Optimization Complete : Time (s): cpu = 00:04:56 ; elapsed = 00:07:02 . Memory (MB): peak = 1633.527 ; gain = 281.988
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1633.527 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 100 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1633.527 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 48 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 16 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 32 instances
+
+Synth Design complete, checksum: 884d9406
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:05:20 ; elapsed = 00:07:42 . Memory (MB): peak = 1633.527 ; gain = 281.988
+INFO: [Common 17-1381] The checkpoint 'C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_s00_data_fifo_0_synth_1/pynq_ddrbench_s00_data_fifo_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1633.527 ; gain = 0.000
+write_vhdl: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1633.527 ; gain = 0.000
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP pynq_ddrbench_s00_data_fifo_0, cache-ID = a92e7c9224f8c01d
+INFO: [Coretcl 2-1174] Renamed 111 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_s00_data_fifo_0_synth_1/pynq_ddrbench_s00_data_fifo_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1633.527 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file pynq_ddrbench_s00_data_fifo_0_utilization_synth.rpt -pb pynq_ddrbench_s00_data_fifo_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jan  9 23:07:28 2023...

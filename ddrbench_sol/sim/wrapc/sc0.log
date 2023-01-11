@@ -1,0 +1,6 @@
+   Build using "D:/Xilinx/Vitis_HLS/2022.1/tps/win64/msys64/mingw64/bin/g++"
+   Compiling ddrbenchmark_testbench.cpp_pre.cpp.tb.cpp
+   Compiling apatb_ddrBenchmark.cpp
+   Compiling ddrbenchmark.cpp_pre.cpp.tb.cpp
+   Compiling apatb_ddrBenchmark_ir.ll
+   Generating cosim.tv.exe

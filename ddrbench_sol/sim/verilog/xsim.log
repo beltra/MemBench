@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# xsim v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Jan  9 22:07:53 2023
+# Process ID: 13972
+# Current directory: C:/Users/gbeve/Downloads/ddrBench/ddrbench_sol/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/ddrBenchmark/xsim_script.tcl}
+# Log file: C:/Users/gbeve/Downloads/ddrBench/ddrbench_sol/sim/verilog/xsim.log
+# Journal file: C:/Users/gbeve/Downloads/ddrBench/ddrbench_sol/sim/verilog\xsim.jou
+# Running On: HpPC, OS: Windows, CPU Frequency: 2195 MHz, CPU Physical cores: 2, Host memory: 6333 MB
+#-----------------------------------------------------------
+source xsim.dir/ddrBenchmark/xsim_script.tcl
+# xsim {ddrBenchmark} -autoloadwcfg -tclbatch {ddrBenchmark.tcl}
+Time resolution is 1 ps
+source ddrBenchmark.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 2 [n/a] @ "125000"
+// RTL Simulation : 1 / 2 [n/a] @ "185525000"
+// RTL Simulation : 2 / 2 [n/a] @ "186355000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 186415 ns : File "C:/Users/gbeve/Downloads/ddrBench/ddrbench_sol/sim/verilog/ddrBenchmark.autotb.v" Line 588
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 684.949 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Jan  9 22:08:06 2023...

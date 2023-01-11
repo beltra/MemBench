@@ -1,0 +1,371 @@
+
+
+================================================================
+== Vitis HLS Report for 'runBench'
+================================================================
+* Date:           Mon Jan  9 22:05:36 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        ddrBench
+* Solution:       ddrbench_sol (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        2|        ?|  20.000 ns|         ?|    2|    ?|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 27
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 20 27 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 18 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 19 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.63>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %counterCmd1, void @empty_13, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 16384, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%rw_read = read i1 @_ssdm_op_Read.ap_auto.i1, i1 %rw" [ddrBench/src/ddrbenchmark.cpp:42]   --->   Operation 30 'read' 'rw_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%dataNum_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %dataNum" [ddrBench/src/ddrbenchmark.cpp:42]   --->   Operation 31 'read' 'dataNum_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%mem_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %mem" [ddrBench/src/ddrbenchmark.cpp:42]   --->   Operation 32 'read' 'mem_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%br_ln44 = br i1 %rw_read, void %if.then4, void %if.then" [ddrBench/src/ddrbenchmark.cpp:44]   --->   Operation 33 'br' 'br_ln44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (3.52ns)   --->   "%add_ln1069 = add i64 %mem_read, i64 64"   --->   Operation 34 'add' 'add_ln1069' <Predicate = (!rw_read)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i58 @_ssdm_op_PartSelect.i58.i64.i32.i32, i64 %add_ln1069, i32 6, i32 63"   --->   Operation 35 'partselect' 'trunc_ln' <Predicate = (!rw_read)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (3.63ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %counterCmd1, i64 0" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 36 'write' 'write_ln174' <Predicate = (rw_read)> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 37 [1/1] (2.47ns)   --->   "%icmp_ln30 = icmp_sgt  i32 %dataNum_read, i32 0" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 37 'icmp' 'icmp_ln30' <Predicate = (rw_read)> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln30 = br i1 %icmp_ln30, void %_Z9writeDataP7ap_uintILi512EEi.exit, void %for.body.lr.ph.i" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 38 'br' 'br_ln30' <Predicate = (rw_read)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%sext_ln1069 = sext i58 %trunc_ln"   --->   Operation 39 'sext' 'sext_ln1069' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i512 %gmem, i64 %sext_ln1069"   --->   Operation 40 'getelementptr' 'gmem_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [7/7] (7.30ns)   --->   "%gmem_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i512P1A, i512 %gmem_addr, i32 1"   --->   Operation 41 'readreq' 'gmem_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 42 [6/7] (7.30ns)   --->   "%gmem_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i512P1A, i512 %gmem_addr, i32 1"   --->   Operation 42 'readreq' 'gmem_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 7.30>
+ST_4 : Operation 43 [5/7] (7.30ns)   --->   "%gmem_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i512P1A, i512 %gmem_addr, i32 1"   --->   Operation 43 'readreq' 'gmem_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 44 [4/7] (7.30ns)   --->   "%gmem_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i512P1A, i512 %gmem_addr, i32 1"   --->   Operation 44 'readreq' 'gmem_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 45 [3/7] (7.30ns)   --->   "%gmem_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i512P1A, i512 %gmem_addr, i32 1"   --->   Operation 45 'readreq' 'gmem_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 46 [2/7] (7.30ns)   --->   "%gmem_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i512P1A, i512 %gmem_addr, i32 1"   --->   Operation 46 'readreq' 'gmem_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 47 [1/7] (7.30ns)   --->   "%gmem_load_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i512P1A, i512 %gmem_addr, i32 1"   --->   Operation 47 'readreq' 'gmem_load_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 48 [1/1] (7.30ns)   --->   "%gmem_addr_read = read i512 @_ssdm_op_Read.m_axi.i512P1A, i512 %gmem_addr"   --->   Operation 48 'read' 'gmem_addr_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 3.90>
+ST_10 : Operation 49 [1/1] (3.90ns)   --->   "%icmp_ln1069 = icmp_eq  i512 %gmem_addr_read, i512 1"   --->   Operation 49 'icmp' 'icmp_ln1069' <Predicate = true> <Delay = 3.90> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 3.90> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 50 [1/1] (0.00ns)   --->   "%br_ln49 = br i1 %icmp_ln1069, void %if.then5, void %if.end" [ddrBench/src/ddrbenchmark.cpp:49]   --->   Operation 50 'br' 'br_ln49' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 51 [1/1] (2.47ns)   --->   "%icmp_ln30_1 = icmp_sgt  i32 %dataNum_read, i32 0" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 51 'icmp' 'icmp_ln30_1' <Predicate = (!icmp_ln1069)> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 52 [1/1] (0.00ns)   --->   "%br_ln30 = br i1 %icmp_ln30_1, void %_Z9writeDataP7ap_uintILi512EEi.exit15, void %for.body.lr.ph.i6" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 52 'br' 'br_ln30' <Predicate = (!icmp_ln1069)> <Delay = 0.00>
+ST_10 : Operation 53 [1/1] (0.00ns)   --->   "%trunc_ln30_1 = partselect i58 @_ssdm_op_PartSelect.i58.i64.i32.i32, i64 %mem_read, i32 6, i32 63" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 53 'partselect' 'trunc_ln30_1' <Predicate = (!icmp_ln1069 & icmp_ln30_1)> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 7.30>
+ST_11 : Operation 54 [1/1] (0.00ns)   --->   "%trunc_ln30_2 = trunc i32 %dataNum_read" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 54 'trunc' 'trunc_ln30_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 55 [1/1] (0.00ns)   --->   "%sext_ln30_1 = sext i58 %trunc_ln30_1" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 55 'sext' 'sext_ln30_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 56 [1/1] (0.00ns)   --->   "%gmem_addr_2 = getelementptr i512 %gmem, i64 %sext_ln30_1" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 56 'getelementptr' 'gmem_addr_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 57 [1/1] (7.30ns)   --->   "%empty_25 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i512, i512 %gmem_addr_2, i32 %dataNum_read" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 57 'writereq' 'empty_25' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 12 <SV = 11> <Delay = 4.05>
+ST_12 : Operation 58 [2/2] (4.05ns)   --->   "%call_ln30 = call void @runBench_Pipeline_dataWrite1, i512 %gmem, i58 %trunc_ln30_1, i31 %trunc_ln30_2" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 58 'call' 'call_ln30' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 59 [1/2] (0.00ns)   --->   "%call_ln30 = call void @runBench_Pipeline_dataWrite1, i512 %gmem, i58 %trunc_ln30_1, i31 %trunc_ln30_2" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 59 'call' 'call_ln30' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 7.30>
+ST_14 : Operation 60 [5/5] (7.30ns)   --->   "%empty_26 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem_addr_2" [ddrBench/src/ddrbenchmark.cpp:52]   --->   Operation 60 'writeresp' 'empty_26' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 15 <SV = 14> <Delay = 7.30>
+ST_15 : Operation 61 [4/5] (7.30ns)   --->   "%empty_26 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem_addr_2" [ddrBench/src/ddrbenchmark.cpp:52]   --->   Operation 61 'writeresp' 'empty_26' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 16 <SV = 15> <Delay = 7.30>
+ST_16 : Operation 62 [3/5] (7.30ns)   --->   "%empty_26 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem_addr_2" [ddrBench/src/ddrbenchmark.cpp:52]   --->   Operation 62 'writeresp' 'empty_26' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 17 <SV = 16> <Delay = 7.30>
+ST_17 : Operation 63 [2/5] (7.30ns)   --->   "%empty_26 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem_addr_2" [ddrBench/src/ddrbenchmark.cpp:52]   --->   Operation 63 'writeresp' 'empty_26' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 18 <SV = 17> <Delay = 7.30>
+ST_18 : Operation 64 [1/5] (7.30ns)   --->   "%empty_26 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem_addr_2" [ddrBench/src/ddrbenchmark.cpp:52]   --->   Operation 64 'writeresp' 'empty_26' <Predicate = (!icmp_ln1069 & icmp_ln30_1)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_18 : Operation 65 [1/1] (0.00ns)   --->   "%br_ln52 = br void %_Z9writeDataP7ap_uintILi512EEi.exit15" [ddrBench/src/ddrbenchmark.cpp:52]   --->   Operation 65 'br' 'br_ln52' <Predicate = (!icmp_ln1069 & icmp_ln30_1)> <Delay = 0.00>
+ST_18 : Operation 66 [1/1] (0.00ns)   --->   "%br_ln52 = br void %if.end" [ddrBench/src/ddrbenchmark.cpp:52]   --->   Operation 66 'br' 'br_ln52' <Predicate = (!icmp_ln1069)> <Delay = 0.00>
+ST_18 : Operation 67 [1/1] (3.63ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %counterCmd1, i64 0" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 67 'write' 'write_ln174' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+
+State 19 <SV = 18> <Delay = 3.63>
+ST_19 : Operation 68 [1/1] (3.63ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %counterCmd1, i64 0" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 68 'write' 'write_ln174' <Predicate = (!rw_read)> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_19 : Operation 69 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end9"   --->   Operation 69 'br' 'br_ln0' <Predicate = (!rw_read)> <Delay = 0.00>
+ST_19 : Operation 70 [1/1] (0.00ns)   --->   "%ret_ln57 = ret" [ddrBench/src/ddrbenchmark.cpp:57]   --->   Operation 70 'ret' 'ret_ln57' <Predicate = true> <Delay = 0.00>
+
+State 20 <SV = 1> <Delay = 7.30>
+ST_20 : Operation 71 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i58 @_ssdm_op_PartSelect.i58.i64.i32.i32, i64 %mem_read, i32 6, i32 63" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 71 'partselect' 'trunc_ln1' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 72 [1/1] (0.00ns)   --->   "%sext_ln30 = sext i58 %trunc_ln1" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 72 'sext' 'sext_ln30' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 73 [1/1] (0.00ns)   --->   "%gmem_addr_1 = getelementptr i512 %gmem, i64 %sext_ln30" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 73 'getelementptr' 'gmem_addr_1' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 74 [1/1] (7.30ns)   --->   "%empty = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i512, i512 %gmem_addr_1, i32 %dataNum_read" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 74 'writereq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 21 <SV = 2> <Delay = 4.05>
+ST_21 : Operation 75 [1/1] (0.00ns)   --->   "%trunc_ln30 = trunc i32 %dataNum_read" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 75 'trunc' 'trunc_ln30' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 76 [2/2] (4.05ns)   --->   "%call_ln30 = call void @runBench_Pipeline_dataWrite, i512 %gmem, i58 %trunc_ln1, i31 %trunc_ln30" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 76 'call' 'call_ln30' <Predicate = true> <Delay = 4.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 3> <Delay = 0.00>
+ST_22 : Operation 77 [1/2] (0.00ns)   --->   "%call_ln30 = call void @runBench_Pipeline_dataWrite, i512 %gmem, i58 %trunc_ln1, i31 %trunc_ln30" [ddrBench/src/ddrbenchmark.cpp:30]   --->   Operation 77 'call' 'call_ln30' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 4> <Delay = 7.30>
+ST_23 : Operation 78 [5/5] (7.30ns)   --->   "%empty_24 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem_addr_1" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 78 'writeresp' 'empty_24' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 24 <SV = 5> <Delay = 7.30>
+ST_24 : Operation 79 [4/5] (7.30ns)   --->   "%empty_24 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem_addr_1" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 79 'writeresp' 'empty_24' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 25 <SV = 6> <Delay = 7.30>
+ST_25 : Operation 80 [3/5] (7.30ns)   --->   "%empty_24 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem_addr_1" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 80 'writeresp' 'empty_24' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 26 <SV = 7> <Delay = 7.30>
+ST_26 : Operation 81 [2/5] (7.30ns)   --->   "%empty_24 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem_addr_1" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 81 'writeresp' 'empty_24' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 27 <SV = 8> <Delay = 7.30>
+ST_27 : Operation 82 [1/5] (7.30ns)   --->   "%empty_24 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i512, i512 %gmem_addr_1" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 82 'writeresp' 'empty_24' <Predicate = (icmp_ln30)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_27 : Operation 83 [1/1] (0.00ns)   --->   "%br_ln174 = br void %_Z9writeDataP7ap_uintILi512EEi.exit" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 83 'br' 'br_ln174' <Predicate = (icmp_ln30)> <Delay = 0.00>
+ST_27 : Operation 84 [1/1] (3.63ns)   --->   "%write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %counterCmd1, i64 0" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174]   --->   Operation 84 'write' 'write_ln174' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_27 : Operation 85 [1/1] (0.00ns)   --->   "%br_ln48 = br void %if.end9" [ddrBench/src/ddrbenchmark.cpp:48]   --->   Operation 85 'br' 'br_ln48' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.63ns
+The critical path consists of the following:
+	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'counterCmd1' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [40]  (3.63 ns)
+
+ <State 2>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem_addr') [16]  (0 ns)
+	bus request operation ('gmem_load_req') on port 'gmem' [17]  (7.3 ns)
+
+ <State 3>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('gmem_load_req') on port 'gmem' [17]  (7.3 ns)
+
+ <State 4>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('gmem_load_req') on port 'gmem' [17]  (7.3 ns)
+
+ <State 5>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('gmem_load_req') on port 'gmem' [17]  (7.3 ns)
+
+ <State 6>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('gmem_load_req') on port 'gmem' [17]  (7.3 ns)
+
+ <State 7>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('gmem_load_req') on port 'gmem' [17]  (7.3 ns)
+
+ <State 8>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('gmem_load_req') on port 'gmem' [17]  (7.3 ns)
+
+ <State 9>: 7.3ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read') on port 'gmem' [18]  (7.3 ns)
+
+ <State 10>: 3.9ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln1069') [19]  (3.9 ns)
+
+ <State 11>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem_addr_2', ddrBench/src/ddrbenchmark.cpp:30) [28]  (0 ns)
+	bus request operation ('empty_25', ddrBench/src/ddrbenchmark.cpp:30) on port 'gmem' (ddrBench/src/ddrbenchmark.cpp:30) [29]  (7.3 ns)
+
+ <State 12>: 4.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln30', ddrBench/src/ddrbenchmark.cpp:30) to 'runBench_Pipeline_dataWrite1' [30]  (4.06 ns)
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+ <State 14>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_26', ddrBench/src/ddrbenchmark.cpp:52) on port 'gmem' (ddrBench/src/ddrbenchmark.cpp:52) [31]  (7.3 ns)
+
+ <State 15>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_26', ddrBench/src/ddrbenchmark.cpp:52) on port 'gmem' (ddrBench/src/ddrbenchmark.cpp:52) [31]  (7.3 ns)
+
+ <State 16>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_26', ddrBench/src/ddrbenchmark.cpp:52) on port 'gmem' (ddrBench/src/ddrbenchmark.cpp:52) [31]  (7.3 ns)
+
+ <State 17>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_26', ddrBench/src/ddrbenchmark.cpp:52) on port 'gmem' (ddrBench/src/ddrbenchmark.cpp:52) [31]  (7.3 ns)
+
+ <State 18>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_26', ddrBench/src/ddrbenchmark.cpp:52) on port 'gmem' (ddrBench/src/ddrbenchmark.cpp:52) [31]  (7.3 ns)
+
+ <State 19>: 3.63ns
+The critical path consists of the following:
+	fifo write operation ('write_ln174', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'counterCmd1' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [37]  (3.63 ns)
+
+ <State 20>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem_addr_1', ddrBench/src/ddrbenchmark.cpp:30) [47]  (0 ns)
+	bus request operation ('empty', ddrBench/src/ddrbenchmark.cpp:30) on port 'gmem' (ddrBench/src/ddrbenchmark.cpp:30) [48]  (7.3 ns)
+
+ <State 21>: 4.06ns
+The critical path consists of the following:
+	'call' operation ('call_ln30', ddrBench/src/ddrbenchmark.cpp:30) to 'runBench_Pipeline_dataWrite' [49]  (4.06 ns)
+
+ <State 22>: 0ns
+The critical path consists of the following:
+
+ <State 23>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_24', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'gmem' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [50]  (7.3 ns)
+
+ <State 24>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_24', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'gmem' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [50]  (7.3 ns)
+
+ <State 25>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_24', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'gmem' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [50]  (7.3 ns)
+
+ <State 26>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_24', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'gmem' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [50]  (7.3 ns)
+
+ <State 27>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_24', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) on port 'gmem' (D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:174) [50]  (7.3 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

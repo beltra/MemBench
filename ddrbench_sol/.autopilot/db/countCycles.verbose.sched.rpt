@@ -1,0 +1,191 @@
+
+
+================================================================
+== Vitis HLS Report for 'countCycles'
+================================================================
+* Date:           Mon Jan  9 22:05:38 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        ddrBench
+* Solution:       ddrbench_sol (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.63>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%cnt_1_loc = alloca i64 1"   --->   Operation 10 'alloca' 'cnt_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (3.63ns)   --->   "%out_read = read i64 @_ssdm_op_Read.ap_fifo.i64P0A, i64 %out_r"   --->   Operation 11 'read' 'out_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 3> <FIFO>
+ST_1 : Operation 12 [1/1] (3.63ns)   --->   "%tmp = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %counterCmd1" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 12 'read' 'tmp' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i61 @_ssdm_op_PartSelect.i61.i64.i32.i32, i64 %out_read, i32 3, i32 63" [ddrBench/src/ddrbenchmark.cpp:13]   --->   Operation 13 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.58>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 14 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [2/2] (1.58ns)   --->   "%call_ln145 = call void @countCycles_Pipeline_count, i64 %tmp, i64 %counterCmd1, i64 %cnt_1_loc" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 15 'call' 'call_ln145' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 16 [1/2] (3.63ns)   --->   "%call_ln145 = call void @countCycles_Pipeline_count, i64 %tmp, i64 %counterCmd1, i64 %cnt_1_loc" [D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 16 'call' 'call_ln145' <Predicate = true> <Delay = 3.63> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%sext_ln13 = sext i61 %trunc_ln" [ddrBench/src/ddrbenchmark.cpp:13]   --->   Operation 17 'sext' 'sext_ln13' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%results_addr = getelementptr i64 %results, i64 %sext_ln13" [ddrBench/src/ddrbenchmark.cpp:13]   --->   Operation 18 'getelementptr' 'results_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (7.30ns)   --->   "%results_addr_req = writereq i1 @_ssdm_op_WriteReq.m_axi.i64P1A, i64 %results_addr, i32 1" [ddrBench/src/ddrbenchmark.cpp:13]   --->   Operation 19 'writereq' 'results_addr_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 7.30>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "%cnt_1_loc_load = load i64 %cnt_1_loc"   --->   Operation 20 'load' 'cnt_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (7.30ns)   --->   "%write_ln13 = write void @_ssdm_op_Write.m_axi.i64P1A, i64 %results_addr, i64 %cnt_1_loc_load, i8 255" [ddrBench/src/ddrbenchmark.cpp:13]   --->   Operation 21 'write' 'write_ln13' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 22 [5/5] (7.30ns)   --->   "%results_addr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i64P1A, i64 %results_addr" [ddrBench/src/ddrbenchmark.cpp:13]   --->   Operation 22 'writeresp' 'results_addr_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 23 [4/5] (7.30ns)   --->   "%results_addr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i64P1A, i64 %results_addr" [ddrBench/src/ddrbenchmark.cpp:13]   --->   Operation 23 'writeresp' 'results_addr_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 24 [3/5] (7.30ns)   --->   "%results_addr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i64P1A, i64 %results_addr" [ddrBench/src/ddrbenchmark.cpp:13]   --->   Operation 24 'writeresp' 'results_addr_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 25 [2/5] (7.30ns)   --->   "%results_addr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i64P1A, i64 %results_addr" [ddrBench/src/ddrbenchmark.cpp:13]   --->   Operation 25 'writeresp' 'results_addr_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_r, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %counterCmd1, void @empty_13, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %results, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 1, void @empty_3, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 29 [1/5] (7.30ns)   --->   "%results_addr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i64P1A, i64 %results_addr" [ddrBench/src/ddrbenchmark.cpp:13]   --->   Operation 29 'writeresp' 'results_addr_resp' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 30 [1/1] (0.00ns)   --->   "%ret_ln14 = ret" [ddrBench/src/ddrbenchmark.cpp:14]   --->   Operation 30 'ret' 'ret_ln14' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.63ns
+The critical path consists of the following:
+	fifo read operation ('out_read') on port 'out_r' [6]  (3.63 ns)
+
+ <State 2>: 1.59ns
+The critical path consists of the following:
+	'call' operation ('call_ln145', D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) to 'countCycles_Pipeline_count' [11]  (1.59 ns)
+
+ <State 3>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('results_addr', ddrBench/src/ddrbenchmark.cpp:13) [15]  (0 ns)
+	bus request operation ('results_addr_req', ddrBench/src/ddrbenchmark.cpp:13) on port 'results' (ddrBench/src/ddrbenchmark.cpp:13) [16]  (7.3 ns)
+
+ <State 4>: 7.3ns
+The critical path consists of the following:
+	'load' operation ('cnt_1_loc_load') on local variable 'cnt_1_loc' [12]  (0 ns)
+	bus write operation ('write_ln13', ddrBench/src/ddrbenchmark.cpp:13) on port 'results' (ddrBench/src/ddrbenchmark.cpp:13) [17]  (7.3 ns)
+
+ <State 5>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('results_addr_resp', ddrBench/src/ddrbenchmark.cpp:13) on port 'results' (ddrBench/src/ddrbenchmark.cpp:13) [18]  (7.3 ns)
+
+ <State 6>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('results_addr_resp', ddrBench/src/ddrbenchmark.cpp:13) on port 'results' (ddrBench/src/ddrbenchmark.cpp:13) [18]  (7.3 ns)
+
+ <State 7>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('results_addr_resp', ddrBench/src/ddrbenchmark.cpp:13) on port 'results' (ddrBench/src/ddrbenchmark.cpp:13) [18]  (7.3 ns)
+
+ <State 8>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('results_addr_resp', ddrBench/src/ddrbenchmark.cpp:13) on port 'results' (ddrBench/src/ddrbenchmark.cpp:13) [18]  (7.3 ns)
+
+ <State 9>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('results_addr_resp', ddrBench/src/ddrbenchmark.cpp:13) on port 'results' (ddrBench/src/ddrbenchmark.cpp:13) [18]  (7.3 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

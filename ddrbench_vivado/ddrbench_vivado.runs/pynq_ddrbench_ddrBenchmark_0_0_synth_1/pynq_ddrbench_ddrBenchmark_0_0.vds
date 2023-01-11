@@ -1,0 +1,705 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Jan  9 23:00:52 2023
+# Process ID: 16424
+# Current directory: C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_ddrBenchmark_0_0_synth_1
+# Command line: vivado.exe -log pynq_ddrbench_ddrBenchmark_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pynq_ddrbench_ddrBenchmark_0_0.tcl
+# Log file: C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_ddrBenchmark_0_0_synth_1/pynq_ddrbench_ddrBenchmark_0_0.vds
+# Journal file: C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_ddrBenchmark_0_0_synth_1\vivado.jou
+# Running On: HpPC, OS: Windows, CPU Frequency: 2195 MHz, CPU Physical cores: 2, Host memory: 6333 MB
+#-----------------------------------------------------------
+source pynq_ddrbench_ddrBenchmark_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 854.047 ; gain = 97.109
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/gbeve/Downloads/ddrBench/ddrbench_sol/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top pynq_ddrbench_ddrBenchmark_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6972
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 1409.469 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pynq_ddrbench_ddrBenchmark_0_0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_ddrBenchmark_0_0/synth/pynq_ddrbench_ddrBenchmark_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_control_s_axi' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_control_s_axi.v:7]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_control_s_axi.v:228]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_control_s_axi' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_store' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:780]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_fifo' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_srl' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_srl' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_fifo' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_fifo__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_mem' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_mem' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_fifo__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_fifo__parameterized1' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_srl__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_srl__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_fifo__parameterized1' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_fifo__parameterized2' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_srl__parameterized1' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_srl__parameterized1' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_fifo__parameterized2' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_store' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:780]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_load' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:324]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_fifo__parameterized3' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_mem__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_mem__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_fifo__parameterized3' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_load' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:324]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_write' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:1852]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_reg_slice' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_reg_slice' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2584]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_fifo__parameterized4' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_srl__parameterized2' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_srl__parameterized2' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_fifo__parameterized4' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_throttle' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2360]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_reg_slice__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_reg_slice__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2584]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_fifo__parameterized5' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_srl__parameterized3' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_srl__parameterized3' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_fifo__parameterized5' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_fifo__parameterized6' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_srl__parameterized4' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_srl__parameterized4' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_fifo__parameterized6' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2686]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_throttle' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2360]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_reg_slice__parameterized1' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_reg_slice__parameterized1' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2584]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2352]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2355]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_write' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:1852]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_read' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:1468]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_gmem_m_axi_reg_slice__parameterized2' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_reg_slice__parameterized2' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:2584]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:1844]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi_read' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:1468]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_gmem_m_axi' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_gmem_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_store' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:780]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_fifo' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_srl' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_srl' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_fifo' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_fifo__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_mem' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_mem' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_fifo__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_fifo__parameterized1' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_srl__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_srl__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_fifo__parameterized1' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_fifo__parameterized2' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_srl__parameterized1' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_srl__parameterized1' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_fifo__parameterized2' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_store' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:780]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_load' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:324]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_fifo__parameterized3' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_mem__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_mem__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_fifo__parameterized3' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_load' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:324]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_write' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:1852]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_reg_slice' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_reg_slice' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2584]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_fifo__parameterized4' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_srl__parameterized2' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_srl__parameterized2' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_fifo__parameterized4' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_throttle' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2360]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_reg_slice__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_reg_slice__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2584]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_fifo__parameterized5' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_srl__parameterized3' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_srl__parameterized3' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_fifo__parameterized5' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_fifo__parameterized6' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_srl__parameterized4' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_srl__parameterized4' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_fifo__parameterized6' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2686]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_throttle' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2360]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_reg_slice__parameterized1' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_reg_slice__parameterized1' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2584]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2352]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2355]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_write' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:1852]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_read' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:1468]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_results_m_axi_reg_slice__parameterized2' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_reg_slice__parameterized2' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:2584]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:1844]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi_read' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:1468]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_results_m_axi' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_results_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_entry_proc' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_entry_proc.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_entry_proc' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_entry_proc.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_runBench' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_runBench.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_runBench_Pipeline_dataWrite1' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_runBench_Pipeline_dataWrite1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_flow_control_loop_pipe_sequential_init' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_flow_control_loop_pipe_sequential_init' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_runBench_Pipeline_dataWrite1' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_runBench_Pipeline_dataWrite1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_runBench_Pipeline_dataWrite' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_runBench_Pipeline_dataWrite.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_runBench_Pipeline_dataWrite' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_runBench_Pipeline_dataWrite.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_runBench' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_runBench.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_countCycles' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_countCycles.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_countCycles_Pipeline_count' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_countCycles_Pipeline_count.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_countCycles_Pipeline_count' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_countCycles_Pipeline_count.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_countCycles' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_countCycles.v:10]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_fifo_w64_d3_S' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_fifo_w64_d3_S.v:43]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_fifo_w64_d3_S_shiftReg' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_fifo_w64_d3_S.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_fifo_w64_d3_S_shiftReg' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_fifo_w64_d3_S.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_fifo_w64_d3_S' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_fifo_w64_d3_S.v:43]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_fifo_w64_d2_S' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_fifo_w64_d2_S.v:43]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_fifo_w64_d2_S_shiftReg' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_fifo_w64_d2_S.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_fifo_w64_d2_S_shiftReg' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_fifo_w64_d2_S.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_fifo_w64_d2_S' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_fifo_w64_d2_S.v:43]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_start_for_countCycles_U0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_start_for_countCycles_U0.v:43]
+INFO: [Synth 8-6157] synthesizing module 'ddrBenchmark_start_for_countCycles_U0_shiftReg' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_start_for_countCycles_U0.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_start_for_countCycles_U0_shiftReg' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_start_for_countCycles_U0.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark_start_for_countCycles_U0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_start_for_countCycles_U0.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'ddrBenchmark' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'pynq_ddrbench_ddrBenchmark_0_0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_ddrBenchmark_0_0/synth/pynq_ddrbench_ddrBenchmark_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/57c2/hdl/verilog/ddrBenchmark_control_s_axi.v:307]
+WARNING: [Synth 8-7129] Port counterCmd1_dout[63] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[62] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[61] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[60] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[59] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[58] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[57] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[56] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[55] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[54] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[53] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[52] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[51] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[50] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[49] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[48] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[47] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[46] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[45] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[44] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[43] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[42] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[41] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[40] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[39] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[38] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[37] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[36] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[35] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[34] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[33] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[32] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[31] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[30] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[29] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[28] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[27] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[26] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[25] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[24] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[23] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[22] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[21] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[20] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[19] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[18] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[17] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[16] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[15] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[14] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[13] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[12] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[11] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[10] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[9] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[8] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[7] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[6] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[5] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[4] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[3] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[2] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[1] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_dout[0] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_num_data_valid[1] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_num_data_valid[0] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_fifo_cap[1] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_fifo_cap[0] in module ddrBenchmark_countCycles_Pipeline_count is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_num_data_valid[1] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_num_data_valid[0] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_fifo_cap[1] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port counterCmd1_fifo_cap[0] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_ARREADY in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RVALID in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[63] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[62] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[61] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[60] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[59] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[58] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[57] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[56] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[55] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[54] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[53] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[52] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[51] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[50] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[49] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[48] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[47] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[46] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[45] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[44] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[43] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[42] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[41] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[40] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[39] in module ddrBenchmark_countCycles is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_results_RDATA[38] in module ddrBenchmark_countCycles is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:35 ; elapsed = 00:00:43 . Memory (MB): peak = 1409.469 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 1409.469 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 1409.469 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1409.469 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_ddrBenchmark_0_0/constraints/ddrBenchmark_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_ddrBenchmark_0_0/constraints/ddrBenchmark_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_ddrBenchmark_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_ddrBenchmark_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1421.699 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1437.301 ; gain = 15.602
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:30 ; elapsed = 00:02:06 . Memory (MB): peak = 1437.301 ; gain = 27.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:30 ; elapsed = 00:02:06 . Memory (MB): peak = 1437.301 ; gain = 27.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_ddrBenchmark_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:30 ; elapsed = 00:02:06 . Memory (MB): peak = 1437.301 ; gain = 27.832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'ddrBenchmark_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'ddrBenchmark_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ddrBenchmark_gmem_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ddrBenchmark_gmem_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ddrBenchmark_gmem_m_axi_reg_slice__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ddrBenchmark_gmem_m_axi_reg_slice__parameterized2'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ddrBenchmark_results_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ddrBenchmark_results_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ddrBenchmark_results_m_axi_reg_slice__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ddrBenchmark_results_m_axi_reg_slice__parameterized2'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'ddrBenchmark_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'ddrBenchmark_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ddrBenchmark_gmem_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ddrBenchmark_gmem_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ddrBenchmark_gmem_m_axi_reg_slice__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ddrBenchmark_gmem_m_axi_reg_slice__parameterized2'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ddrBenchmark_results_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ddrBenchmark_results_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ddrBenchmark_results_m_axi_reg_slice__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ddrBenchmark_results_m_axi_reg_slice__parameterized2'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:39 ; elapsed = 00:02:18 . Memory (MB): peak = 1437.301 ; gain = 27.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 9     
+	   2 Input   52 Bit       Adders := 4     
+	   2 Input   32 Bit       Adders := 4     
+	   2 Input   31 Bit       Adders := 2     
+	   2 Input   12 Bit       Adders := 4     
+	   2 Input    9 Bit       Adders := 8     
+	   2 Input    8 Bit       Adders := 6     
+	   2 Input    5 Bit       Adders := 36    
+	   2 Input    4 Bit       Adders := 30    
+	   2 Input    3 Bit       Adders := 14    
+	   2 Input    2 Bit       Adders := 5     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	              577 Bit    Registers := 1     
+	              576 Bit    Registers := 1     
+	              514 Bit    Registers := 1     
+	              513 Bit    Registers := 2     
+	              512 Bit    Registers := 2     
+	               96 Bit    Registers := 12    
+	               73 Bit    Registers := 1     
+	               72 Bit    Registers := 7     
+	               66 Bit    Registers := 1     
+	               65 Bit    Registers := 2     
+	               64 Bit    Registers := 25    
+	               61 Bit    Registers := 1     
+	               58 Bit    Registers := 2     
+	               52 Bit    Registers := 4     
+	               32 Bit    Registers := 10    
+	               31 Bit    Registers := 6     
+	               27 Bit    Registers := 1     
+	                9 Bit    Registers := 7     
+	                8 Bit    Registers := 13    
+	                6 Bit    Registers := 5     
+	                5 Bit    Registers := 20    
+	                4 Bit    Registers := 24    
+	                3 Bit    Registers := 7     
+	                2 Bit    Registers := 15    
+	                1 Bit    Registers := 171   
++---RAMs : 
+	             127K Bit	(255 X 514 bit)          RAMs := 1     
+	              16K Bit	(255 X 66 bit)          RAMs := 1     
+	               8K Bit	(15 X 576 bit)          RAMs := 1     
+	               1K Bit	(15 X 72 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input  513 Bit        Muxes := 1     
+	   2 Input  512 Bit        Muxes := 3     
+	   2 Input   96 Bit        Muxes := 4     
+	   2 Input   72 Bit        Muxes := 2     
+	   2 Input   65 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 23    
+	   2 Input   52 Bit        Muxes := 4     
+	  11 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
+	   2 Input   27 Bit        Muxes := 2     
+	  28 Input   27 Bit        Muxes := 1     
+	   2 Input   23 Bit        Muxes := 1     
+	   2 Input   21 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 1     
+	   2 Input   19 Bit        Muxes := 2     
+	   2 Input   18 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 1     
+	   4 Input   12 Bit        Muxes := 4     
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 9     
+	  10 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 14    
+	   4 Input    8 Bit        Muxes := 4     
+	   2 Input    6 Bit        Muxes := 8     
+	   2 Input    5 Bit        Muxes := 35    
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 32    
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 17    
+	   2 Input    2 Bit        Muxes := 123   
+	   3 Input    2 Bit        Muxes := 30    
+	   4 Input    2 Bit        Muxes := 10    
+	   2 Input    1 Bit        Muxes := 221   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_wstate_reg[0]) is unused and will be removed from module ddrBenchmark_control_s_axi.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_rstate_reg[0]) is unused and will be removed from module ddrBenchmark_control_s_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/FSM_sequential_state_reg[1]) is unused and will be removed from module ddrBenchmark_results_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/FSM_sequential_state_reg[0]) is unused and will be removed from module ddrBenchmark_results_m_axi.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:49 ; elapsed = 00:03:44 . Memory (MB): peak = 1437.301 ; gain = 27.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-----------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                  | RTL Object                               | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/gmem_m_axi_U/store_unit | buff_wdata/U_fifo_mem/mem_reg            | 15 x 576(READ_FIRST)   | W |   | 15 x 576(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
+|inst/gmem_m_axi_U/load_unit  | buff_rdata/U_fifo_mem/mem_reg            | 255 x 514(READ_FIRST)  | W |   | 255 x 514(WRITE_FIRST) |   | R | Port A and B     | 1      | 7      | 
+|inst/results_m_axi_U         | store_unit/buff_wdata/U_fifo_mem/mem_reg | 15 x 72(READ_FIRST)    | W |   | 15 x 72(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
++-----------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:14 ; elapsed = 00:04:20 . Memory (MB): peak = 1437.301 ; gain = 27.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:31 ; elapsed = 00:04:42 . Memory (MB): peak = 1437.301 ; gain = 27.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-----------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                  | RTL Object                               | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/gmem_m_axi_U/store_unit | buff_wdata/U_fifo_mem/mem_reg            | 15 x 576(READ_FIRST)   | W |   | 15 x 576(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
+|inst/gmem_m_axi_U/load_unit  | buff_rdata/U_fifo_mem/mem_reg            | 255 x 514(READ_FIRST)  | W |   | 255 x 514(WRITE_FIRST) |   | R | Port A and B     | 1      | 7      | 
+|inst/results_m_axi_U         | store_unit/buff_wdata/U_fifo_mem/mem_reg | 15 x 72(READ_FIRST)    | W |   | 15 x 72(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
++-----------------------------+------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:43 ; elapsed = 00:05:08 . Memory (MB): peak = 1437.301 ; gain = 27.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:04:08 ; elapsed = 00:05:38 . Memory (MB): peak = 1437.301 ; gain = 27.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:09 ; elapsed = 00:05:38 . Memory (MB): peak = 1437.301 ; gain = 27.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:12 ; elapsed = 00:05:41 . Memory (MB): peak = 1437.301 ; gain = 27.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:12 ; elapsed = 00:05:42 . Memory (MB): peak = 1437.301 ; gain = 27.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:13 ; elapsed = 00:05:43 . Memory (MB): peak = 1437.301 ; gain = 27.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:14 ; elapsed = 00:05:43 . Memory (MB): peak = 1437.301 ; gain = 27.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name       | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | mem_reg[3]     | 96     | 96         | 96     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | mem_reg[14]    | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__2     | mem_reg[3]     | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | mem_reg[14]    | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__4     | mem_reg[14]    | 72     | 72         | 72     | 0       | 0      | 0      | 0      | 
+|dsrl__5     | mem_reg[14]    | 577    | 577        | 577    | 0       | 0      | 0      | 0      | 
+|dsrl__6     | mem_reg[3]     | 96     | 96         | 96     | 0       | 0      | 0      | 0      | 
+|dsrl__7     | mem_reg[14]    | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__8     | mem_reg[3]     | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__9     | mem_reg[14]    | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__10    | mem_reg[14]    | 72     | 72         | 72     | 0       | 0      | 0      | 0      | 
+|dsrl__11    | mem_reg[14]    | 73     | 73         | 73     | 0       | 0      | 0      | 0      | 
+|dsrl__12    | SRL_SIG_reg[2] | 64     | 64         | 64     | 0       | 0      | 0      | 0      | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   270|
+|2     |LUT1     |    67|
+|3     |LUT2     |   223|
+|4     |LUT3     |   840|
+|5     |LUT4     |  1178|
+|6     |LUT5     |   442|
+|7     |LUT6     |   381|
+|8     |RAMB18E1 |     1|
+|9     |RAMB36E1 |    10|
+|11    |SRL16E   |   630|
+|12    |FDRE     |  4463|
+|13    |FDSE     |    18|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:14 ; elapsed = 00:05:44 . Memory (MB): peak = 1437.301 ; gain = 27.832
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 140 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:08 ; elapsed = 00:05:00 . Memory (MB): peak = 1437.301 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:04:14 ; elapsed = 00:05:45 . Memory (MB): peak = 1437.301 ; gain = 27.832
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.832 . Memory (MB): peak = 1437.301 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 281 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1437.301 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: b78dbb7a
+INFO: [Common 17-83] Releasing license: Synthesis
+179 Infos, 112 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:04:40 ; elapsed = 00:06:24 . Memory (MB): peak = 1437.301 ; gain = 27.832
+INFO: [Common 17-1381] The checkpoint 'C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_ddrBenchmark_0_0_synth_1/pynq_ddrbench_ddrBenchmark_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1437.301 ; gain = 0.000
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP pynq_ddrbench_ddrBenchmark_0_0, cache-ID = e181ffa4612c7e74
+INFO: [Coretcl 2-1174] Renamed 74 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_ddrBenchmark_0_0_synth_1/pynq_ddrbench_ddrBenchmark_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file pynq_ddrbench_ddrBenchmark_0_0_utilization_synth.rpt -pb pynq_ddrbench_ddrBenchmark_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jan  9 23:08:34 2023...

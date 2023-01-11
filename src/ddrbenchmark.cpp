@@ -58,12 +58,15 @@ void runBench(ap_uint<INPUT_BITWIDTH> *mem, hls::stream<int64_t> &cmd,
 
 void ddrBenchmark(ap_uint<INPUT_BITWIDTH> *mem, int dataNum, bool rw, int64_t *res) {
 
-//#pragma HLS INTERFACE m_axi port=mem depth=dataNum bundle=gmem num_write_outstanding=4 max_write_burst_length=4 num_read_outstanding=4 max_read_burst_length=4 offset=slave
-#pragma HLS INTERFACE m_axi port=mem depth=data_depth bundle=gmem offset=slave
-#pragma HLS INTERFACE s_axilite register port=mem bundle=control
-#pragma HLS INTERFACE s_axilite register port=return bundle=control
+#pragma HLS INTERFACE m_axi port=mem depth=max_data_depth bundle=gmem offset=slave
+#pragma HLS INTERFACE m_axi port=res depth=1 bundle=results offset=slave
 
-	std::cout << "** Started kernel **" << std::endl;
+#pragma HLS INTERFACE s_axilite register port=mem bundle=control
+#pragma HLS INTERFACE s_axilite register port=res bundle=control
+
+#pragma HLS INTERFACE s_axilite register port=dataNum bundle=control
+#pragma HLS INTERFACE s_axilite register port=rw bundle=control
+#pragma HLS INTERFACE s_axilite register port=return bundle=control
 
 #pragma HLS DATAFLOW
 

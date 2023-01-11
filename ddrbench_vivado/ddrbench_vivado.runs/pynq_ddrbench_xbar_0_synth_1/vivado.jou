@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Jan  9 22:58:21 2023
+# Process ID: 15392
+# Current directory: C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1
+# Command line: vivado.exe -log pynq_ddrbench_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pynq_ddrbench_xbar_0.tcl
+# Log file: C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1/pynq_ddrbench_xbar_0.vds
+# Journal file: C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1\vivado.jou
+# Running On: HpPC, OS: Windows, CPU Frequency: 2195 MHz, CPU Physical cores: 2, Host memory: 6333 MB
+#-----------------------------------------------------------
+source pynq_ddrbench_xbar_0.tcl -notrace

@@ -1,10 +1,10 @@
-#include "..\ddrbenchmark.hpp"
+#include "../ddrbenchmark.hpp"
 
 //#define MULTIPLE_TEST
 #define REPETITIONS 100
 
 void runHWTest(ap_uint<INPUT_BITWIDTH> *mem, int dataNum, bool rw) {
-	int64_t timeTaken;
+	int64_t timeTaken = 0;
 	bool valid = false;
 
 	ddrBenchmark(mem, dataNum, rw, &timeTaken);
@@ -24,7 +24,7 @@ void runHWTest(ap_uint<INPUT_BITWIDTH> *mem, int dataNum, bool rw) {
 
 void runHWTestMultiple(ap_uint<INPUT_BITWIDTH> *mem, int dataNum, bool rw,
 		int totReps) {
-	int64_t timeTaken;
+	int64_t timeTaken = 0;
 	double timeTakenAvg = 0.0;
 	bool valid = 0;
 	int rep = 0;
@@ -59,17 +59,22 @@ void runHWTestMultiple(ap_uint<INPUT_BITWIDTH> *mem, int dataNum, bool rw,
 int main(int argc, char *argv[]) {
 	std::cout << "** Starting TB **" << std::endl;
 
-	ap_uint<INPUT_BITWIDTH> mem[TEST_DIM];
+	ap_uint<INPUT_BITWIDTH> mem[MAX_TEST_DIM];
 
 	int64_t timeTaken;
+	int dataDim = 16384;
+	int valid = -1;
 
+	if (dataDim > MAX_TEST_DIM) {
+		return -1;
+	}
 
 #ifndef MULTIPLE_TEST
-	runHWTest(mem, TEST_DIM, WRITE);
-	runHWTest(mem, TEST_DIM, READ);
+	runHWTest(mem, dataDim, WRITE);
+	runHWTest(mem, dataDim, READ);
 #else
-	runHWTestMultiple(mem, TEST_DIM, WRITE, REPETITIONS);
-	runHWTestMultiple(mem, TEST_DIM, READ, REPETITIONS);
+	runHWTestMultiple(mem, dataDim, WRITE, REPETITIONS);
+	runHWTestMultiple(mem, dataDim, READ, REPETITIONS);
 #endif
 
 	std::cout << "** TB ended **" << std::endl;

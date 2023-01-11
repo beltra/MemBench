@@ -2,30 +2,37 @@
 <vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
   <errorLogs>
     <logs>
-      <synLog>
-        <logs message="ERROR: [HLS 207-3776] use of undeclared identifier 'TEST_DIM' (MemBench/src/ddrbenchmark.cpp:63:44)" projectName="MemBench" solutionName="solution1" date="2023-01-09T13:16:56.806+0100"/>
-      </synLog>
+      <synLog/>
       <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="MemBench" solutionName="solution1" date="2023-01-09T13:40:39.359+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="MemBench" solutionName="solution1" date="2023-01-09T13:38:52.248+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="MemBench" solutionName="solution1" date="2023-01-09T13:36:28.690+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="MemBench" solutionName="solution1" date="2023-01-09T13:34:08.995+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="MemBench" solutionName="solution1" date="2023-01-09T13:32:20.641+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="MemBench" solutionName="solution1" date="2023-01-09T13:30:20.991+0100"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="MemBench" solutionName="solution1" date="2023-01-09T13:29:02.542+0100"/>
-      </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog/>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:45.687+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_BREADY' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:43.139+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWUSER' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:42.651+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWREGION' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:42.227+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWQOS' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:41.959+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWPROT' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:41.890+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWCACHE' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:41.597+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWLOCK' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:41.537+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWBURST' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:41.500+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWSIZE' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:41.423+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWLEN' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:41.373+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWID' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:41.327+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWADDR' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:41.288+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWVALID' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:41.230+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_BREADY' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:40.429+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWUSER' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:40.339+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWREGION' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:40.300+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWQOS' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:40.184+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWPROT' to 0." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:05:39.939+0100" type="Warning"/>
+      </synLog>
+      <simLog>
+        <logs message="WARNING: [HLS 200-616] This design uses AXI slave interface in dataflow mode, which can result in simulation dead-lock and/or mismatching results (due to AXI slave FIFO sizing)." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:06:58.737+0100" type="Warning"/>
+        <logs message="WARNING: [COSIM 212-384] This design has internal non-blocking FIFO/Stream accesses, which may result in mismatches or simulation hanging." projectName="ddrBench" solutionName="ddrbench_sol" date="2023-01-09T22:06:18.810+0100" type="Warning"/>
+      </simLog>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>
