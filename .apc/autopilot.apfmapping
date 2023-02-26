@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="ddrbenchmark.hpp" path="C:\Users\gbeve\Downloads\ddrBench\src\ddrbenchmark.hpp"/>
-    <originFiles name="ddrbenchmark.cpp" path="C:\Users\gbeve\Downloads\ddrBench\src\ddrbenchmark.cpp"/>
+    <originFiles name="ddrbenchmark.hpp" path="C:\FPGA\MemBench\src\ddrbenchmark.hpp"/>
+    <originFiles name="ddrbenchmark.cpp" path="C:\FPGA\MemBench\src\ddrbenchmark.cpp"/>
   </source>
   <testbench>
-    <originFiles name="ddrbenchmark_testbench.cpp" path="C:\Users\gbeve\Downloads\MemBench\src\testbench\ddrbenchmark_testbench.cpp"/>
+    <originFiles name="ddrbenchmark_testbench.cpp" path="C:\FPGA\MemBench\src\testbench\ddrbenchmark_testbench.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

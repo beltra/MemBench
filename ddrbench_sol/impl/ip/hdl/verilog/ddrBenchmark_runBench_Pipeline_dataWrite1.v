@@ -60,8 +60,8 @@ module ddrBenchmark_runBench_Pipeline_dataWrite1 (
         m_axi_gmem_BRESP,
         m_axi_gmem_BID,
         m_axi_gmem_BUSER,
-        sext_ln30_1,
-        trunc_ln30_3
+        sext_ln17_1,
+        trunc_ln17_3
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
@@ -87,8 +87,8 @@ output  [3:0] m_axi_gmem_AWREGION;
 output  [0:0] m_axi_gmem_AWUSER;
 output   m_axi_gmem_WVALID;
 input   m_axi_gmem_WREADY;
-output  [511:0] m_axi_gmem_WDATA;
-output  [63:0] m_axi_gmem_WSTRB;
+output  [63:0] m_axi_gmem_WDATA;
+output  [7:0] m_axi_gmem_WSTRB;
 output   m_axi_gmem_WLAST;
 output  [0:0] m_axi_gmem_WID;
 output  [0:0] m_axi_gmem_WUSER;
@@ -107,7 +107,7 @@ output  [3:0] m_axi_gmem_ARREGION;
 output  [0:0] m_axi_gmem_ARUSER;
 input   m_axi_gmem_RVALID;
 output   m_axi_gmem_RREADY;
-input  [511:0] m_axi_gmem_RDATA;
+input  [63:0] m_axi_gmem_RDATA;
 input   m_axi_gmem_RLAST;
 input  [0:0] m_axi_gmem_RID;
 input  [8:0] m_axi_gmem_RFIFONUM;
@@ -118,8 +118,8 @@ output   m_axi_gmem_BREADY;
 input  [1:0] m_axi_gmem_BRESP;
 input  [0:0] m_axi_gmem_BID;
 input  [0:0] m_axi_gmem_BUSER;
-input  [57:0] sext_ln30_1;
-input  [30:0] trunc_ln30_3;
+input  [60:0] sext_ln17_1;
+input  [30:0] trunc_ln17_3;
 
 reg ap_idle;
 reg m_axi_gmem_WVALID;
@@ -132,7 +132,7 @@ reg    ap_idle_pp0;
 wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] icmp_ln30_fu_94_p2;
+wire   [0:0] icmp_ln17_fu_94_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
@@ -142,7 +142,7 @@ reg   [30:0] i_reg_122;
 reg    ap_block_pp0_stage0_11001;
 wire    ap_block_pp0_stage0_01001;
 reg   [30:0] i_1_fu_52;
-wire   [30:0] add_ln30_fu_100_p2;
+wire   [30:0] add_ln17_fu_100_p2;
 wire    ap_loop_init;
 reg   [30:0] ap_sig_allocacmp_i;
 reg    ap_done_reg;
@@ -209,8 +209,8 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((icmp_ln30_fu_94_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            i_1_fu_52 <= add_ln30_fu_100_p2;
+        if (((icmp_ln17_fu_94_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            i_1_fu_52 <= add_ln17_fu_100_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             i_1_fu_52 <= 31'd0;
         end
@@ -224,7 +224,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln30_fu_94_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln17_fu_94_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -298,7 +298,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln30_fu_100_p2 = (ap_sig_allocacmp_i + 31'd1);
+assign add_ln17_fu_100_p2 = (ap_sig_allocacmp_i + 31'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -324,7 +324,7 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign icmp_ln30_fu_94_p2 = ((ap_sig_allocacmp_i == trunc_ln30_3) ? 1'b1 : 1'b0);
+assign icmp_ln17_fu_94_p2 = ((ap_sig_allocacmp_i == trunc_ln17_3) ? 1'b1 : 1'b0);
 
 assign m_axi_gmem_ARADDR = 64'd0;
 
@@ -384,7 +384,7 @@ assign m_axi_gmem_WID = 1'd0;
 
 assign m_axi_gmem_WLAST = 1'b0;
 
-assign m_axi_gmem_WSTRB = 64'd18446744073709551615;
+assign m_axi_gmem_WSTRB = 8'd255;
 
 assign m_axi_gmem_WUSER = 1'd0;
 

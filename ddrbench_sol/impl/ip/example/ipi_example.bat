@@ -6,4 +6,4 @@
 
 @echo off
 
-D:/Xilinx/Vivado/2022.1/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xc7z020-clg400-1 ../xilinx_com_hls_ddrBenchmark_1_0.zip
+C:/Xilinx/Vivado/2022.1/bin/vivado  -notrace -mode batch -source ipi_example.tcl -tclargs xc7z020-clg400-1 ../xilinx_com_hls_ddrBenchmark_1_0.zip

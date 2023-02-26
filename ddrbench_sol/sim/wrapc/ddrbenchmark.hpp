@@ -5,23 +5,24 @@
 #include "ap_int.h"
 #include <hls_stream.h>
 
-#define INPUT_BITWIDTH 512
+#define DATA_BITWIDTH 32	 // Single data size in bits
 
-#define MAX_TEST_DIM 16384
+#define MAX_MEM_USE 2  // Max test dim in MB
+
+#define MAX_TEST_DIM ((MAX_MEM_USE*1024*1024)/DATA_BITWIDTH)*8
 
 #define WRITE 1
 #define READ 0
 
 const unsigned int max_data_depth = MAX_TEST_DIM;
 
-void ddrBenchmark(ap_uint<INPUT_BITWIDTH> *mem, int dataNum, bool rw, int64_t *res);
+void ddrBenchmark(ap_uint<DATA_BITWIDTH> *mem, int dataNum, bool rw, uint64_t *res);
 
-void writeData(ap_uint<INPUT_BITWIDTH> *mem, int dataNum);
-void readData(ap_uint<INPUT_BITWIDTH> *mem, int dataNum);
+void writeData(ap_uint<DATA_BITWIDTH> *mem, int dataNum);
+void readData(ap_uint<DATA_BITWIDTH> *mem, int dataNum);
 
-void compareHWResult(ap_uint<INPUT_BITWIDTH> *data, int dataNum, bool *res);
-void countCycles(hls::stream<int64_t> &cmd, int64_t *out);
-void runBench(ap_uint<INPUT_BITWIDTH> *mem, hls::stream<int64_t> &cmd,
+void countCycles(hls::stream<int64_t> &cmd, uint64_t *out);
+void runBench(ap_uint<DATA_BITWIDTH> *mem, hls::stream<int64_t> &cmd,
 		int dataNum, bool rw);
 
 #endif //DDRBENCHMARK_HPP

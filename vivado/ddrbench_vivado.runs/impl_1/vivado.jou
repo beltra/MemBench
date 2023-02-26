@@ -2,12 +2,12 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Mon Jan  9 23:11:59 2023
-# Process ID: 14248
-# Current directory: C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/impl_1
+# Start of session at: Sun Feb 26 22:09:10 2023
+# Process ID: 50020
+# Current directory: C:/FPGA/MemBench/vivado/ddrbench_vivado.runs/impl_1
 # Command line: vivado.exe -log pynq_ddrbench_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source pynq_ddrbench_wrapper.tcl -notrace
-# Log file: C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/impl_1/pynq_ddrbench_wrapper.vdi
-# Journal file: C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/impl_1\vivado.jou
-# Running On: HpPC, OS: Windows, CPU Frequency: 2195 MHz, CPU Physical cores: 2, Host memory: 6333 MB
+# Log file: C:/FPGA/MemBench/vivado/ddrbench_vivado.runs/impl_1/pynq_ddrbench_wrapper.vdi
+# Journal file: C:/FPGA/MemBench/vivado/ddrbench_vivado.runs/impl_1\vivado.jou
+# Running On: LenovoPC, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 12723 MB
 #-----------------------------------------------------------
 source pynq_ddrbench_wrapper.tcl -notrace

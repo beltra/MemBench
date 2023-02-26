@@ -2,19 +2,19 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Mon Jan  9 22:58:21 2023
-# Process ID: 15392
-# Current directory: C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1
+# Start of session at: Mon Feb 13 00:05:35 2023
+# Process ID: 19596
+# Current directory: C:/FPGA/MemBench/vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1
 # Command line: vivado.exe -log pynq_ddrbench_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pynq_ddrbench_xbar_0.tcl
-# Log file: C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1/pynq_ddrbench_xbar_0.vds
-# Journal file: C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1\vivado.jou
-# Running On: HpPC, OS: Windows, CPU Frequency: 2195 MHz, CPU Physical cores: 2, Host memory: 6333 MB
+# Log file: C:/FPGA/MemBench/vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1/pynq_ddrbench_xbar_0.vds
+# Journal file: C:/FPGA/MemBench/vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1\vivado.jou
+# Running On: LenovoPC, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 12723 MB
 #-----------------------------------------------------------
 source pynq_ddrbench_xbar_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1347.480 ; gain = 591.258
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1283.766 ; gain = 7.121
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/gbeve/Downloads/ddrBench/ddrbench_sol/impl/ip'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/FPGA/MemBench/ddrbench_sol/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
 Command: synth_design -top pynq_ddrbench_xbar_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -22,122 +22,112 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10832
+INFO: [Synth 8-7075] Helper process launched with PID 19204
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:34 ; elapsed = 00:01:01 . Memory (MB): peak = 1347.480 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1283.766 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'pynq_ddrbench_xbar_0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_xbar_0/synth/pynq_ddrbench_xbar_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_axi_crossbar' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4883]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_crossbar' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:2238]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_si_transactor' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_addr_decoder' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2132]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:61]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:61]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2132]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_addr_decoder' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_axic_srl_fifo' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_ndeep_srl' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
-INFO: [Synth 8-6157] synthesizing module 'SRLC32E' [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:106148]
-INFO: [Synth 8-6155] done synthesizing module 'SRLC32E' (0#1) [D:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:106148]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_ndeep_srl' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_axic_srl_fifo' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_si_transactor' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_si_transactor__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_si_transactor__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_splitter' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4460]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_splitter' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4460]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_wdata_router' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4735]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_ndeep_srl__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_ndeep_srl__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_wdata_router' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4735]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_si_transactor__parameterized1' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_axic_srl_fifo__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_axic_srl_fifo__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_si_transactor__parameterized1' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_wdata_router__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4735]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_ndeep_srl__parameterized1' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_ndeep_srl__parameterized1' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_wdata_router__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4735]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_addr_decoder__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_addr_decoder__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_addr_decoder__parameterized1' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_addr_decoder__parameterized1' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_wdata_mux' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4560]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized1' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized1' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_wdata_mux' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4560]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_26_axi_register_slice' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice__parameterized1' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice__parameterized1' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice__parameterized2' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice__parameterized2' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_26_axi_register_slice' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
-WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_26_axi_register_slice' is unconnected for instance 'reg_slice_mi' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_26_axi_register_slice' has 93 connections declared, but only 92 given [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_26_axi_register_slice' is unconnected for instance 'reg_slice_mi' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_26_axi_register_slice' has 93 connections declared, but only 92 given [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_axic_srl_fifo__parameterized1' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_ndeep_srl__parameterized2' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_ndeep_srl__parameterized2' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_axic_srl_fifo__parameterized1' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_wdata_mux__parameterized0' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4560]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized2' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized2' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_wdata_mux__parameterized0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4560]
-WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_26_axi_register_slice' is unconnected for instance 'reg_slice_mi' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_26_axi_register_slice' has 93 connections declared, but only 92 given [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_decerr_slave' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3500]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3633]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_decerr_slave' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3500]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_addr_arbiter' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:422]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_addr_arbiter' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:422]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_crossbar' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:2238]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_axi_crossbar' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4883]
-INFO: [Synth 8-6155] done synthesizing module 'pynq_ddrbench_xbar_0' (0#1) [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_xbar_0/synth/pynq_ddrbench_xbar_0.v:53]
-WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
-WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
-WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
-WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
-WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
-WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
-WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
-WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[0].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[1].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[2].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
+INFO: [Synth 8-6157] synthesizing module 'pynq_ddrbench_xbar_0' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_xbar_0_1/synth/pynq_ddrbench_xbar_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_axi_crossbar' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4883]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_crossbar' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:2238]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_si_transactor' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_addr_decoder' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2132]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2132]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_addr_decoder' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_axic_srl_fifo' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_ndeep_srl' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
+INFO: [Synth 8-6157] synthesizing module 'SRLC32E' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:106148]
+INFO: [Synth 8-6155] done synthesizing module 'SRLC32E' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:106148]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_ndeep_srl' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_axic_srl_fifo' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_si_transactor' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_si_transactor__parameterized0' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_si_transactor__parameterized0' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_splitter' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4460]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_splitter' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4460]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_wdata_router' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4735]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_ndeep_srl__parameterized0' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_ndeep_srl__parameterized0' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_wdata_router' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4735]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_si_transactor__parameterized1' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_si_transactor__parameterized1' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3799]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_addr_decoder__parameterized0' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_addr_decoder__parameterized0' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_addr_decoder__parameterized1' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_addr_decoder__parameterized1' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:793]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_axic_srl_fifo__parameterized0' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_axic_srl_fifo__parameterized0' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_wdata_mux' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4560]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized0' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized0' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_wdata_mux' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4560]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_26_axi_register_slice' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice__parameterized0' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice__parameterized0' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice__parameterized1' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice__parameterized1' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice__parameterized2' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_26_axic_register_slice__parameterized2' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:1497]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_26_axi_register_slice' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/0a3f/hdl/axi_register_slice_v2_1_vl_rfs.v:3725]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_26_axi_register_slice' is unconnected for instance 'reg_slice_mi' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_26_axi_register_slice' has 93 connections declared, but only 92 given [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_axic_srl_fifo__parameterized1' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_ndeep_srl__parameterized1' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_ndeep_srl__parameterized1' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1134]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_axic_srl_fifo__parameterized1' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:697]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_wdata_mux__parameterized0' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4560]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized1' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized1' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:888]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_wdata_mux__parameterized0' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4560]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_26_axi_register_slice' is unconnected for instance 'reg_slice_mi' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+WARNING: [Synth 8-7023] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_26_axi_register_slice' has 93 connections declared, but only 92 given [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_decerr_slave' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3500]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3633]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_decerr_slave' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:3500]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_27_addr_arbiter' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:422]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2451]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_addr_arbiter' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:422]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_crossbar' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:2238]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_27_axi_crossbar' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4883]
+INFO: [Synth 8-6155] done synthesizing module 'pynq_ddrbench_xbar_0' (0#1) [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_xbar_0_1/synth/pynq_ddrbench_xbar_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5390/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[0].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[1].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/3fa0/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
 WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_26_axic_register_slice is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_26_axic_register_slice is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_26_axic_register_slice__parameterized0 is either unconnected or has no load
@@ -240,55 +230,54 @@ WARNING: [Synth 8-7129] Port S_AXI_ARSIZE[4] in module axi_crossbar_v2_1_27_cros
 WARNING: [Synth 8-7129] Port S_AXI_ARSIZE[3] in module axi_crossbar_v2_1_27_crossbar is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:03 ; elapsed = 00:01:54 . Memory (MB): peak = 1412.824 ; gain = 65.344
+Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:55 . Memory (MB): peak = 1412.824 ; gain = 65.344
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:04 ; elapsed = 00:01:55 . Memory (MB): peak = 1412.824 ; gain = 65.344
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1412.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 1398.844 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_xbar_0/pynq_ddrbench_xbar_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [c:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_xbar_0/pynq_ddrbench_xbar_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_xbar_0_1/pynq_ddrbench_xbar_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_xbar_0_1/pynq_ddrbench_xbar_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/FPGA/MemBench/vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/FPGA/MemBench/vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1441.406 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1398.844 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1444.199 ; gain = 2.793
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.106 . Memory (MB): peak = 1398.844 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:48 ; elapsed = 00:02:58 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:50 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:48 ; elapsed = 00:02:58 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:50 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/FPGA/MemBench/vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:48 ; elapsed = 00:02:58 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:50 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized0'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized1'
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized2'
 INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.write_cs_reg' in module 'axi_crossbar_v2_1_27_decerr_slave'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -320,22 +309,13 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    ZERO |                             1000 |                               10
-                     ONE |                             0010 |                               11
-                     TWO |                             0001 |                               01
-                  iSTATE |                             0100 |                               00
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized2'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
             P_WRITE_IDLE |                              001 |                               00
             P_WRITE_DATA |                              010 |                               01
             P_WRITE_RESP |                              100 |                               10
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.write_cs_reg' using encoding 'one-hot' in module 'axi_crossbar_v2_1_27_decerr_slave'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:52 ; elapsed = 00:03:03 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:51 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -343,33 +323,30 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input    8 Bit       Adders := 3     
-	   2 Input    5 Bit       Adders := 8     
-	   2 Input    4 Bit       Adders := 7     
-	   2 Input    3 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 8     
+	   2 Input    3 Bit       Adders := 7     
 	   2 Input    2 Bit       Adders := 3     
 	   2 Input    1 Bit       Adders := 2     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 11    
+	   2 Input      1 Bit         XORs := 9     
 +---Registers : 
-	              516 Bit    Registers := 6     
 	               96 Bit    Registers := 2     
+	               68 Bit    Registers := 4     
 	                8 Bit    Registers := 3     
-	                5 Bit    Registers := 4     
-	                4 Bit    Registers := 10    
-	                3 Bit    Registers := 9     
-	                2 Bit    Registers := 24    
-	                1 Bit    Registers := 48    
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 22    
+	                1 Bit    Registers := 45    
 +---Muxes : 
-	   2 Input  516 Bit        Muxes := 6     
-	   2 Input   24 Bit        Muxes := 6     
+	   2 Input   68 Bit        Muxes := 4     
+	   2 Input   16 Bit        Muxes := 4     
 	   2 Input    8 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 4     
-	   3 Input    4 Bit        Muxes := 5     
-	   2 Input    4 Bit        Muxes := 15    
-	   2 Input    3 Bit        Muxes := 4     
-	   2 Input    2 Bit        Muxes := 28    
-	   2 Input    1 Bit        Muxes := 71    
-	   4 Input    1 Bit        Muxes := 15    
+	   3 Input    4 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 14    
+	   2 Input    3 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 19    
+	   2 Input    1 Bit        Muxes := 60    
+	   4 Input    1 Bit        Muxes := 12    
 	   3 Input    1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -387,33 +364,30 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-INFO: [Synth 8-3332] Sequential element (wrouter_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_27_wdata_router.
-INFO: [Synth 8-3332] Sequential element (wrouter_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_27_wdata_router__parameterized0.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[2]) is unused and will be removed from module axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized1__1.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[2]) is unused and will be removed from module axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized1.
-INFO: [Synth 8-3332] Sequential element (gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_27_wdata_mux__parameterized0.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[3]) is unused and will be removed from module axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized1.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[1]) is unused and will be removed from module axi_data_fifo_v2_1_25_axic_reg_srl_fifo__parameterized1.
+INFO: [Synth 8-3332] Sequential element (gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.wdata_router_w/wrouter_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_27_axi_crossbar.
+INFO: [Synth 8-3332] Sequential element (gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_27_axi_crossbar.
+INFO: [Synth 8-3332] Sequential element (gen_samd.crossbar_samd/gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_27_axi_crossbar.
+INFO: [Synth 8-3332] Sequential element (gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_27_axi_crossbar.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:19 ; elapsed = 00:03:38 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:56 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:43 ; elapsed = 00:04:17 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:01:04 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:47 ; elapsed = 00:04:25 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:01:07 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:56 ; elapsed = 00:04:35 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:01:08 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -431,37 +405,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:17 ; elapsed = 00:05:02 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:01:14 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:17 ; elapsed = 00:05:02 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:01:14 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:18 ; elapsed = 00:05:04 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:01:14 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:18 ; elapsed = 00:05:04 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:14 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:20 ; elapsed = 00:05:05 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:01:14 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:20 ; elapsed = 00:05:05 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:01:14 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -477,41 +451,38 @@ Report Cell Usage:
 +------+--------+------+
 |      |Cell    |Count |
 +------+--------+------+
-|1     |LUT1    |    11|
-|2     |LUT2    |   258|
-|3     |LUT3    |  1486|
-|4     |LUT4    |    52|
-|5     |LUT5    |    56|
-|6     |LUT6    |   103|
-|7     |MUXF7   |     1|
-|8     |SRLC32E |     6|
-|9     |FDRE    |  1326|
-|10    |FDSE    |    23|
+|1     |LUT1    |    12|
+|2     |LUT2    |    50|
+|3     |LUT3    |   296|
+|4     |LUT4    |    46|
+|5     |LUT5    |    51|
+|6     |LUT6    |    94|
+|7     |SRLC32E |     4|
+|8     |FDRE    |   418|
+|9     |FDSE    |    21|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:20 ; elapsed = 00:05:05 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:01:14 . Memory (MB): peak = 1398.844 ; gain = 115.078
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 220 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:55 ; elapsed = 00:04:35 . Memory (MB): peak = 1444.199 ; gain = 65.344
-Synthesis Optimization Complete : Time (s): cpu = 00:03:20 ; elapsed = 00:05:06 . Memory (MB): peak = 1444.199 ; gain = 96.719
+Synthesis finished with 0 errors, 0 critical warnings and 218 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:01:10 . Memory (MB): peak = 1398.844 ; gain = 115.078
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:01:14 . Memory (MB): peak = 1398.844 ; gain = 115.078
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.529 . Memory (MB): peak = 1444.199 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1398.844 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1444.199 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1398.844 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: af27a958
+Synth Design complete, checksum: 92c44534
 INFO: [Common 17-83] Releasing license: Synthesis
-125 Infos, 124 Warnings, 0 Critical Warnings and 0 Errors encountered.
+111 Infos, 121 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:41 ; elapsed = 00:05:38 . Memory (MB): peak = 1444.199 ; gain = 96.719
-INFO: [Common 17-1381] The checkpoint 'C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1/pynq_ddrbench_xbar_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP pynq_ddrbench_xbar_0, cache-ID = 393a94fc71006b04
-INFO: [Coretcl 2-1174] Renamed 35 cell refs.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/gbeve/Downloads/ddrBench/ddrbench_vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1/pynq_ddrbench_xbar_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:01:24 . Memory (MB): peak = 1398.844 ; gain = 115.078
+INFO: [Common 17-1381] The checkpoint 'C:/FPGA/MemBench/vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1/pynq_ddrbench_xbar_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP pynq_ddrbench_xbar_0, cache-ID = d9e1d09d43ffde85
+INFO: [Coretcl 2-1174] Renamed 29 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/FPGA/MemBench/vivado/ddrbench_vivado.runs/pynq_ddrbench_xbar_0_synth_1/pynq_ddrbench_xbar_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file pynq_ddrbench_xbar_0_utilization_synth.rpt -pb pynq_ddrbench_xbar_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jan  9 23:05:09 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 13 00:07:12 2023...

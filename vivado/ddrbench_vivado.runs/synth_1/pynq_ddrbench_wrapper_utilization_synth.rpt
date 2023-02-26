@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Mon Jan  9 23:11:47 2023
-| Host         : HpPC running 64-bit major release  (build 9200)
+| Date         : Sun Feb 26 22:09:02 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file pynq_ddrbench_wrapper_utilization_synth.rpt -pb pynq_ddrbench_wrapper_utilization_synth.pb
 | Design       : pynq_ddrbench_wrapper
 | Device       : xc7z020clg400-1
@@ -177,16 +177,11 @@ Table of Contents
 |               Ref Name               | Used |
 +--------------------------------------+------+
 | pynq_ddrbench_xbar_0                 |    1 |
-| pynq_ddrbench_s00_data_fifo_0        |    1 |
-| pynq_ddrbench_rst_ps7_0_100M_0       |    1 |
+| pynq_ddrbench_rst_ps7_0_50M_0        |    1 |
 | pynq_ddrbench_processing_system7_0_0 |    1 |
 | pynq_ddrbench_ddrBenchmark_0_0       |    1 |
-| pynq_ddrbench_auto_us_df_0           |    1 |
-| pynq_ddrbench_auto_pc_2              |    1 |
 | pynq_ddrbench_auto_pc_1              |    1 |
 | pynq_ddrbench_auto_pc_0              |    1 |
-| pynq_ddrbench_auto_ds_1              |    1 |
-| pynq_ddrbench_auto_ds_0              |    1 |
 +--------------------------------------+------+
 
 

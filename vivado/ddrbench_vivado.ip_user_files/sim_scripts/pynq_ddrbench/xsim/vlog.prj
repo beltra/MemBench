@@ -1,0 +1,26 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2022.1/data/xilinx_vip/include" --include "../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/ec67/hdl" --include "../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/5765/hdl" --include "../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog" --include "../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_ddrBenchmark_0_0_1/drivers/ddrBenchmark_v1_0/src" \
+"../../../bd/pynq_ddrbench/ip/pynq_ddrbench_processing_system7_0_0_1/sim/pynq_ddrbench_processing_system7_0_0.v" \
+"../../../bd/pynq_ddrbench/ip/pynq_ddrbench_xbar_0_1/sim/pynq_ddrbench_xbar_0.v" \
+"../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog/ddrBenchmark_control_s_axi.v" \
+"../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog/ddrBenchmark_countCycles.v" \
+"../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog/ddrBenchmark_countCycles_Pipeline_count.v" \
+"../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog/ddrBenchmark_entry_proc.v" \
+"../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog/ddrBenchmark_fifo_w64_d2_S.v" \
+"../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog/ddrBenchmark_fifo_w64_d3_S.v" \
+"../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog/ddrBenchmark_flow_control_loop_pipe_sequential_init.v" \
+"../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog/ddrBenchmark_gmem_m_axi.v" \
+"../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog/ddrBenchmark_hls_deadlock_detection_unit.v" \
+"../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog/ddrBenchmark_results_m_axi.v" \
+"../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog/ddrBenchmark_runBench.v" \
+"../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog/ddrBenchmark_runBench_Pipeline_dataWrite.v" \
+"../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog/ddrBenchmark_runBench_Pipeline_dataWrite1.v" \
+"../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog/ddrBenchmark_start_for_countCycles_U0.v" \
+"../../../../ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ipshared/30b1/hdl/verilog/ddrBenchmark.v" \
+"../../../bd/pynq_ddrbench/ip/pynq_ddrbench_ddrBenchmark_0_0_1/sim/pynq_ddrbench_ddrBenchmark_0_0.v" \
+"../../../bd/pynq_ddrbench/ip/pynq_ddrbench_auto_pc_0_1/sim/pynq_ddrbench_auto_pc_0.v" \
+"../../../bd/pynq_ddrbench/ip/pynq_ddrbench_auto_pc_1_1/sim/pynq_ddrbench_auto_pc_1.v" \
+"../../../bd/pynq_ddrbench/sim/pynq_ddrbench.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

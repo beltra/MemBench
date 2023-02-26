@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="ddrBenchmark_ddrBenchmark,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=3873,HLS_SYN_LUT=5571,HLS_VERSION=2022_1}" *)
+(* CORE_GENERATION_INFO="ddrBenchmark_ddrBenchmark,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=2566,HLS_SYN_LUT=4610,HLS_VERSION=2022_1}" *)
 
 module ddrBenchmark (
         s_axi_control_AWVALID,
@@ -127,7 +127,7 @@ parameter    C_S_AXI_CONTROL_ADDR_WIDTH = 6;
 parameter    C_S_AXI_DATA_WIDTH = 32;
 parameter    C_M_AXI_GMEM_ID_WIDTH = 1;
 parameter    C_M_AXI_GMEM_ADDR_WIDTH = 64;
-parameter    C_M_AXI_GMEM_DATA_WIDTH = 512;
+parameter    C_M_AXI_GMEM_DATA_WIDTH = 64;
 parameter    C_M_AXI_GMEM_AWUSER_WIDTH = 1;
 parameter    C_M_AXI_GMEM_ARUSER_WIDTH = 1;
 parameter    C_M_AXI_GMEM_WUSER_WIDTH = 1;
@@ -151,7 +151,7 @@ parameter    C_M_AXI_RESULTS_CACHE_VALUE = 3;
 
 parameter C_S_AXI_CONTROL_WSTRB_WIDTH = (32 / 8);
 parameter C_S_AXI_WSTRB_WIDTH = (32 / 8);
-parameter C_M_AXI_GMEM_WSTRB_WIDTH = (512 / 8);
+parameter C_M_AXI_GMEM_WSTRB_WIDTH = (64 / 8);
 parameter C_M_AXI_WSTRB_WIDTH = (32 / 8);
 parameter C_M_AXI_RESULTS_WSTRB_WIDTH = (64 / 8);
 
@@ -279,7 +279,7 @@ wire    gmem_AWREADY;
 wire    gmem_WREADY;
 wire    gmem_ARREADY;
 wire    gmem_RVALID;
-wire   [511:0] gmem_RDATA;
+wire   [63:0] gmem_RDATA;
 wire    gmem_RLAST;
 wire   [0:0] gmem_RID;
 wire   [8:0] gmem_RFIFONUM;
@@ -326,8 +326,8 @@ wire   [3:0] runBench_U0_m_axi_gmem_AWQOS;
 wire   [3:0] runBench_U0_m_axi_gmem_AWREGION;
 wire   [0:0] runBench_U0_m_axi_gmem_AWUSER;
 wire    runBench_U0_m_axi_gmem_WVALID;
-wire   [511:0] runBench_U0_m_axi_gmem_WDATA;
-wire   [63:0] runBench_U0_m_axi_gmem_WSTRB;
+wire   [63:0] runBench_U0_m_axi_gmem_WDATA;
+wire   [7:0] runBench_U0_m_axi_gmem_WSTRB;
 wire    runBench_U0_m_axi_gmem_WLAST;
 wire   [0:0] runBench_U0_m_axi_gmem_WID;
 wire   [0:0] runBench_U0_m_axi_gmem_WUSER;
@@ -469,7 +469,7 @@ ddrBenchmark_gmem_m_axi #(
     .C_USER_VALUE( C_M_AXI_GMEM_USER_VALUE ),
     .C_PROT_VALUE( C_M_AXI_GMEM_PROT_VALUE ),
     .C_CACHE_VALUE( C_M_AXI_GMEM_CACHE_VALUE ),
-    .USER_DW( 512 ),
+    .USER_DW( 64 ),
     .USER_AW( 64 ))
 gmem_m_axi_U(
     .AWVALID(m_axi_gmem_AWVALID),
@@ -906,5 +906,12 @@ reg find_df_deadlock = 0;
 `include "ddrBenchmark_hls_deadlock_detector.vh"
 // synthesis translate_on
 
+
+reg find_df_deadlock = 0;
+// synthesis translate_off
+`include "ddrBenchmark_hls_deadlock_detector.vh"
+// synthesis translate_on
+
 endmodule //ddrBenchmark
+
 

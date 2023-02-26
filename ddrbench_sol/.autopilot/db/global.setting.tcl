@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c ../src/ddrbenchmark.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile C:/Users/gbeve/Downloads/ddrBench/ddrbench_sol/ddrbench_sol.directive
+set DirectiveFile C:/FPGA/MemBench/ddrbench_sol/ddrbench_sol.directive
 set TBFiles {verilog ../src/testbench/ddrbenchmark_testbench.cpp bc ../src/testbench/ddrbenchmark_testbench.cpp vhdl ../src/testbench/ddrbenchmark_testbench.cpp sc ../src/testbench/ddrbenchmark_testbench.cpp cas ../src/testbench/ddrbenchmark_testbench.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

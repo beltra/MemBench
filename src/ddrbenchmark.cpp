@@ -1,6 +1,6 @@
 #include "ddrbenchmark.hpp"
 
-void countCycles(hls::stream<int64_t> &cmd, int64_t *out) {
+void countCycles(hls::stream<int64_t> &cmd, uint64_t *out) {
 	int64_t val;
 	// Start counting when data is available
 	int64_t cnt = cmd.read();
@@ -13,50 +13,39 @@ void countCycles(hls::stream<int64_t> &cmd, int64_t *out) {
 	*out = cnt;
 }
 
-void compareHWResult(ap_uint<INPUT_BITWIDTH> *data, int dataNum, bool *res) {
-	bool valid = true;
-
-	// Check if data in memory is correctly written
-	verifyData: for (int i = 0; i < dataNum && valid; i++) {
-#pragma HLS PIPELINE
-		valid = data[i] == (ap_uint<INPUT_BITWIDTH> ) i;
-	}
-	*res = valid;
-
-	return;
-}
-
-void writeData(ap_uint<INPUT_BITWIDTH> *mem, int dataNum) {
+void writeData(ap_uint<DATA_BITWIDTH> *mem, int dataNum) {
 	dataWrite: for (int i = 0; i < dataNum; i++) {
-		mem[i] = (ap_uint<INPUT_BITWIDTH> ) i;
+#pragma HLS PIPELINE II=1
+		mem[i] = (ap_uint<DATA_BITWIDTH> ) i;	// Store a number in the memory
 	}
 }
 
-void readData(ap_uint<INPUT_BITWIDTH> *mem, int dataNum) {
-	ap_uint< INPUT_BITWIDTH> tmp;
+void readData(ap_uint<DATA_BITWIDTH> *mem, int dataNum) {
+	ap_uint<DATA_BITWIDTH> tmp;
 	dataRead: for (int i = 0; i < dataNum; i++) {
-		tmp = mem[i];
+#pragma HLS PIPELINE II=1
+		tmp = mem[i];	// Read each value and store it (to be overwritten by the next cycle)
 	}
 }
 
-void runBench(ap_uint<INPUT_BITWIDTH> *mem, hls::stream<int64_t> &cmd,
+void runBench(ap_uint<DATA_BITWIDTH> *mem, hls::stream<int64_t> &cmd,
 		int dataNum, bool rw) {
 	if (rw == WRITE) {
 		cmd.write(0);  // Start counting
 		writeData(mem, dataNum);  // Write data
-		cmd.write(0);  // Stop counting
+		cmd.write(1);  // Stop counting
 	} else if (rw == READ) {
-		if (mem[1] != 1) {
+		if (mem[dataNum] != dataNum) {
 			// Data not already written one time
 			writeData(mem, dataNum);
 		}
 		cmd.write(0);  // Start counting
 		readData(mem, dataNum);  // Read data
-		cmd.write(0);  // Stop counting
+		cmd.write(1);  // Stop counting
 	}
 }
 
-void ddrBenchmark(ap_uint<INPUT_BITWIDTH> *mem, int dataNum, bool rw, int64_t *res) {
+void ddrBenchmark(ap_uint<DATA_BITWIDTH> *mem, int dataNum, bool rw, uint64_t *res) {
 
 #pragma HLS INTERFACE m_axi port=mem depth=max_data_depth bundle=gmem offset=slave
 #pragma HLS INTERFACE m_axi port=res depth=1 bundle=results offset=slave

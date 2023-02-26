@@ -1,11 +1,27 @@
 {"sourceFile": [{
       "name": "",
-      "directive": [{
+      "directive": [
+        {
           "functionName": "ddrBenchmark",
           "label": "",
           "functionLabel": "",
           "id": "1",
-          "sourceFile": "C:\/Users\/gbeve\/Downloads\/ddrBench\/ddrbench_sol\/csynth.tcl",
+          "sourceFile": "C:\/FPGA\/MemBench\/ddrbench_sol\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "ddrBenchmark"
+              }]
+          }
+        },
+        {
+          "functionName": "ddrBenchmark",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "C:\/FPGA\/MemBench\/ddrbench_sol\/csynth.tcl",
           "sourceLine": "16",
           "pragma": {
             "name": "TOP",
@@ -14,5 +30,6 @@
                 "value": "ddrBenchmark"
               }]
           }
-        }]
+        }
+      ]
     }]}

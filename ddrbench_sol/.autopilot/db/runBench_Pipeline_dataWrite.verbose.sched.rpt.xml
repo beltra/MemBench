@@ -1,10 +1,10 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'runBench_Pipeline_dataWrite'" level="0">
-<item name = "Date">Mon Jan  9 22:05:36 2023
+<item name = "Date">Sun Feb 26 21:56:48 2023
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
-<item name = "Project">ddrBench</item>
+<item name = "Project">MemBench</item>
 <item name = "Solution">ddrbench_sol (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
 <item name = "Target device">xc7z020-clg400-1</item>

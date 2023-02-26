@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1673298345564">
-  <ports id="1" name="counterCmd1" type="PortType" coreName="FIFO_SRL" coreId="0" bitwidth="64" iftype="IfTypeRom">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1677445012296">
+  <ports id="1" name="counterCmd1" type="PortType" coreName="FIFO_SRL" coreId="1953391988" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="results" type="PortType" coreId="1702129263" bitwidth="64" direction="DirOut" iftype="IfTypeFifo">
+  <ports id="2" name="results" type="PortType" coreId="1953391988" bitwidth="64" direction="DirOut" iftype="IfTypeFifo">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <ports id="3" name="out_r" type="PortType" coreName="FIFO_SRL" coreId="0" bitwidth="64" iftype="IfTypeRom">
+  <ports id="3" name="out_r" type="PortType" coreName="FIFO_SRL" coreId="1953391988" bitwidth="64" iftype="IfTypeRom">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="25" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -35,7 +35,7 @@
   <edges id="139" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
   <edges id="140" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.4"/>
   <blocks id="20" name="countCycles" type="BlockType">
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="cnt_1_loc" coreId="0" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="cnt_1_loc" coreId="1919906913" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>call</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <constName>empty</constName>
@@ -44,66 +44,66 @@
       <dataInputObjs>out_r</dataInputObjs>
       <dataOutputObjs>partselect</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="tmp" lineNumber="145" originalName="tmp" fileName="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="64" opcode="read" m_display="0" m_delay="3.63" m_topoIndex="3" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="C:\Users\gbeve\Downloads" functionName="read"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="tmp" lineNumber="145" originalName="tmp" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="read" bitwidth="64" opcode="read" m_display="0" m_delay="3.63" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="C:\FPGA" functionName="read"/>
       <dataInputObjs>counterCmd1</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="empty" coreId="0" bitwidth="32" opcode="wait" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1"/>
-    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="_ln145" lineNumber="145" fileName="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="grp_countCycles_Pipeline_count_fu_90" coreId="0" contextFuncName="read" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.58" m_topoIndex="6" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="C:\Users\gbeve\Downloads" functionName="read"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="empty" coreId="3018709127" bitwidth="32" opcode="wait" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="_ln145" lineNumber="145" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" fileDirectory=".." rtlName="grp_countCycles_Pipeline_count_fu_90" coreId="49" contextFuncName="read" opcode="call" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.58" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" linenumber="145" fileDirectory="C:\FPGA" functionName="read"/>
       <dataInputObjs>read</dataInputObjs>
       <dataInputObjs>counterCmd1</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>countCycles_Pipeline_count</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="cnt_1_loc_load" coreId="1260871437" bitwidth="64" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="cnt_1_loc_load" coreId="825368659" bitwidth="64" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>write</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="trunc_ln" lineNumber="13" fileName="ddrBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="trunc_ln_reg_133" coreId="4294967295" contextFuncName="countCycles" bitwidth="61" opcode="partselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="ddrBench/src/ddrbenchmark.cpp" linenumber="13" fileDirectory="C:\Users\gbeve\Downloads" functionName="countCycles"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="trunc_ln" lineNumber="13" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="trunc_ln_reg_133" coreId="1629516649" contextFuncName="countCycles" bitwidth="61" opcode="partselect" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="13" fileDirectory="C:\FPGA" functionName="countCycles"/>
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="sext_ln13" lineNumber="13" fileName="ddrBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="sext_ln13_fu_108_p1" coreId="2858734306" contextFuncName="countCycles" bitwidth="64" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="ddrBench/src/ddrbenchmark.cpp" linenumber="13" fileDirectory="C:\Users\gbeve\Downloads" functionName="countCycles"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="sext_ln13" lineNumber="13" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="sext_ln13_fu_108_p1" coreId="1970040691" contextFuncName="countCycles" bitwidth="64" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="13" fileDirectory="C:\FPGA" functionName="countCycles"/>
       <dataInputObjs>partselect</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="results_addr" lineNumber="13" fileName="ddrBench/src/ddrbenchmark.cpp" fileDirectory=".." coreId="3018709127" contextFuncName="countCycles" bitwidth="64" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="ddrBench/src/ddrbenchmark.cpp" linenumber="13" fileDirectory="C:\Users\gbeve\Downloads" functionName="countCycles"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="results_addr" lineNumber="13" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreId="576534583" contextFuncName="countCycles" bitwidth="64" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="13" fileDirectory="C:\FPGA" functionName="countCycles"/>
       <dataInputObjs>sext</dataInputObjs>
       <dataOutputObjs>results</dataOutputObjs>
       <dataOutputObjs>writereq</dataOutputObjs>
       <dataOutputObjs>write</dataOutputObjs>
       <dataOutputObjs>writeresp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="results_addr_req" lineNumber="13" fileName="ddrBench/src/ddrbenchmark.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="countCycles" bitwidth="1" opcode="writereq" nodeLabel="2.0" m_display="0" m_delay="7.3" m_topoIndex="9" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="ddrBench/src/ddrbenchmark.cpp" linenumber="13" fileDirectory="C:\Users\gbeve\Downloads" functionName="countCycles"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="results_addr_req" lineNumber="13" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="countCycles" bitwidth="1" opcode="writereq" nodeLabel="2.0" m_display="0" m_delay="7.3" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="13" fileDirectory="C:\FPGA" functionName="countCycles"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="results_addr_write_ln13" lineNumber="13" fileName="ddrBench/src/ddrbenchmark.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="countCycles" opcode="write" nodeLabel="3.0" m_display="0" m_delay="7.3" m_topoIndex="11" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="ddrBench/src/ddrbenchmark.cpp" linenumber="13" fileDirectory="C:\Users\gbeve\Downloads" functionName="countCycles"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="results_addr_write_ln13" lineNumber="13" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="countCycles" opcode="write" nodeLabel="3.0" m_display="0" m_delay="7.3" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="13" fileDirectory="C:\FPGA" functionName="countCycles"/>
       <dataInputObjs>getelementptr</dataInputObjs>
       <dataInputObjs>load</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="results_addr_resp" lineNumber="13" fileName="ddrBench/src/ddrbenchmark.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="countCycles" bitwidth="1" opcode="writeresp" nodeLabel="4.0" nodeLatency="4" m_display="0" m_delay="7.3" m_topoIndex="12" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="ddrBench/src/ddrbenchmark.cpp" linenumber="13" fileDirectory="C:\Users\gbeve\Downloads" functionName="countCycles"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="results_addr_resp" lineNumber="13" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="countCycles" bitwidth="1" opcode="writeresp" nodeLabel="4.0" nodeLatency="4" m_display="0" m_delay="7.3" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="13" fileDirectory="C:\FPGA" functionName="countCycles"/>
       <dataInputObjs>getelementptr</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="_ln14" lineNumber="14" fileName="ddrBench/src/ddrbenchmark.cpp" fileDirectory=".." coreId="875650864" contextFuncName="countCycles" opcode="ret" nodeLabel="8.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
-      <inlineStackInfo fileName="ddrBench/src/ddrbenchmark.cpp" linenumber="14" fileDirectory="C:\Users\gbeve\Downloads" functionName="countCycles"/>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="_ln14" lineNumber="14" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreId="570456169" contextFuncName="countCycles" opcode="ret" nodeLabel="8.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="14" fileDirectory="C:\FPGA" functionName="countCycles"/>
     </node_objs>
-    <fileValidLineNumbers fileName="ddrBench/src/ddrbenchmark.cpp">
+    <fileValidLineNumbers fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h">
+      <validLinenumbers>145</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="MemBench/src/ddrbenchmark.cpp">
       <validLinenumbers>13</validLinenumbers>
       <validLinenumbers>14</validLinenumbers>
-    </fileValidLineNumbers>
-    <fileValidLineNumbers fileName="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h">
-      <validLinenumbers>145</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
   <ScheduleInfo time="0"/>

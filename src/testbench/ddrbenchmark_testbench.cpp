@@ -3,13 +3,27 @@
 //#define MULTIPLE_TEST
 #define REPETITIONS 100
 
-void runHWTest(ap_uint<INPUT_BITWIDTH> *mem, int dataNum, bool rw) {
-	int64_t timeTaken = 0;
+void compareHWResult(ap_uint<DATA_BITWIDTH> *mem, int dataNum, bool *res) {
+	bool valid = true;
+
+	// Check if data in memory is correctly written
+	verifyData: for (int i = 0; i < dataNum && valid; i++) {
+		valid = mem[i] == (ap_uint<DATA_BITWIDTH> ) i;
+	}
+	*res = valid;
+
+	return;
+}
+
+void runHWTest(ap_uint<DATA_BITWIDTH> *mem, int dataNum, bool rw) {
+	uint64_t timeTaken = 0;
 	bool valid = false;
 
+	// Run the test and check if correctly executed
 	ddrBenchmark(mem, dataNum, rw, &timeTaken);
 	compareHWResult(mem, dataNum, &valid);
 
+	// Print results
 	if (valid) {
 		std::cout << "* Single test *" << std::endl;
 		std::cout << "- Time taken: " << timeTaken << " clock cycles"
@@ -19,16 +33,17 @@ void runHWTest(ap_uint<INPUT_BITWIDTH> *mem, int dataNum, bool rw) {
 	} else {
 		std::cout << "!!! INVALID TEST !!!" << std::endl;
 	}
-
 }
 
-void runHWTestMultiple(ap_uint<INPUT_BITWIDTH> *mem, int dataNum, bool rw,
+void runHWTestMultiple(ap_uint<DATA_BITWIDTH> *mem, int dataNum, bool rw,
 		int totReps) {
-	int64_t timeTaken = 0;
+
+	uint64_t timeTaken = 0;
 	double timeTakenAvg = 0.0;
 	bool valid = 0;
 	int rep = 0;
 
+	// Run multiple tests and get the average results
 	for (int i = 0; i < totReps; i++) {
 		valid = 0;
 		ddrBenchmark(mem, dataNum, rw, &timeTaken);
@@ -37,12 +52,13 @@ void runHWTestMultiple(ap_uint<INPUT_BITWIDTH> *mem, int dataNum, bool rw,
 			timeTakenAvg += timeTaken;
 			rep++;
 		} else {
-			std::cout << "Invalid test n. " << i << std::endl;
+			std::cout << "Test n. " << i << "invalid" << std::endl;
 		}
 	}
 
 	timeTakenAvg /= rep;
 
+	// Print results
 	if (rep > 0) {
 		std::cout << "* Multiple test *" << std::endl;
 		std::cout << "- Time taken: " << timeTakenAvg << " clock cycles"
@@ -59,15 +75,9 @@ void runHWTestMultiple(ap_uint<INPUT_BITWIDTH> *mem, int dataNum, bool rw,
 int main(int argc, char *argv[]) {
 	std::cout << "** Starting TB **" << std::endl;
 
-	ap_uint<INPUT_BITWIDTH> mem[MAX_TEST_DIM];
+	ap_uint<DATA_BITWIDTH> mem[MAX_TEST_DIM];
 
-	int64_t timeTaken;
-	int dataDim = 16384;
-	int valid = -1;
-
-	if (dataDim > MAX_TEST_DIM) {
-		return -1;
-	}
+	int dataDim = 8192;
 
 #ifndef MULTIPLE_TEST
 	runHWTest(mem, dataDim, WRITE);

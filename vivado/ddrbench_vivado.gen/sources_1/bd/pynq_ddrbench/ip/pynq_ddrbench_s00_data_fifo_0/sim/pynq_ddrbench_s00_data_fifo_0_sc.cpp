@@ -73,11 +73,11 @@ pynq_ddrbench_s00_data_fifo_0_sc::pynq_ddrbench_s00_data_fifo_0_sc(const sc_core
     model_param_props.addLong("C_AXI_BUSER_WIDTH", "1");
     model_param_props.addLong("C_AXI_WRITE_FIFO_DEPTH", "512");
     model_param_props.addLong("C_AXI_WRITE_FIFO_DELAY", "1");
-    model_param_props.addLong("C_AXI_READ_FIFO_DEPTH", "512");
-    model_param_props.addLong("C_AXI_READ_FIFO_DELAY", "1");
+    model_param_props.addLong("C_AXI_READ_FIFO_DEPTH", "0");
+    model_param_props.addLong("C_AXI_READ_FIFO_DELAY", "0");
     model_param_props.addString("C_FAMILY", "zynq");
     model_param_props.addString("C_AXI_WRITE_FIFO_TYPE", "bram");
-    model_param_props.addString("C_AXI_READ_FIFO_TYPE", "bram");
+    model_param_props.addString("C_AXI_READ_FIFO_TYPE", "lut");
     model_param_props.addString("COMPONENT_NAME", "pynq_ddrbench_s00_data_fifo_0");
 
   mp_impl = new axi_data_fifo("inst", model_param_props);

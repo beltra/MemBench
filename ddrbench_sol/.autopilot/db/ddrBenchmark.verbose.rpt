@@ -3,10 +3,10 @@
 ================================================================
 == Vitis HLS Report for 'ddrBenchmark'
 ================================================================
-* Date:           Mon Jan  9 22:05:46 2023
+* Date:           Sun Feb 26 21:56:52 2023
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
-* Project:        ddrBench
+* Project:        MemBench
 * Solution:       ddrbench_sol (Vivado IP Flow Target)
 * Product family: zynq
 * Target device:  xc7z020-clg400-1
@@ -58,32 +58,32 @@
 |DSP              |        -|    -|       -|      -|    -|
 |Expression       |        -|    -|       0|     14|    -|
 |FIFO             |        -|    -|     198|    136|    -|
-|Instance         |        0|    -|    3673|   5403|    -|
+|Instance         |        0|    -|    2366|   4442|    -|
 |Memory           |        -|    -|       -|      -|    -|
 |Multiplexer      |        -|    -|       -|     18|    -|
 |Register         |        -|    -|       2|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|    3873|   5571|    0|
+|Total            |        0|    0|    2566|   4610|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |        0|    0|       3|     10|    0|
+|Utilization (%)  |        0|    0|       2|      8|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
     * Instance: 
-    +-----------------+---------------+---------+----+------+------+-----+
-    |     Instance    |     Module    | BRAM_18K| DSP|  FF  |  LUT | URAM|
-    +-----------------+---------------+---------+----+------+------+-----+
-    |control_s_axi_U  |control_s_axi  |        0|   0|   221|   362|    0|
-    |countCycles_U0   |countCycles    |        0|   0|   203|   225|    0|
-    |entry_proc_U0    |entry_proc     |        0|   0|     3|    29|    0|
-    |gmem_m_axi_U     |gmem_m_axi     |        0|   0|  1621|  2323|    0|
-    |results_m_axi_U  |results_m_axi  |        0|   0|   772|  1504|    0|
-    |runBench_U0      |runBench       |        0|   0|   853|   960|    0|
-    +-----------------+---------------+---------+----+------+------+-----+
-    |Total            |               |        0|   0|  3673|  5403|    0|
-    +-----------------+---------------+---------+----+------+------+-----+
+    +-----------------+---------------+---------+----+-----+------+-----+
+    |     Instance    |     Module    | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +-----------------+---------------+---------+----+-----+------+-----+
+    |control_s_axi_U  |control_s_axi  |        0|   0|  221|   362|    0|
+    |countCycles_U0   |countCycles    |        0|   0|  203|   225|    0|
+    |entry_proc_U0    |entry_proc     |        0|   0|    3|    29|    0|
+    |gmem_m_axi_U     |gmem_m_axi     |        0|   0|  772|  1504|    0|
+    |results_m_axi_U  |results_m_axi  |        0|   0|  772|  1504|    0|
+    |runBench_U0      |runBench       |        0|   0|  395|   818|    0|
+    +-----------------+---------------+---------+----+-----+------+-----+
+    |Total            |               |        0|   0| 2366|  4442|    0|
+    +-----------------+---------------+---------+----+-----+------+-----+
 
     * DSP: 
     N/A
@@ -180,8 +180,8 @@
 |m_axi_gmem_AWUSER       |  out|    1|       m_axi|          gmem|       pointer|
 |m_axi_gmem_WVALID       |  out|    1|       m_axi|          gmem|       pointer|
 |m_axi_gmem_WREADY       |   in|    1|       m_axi|          gmem|       pointer|
-|m_axi_gmem_WDATA        |  out|  512|       m_axi|          gmem|       pointer|
-|m_axi_gmem_WSTRB        |  out|   64|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WDATA        |  out|   64|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WSTRB        |  out|    8|       m_axi|          gmem|       pointer|
 |m_axi_gmem_WLAST        |  out|    1|       m_axi|          gmem|       pointer|
 |m_axi_gmem_WID          |  out|    1|       m_axi|          gmem|       pointer|
 |m_axi_gmem_WUSER        |  out|    1|       m_axi|          gmem|       pointer|
@@ -200,7 +200,7 @@
 |m_axi_gmem_ARUSER       |  out|    1|       m_axi|          gmem|       pointer|
 |m_axi_gmem_RVALID       |   in|    1|       m_axi|          gmem|       pointer|
 |m_axi_gmem_RREADY       |  out|    1|       m_axi|          gmem|       pointer|
-|m_axi_gmem_RDATA        |   in|  512|       m_axi|          gmem|       pointer|
+|m_axi_gmem_RDATA        |   in|   64|       m_axi|          gmem|       pointer|
 |m_axi_gmem_RLAST        |   in|    1|       m_axi|          gmem|       pointer|
 |m_axi_gmem_RID          |   in|    1|       m_axi|          gmem|       pointer|
 |m_axi_gmem_RUSER        |   in|    1|       m_axi|          gmem|       pointer|
@@ -298,34 +298,34 @@ IsGatedGlobalClock: 0
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 1.00>
-ST_1 : Operation 6 [2/2] (1.00ns)   --->   "%res_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %res" [ddrBench/src/ddrbenchmark.cpp:71]   --->   Operation 6 'read' 'res_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 7 [2/2] (1.00ns)   --->   "%rw_read = read i1 @_ssdm_op_Read.s_axilite.i1, i1 %rw" [ddrBench/src/ddrbenchmark.cpp:71]   --->   Operation 7 'read' 'rw_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 8 [2/2] (1.00ns)   --->   "%dataNum_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %dataNum" [ddrBench/src/ddrbenchmark.cpp:71]   --->   Operation 8 'read' 'dataNum_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 9 [2/2] (1.00ns)   --->   "%mem_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %mem" [ddrBench/src/ddrbenchmark.cpp:71]   --->   Operation 9 'read' 'mem_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%res_c = alloca i64 1" [ddrBench/src/ddrbenchmark.cpp:71]   --->   Operation 10 'alloca' 'res_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 3> <FIFO>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%counterCmd = alloca i64 1" [ddrBench/src/ddrbenchmark.cpp:73]   --->   Operation 11 'alloca' 'counterCmd' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 6 [2/2] (1.00ns)   --->   "%res_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %res" [MemBench/src/ddrbenchmark.cpp:60]   --->   Operation 6 'read' 'res_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 7 [2/2] (1.00ns)   --->   "%rw_read = read i1 @_ssdm_op_Read.s_axilite.i1, i1 %rw" [MemBench/src/ddrbenchmark.cpp:60]   --->   Operation 7 'read' 'rw_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 8 [2/2] (1.00ns)   --->   "%dataNum_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %dataNum" [MemBench/src/ddrbenchmark.cpp:60]   --->   Operation 8 'read' 'dataNum_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 9 [2/2] (1.00ns)   --->   "%mem_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %mem" [MemBench/src/ddrbenchmark.cpp:60]   --->   Operation 9 'read' 'mem_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%res_c = alloca i64 1" [MemBench/src/ddrbenchmark.cpp:60]   --->   Operation 10 'alloca' 'res_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 3> <FIFO>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%counterCmd = alloca i64 1" [MemBench/src/ddrbenchmark.cpp:62]   --->   Operation 11 'alloca' 'counterCmd' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
 
 State 2 <SV = 1> <Delay = 4.63>
-ST_2 : Operation 12 [1/2] (1.00ns)   --->   "%res_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %res" [ddrBench/src/ddrbenchmark.cpp:71]   --->   Operation 12 'read' 'res_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_2 : Operation 13 [1/2] (1.00ns)   --->   "%rw_read = read i1 @_ssdm_op_Read.s_axilite.i1, i1 %rw" [ddrBench/src/ddrbenchmark.cpp:71]   --->   Operation 13 'read' 'rw_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_2 : Operation 14 [1/2] (1.00ns)   --->   "%dataNum_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %dataNum" [ddrBench/src/ddrbenchmark.cpp:71]   --->   Operation 14 'read' 'dataNum_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_2 : Operation 15 [1/2] (1.00ns)   --->   "%mem_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %mem" [ddrBench/src/ddrbenchmark.cpp:71]   --->   Operation 15 'read' 'mem_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_2 : Operation 16 [1/1] (3.63ns)   --->   "%call_ln71 = call void @entry_proc, i64 %res_read, i64 %res_c" [ddrBench/src/ddrbenchmark.cpp:71]   --->   Operation 16 'call' 'call_ln71' <Predicate = true> <Delay = 3.63> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_2 : Operation 17 [2/2] (3.63ns)   --->   "%call_ln75 = call void @runBench, i512 %gmem, i64 %mem_read, i64 %counterCmd, i32 %dataNum_read, i1 %rw_read" [ddrBench/src/ddrbenchmark.cpp:75]   --->   Operation 17 'call' 'call_ln75' <Predicate = true> <Delay = 3.63> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 12 [1/2] (1.00ns)   --->   "%res_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %res" [MemBench/src/ddrbenchmark.cpp:60]   --->   Operation 12 'read' 'res_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 13 [1/2] (1.00ns)   --->   "%rw_read = read i1 @_ssdm_op_Read.s_axilite.i1, i1 %rw" [MemBench/src/ddrbenchmark.cpp:60]   --->   Operation 13 'read' 'rw_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 14 [1/2] (1.00ns)   --->   "%dataNum_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %dataNum" [MemBench/src/ddrbenchmark.cpp:60]   --->   Operation 14 'read' 'dataNum_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 15 [1/2] (1.00ns)   --->   "%mem_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %mem" [MemBench/src/ddrbenchmark.cpp:60]   --->   Operation 15 'read' 'mem_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 16 [1/1] (3.63ns)   --->   "%call_ln60 = call void @entry_proc, i64 %res_read, i64 %res_c" [MemBench/src/ddrbenchmark.cpp:60]   --->   Operation 16 'call' 'call_ln60' <Predicate = true> <Delay = 3.63> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 17 [2/2] (3.63ns)   --->   "%call_ln64 = call void @runBench, i64 %gmem, i64 %mem_read, i64 %counterCmd, i32 %dataNum_read, i1 %rw_read" [MemBench/src/ddrbenchmark.cpp:64]   --->   Operation 17 'call' 'call_ln64' <Predicate = true> <Delay = 3.63> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.00>
-ST_3 : Operation 18 [1/2] (0.00ns)   --->   "%call_ln75 = call void @runBench, i512 %gmem, i64 %mem_read, i64 %counterCmd, i32 %dataNum_read, i1 %rw_read" [ddrBench/src/ddrbenchmark.cpp:75]   --->   Operation 18 'call' 'call_ln75' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 18 [1/2] (0.00ns)   --->   "%call_ln64 = call void @runBench, i64 %gmem, i64 %mem_read, i64 %counterCmd, i32 %dataNum_read, i1 %rw_read" [MemBench/src/ddrbenchmark.cpp:64]   --->   Operation 18 'call' 'call_ln64' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 19 [2/2] (0.00ns)   --->   "%call_ln76 = call void @countCycles, i64 %counterCmd, i64 %results, i64 %res_c" [ddrBench/src/ddrbenchmark.cpp:76]   --->   Operation 19 'call' 'call_ln76' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 19 [2/2] (0.00ns)   --->   "%call_ln65 = call void @countCycles, i64 %counterCmd, i64 %results, i64 %res_c" [MemBench/src/ddrbenchmark.cpp:65]   --->   Operation 19 'call' 'call_ln65' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 5 <SV = 4> <Delay = 0.00>
-ST_5 : Operation 20 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @res_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i64 %res_c, i64 %res_c" [ddrBench/src/ddrbenchmark.cpp:71]   --->   Operation 20 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln71 = specinterface void @_ssdm_op_SpecInterface, i64 %res_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0" [ddrBench/src/ddrbenchmark.cpp:71]   --->   Operation 21 'specinterface' 'specinterface_ln71' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 22 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln71 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_0" [ddrBench/src/ddrbenchmark.cpp:71]   --->   Operation 22 'specdataflowpipeline' 'specdataflowpipeline_ln71' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 23 [1/1] (0.00ns)   --->   "%spectopmodule_ln59 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_14" [ddrBench/src/ddrbenchmark.cpp:59]   --->   Operation 23 'spectopmodule' 'spectopmodule_ln59' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 16384, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i512 %gmem"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 20 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @res_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i64 %res_c, i64 %res_c" [MemBench/src/ddrbenchmark.cpp:60]   --->   Operation 20 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln60 = specinterface void @_ssdm_op_SpecInterface, i64 %res_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0" [MemBench/src/ddrbenchmark.cpp:60]   --->   Operation 21 'specinterface' 'specinterface_ln60' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 22 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln60 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_0" [MemBench/src/ddrbenchmark.cpp:60]   --->   Operation 22 'specdataflowpipeline' 'specdataflowpipeline_ln60' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 23 [1/1] (0.00ns)   --->   "%spectopmodule_ln48 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_14" [MemBench/src/ddrbenchmark.cpp:48]   --->   Operation 23 'spectopmodule' 'spectopmodule_ln48' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 11184808, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %gmem"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %results, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 1, void @empty_3, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 27 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %results"   --->   Operation 27 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %mem, void @empty_4, i32 1, i32 1, void @empty_5, i32 0, i32 0, void @empty_6, void @empty_7, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_8, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
@@ -341,8 +341,8 @@ ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface 
 ST_5 : Operation 38 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_4, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_6, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 38 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 39 [1/1] (0.00ns)   --->   "%empty_27 = specchannel i32 @_ssdm_op_SpecChannel, void @counterCmd_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i64 %counterCmd, i64 %counterCmd"   --->   Operation 39 'specchannel' 'empty_27' <Predicate = true> <Delay = 0.00>
 ST_5 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %counterCmd, void @empty_13, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 41 [1/2] (0.00ns)   --->   "%call_ln76 = call void @countCycles, i64 %counterCmd, i64 %results, i64 %res_c" [ddrBench/src/ddrbenchmark.cpp:76]   --->   Operation 41 'call' 'call_ln76' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_5 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln77 = ret" [ddrBench/src/ddrbenchmark.cpp:77]   --->   Operation 42 'ret' 'ret_ln77' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 41 [1/2] (0.00ns)   --->   "%call_ln65 = call void @countCycles, i64 %counterCmd, i64 %results, i64 %res_c" [MemBench/src/ddrbenchmark.cpp:65]   --->   Operation 41 'call' 'call_ln65' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 42 [1/1] (0.00ns)   --->   "%ret_ln66 = ret" [MemBench/src/ddrbenchmark.cpp:66]   --->   Operation 42 'ret' 'ret_ln66' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -374,12 +374,12 @@ res_read                  (read                ) [ 000000]
 rw_read                   (read                ) [ 000100]
 dataNum_read              (read                ) [ 000100]
 mem_read                  (read                ) [ 000100]
-call_ln71                 (call                ) [ 000000]
-call_ln75                 (call                ) [ 000000]
+call_ln60                 (call                ) [ 000000]
+call_ln64                 (call                ) [ 000000]
 empty                     (specchannel         ) [ 000000]
-specinterface_ln71        (specinterface       ) [ 000000]
-specdataflowpipeline_ln71 (specdataflowpipeline) [ 000000]
-spectopmodule_ln59        (spectopmodule       ) [ 000000]
+specinterface_ln60        (specinterface       ) [ 000000]
+specdataflowpipeline_ln60 (specdataflowpipeline) [ 000000]
+spectopmodule_ln48        (spectopmodule       ) [ 000000]
 specinterface_ln0         (specinterface       ) [ 000000]
 specbitsmap_ln0           (specbitsmap         ) [ 000000]
 specinterface_ln0         (specinterface       ) [ 000000]
@@ -397,8 +397,8 @@ specinterface_ln0         (specinterface       ) [ 000000]
 specinterface_ln0         (specinterface       ) [ 000000]
 empty_27                  (specchannel         ) [ 000000]
 specinterface_ln0         (specinterface       ) [ 000000]
-call_ln76                 (call                ) [ 000000]
-ret_ln77                  (ret                 ) [ 000000]
+call_ln65                 (call                ) [ 000000]
+ret_ln66                  (ret                 ) [ 000000]
 </LifeTime>
 
 <model>
@@ -879,7 +879,7 @@ ret_ln77                  (ret                 ) [ 000000]
 </bind>
 </comp>
 
-<comp id="122" class="1004" name="call_ln71_entry_proc_fu_122">
+<comp id="122" class="1004" name="call_ln60_entry_proc_fu_122">
 <pin_list>
 <pin id="123" dir="0" index="0" bw="0" slack="0"/>
 <pin id="124" dir="0" index="1" bw="64" slack="0"/>
@@ -888,14 +888,14 @@ ret_ln77                  (ret                 ) [ 000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln71/2 "/>
+<opset="call_ln60/2 "/>
 </bind>
 </comp>
 
 <comp id="129" class="1004" name="grp_runBench_fu_129">
 <pin_list>
 <pin id="130" dir="0" index="0" bw="0" slack="0"/>
-<pin id="131" dir="0" index="1" bw="512" slack="0"/>
+<pin id="131" dir="0" index="1" bw="64" slack="0"/>
 <pin id="132" dir="0" index="2" bw="64" slack="0"/>
 <pin id="133" dir="0" index="3" bw="64" slack="1"/>
 <pin id="134" dir="0" index="4" bw="32" slack="0"/>
@@ -904,7 +904,7 @@ ret_ln77                  (ret                 ) [ 000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln75/2 "/>
+<opset="call_ln64/2 "/>
 </bind>
 </comp>
 
@@ -918,7 +918,7 @@ ret_ln77                  (ret                 ) [ 000000]
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="call_ln76/4 "/>
+<opset="call_ln65/4 "/>
 </bind>
 </comp>
 
@@ -1068,8 +1068,8 @@ ret_ln77                  (ret                 ) [ 000000]
 |----------|-----------------------------|---------|---------|---------|
 | Operation|       Functional Unit       |  Delay  |    FF   |   LUT   |
 |----------|-----------------------------|---------|---------|---------|
-|          | call_ln71_entry_proc_fu_122 |    0    |    0    |    0    |
-|   call   |     grp_runBench_fu_129     |  11.116 |   3474  |   423   |
+|          | call_ln60_entry_proc_fu_122 |    0    |    0    |    0    |
+|   call   |     grp_runBench_fu_129     |  12.704 |   776   |   267   |
 |          |    grp_countCycles_fu_142   |  3.176  |   317   |    80   |
 |----------|-----------------------------|---------|---------|---------|
 |          |        grp_read_fu_98       |    0    |    0    |    0    |
@@ -1077,7 +1077,7 @@ ret_ln77                  (ret                 ) [ 000000]
 |          |       grp_read_fu_110       |    0    |    0    |    0    |
 |          |       grp_read_fu_116       |    0    |    0    |    0    |
 |----------|-----------------------------|---------|---------|---------|
-|   Total  |                             |  14.292 |   3791  |   503   |
+|   Total  |                             |  15.88  |   1093  |   347   |
 |----------|-----------------------------|---------|---------|---------|
 
 Memories:
@@ -1113,10 +1113,10 @@ N/A
 +-----------+--------+--------+--------+
 |           |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+
-|  Function |   14   |  3791  |   503  |
+|  Function |   15   |  1093  |   347  |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|    4   |    -   |   27   |
 |  Register |    -   |   225  |    -   |
 +-----------+--------+--------+--------+
-|   Total   |   19   |  4016  |   530  |
+|   Total   |   20   |  1318  |   374  |
 +-----------+--------+--------+--------+

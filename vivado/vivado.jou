@@ -1,0 +1,99 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Jan 18 19:28:57 2023
+# Process ID: 22644
+# Current directory: C:/FPGA/MemBench/vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16180 C:\FPGA\MemBench\vivado\ddrbench_vivado.xpr
+# Log file: C:/FPGA/MemBench/vivado/vivado.log
+# Journal file: C:/FPGA/MemBench/vivado\vivado.jou
+# Running On: LenovoPC, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 12723 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/FPGA/MemBench/vivado/ddrbench_vivado.xpr
+update_compile_order -fileset sources_1
+xhub::refresh_catalog [xhub::get_xstores xilinx_board_store]
+set_param board.repoPaths {C:/Users/gbeve/AppData/Roaming/Xilinx/Vivado/2022.1/xhub/board_store/xilinx_board_store}
+xhub::install [xhub::get_xitems tulembedded.com:xilinx_board_store:pynq-z2:1.0]
+open_bd_design {C:/FPGA/MemBench/vivado/ddrbench_vivado.srcs/sources_1/bd/pynq_ddrbench/pynq_ddrbench.bd}
+delete_bd_objs [get_bd_intf_nets axi_mem_intercon_M01_AXI]
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {pynq_ddrbench_processing_system7_0_0 pynq_ddrbench_rst_ps7_0_100M_0 pynq_ddrbench_ddrBenchmark_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {pynq_ddrbench_processing_system7_0_0 pynq_ddrbench_rst_ps7_0_100M_0 pynq_ddrbench_ddrBenchmark_0_0}] -no_script -sync -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset sources_1] C:/FPGA/MemBench/vivado/ddrbench_vivado.srcs/sources_1/bd/pynq_ddrbench/pynq_ddrbench.bd]
+set_property synth_checkpoint_mode None [get_files  C:/FPGA/MemBench/vivado/ddrbench_vivado.srcs/sources_1/bd/pynq_ddrbench/pynq_ddrbench.bd]
+generate_target all [get_files  C:/FPGA/MemBench/vivado/ddrbench_vivado.srcs/sources_1/bd/pynq_ddrbench/pynq_ddrbench.bd]
+export_ip_user_files -of_objects [get_files C:/FPGA/MemBench/vivado/ddrbench_vivado.srcs/sources_1/bd/pynq_ddrbench/pynq_ddrbench.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/FPGA/MemBench/vivado/ddrbench_vivado.srcs/sources_1/bd/pynq_ddrbench/pynq_ddrbench.bd] -directory C:/FPGA/MemBench/vivado/ddrbench_vivado.ip_user_files/sim_scripts -ip_user_files_dir C:/FPGA/MemBench/vivado/ddrbench_vivado.ip_user_files -ipstatic_source_dir C:/FPGA/MemBench/vivado/ddrbench_vivado.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/FPGA/MemBench/vivado/ddrbench_vivado.cache/compile_simlib/modelsim} {questa=C:/FPGA/MemBench/vivado/ddrbench_vivado.cache/compile_simlib/questa} {riviera=C:/FPGA/MemBench/vivado/ddrbench_vivado.cache/compile_simlib/riviera} {activehdl=C:/FPGA/MemBench/vivado/ddrbench_vivado.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+startgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_HP1 {0}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.NUM_MI {1}] [get_bd_cells axi_mem_intercon]
+endgroup
+report_ip_status -name ip_status 
+set_property range 8K [get_bd_addr_segs {ddrBenchmark_0/Data_m_axi_results/SEG_processing_system7_0_HP0_DDR_LOWOCM}]
+set_property range 4K [get_bd_addr_segs {ddrBenchmark_0/Data_m_axi_results/SEG_processing_system7_0_HP0_DDR_LOWOCM}]
+set_property offset 0x0000000000000000 [get_bd_addr_segs {ddrBenchmark_0/Data_m_axi_results/SEG_processing_system7_0_HP0_DDR_LOWOCM}]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+validate_bd_design
+report_ip_status -name ip_status 
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+reset_run synth_1
+save_bd_design
+launch_runs impl_1 -jobs 7
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run impl_1
+open_bd_design {C:/FPGA/MemBench/vivado/ddrbench_vivado.srcs/sources_1/bd/pynq_ddrbench/pynq_ddrbench.bd}
+export_ip_user_files -of_objects  [get_files C:/FPGA/MemBench/vivado/ddrbench_vivado.srcs/sources_1/bd/pynq_ddrbench/pynq_ddrbench.bd] -no_script -reset -force -quiet
+remove_files  C:/FPGA/MemBench/vivado/ddrbench_vivado.srcs/sources_1/bd/pynq_ddrbench/pynq_ddrbench.bd
+create_bd_design "pynq_ddrbench"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:ddrBenchmark:1.0 ddrBenchmark_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {1}] [get_bd_cells processing_system7_0]
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/ddrBenchmark_0/s_axi_control} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins ddrBenchmark_0/s_axi_control]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/ddrBenchmark_0/m_axi_gmem} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/ddrBenchmark_0/m_axi_results} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins ddrBenchmark_0/m_axi_results]
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+wait_on_run impl_1
+make_wrapper -files [get_files C:/FPGA/MemBench/vivado/ddrbench_vivado.srcs/sources_1/bd/pynq_ddrbench/pynq_ddrbench.bd] -top
+report_ip_status -name ip_status 
+open_hw_manager
+connect_hw_server -allow_non_jtag
+close_design
+open_bd_design {C:/FPGA/MemBench/vivado/ddrbench_vivado.srcs/sources_1/bd/pynq_ddrbench/pynq_ddrbench.bd}
+open_bd_design {C:/FPGA/MemBench/vivado/ddrbench_vivado.srcs/sources_1/bd/pynq_ddrbench/pynq_ddrbench.bd}
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+wait_on_run impl_1
+open_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 7
+wait_on_run impl_1
+open_bd_design {C:/FPGA/MemBench/vivado/ddrbench_vivado.srcs/sources_1/bd/pynq_ddrbench/pynq_ddrbench.bd}
+close_project
+open_project C:/FPGA/MemBench/vivado/ddrbench_vivado.xpr
+update_compile_order -fileset sources_1

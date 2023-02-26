@@ -3,10 +3,10 @@
 ================================================================
 == Vitis HLS Report for 'runBench_Pipeline_dataWrite'
 ================================================================
-* Date:           Mon Jan  9 22:05:43 2023
+* Date:           Sun Feb 26 21:56:51 2023
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
-* Project:        ddrBench
+* Project:        MemBench
 * Solution:       ddrbench_sol (Vivado IP Flow Target)
 * Product family: zynq
 * Target device:  xc7z020-clg400-1
@@ -85,9 +85,9 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |add_ln30_fu_100_p2         |         +|   0|  0|  38|          31|           1|
+    |add_ln17_fu_100_p2         |         +|   0|  0|  38|          31|           1|
     |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
-    |icmp_ln30_fu_94_p2         |      icmp|   0|  0|  17|          31|          31|
+    |icmp_ln17_fu_94_p2         |      icmp|   0|  0|  17|          31|          31|
     |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
     +---------------------------+----------+----+---+----+------------+------------+
     |Total                      |          |   0|  0|  59|          64|          35|
@@ -149,8 +149,8 @@
 |m_axi_gmem_AWUSER    |  out|    1|       m_axi|                         gmem|       pointer|
 |m_axi_gmem_WVALID    |  out|    1|       m_axi|                         gmem|       pointer|
 |m_axi_gmem_WREADY    |   in|    1|       m_axi|                         gmem|       pointer|
-|m_axi_gmem_WDATA     |  out|  512|       m_axi|                         gmem|       pointer|
-|m_axi_gmem_WSTRB     |  out|   64|       m_axi|                         gmem|       pointer|
+|m_axi_gmem_WDATA     |  out|   64|       m_axi|                         gmem|       pointer|
+|m_axi_gmem_WSTRB     |  out|    8|       m_axi|                         gmem|       pointer|
 |m_axi_gmem_WLAST     |  out|    1|       m_axi|                         gmem|       pointer|
 |m_axi_gmem_WID       |  out|    1|       m_axi|                         gmem|       pointer|
 |m_axi_gmem_WUSER     |  out|    1|       m_axi|                         gmem|       pointer|
@@ -169,7 +169,7 @@
 |m_axi_gmem_ARUSER    |  out|    1|       m_axi|                         gmem|       pointer|
 |m_axi_gmem_RVALID    |   in|    1|       m_axi|                         gmem|       pointer|
 |m_axi_gmem_RREADY    |  out|    1|       m_axi|                         gmem|       pointer|
-|m_axi_gmem_RDATA     |   in|  512|       m_axi|                         gmem|       pointer|
+|m_axi_gmem_RDATA     |   in|   64|       m_axi|                         gmem|       pointer|
 |m_axi_gmem_RLAST     |   in|    1|       m_axi|                         gmem|       pointer|
 |m_axi_gmem_RID       |   in|    1|       m_axi|                         gmem|       pointer|
 |m_axi_gmem_RFIFONUM  |   in|    9|       m_axi|                         gmem|       pointer|
@@ -180,7 +180,7 @@
 |m_axi_gmem_BRESP     |   in|    2|       m_axi|                         gmem|       pointer|
 |m_axi_gmem_BID       |   in|    1|       m_axi|                         gmem|       pointer|
 |m_axi_gmem_BUSER     |   in|    1|       m_axi|                         gmem|       pointer|
-|sext_ln30            |   in|   58|     ap_none|                    sext_ln30|        scalar|
-|trunc_ln30_2         |   in|   31|     ap_none|                 trunc_ln30_2|        scalar|
+|sext_ln17            |   in|   61|     ap_none|                    sext_ln17|        scalar|
+|trunc_ln17_2         |   in|   31|     ap_none|                 trunc_ln17_2|        scalar|
 +---------------------+-----+-----+------------+-----------------------------+--------------+
 

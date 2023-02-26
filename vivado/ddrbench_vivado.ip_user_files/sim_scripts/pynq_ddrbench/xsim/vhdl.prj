@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../bd/pynq_ddrbench/ip/pynq_ddrbench_rst_ps7_0_50M_0/sim/pynq_ddrbench_rst_ps7_0_50M_0.vhd" \
+
+nosort

@@ -4,6 +4,7 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../src/ddrbenchmark.cpp in debug mode
    Generating csim.exe
 ** Starting TB **
+** Starting TB **
 * Single test *
 - Time taken: 0 clock cycles
 - Mode: Write

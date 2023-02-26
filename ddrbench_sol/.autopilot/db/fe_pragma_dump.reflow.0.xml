@@ -1,26 +1,28 @@
 <pragmas>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="103" pragmaType="inline" parentfunction="hls::stream<long long, 0>::stream()" off="0" region="0" recursive="0"/>
-<pragma file="ddrBench/src/ddrbenchmark.cpp" line="71" pragmaType="dataflow" parentfunction="ddrBenchmark" disable_start_propagation="0"/>
-<pragma file="ddrBench/src/ddrbenchmark.cpp" line="61" pragmaType="interface" parentfunction="ddrBenchmark" mode="m_axi" port="mem" bundle="gmem" offset="slave" name="" depth="16384" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
-<pragma file="ddrBench/src/ddrbenchmark.cpp" line="62" pragmaType="interface" parentfunction="ddrBenchmark" mode="m_axi" port="res" bundle="results" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
-<pragma file="ddrBench/src/ddrbenchmark.cpp" line="64" pragmaType="interface" parentfunction="ddrBenchmark" mode="s_axilite" port="mem" bundle="control" offset="-1" name="" clock="" impl="" register="1"/>
-<pragma file="ddrBench/src/ddrbenchmark.cpp" line="65" pragmaType="interface" parentfunction="ddrBenchmark" mode="s_axilite" port="res" bundle="control" offset="-1" name="" clock="" impl="" register="1"/>
-<pragma file="ddrBench/src/ddrbenchmark.cpp" line="67" pragmaType="interface" parentfunction="ddrBenchmark" mode="s_axilite" port="dataNum" bundle="control" offset="-1" name="" clock="" impl="" register="1"/>
-<pragma file="ddrBench/src/ddrbenchmark.cpp" line="68" pragmaType="interface" parentfunction="ddrBenchmark" mode="s_axilite" port="rw" bundle="control" offset="-1" name="" clock="" impl="" register="1"/>
-<pragma file="ddrBench/src/ddrbenchmark.cpp" line="69" pragmaType="interface" parentfunction="ddrBenchmark" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="1"/>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="1834" pragmaType="inline" parentfunction="bool operator!=<512, false>(ap_int_base<512, false> const&, int)" off="0" region="0" recursive="0"/>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="221" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base()" off="0" region="0" recursive="0"/>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="144" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="173" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="260" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="1068" pragmaType="inline" parentfunction="bool ap_int_base<512, false>::operator!=<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="154" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="161" pragmaType="inline" parentfunction="read_nb" off="0" region="0" recursive="0"/>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="260" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h" line="230" pragmaType="inline" parentfunction="ap_uint<512>::ap_uint()" off="0" region="0" recursive="0"/>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_common.h" line="567" pragmaType="inline" parentfunction="_ZN8ssdm_intILi512ELb0EEC2EDq512_j" off="0" region="0" recursive="0"/>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_common.h" line="559" pragmaType="inline" parentfunction="ssdm_int<32, true>::ssdm_int(int)" off="0" region="0" recursive="0"/>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h" line="333" pragmaType="inline" parentfunction="ap_uint<512>::ap_uint(int)" off="0" region="0" recursive="0"/>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
-<pragma file="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_common.h" line="0" pragmaType="inline" parentfunction="ssdm_int<512, false>::ssdm_int()" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_common.h" line="567" pragmaType="inline" parentfunction="_ZN8ssdm_intILi48ELb0EEC2EDq48_j" off="0" region="0" recursive="0"/>
+<pragma file="MemBench/src/ddrbenchmark.cpp" line="26" pragmaType="pipeline" parentfunction="readData" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h" line="333" pragmaType="inline" parentfunction="ap_uint<48>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="1834" pragmaType="inline" parentfunction="bool operator!=<48, false>(ap_int_base<48, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="161" pragmaType="inline" parentfunction="read_nb" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="260" pragmaType="inline" parentfunction="ap_int_base<48, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_common.h" line="559" pragmaType="inline" parentfunction="ssdm_int<32, true>::ssdm_int(int)" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="260" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="1068" pragmaType="inline" parentfunction="bool ap_int_base<48, false>::operator!=<32, true>(ap_int_base<32, true> const&) const" off="0" region="0" recursive="0"/>
+<pragma file="MemBench/src/ddrbenchmark.cpp" line="60" pragmaType="dataflow" parentfunction="ddrBenchmark" disable_start_propagation="0"/>
+<pragma file="MemBench/src/ddrbenchmark.cpp" line="50" pragmaType="interface" parentfunction="ddrBenchmark" mode="m_axi" port="mem" bundle="gmem" offset="slave" name="" depth="11184808" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="MemBench/src/ddrbenchmark.cpp" line="51" pragmaType="interface" parentfunction="ddrBenchmark" mode="m_axi" port="res" bundle="results" offset="slave" name="" depth="1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="MemBench/src/ddrbenchmark.cpp" line="53" pragmaType="interface" parentfunction="ddrBenchmark" mode="s_axilite" port="mem" bundle="control" offset="-1" name="" clock="" impl="" register="1"/>
+<pragma file="MemBench/src/ddrbenchmark.cpp" line="54" pragmaType="interface" parentfunction="ddrBenchmark" mode="s_axilite" port="res" bundle="control" offset="-1" name="" clock="" impl="" register="1"/>
+<pragma file="MemBench/src/ddrbenchmark.cpp" line="56" pragmaType="interface" parentfunction="ddrBenchmark" mode="s_axilite" port="dataNum" bundle="control" offset="-1" name="" clock="" impl="" register="1"/>
+<pragma file="MemBench/src/ddrbenchmark.cpp" line="57" pragmaType="interface" parentfunction="ddrBenchmark" mode="s_axilite" port="rw" bundle="control" offset="-1" name="" clock="" impl="" register="1"/>
+<pragma file="MemBench/src/ddrbenchmark.cpp" line="58" pragmaType="interface" parentfunction="ddrBenchmark" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="1"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="221" pragmaType="inline" parentfunction="ap_int_base<48, false>::ap_int_base()" off="0" region="0" recursive="0"/>
+<pragma file="MemBench/src/ddrbenchmark.cpp" line="18" pragmaType="pipeline" parentfunction="writeData" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h" line="230" pragmaType="inline" parentfunction="ap_uint<48>::ap_uint()" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="154" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="173" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="103" pragmaType="inline" parentfunction="hls::stream<long long, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h" line="144" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_common.h" line="0" pragmaType="inline" parentfunction="ssdm_int<48, false>::ssdm_int()" off="0" region="0" recursive="0"/>
+<pragma file="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
 </pragmas>

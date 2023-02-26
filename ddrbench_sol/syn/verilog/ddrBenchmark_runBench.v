@@ -121,8 +121,8 @@ output  [3:0] m_axi_gmem_AWREGION;
 output  [0:0] m_axi_gmem_AWUSER;
 output   m_axi_gmem_WVALID;
 input   m_axi_gmem_WREADY;
-output  [511:0] m_axi_gmem_WDATA;
-output  [63:0] m_axi_gmem_WSTRB;
+output  [63:0] m_axi_gmem_WDATA;
+output  [7:0] m_axi_gmem_WSTRB;
 output   m_axi_gmem_WLAST;
 output  [0:0] m_axi_gmem_WID;
 output  [0:0] m_axi_gmem_WUSER;
@@ -141,7 +141,7 @@ output  [3:0] m_axi_gmem_ARREGION;
 output  [0:0] m_axi_gmem_ARUSER;
 input   m_axi_gmem_RVALID;
 output   m_axi_gmem_RREADY;
-input  [511:0] m_axi_gmem_RDATA;
+input  [63:0] m_axi_gmem_RDATA;
 input   m_axi_gmem_RLAST;
 input  [0:0] m_axi_gmem_RID;
 input  [8:0] m_axi_gmem_RFIFONUM;
@@ -177,14 +177,15 @@ reg[3:0] m_axi_gmem_AWQOS;
 reg[3:0] m_axi_gmem_AWREGION;
 reg[0:0] m_axi_gmem_AWUSER;
 reg m_axi_gmem_WVALID;
-reg[511:0] m_axi_gmem_WDATA;
-reg[63:0] m_axi_gmem_WSTRB;
+reg[63:0] m_axi_gmem_WDATA;
+reg[7:0] m_axi_gmem_WSTRB;
 reg m_axi_gmem_WLAST;
 reg[0:0] m_axi_gmem_WID;
 reg[0:0] m_axi_gmem_WUSER;
 reg m_axi_gmem_ARVALID;
 reg m_axi_gmem_RREADY;
 reg m_axi_gmem_BREADY;
+reg[63:0] counterCmd1_din;
 reg counterCmd1_write;
 
 reg    ap_done_reg;
@@ -194,115 +195,124 @@ reg    gmem_blk_n_AW;
 wire    ap_CS_fsm_state20;
 reg    gmem_blk_n_B;
 wire    ap_CS_fsm_state27;
-reg   [0:0] icmp_ln30_reg_236;
+reg   [0:0] icmp_ln17_reg_259;
 reg    gmem_blk_n_AR;
 wire    ap_CS_fsm_state2;
 reg    gmem_blk_n_R;
 wire    ap_CS_fsm_state9;
 wire    ap_CS_fsm_state11;
 wire    ap_CS_fsm_state18;
-reg   [0:0] icmp_ln1069_reg_251;
-reg   [0:0] icmp_ln30_1_reg_255;
+reg   [0:0] icmp_ln1069_reg_274;
+reg   [0:0] icmp_ln17_1_reg_278;
 reg    counterCmd1_blk_n;
 wire    ap_CS_fsm_state19;
-wire  signed [57:0] grp_fu_138_p4;
-reg   [57:0] reg_147;
+wire  signed [60:0] grp_fu_141_p4;
+reg   [60:0] reg_150;
 wire    ap_CS_fsm_state10;
-wire   [0:0] icmp_ln1069_fu_179_p2;
-wire   [0:0] grp_fu_132_p2;
-reg   [57:0] trunc_ln_reg_231;
-reg   [511:0] gmem_addr_read_reg_246;
-wire   [30:0] trunc_ln30_2_fu_184_p1;
-reg   [30:0] trunc_ln30_2_reg_259;
-wire   [30:0] trunc_ln30_fu_209_p1;
-reg   [30:0] trunc_ln30_reg_274;
+wire   [0:0] icmp_ln1069_fu_201_p2;
+wire   [0:0] grp_fu_135_p2;
+reg   [60:0] trunc_ln1069_1_reg_254;
+wire   [47:0] trunc_ln1069_fu_194_p1;
+reg   [47:0] trunc_ln1069_reg_269;
+wire   [30:0] trunc_ln17_2_fu_206_p1;
+reg   [30:0] trunc_ln17_2_reg_282;
+wire   [30:0] trunc_ln17_fu_231_p1;
+reg   [30:0] trunc_ln17_reg_297;
 wire    ap_CS_fsm_state21;
-wire    grp_runBench_Pipeline_dataWrite1_fu_116_ap_start;
-wire    grp_runBench_Pipeline_dataWrite1_fu_116_ap_done;
-wire    grp_runBench_Pipeline_dataWrite1_fu_116_ap_idle;
-wire    grp_runBench_Pipeline_dataWrite1_fu_116_ap_ready;
-wire    grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWVALID;
-wire   [63:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWADDR;
-wire   [0:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWID;
-wire   [31:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWLEN;
-wire   [2:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWSIZE;
-wire   [1:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWBURST;
-wire   [1:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWLOCK;
-wire   [3:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWCACHE;
-wire   [2:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWPROT;
-wire   [3:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWQOS;
-wire   [3:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWREGION;
-wire   [0:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWUSER;
-wire    grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WVALID;
-wire   [511:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WDATA;
-wire   [63:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WSTRB;
-wire    grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WLAST;
-wire   [0:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WID;
-wire   [0:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WUSER;
-wire    grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARVALID;
-wire   [63:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARADDR;
-wire   [0:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARID;
-wire   [31:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARLEN;
-wire   [2:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARSIZE;
-wire   [1:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARBURST;
-wire   [1:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARLOCK;
-wire   [3:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARCACHE;
-wire   [2:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARPROT;
-wire   [3:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARQOS;
-wire   [3:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARREGION;
-wire   [0:0] grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARUSER;
-wire    grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_RREADY;
-wire    grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_BREADY;
-wire    grp_runBench_Pipeline_dataWrite_fu_124_ap_start;
-wire    grp_runBench_Pipeline_dataWrite_fu_124_ap_done;
-wire    grp_runBench_Pipeline_dataWrite_fu_124_ap_idle;
-wire    grp_runBench_Pipeline_dataWrite_fu_124_ap_ready;
-wire    grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWVALID;
-wire   [63:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWADDR;
-wire   [0:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWID;
-wire   [31:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWLEN;
-wire   [2:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWSIZE;
-wire   [1:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWBURST;
-wire   [1:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWLOCK;
-wire   [3:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWCACHE;
-wire   [2:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWPROT;
-wire   [3:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWQOS;
-wire   [3:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWREGION;
-wire   [0:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWUSER;
-wire    grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WVALID;
-wire   [511:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WDATA;
-wire   [63:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WSTRB;
-wire    grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WLAST;
-wire   [0:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WID;
-wire   [0:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WUSER;
-wire    grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARVALID;
-wire   [63:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARADDR;
-wire   [0:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARID;
-wire   [31:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARLEN;
-wire   [2:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARSIZE;
-wire   [1:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARBURST;
-wire   [1:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARLOCK;
-wire   [3:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARCACHE;
-wire   [2:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARPROT;
-wire   [3:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARQOS;
-wire   [3:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARREGION;
-wire   [0:0] grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARUSER;
-wire    grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_RREADY;
-wire    grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_BREADY;
-reg    grp_runBench_Pipeline_dataWrite1_fu_116_ap_start_reg;
+wire    grp_runBench_Pipeline_dataWrite1_fu_119_ap_start;
+wire    grp_runBench_Pipeline_dataWrite1_fu_119_ap_done;
+wire    grp_runBench_Pipeline_dataWrite1_fu_119_ap_idle;
+wire    grp_runBench_Pipeline_dataWrite1_fu_119_ap_ready;
+wire    grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWVALID;
+wire   [63:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWADDR;
+wire   [0:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWID;
+wire   [31:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWLEN;
+wire   [2:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWSIZE;
+wire   [1:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWBURST;
+wire   [1:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWLOCK;
+wire   [3:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWCACHE;
+wire   [2:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWPROT;
+wire   [3:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWQOS;
+wire   [3:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWREGION;
+wire   [0:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWUSER;
+wire    grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WVALID;
+wire   [63:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WDATA;
+wire   [7:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WSTRB;
+wire    grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WLAST;
+wire   [0:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WID;
+wire   [0:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WUSER;
+wire    grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARVALID;
+wire   [63:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARADDR;
+wire   [0:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARID;
+wire   [31:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARLEN;
+wire   [2:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARSIZE;
+wire   [1:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARBURST;
+wire   [1:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARLOCK;
+wire   [3:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARCACHE;
+wire   [2:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARPROT;
+wire   [3:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARQOS;
+wire   [3:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARREGION;
+wire   [0:0] grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARUSER;
+wire    grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_RREADY;
+wire    grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_BREADY;
+wire    grp_runBench_Pipeline_dataWrite_fu_127_ap_start;
+wire    grp_runBench_Pipeline_dataWrite_fu_127_ap_done;
+wire    grp_runBench_Pipeline_dataWrite_fu_127_ap_idle;
+wire    grp_runBench_Pipeline_dataWrite_fu_127_ap_ready;
+wire    grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWVALID;
+wire   [63:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWADDR;
+wire   [0:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWID;
+wire   [31:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWLEN;
+wire   [2:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWSIZE;
+wire   [1:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWBURST;
+wire   [1:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWLOCK;
+wire   [3:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWCACHE;
+wire   [2:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWPROT;
+wire   [3:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWQOS;
+wire   [3:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWREGION;
+wire   [0:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWUSER;
+wire    grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WVALID;
+wire   [63:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WDATA;
+wire   [7:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WSTRB;
+wire    grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WLAST;
+wire   [0:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WID;
+wire   [0:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WUSER;
+wire    grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARVALID;
+wire   [63:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARADDR;
+wire   [0:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARID;
+wire   [31:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARLEN;
+wire   [2:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARSIZE;
+wire   [1:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARBURST;
+wire   [1:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARLOCK;
+wire   [3:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARCACHE;
+wire   [2:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARPROT;
+wire   [3:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARQOS;
+wire   [3:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARREGION;
+wire   [0:0] grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARUSER;
+wire    grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_RREADY;
+wire    grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_BREADY;
+reg    grp_runBench_Pipeline_dataWrite1_fu_119_ap_start_reg;
 wire    ap_CS_fsm_state12;
 wire    ap_CS_fsm_state13;
-reg    grp_runBench_Pipeline_dataWrite_fu_124_ap_start_reg;
+reg    grp_runBench_Pipeline_dataWrite_fu_127_ap_start_reg;
 wire    ap_CS_fsm_state22;
-wire  signed [63:0] sext_ln1069_fu_169_p1;
-wire  signed [63:0] sext_ln30_1_fu_187_p1;
-wire  signed [63:0] sext_ln30_fu_198_p1;
-reg    ap_predicate_op64_writeresp_state18;
+wire  signed [63:0] sext_ln1069_1_fu_184_p1;
+wire  signed [63:0] sext_ln17_1_fu_209_p1;
+wire  signed [63:0] sext_ln17_fu_220_p1;
+reg    ap_predicate_op68_writeresp_state18;
 reg    ap_block_state18;
 reg    ap_block_state27;
 reg    ap_block_state1;
 reg    ap_block_state19;
-wire   [63:0] add_ln1069_fu_153_p2;
+wire  signed [31:0] grp_fu_135_p0;
+wire  signed [31:0] shl_ln_fu_156_p1;
+wire   [34:0] shl_ln_fu_156_p3;
+wire  signed [63:0] sext_ln1069_2_fu_164_p1;
+wire   [63:0] add_ln1069_fu_168_p2;
+wire  signed [31:0] sext_ln1069_fu_198_p0;
+wire  signed [47:0] sext_ln1069_fu_198_p1;
+wire  signed [31:0] trunc_ln17_2_fu_206_p0;
+wire  signed [31:0] trunc_ln17_fu_231_p0;
 reg   [26:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 reg    ap_ST_fsm_state2_blk;
@@ -337,122 +347,122 @@ wire    ap_ce_reg;
 initial begin
 #0 ap_done_reg = 1'b0;
 #0 ap_CS_fsm = 27'd1;
-#0 grp_runBench_Pipeline_dataWrite1_fu_116_ap_start_reg = 1'b0;
-#0 grp_runBench_Pipeline_dataWrite_fu_124_ap_start_reg = 1'b0;
+#0 grp_runBench_Pipeline_dataWrite1_fu_119_ap_start_reg = 1'b0;
+#0 grp_runBench_Pipeline_dataWrite_fu_127_ap_start_reg = 1'b0;
 end
 
-ddrBenchmark_runBench_Pipeline_dataWrite1 grp_runBench_Pipeline_dataWrite1_fu_116(
+ddrBenchmark_runBench_Pipeline_dataWrite1 grp_runBench_Pipeline_dataWrite1_fu_119(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_runBench_Pipeline_dataWrite1_fu_116_ap_start),
-    .ap_done(grp_runBench_Pipeline_dataWrite1_fu_116_ap_done),
-    .ap_idle(grp_runBench_Pipeline_dataWrite1_fu_116_ap_idle),
-    .ap_ready(grp_runBench_Pipeline_dataWrite1_fu_116_ap_ready),
-    .m_axi_gmem_AWVALID(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWVALID),
+    .ap_start(grp_runBench_Pipeline_dataWrite1_fu_119_ap_start),
+    .ap_done(grp_runBench_Pipeline_dataWrite1_fu_119_ap_done),
+    .ap_idle(grp_runBench_Pipeline_dataWrite1_fu_119_ap_idle),
+    .ap_ready(grp_runBench_Pipeline_dataWrite1_fu_119_ap_ready),
+    .m_axi_gmem_AWVALID(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWVALID),
     .m_axi_gmem_AWREADY(m_axi_gmem_AWREADY),
-    .m_axi_gmem_AWADDR(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWADDR),
-    .m_axi_gmem_AWID(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWID),
-    .m_axi_gmem_AWLEN(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWLEN),
-    .m_axi_gmem_AWSIZE(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWSIZE),
-    .m_axi_gmem_AWBURST(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWBURST),
-    .m_axi_gmem_AWLOCK(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWLOCK),
-    .m_axi_gmem_AWCACHE(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWCACHE),
-    .m_axi_gmem_AWPROT(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWPROT),
-    .m_axi_gmem_AWQOS(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWQOS),
-    .m_axi_gmem_AWREGION(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWREGION),
-    .m_axi_gmem_AWUSER(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWUSER),
-    .m_axi_gmem_WVALID(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WVALID),
+    .m_axi_gmem_AWADDR(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWADDR),
+    .m_axi_gmem_AWID(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWID),
+    .m_axi_gmem_AWLEN(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWLEN),
+    .m_axi_gmem_AWSIZE(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWSIZE),
+    .m_axi_gmem_AWBURST(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWBURST),
+    .m_axi_gmem_AWLOCK(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWLOCK),
+    .m_axi_gmem_AWCACHE(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWCACHE),
+    .m_axi_gmem_AWPROT(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWPROT),
+    .m_axi_gmem_AWQOS(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWQOS),
+    .m_axi_gmem_AWREGION(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWREGION),
+    .m_axi_gmem_AWUSER(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWUSER),
+    .m_axi_gmem_WVALID(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WVALID),
     .m_axi_gmem_WREADY(m_axi_gmem_WREADY),
-    .m_axi_gmem_WDATA(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WDATA),
-    .m_axi_gmem_WSTRB(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WSTRB),
-    .m_axi_gmem_WLAST(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WLAST),
-    .m_axi_gmem_WID(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WID),
-    .m_axi_gmem_WUSER(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WUSER),
-    .m_axi_gmem_ARVALID(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARVALID),
+    .m_axi_gmem_WDATA(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WDATA),
+    .m_axi_gmem_WSTRB(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WSTRB),
+    .m_axi_gmem_WLAST(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WLAST),
+    .m_axi_gmem_WID(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WID),
+    .m_axi_gmem_WUSER(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WUSER),
+    .m_axi_gmem_ARVALID(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARVALID),
     .m_axi_gmem_ARREADY(1'b0),
-    .m_axi_gmem_ARADDR(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARADDR),
-    .m_axi_gmem_ARID(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARID),
-    .m_axi_gmem_ARLEN(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARLEN),
-    .m_axi_gmem_ARSIZE(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARSIZE),
-    .m_axi_gmem_ARBURST(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARBURST),
-    .m_axi_gmem_ARLOCK(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARLOCK),
-    .m_axi_gmem_ARCACHE(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARCACHE),
-    .m_axi_gmem_ARPROT(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARPROT),
-    .m_axi_gmem_ARQOS(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARQOS),
-    .m_axi_gmem_ARREGION(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARREGION),
-    .m_axi_gmem_ARUSER(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_ARUSER),
+    .m_axi_gmem_ARADDR(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARADDR),
+    .m_axi_gmem_ARID(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARID),
+    .m_axi_gmem_ARLEN(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARLEN),
+    .m_axi_gmem_ARSIZE(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARSIZE),
+    .m_axi_gmem_ARBURST(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARBURST),
+    .m_axi_gmem_ARLOCK(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARLOCK),
+    .m_axi_gmem_ARCACHE(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARCACHE),
+    .m_axi_gmem_ARPROT(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARPROT),
+    .m_axi_gmem_ARQOS(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARQOS),
+    .m_axi_gmem_ARREGION(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARREGION),
+    .m_axi_gmem_ARUSER(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_ARUSER),
     .m_axi_gmem_RVALID(1'b0),
-    .m_axi_gmem_RREADY(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_RREADY),
-    .m_axi_gmem_RDATA(512'd0),
+    .m_axi_gmem_RREADY(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_RREADY),
+    .m_axi_gmem_RDATA(64'd0),
     .m_axi_gmem_RLAST(1'b0),
     .m_axi_gmem_RID(1'd0),
     .m_axi_gmem_RFIFONUM(9'd0),
     .m_axi_gmem_RUSER(1'd0),
     .m_axi_gmem_RRESP(2'd0),
     .m_axi_gmem_BVALID(m_axi_gmem_BVALID),
-    .m_axi_gmem_BREADY(grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_BREADY),
+    .m_axi_gmem_BREADY(grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_BREADY),
     .m_axi_gmem_BRESP(m_axi_gmem_BRESP),
     .m_axi_gmem_BID(m_axi_gmem_BID),
     .m_axi_gmem_BUSER(m_axi_gmem_BUSER),
-    .sext_ln30_1(reg_147),
-    .trunc_ln30_3(trunc_ln30_2_reg_259)
+    .sext_ln17_1(reg_150),
+    .trunc_ln17_3(trunc_ln17_2_reg_282)
 );
 
-ddrBenchmark_runBench_Pipeline_dataWrite grp_runBench_Pipeline_dataWrite_fu_124(
+ddrBenchmark_runBench_Pipeline_dataWrite grp_runBench_Pipeline_dataWrite_fu_127(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_runBench_Pipeline_dataWrite_fu_124_ap_start),
-    .ap_done(grp_runBench_Pipeline_dataWrite_fu_124_ap_done),
-    .ap_idle(grp_runBench_Pipeline_dataWrite_fu_124_ap_idle),
-    .ap_ready(grp_runBench_Pipeline_dataWrite_fu_124_ap_ready),
-    .m_axi_gmem_AWVALID(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWVALID),
+    .ap_start(grp_runBench_Pipeline_dataWrite_fu_127_ap_start),
+    .ap_done(grp_runBench_Pipeline_dataWrite_fu_127_ap_done),
+    .ap_idle(grp_runBench_Pipeline_dataWrite_fu_127_ap_idle),
+    .ap_ready(grp_runBench_Pipeline_dataWrite_fu_127_ap_ready),
+    .m_axi_gmem_AWVALID(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWVALID),
     .m_axi_gmem_AWREADY(m_axi_gmem_AWREADY),
-    .m_axi_gmem_AWADDR(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWADDR),
-    .m_axi_gmem_AWID(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWID),
-    .m_axi_gmem_AWLEN(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWLEN),
-    .m_axi_gmem_AWSIZE(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWSIZE),
-    .m_axi_gmem_AWBURST(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWBURST),
-    .m_axi_gmem_AWLOCK(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWLOCK),
-    .m_axi_gmem_AWCACHE(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWCACHE),
-    .m_axi_gmem_AWPROT(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWPROT),
-    .m_axi_gmem_AWQOS(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWQOS),
-    .m_axi_gmem_AWREGION(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWREGION),
-    .m_axi_gmem_AWUSER(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWUSER),
-    .m_axi_gmem_WVALID(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WVALID),
+    .m_axi_gmem_AWADDR(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWADDR),
+    .m_axi_gmem_AWID(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWID),
+    .m_axi_gmem_AWLEN(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWLEN),
+    .m_axi_gmem_AWSIZE(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWSIZE),
+    .m_axi_gmem_AWBURST(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWBURST),
+    .m_axi_gmem_AWLOCK(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWLOCK),
+    .m_axi_gmem_AWCACHE(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWCACHE),
+    .m_axi_gmem_AWPROT(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWPROT),
+    .m_axi_gmem_AWQOS(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWQOS),
+    .m_axi_gmem_AWREGION(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWREGION),
+    .m_axi_gmem_AWUSER(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWUSER),
+    .m_axi_gmem_WVALID(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WVALID),
     .m_axi_gmem_WREADY(m_axi_gmem_WREADY),
-    .m_axi_gmem_WDATA(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WDATA),
-    .m_axi_gmem_WSTRB(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WSTRB),
-    .m_axi_gmem_WLAST(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WLAST),
-    .m_axi_gmem_WID(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WID),
-    .m_axi_gmem_WUSER(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WUSER),
-    .m_axi_gmem_ARVALID(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARVALID),
+    .m_axi_gmem_WDATA(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WDATA),
+    .m_axi_gmem_WSTRB(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WSTRB),
+    .m_axi_gmem_WLAST(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WLAST),
+    .m_axi_gmem_WID(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WID),
+    .m_axi_gmem_WUSER(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WUSER),
+    .m_axi_gmem_ARVALID(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARVALID),
     .m_axi_gmem_ARREADY(1'b0),
-    .m_axi_gmem_ARADDR(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARADDR),
-    .m_axi_gmem_ARID(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARID),
-    .m_axi_gmem_ARLEN(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARLEN),
-    .m_axi_gmem_ARSIZE(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARSIZE),
-    .m_axi_gmem_ARBURST(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARBURST),
-    .m_axi_gmem_ARLOCK(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARLOCK),
-    .m_axi_gmem_ARCACHE(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARCACHE),
-    .m_axi_gmem_ARPROT(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARPROT),
-    .m_axi_gmem_ARQOS(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARQOS),
-    .m_axi_gmem_ARREGION(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARREGION),
-    .m_axi_gmem_ARUSER(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_ARUSER),
+    .m_axi_gmem_ARADDR(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARADDR),
+    .m_axi_gmem_ARID(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARID),
+    .m_axi_gmem_ARLEN(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARLEN),
+    .m_axi_gmem_ARSIZE(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARSIZE),
+    .m_axi_gmem_ARBURST(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARBURST),
+    .m_axi_gmem_ARLOCK(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARLOCK),
+    .m_axi_gmem_ARCACHE(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARCACHE),
+    .m_axi_gmem_ARPROT(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARPROT),
+    .m_axi_gmem_ARQOS(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARQOS),
+    .m_axi_gmem_ARREGION(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARREGION),
+    .m_axi_gmem_ARUSER(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_ARUSER),
     .m_axi_gmem_RVALID(1'b0),
-    .m_axi_gmem_RREADY(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_RREADY),
-    .m_axi_gmem_RDATA(512'd0),
+    .m_axi_gmem_RREADY(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_RREADY),
+    .m_axi_gmem_RDATA(64'd0),
     .m_axi_gmem_RLAST(1'b0),
     .m_axi_gmem_RID(1'd0),
     .m_axi_gmem_RFIFONUM(9'd0),
     .m_axi_gmem_RUSER(1'd0),
     .m_axi_gmem_RRESP(2'd0),
     .m_axi_gmem_BVALID(m_axi_gmem_BVALID),
-    .m_axi_gmem_BREADY(grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_BREADY),
+    .m_axi_gmem_BREADY(grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_BREADY),
     .m_axi_gmem_BRESP(m_axi_gmem_BRESP),
     .m_axi_gmem_BID(m_axi_gmem_BID),
     .m_axi_gmem_BUSER(m_axi_gmem_BUSER),
-    .sext_ln30(reg_147),
-    .trunc_ln30_2(trunc_ln30_reg_274)
+    .sext_ln17(reg_150),
+    .trunc_ln17_2(trunc_ln17_reg_297)
 );
 
 always @ (posedge ap_clk) begin
@@ -477,73 +487,73 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_runBench_Pipeline_dataWrite1_fu_116_ap_start_reg <= 1'b0;
+        grp_runBench_Pipeline_dataWrite1_fu_119_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state12)) begin
-            grp_runBench_Pipeline_dataWrite1_fu_116_ap_start_reg <= 1'b1;
-        end else if ((grp_runBench_Pipeline_dataWrite1_fu_116_ap_ready == 1'b1)) begin
-            grp_runBench_Pipeline_dataWrite1_fu_116_ap_start_reg <= 1'b0;
+            grp_runBench_Pipeline_dataWrite1_fu_119_ap_start_reg <= 1'b1;
+        end else if ((grp_runBench_Pipeline_dataWrite1_fu_119_ap_ready == 1'b1)) begin
+            grp_runBench_Pipeline_dataWrite1_fu_119_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_runBench_Pipeline_dataWrite_fu_124_ap_start_reg <= 1'b0;
+        grp_runBench_Pipeline_dataWrite_fu_127_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state21)) begin
-            grp_runBench_Pipeline_dataWrite_fu_124_ap_start_reg <= 1'b1;
-        end else if ((grp_runBench_Pipeline_dataWrite_fu_124_ap_ready == 1'b1)) begin
-            grp_runBench_Pipeline_dataWrite_fu_124_ap_start_reg <= 1'b0;
+            grp_runBench_Pipeline_dataWrite_fu_127_ap_start_reg <= 1'b1;
+        end else if ((grp_runBench_Pipeline_dataWrite_fu_127_ap_ready == 1'b1)) begin
+            grp_runBench_Pipeline_dataWrite_fu_127_ap_start_reg <= 1'b0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state9)) begin
-        gmem_addr_read_reg_246 <= m_axi_gmem_RDATA;
-    end
-end
-
-always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state10)) begin
-        icmp_ln1069_reg_251 <= icmp_ln1069_fu_179_p2;
+        icmp_ln1069_reg_274 <= icmp_ln1069_fu_201_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state10) & (icmp_ln1069_fu_179_p2 == 1'd0))) begin
-        icmp_ln30_1_reg_255 <= grp_fu_132_p2;
+    if (((1'b1 == ap_CS_fsm_state10) & (icmp_ln1069_fu_201_p2 == 1'd0))) begin
+        icmp_ln17_1_reg_278 <= grp_fu_135_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state1) & (rw == 1'd1))) begin
-        icmp_ln30_reg_236 <= grp_fu_132_p2;
+        icmp_ln17_reg_259 <= grp_fu_135_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state20) | ((1'b1 == ap_CS_fsm_state10) & (grp_fu_132_p2 == 1'd1) & (icmp_ln1069_fu_179_p2 == 1'd0)))) begin
-        reg_147 <= {{mem[63:6]}};
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state11)) begin
-        trunc_ln30_2_reg_259 <= trunc_ln30_2_fu_184_p1;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state21)) begin
-        trunc_ln30_reg_274 <= trunc_ln30_fu_209_p1;
+    if (((1'b1 == ap_CS_fsm_state20) | ((1'b1 == ap_CS_fsm_state10) & (grp_fu_135_p2 == 1'd1) & (icmp_ln1069_fu_201_p2 == 1'd0)))) begin
+        reg_150 <= {{mem[63:3]}};
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state1) & (rw == 1'd0))) begin
-        trunc_ln_reg_231 <= {{add_ln1069_fu_153_p2[63:6]}};
+        trunc_ln1069_1_reg_254 <= {{add_ln1069_fu_168_p2[63:3]}};
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state9)) begin
+        trunc_ln1069_reg_269 <= trunc_ln1069_fu_194_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state11)) begin
+        trunc_ln17_2_reg_282 <= trunc_ln17_2_fu_206_p1;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if ((1'b1 == ap_CS_fsm_state21)) begin
+        trunc_ln17_reg_297 <= trunc_ln17_fu_231_p1;
     end
 end
 
@@ -560,7 +570,7 @@ end
 assign ap_ST_fsm_state12_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_runBench_Pipeline_dataWrite1_fu_116_ap_done == 1'b0)) begin
+    if ((grp_runBench_Pipeline_dataWrite1_fu_119_ap_done == 1'b0)) begin
         ap_ST_fsm_state13_blk = 1'b1;
     end else begin
         ap_ST_fsm_state13_blk = 1'b0;
@@ -576,7 +586,7 @@ assign ap_ST_fsm_state16_blk = 1'b0;
 assign ap_ST_fsm_state17_blk = 1'b0;
 
 always @ (*) begin
-    if (((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (ap_predicate_op64_writeresp_state18 == 1'b1)))) begin
+    if (((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (ap_predicate_op68_writeresp_state18 == 1'b1)))) begin
         ap_ST_fsm_state18_blk = 1'b1;
     end else begin
         ap_ST_fsm_state18_blk = 1'b0;
@@ -610,7 +620,7 @@ end
 assign ap_ST_fsm_state21_blk = 1'b0;
 
 always @ (*) begin
-    if ((grp_runBench_Pipeline_dataWrite_fu_124_ap_done == 1'b0)) begin
+    if ((grp_runBench_Pipeline_dataWrite_fu_127_ap_done == 1'b0)) begin
         ap_ST_fsm_state22_blk = 1'b1;
     end else begin
         ap_ST_fsm_state22_blk = 1'b0;
@@ -626,7 +636,7 @@ assign ap_ST_fsm_state25_blk = 1'b0;
 assign ap_ST_fsm_state26_blk = 1'b0;
 
 always @ (*) begin
-    if (((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (icmp_ln30_reg_236 == 1'd1)))) begin
+    if (((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (icmp_ln17_reg_259 == 1'd1)))) begin
         ap_ST_fsm_state27_blk = 1'b1;
     end else begin
         ap_ST_fsm_state27_blk = 1'b0;
@@ -694,7 +704,17 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((~((rw == 1'd0) & (counterCmd1_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state19) & (rw == 1'd0)) | (~((ap_done_reg == 1'b1) | (ap_start == 1'b0) | ((rw == 1'd1) & (counterCmd1_full_n == 1'b0))) & (1'b1 == ap_CS_fsm_state1) & (rw == 1'd1)) | (~((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (icmp_ln30_reg_236 == 1'd1))) & (1'b1 == ap_CS_fsm_state27)) | (~((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (ap_predicate_op64_writeresp_state18 == 1'b1))) & (1'b1 == ap_CS_fsm_state18)))) begin
+    if (((~((rw == 1'd0) & (counterCmd1_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state19) & (rw == 1'd0)) | (~((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (icmp_ln17_reg_259 == 1'd1))) & (1'b1 == ap_CS_fsm_state27)))) begin
+        counterCmd1_din = 64'd1;
+    end else if (((~((ap_done_reg == 1'b1) | (ap_start == 1'b0) | ((rw == 1'd1) & (counterCmd1_full_n == 1'b0))) & (1'b1 == ap_CS_fsm_state1) & (rw == 1'd1)) | (~((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (ap_predicate_op68_writeresp_state18 == 1'b1))) & (1'b1 == ap_CS_fsm_state18)))) begin
+        counterCmd1_din = 64'd0;
+    end else begin
+        counterCmd1_din = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((~((rw == 1'd0) & (counterCmd1_full_n == 1'b0)) & (1'b1 == ap_CS_fsm_state19) & (rw == 1'd0)) | (~((ap_done_reg == 1'b1) | (ap_start == 1'b0) | ((rw == 1'd1) & (counterCmd1_full_n == 1'b0))) & (1'b1 == ap_CS_fsm_state1) & (rw == 1'd1)) | (~((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (icmp_ln17_reg_259 == 1'd1))) & (1'b1 == ap_CS_fsm_state27)) | (~((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (ap_predicate_op68_writeresp_state18 == 1'b1))) & (1'b1 == ap_CS_fsm_state18)))) begin
         counterCmd1_write = 1'b1;
     end else begin
         counterCmd1_write = 1'b0;
@@ -718,7 +738,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((((1'b1 == ap_CS_fsm_state18) & (icmp_ln30_1_reg_255 == 1'd1) & (icmp_ln1069_reg_251 == 1'd0)) | ((1'b1 == ap_CS_fsm_state27) & (icmp_ln30_reg_236 == 1'd1)))) begin
+    if ((((1'b1 == ap_CS_fsm_state18) & (icmp_ln17_1_reg_278 == 1'd1) & (icmp_ln1069_reg_274 == 1'd0)) | ((1'b1 == ap_CS_fsm_state27) & (icmp_ln17_reg_259 == 1'd1)))) begin
         gmem_blk_n_B = m_axi_gmem_BVALID;
     end else begin
         gmem_blk_n_B = 1'b1;
@@ -743,13 +763,13 @@ end
 
 always @ (*) begin
     if (((m_axi_gmem_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state20))) begin
-        m_axi_gmem_AWADDR = sext_ln30_fu_198_p1;
+        m_axi_gmem_AWADDR = sext_ln17_fu_220_p1;
     end else if (((m_axi_gmem_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state11))) begin
-        m_axi_gmem_AWADDR = sext_ln30_1_fu_187_p1;
+        m_axi_gmem_AWADDR = sext_ln17_1_fu_209_p1;
     end else if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_AWADDR = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWADDR;
+        m_axi_gmem_AWADDR = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWADDR;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_AWADDR = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWADDR;
+        m_axi_gmem_AWADDR = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWADDR;
     end else begin
         m_axi_gmem_AWADDR = 'bx;
     end
@@ -757,9 +777,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_AWBURST = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWBURST;
+        m_axi_gmem_AWBURST = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWBURST;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_AWBURST = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWBURST;
+        m_axi_gmem_AWBURST = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWBURST;
     end else begin
         m_axi_gmem_AWBURST = 2'd0;
     end
@@ -767,9 +787,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_AWCACHE = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWCACHE;
+        m_axi_gmem_AWCACHE = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWCACHE;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_AWCACHE = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWCACHE;
+        m_axi_gmem_AWCACHE = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWCACHE;
     end else begin
         m_axi_gmem_AWCACHE = 4'd0;
     end
@@ -777,9 +797,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_AWID = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWID;
+        m_axi_gmem_AWID = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWID;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_AWID = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWID;
+        m_axi_gmem_AWID = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWID;
     end else begin
         m_axi_gmem_AWID = 1'd0;
     end
@@ -789,9 +809,9 @@ always @ (*) begin
     if ((((m_axi_gmem_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state11)) | ((m_axi_gmem_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state20)))) begin
         m_axi_gmem_AWLEN = dataNum;
     end else if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_AWLEN = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWLEN;
+        m_axi_gmem_AWLEN = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWLEN;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_AWLEN = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWLEN;
+        m_axi_gmem_AWLEN = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWLEN;
     end else begin
         m_axi_gmem_AWLEN = 'bx;
     end
@@ -799,9 +819,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_AWLOCK = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWLOCK;
+        m_axi_gmem_AWLOCK = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWLOCK;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_AWLOCK = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWLOCK;
+        m_axi_gmem_AWLOCK = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWLOCK;
     end else begin
         m_axi_gmem_AWLOCK = 2'd0;
     end
@@ -809,9 +829,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_AWPROT = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWPROT;
+        m_axi_gmem_AWPROT = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWPROT;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_AWPROT = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWPROT;
+        m_axi_gmem_AWPROT = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWPROT;
     end else begin
         m_axi_gmem_AWPROT = 3'd0;
     end
@@ -819,9 +839,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_AWQOS = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWQOS;
+        m_axi_gmem_AWQOS = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWQOS;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_AWQOS = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWQOS;
+        m_axi_gmem_AWQOS = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWQOS;
     end else begin
         m_axi_gmem_AWQOS = 4'd0;
     end
@@ -829,9 +849,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_AWREGION = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWREGION;
+        m_axi_gmem_AWREGION = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWREGION;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_AWREGION = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWREGION;
+        m_axi_gmem_AWREGION = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWREGION;
     end else begin
         m_axi_gmem_AWREGION = 4'd0;
     end
@@ -839,9 +859,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_AWSIZE = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWSIZE;
+        m_axi_gmem_AWSIZE = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWSIZE;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_AWSIZE = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWSIZE;
+        m_axi_gmem_AWSIZE = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWSIZE;
     end else begin
         m_axi_gmem_AWSIZE = 3'd0;
     end
@@ -849,9 +869,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_AWUSER = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWUSER;
+        m_axi_gmem_AWUSER = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWUSER;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_AWUSER = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWUSER;
+        m_axi_gmem_AWUSER = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWUSER;
     end else begin
         m_axi_gmem_AWUSER = 1'd0;
     end
@@ -861,21 +881,21 @@ always @ (*) begin
     if ((((m_axi_gmem_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state11)) | ((m_axi_gmem_AWREADY == 1'b1) & (1'b1 == ap_CS_fsm_state20)))) begin
         m_axi_gmem_AWVALID = 1'b1;
     end else if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_AWVALID = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_AWVALID;
+        m_axi_gmem_AWVALID = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_AWVALID;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_AWVALID = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_AWVALID;
+        m_axi_gmem_AWVALID = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_AWVALID;
     end else begin
         m_axi_gmem_AWVALID = 1'b0;
     end
 end
 
 always @ (*) begin
-    if (((~((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (icmp_ln30_reg_236 == 1'd1))) & (1'b1 == ap_CS_fsm_state27) & (icmp_ln30_reg_236 == 1'd1)) | (~((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (ap_predicate_op64_writeresp_state18 == 1'b1))) & (ap_predicate_op64_writeresp_state18 == 1'b1) & (1'b1 == ap_CS_fsm_state18)))) begin
+    if (((~((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (icmp_ln17_reg_259 == 1'd1))) & (1'b1 == ap_CS_fsm_state27) & (icmp_ln17_reg_259 == 1'd1)) | (~((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (ap_predicate_op68_writeresp_state18 == 1'b1))) & (ap_predicate_op68_writeresp_state18 == 1'b1) & (1'b1 == ap_CS_fsm_state18)))) begin
         m_axi_gmem_BREADY = 1'b1;
     end else if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_BREADY = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_BREADY;
+        m_axi_gmem_BREADY = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_BREADY;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_BREADY = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_BREADY;
+        m_axi_gmem_BREADY = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_BREADY;
     end else begin
         m_axi_gmem_BREADY = 1'b0;
     end
@@ -891,9 +911,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_WDATA = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WDATA;
+        m_axi_gmem_WDATA = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WDATA;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_WDATA = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WDATA;
+        m_axi_gmem_WDATA = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WDATA;
     end else begin
         m_axi_gmem_WDATA = 'bx;
     end
@@ -901,9 +921,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_WID = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WID;
+        m_axi_gmem_WID = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WID;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_WID = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WID;
+        m_axi_gmem_WID = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WID;
     end else begin
         m_axi_gmem_WID = 'bx;
     end
@@ -911,9 +931,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_WLAST = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WLAST;
+        m_axi_gmem_WLAST = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WLAST;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_WLAST = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WLAST;
+        m_axi_gmem_WLAST = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WLAST;
     end else begin
         m_axi_gmem_WLAST = 'bx;
     end
@@ -921,9 +941,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_WSTRB = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WSTRB;
+        m_axi_gmem_WSTRB = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WSTRB;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_WSTRB = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WSTRB;
+        m_axi_gmem_WSTRB = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WSTRB;
     end else begin
         m_axi_gmem_WSTRB = 'bx;
     end
@@ -931,9 +951,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_WUSER = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WUSER;
+        m_axi_gmem_WUSER = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WUSER;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_WUSER = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WUSER;
+        m_axi_gmem_WUSER = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WUSER;
     end else begin
         m_axi_gmem_WUSER = 'bx;
     end
@@ -941,9 +961,9 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state22) | (1'b1 == ap_CS_fsm_state21))) begin
-        m_axi_gmem_WVALID = grp_runBench_Pipeline_dataWrite_fu_124_m_axi_gmem_WVALID;
+        m_axi_gmem_WVALID = grp_runBench_Pipeline_dataWrite_fu_127_m_axi_gmem_WVALID;
     end else if (((1'b1 == ap_CS_fsm_state13) | (1'b1 == ap_CS_fsm_state12))) begin
-        m_axi_gmem_WVALID = grp_runBench_Pipeline_dataWrite1_fu_116_m_axi_gmem_WVALID;
+        m_axi_gmem_WVALID = grp_runBench_Pipeline_dataWrite1_fu_119_m_axi_gmem_WVALID;
     end else begin
         m_axi_gmem_WVALID = 1'b0;
     end
@@ -952,9 +972,9 @@ end
 always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if ((~((ap_done_reg == 1'b1) | (ap_start == 1'b0) | ((rw == 1'd1) & (counterCmd1_full_n == 1'b0))) & (1'b1 == ap_CS_fsm_state1) & (grp_fu_132_p2 == 1'd0) & (rw == 1'd1))) begin
+            if ((~((ap_done_reg == 1'b1) | (ap_start == 1'b0) | ((rw == 1'd1) & (counterCmd1_full_n == 1'b0))) & (1'b1 == ap_CS_fsm_state1) & (grp_fu_135_p2 == 1'd0) & (rw == 1'd1))) begin
                 ap_NS_fsm = ap_ST_fsm_state27;
-            end else if ((~((ap_done_reg == 1'b1) | (ap_start == 1'b0) | ((rw == 1'd1) & (counterCmd1_full_n == 1'b0))) & (1'b1 == ap_CS_fsm_state1) & (grp_fu_132_p2 == 1'd1) & (rw == 1'd1))) begin
+            end else if ((~((ap_done_reg == 1'b1) | (ap_start == 1'b0) | ((rw == 1'd1) & (counterCmd1_full_n == 1'b0))) & (1'b1 == ap_CS_fsm_state1) & (grp_fu_135_p2 == 1'd1) & (rw == 1'd1))) begin
                 ap_NS_fsm = ap_ST_fsm_state20;
             end else if ((~((ap_done_reg == 1'b1) | (ap_start == 1'b0) | ((rw == 1'd1) & (counterCmd1_full_n == 1'b0))) & (1'b1 == ap_CS_fsm_state1) & (rw == 1'd0))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
@@ -995,7 +1015,7 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state10 : begin
-            if (((1'b1 == ap_CS_fsm_state10) & (grp_fu_132_p2 == 1'd1) & (icmp_ln1069_fu_179_p2 == 1'd0))) begin
+            if (((1'b1 == ap_CS_fsm_state10) & (grp_fu_135_p2 == 1'd1) & (icmp_ln1069_fu_201_p2 == 1'd0))) begin
                 ap_NS_fsm = ap_ST_fsm_state11;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state18;
@@ -1012,7 +1032,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state13;
         end
         ap_ST_fsm_state13 : begin
-            if (((grp_runBench_Pipeline_dataWrite1_fu_116_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state13))) begin
+            if (((grp_runBench_Pipeline_dataWrite1_fu_119_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state13))) begin
                 ap_NS_fsm = ap_ST_fsm_state14;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state13;
@@ -1031,7 +1051,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state18;
         end
         ap_ST_fsm_state18 : begin
-            if ((~((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (ap_predicate_op64_writeresp_state18 == 1'b1))) & (1'b1 == ap_CS_fsm_state18))) begin
+            if ((~((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (ap_predicate_op68_writeresp_state18 == 1'b1))) & (1'b1 == ap_CS_fsm_state18))) begin
                 ap_NS_fsm = ap_ST_fsm_state19;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state18;
@@ -1055,7 +1075,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state22;
         end
         ap_ST_fsm_state22 : begin
-            if (((grp_runBench_Pipeline_dataWrite_fu_124_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state22))) begin
+            if (((grp_runBench_Pipeline_dataWrite_fu_127_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state22))) begin
                 ap_NS_fsm = ap_ST_fsm_state23;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state22;
@@ -1074,7 +1094,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state27;
         end
         ap_ST_fsm_state27 : begin
-            if ((~((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (icmp_ln30_reg_236 == 1'd1))) & (1'b1 == ap_CS_fsm_state27))) begin
+            if ((~((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (icmp_ln17_reg_259 == 1'd1))) & (1'b1 == ap_CS_fsm_state27))) begin
                 ap_NS_fsm = ap_ST_fsm_state19;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state27;
@@ -1086,7 +1106,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln1069_fu_153_p2 = (mem + 64'd64);
+assign add_ln1069_fu_168_p2 = ($signed(sext_ln1069_2_fu_164_p1) + $signed(mem));
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -1119,7 +1139,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    ap_block_state18 = ((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (ap_predicate_op64_writeresp_state18 == 1'b1)));
+    ap_block_state18 = ((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (ap_predicate_op68_writeresp_state18 == 1'b1)));
 end
 
 always @ (*) begin
@@ -1127,26 +1147,26 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    ap_block_state27 = ((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (icmp_ln30_reg_236 == 1'd1)));
+    ap_block_state27 = ((counterCmd1_full_n == 1'b0) | ((m_axi_gmem_BVALID == 1'b0) & (icmp_ln17_reg_259 == 1'd1)));
 end
 
 always @ (*) begin
-    ap_predicate_op64_writeresp_state18 = ((icmp_ln30_1_reg_255 == 1'd1) & (icmp_ln1069_reg_251 == 1'd0));
+    ap_predicate_op68_writeresp_state18 = ((icmp_ln17_1_reg_278 == 1'd1) & (icmp_ln1069_reg_274 == 1'd0));
 end
 
-assign counterCmd1_din = 64'd0;
+assign grp_fu_135_p0 = dataNum;
 
-assign grp_fu_132_p2 = (($signed(dataNum) > $signed(32'd0)) ? 1'b1 : 1'b0);
+assign grp_fu_135_p2 = (($signed(grp_fu_135_p0) > $signed(32'd0)) ? 1'b1 : 1'b0);
 
-assign grp_fu_138_p4 = {{mem[63:6]}};
+assign grp_fu_141_p4 = {{mem[63:3]}};
 
-assign grp_runBench_Pipeline_dataWrite1_fu_116_ap_start = grp_runBench_Pipeline_dataWrite1_fu_116_ap_start_reg;
+assign grp_runBench_Pipeline_dataWrite1_fu_119_ap_start = grp_runBench_Pipeline_dataWrite1_fu_119_ap_start_reg;
 
-assign grp_runBench_Pipeline_dataWrite_fu_124_ap_start = grp_runBench_Pipeline_dataWrite_fu_124_ap_start_reg;
+assign grp_runBench_Pipeline_dataWrite_fu_127_ap_start = grp_runBench_Pipeline_dataWrite_fu_127_ap_start_reg;
 
-assign icmp_ln1069_fu_179_p2 = ((gmem_addr_read_reg_246 == 512'd1) ? 1'b1 : 1'b0);
+assign icmp_ln1069_fu_201_p2 = ((trunc_ln1069_reg_269 == sext_ln1069_fu_198_p1) ? 1'b1 : 1'b0);
 
-assign m_axi_gmem_ARADDR = sext_ln1069_fu_169_p1;
+assign m_axi_gmem_ARADDR = sext_ln1069_1_fu_184_p1;
 
 assign m_axi_gmem_ARBURST = 2'd0;
 
@@ -1168,14 +1188,30 @@ assign m_axi_gmem_ARSIZE = 3'd0;
 
 assign m_axi_gmem_ARUSER = 1'd0;
 
-assign sext_ln1069_fu_169_p1 = $signed(trunc_ln_reg_231);
+assign sext_ln1069_1_fu_184_p1 = $signed(trunc_ln1069_1_reg_254);
 
-assign sext_ln30_1_fu_187_p1 = $signed(reg_147);
+assign sext_ln1069_2_fu_164_p1 = $signed(shl_ln_fu_156_p3);
 
-assign sext_ln30_fu_198_p1 = grp_fu_138_p4;
+assign sext_ln1069_fu_198_p0 = dataNum;
 
-assign trunc_ln30_2_fu_184_p1 = dataNum[30:0];
+assign sext_ln1069_fu_198_p1 = sext_ln1069_fu_198_p0;
 
-assign trunc_ln30_fu_209_p1 = dataNum[30:0];
+assign sext_ln17_1_fu_209_p1 = $signed(reg_150);
+
+assign sext_ln17_fu_220_p1 = grp_fu_141_p4;
+
+assign shl_ln_fu_156_p1 = dataNum;
+
+assign shl_ln_fu_156_p3 = {{shl_ln_fu_156_p1}, {3'd0}};
+
+assign trunc_ln1069_fu_194_p1 = m_axi_gmem_RDATA[47:0];
+
+assign trunc_ln17_2_fu_206_p0 = dataNum;
+
+assign trunc_ln17_2_fu_206_p1 = trunc_ln17_2_fu_206_p0[30:0];
+
+assign trunc_ln17_fu_231_p0 = dataNum;
+
+assign trunc_ln17_fu_231_p1 = trunc_ln17_fu_231_p0[30:0];
 
 endmodule //ddrBenchmark_runBench

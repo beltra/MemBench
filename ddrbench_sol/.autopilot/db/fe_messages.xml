@@ -1,69 +1,81 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_ref.h:724:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_ref.h:724:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_ref.h:738:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_ref.h:738:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_ref.h:752:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_ref.h:752:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ddrBench/src/ddrbenchmark.cpp:21:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="compareHWResult" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="MemBench/src/ddrbenchmark.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="writeData" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/gbeve/Downloads/ddrBench/ddrbench_sol/csynth.tcl:16:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="MemBench/src/ddrbenchmark.cpp:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="readData" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/FPGA/MemBench/ddrbench_sol/csynth.tcl:16:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="ddrBenchmark" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=ddrBenchmark" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ddrBench/src/ddrbenchmark.cpp:61:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/FPGA/MemBench/ddrbench_sol/directives.tcl:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="ddrBenchmark" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=ddrBenchmark" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="MemBench/src/ddrbenchmark.cpp:50:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="ddrBenchmark" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=mem depth=max_data_depth bundle=gmem offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ddrBench/src/ddrbenchmark.cpp:62:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="MemBench/src/ddrbenchmark.cpp:51:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="ddrBenchmark" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=res depth=1 bundle=results offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ddrBench/src/ddrbenchmark.cpp:64:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="MemBench/src/ddrbenchmark.cpp:53:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="ddrBenchmark" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=mem bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ddrBench/src/ddrbenchmark.cpp:65:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="MemBench/src/ddrbenchmark.cpp:54:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="ddrBenchmark" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=res bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ddrBench/src/ddrbenchmark.cpp:67:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="MemBench/src/ddrbenchmark.cpp:56:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="ddrBenchmark" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=dataNum bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ddrBench/src/ddrbenchmark.cpp:68:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="MemBench/src/ddrbenchmark.cpp:57:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="ddrBenchmark" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=rw bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ddrBench/src/ddrbenchmark.cpp:69:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="MemBench/src/ddrbenchmark.cpp:58:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="ddrBenchmark" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ddrBench/src/ddrbenchmark.cpp:71:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="MemBench/src/ddrbenchmark.cpp:60:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="ddrBenchmark" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67" msg_body="Inlining function '_ZN8ssdm_intILi512ELb0EEC2EDq512_j' into 'ap_int_base&lt;512, false&gt;::ap_int_base(int)'">
-        <args Callee="_ZN8ssdm_intILi512ELb0EEC2EDq512_j" Caller="ap_int_base&lt;512, false&gt;::ap_int_base(int)"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67" msg_body="Inlining function '_ZN8ssdm_intILi48ELb0EEC2EDq48_j' into 'ap_int_base&lt;48, false&gt;::ap_int_base(int)'">
+        <args Callee="_ZN8ssdm_intILi48ELb0EEC2EDq48_j" Caller="ap_int_base&lt;48, false&gt;::ap_int_base(int)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:333:58" msg_body="Inlining function 'ap_int_base&lt;512, false&gt;::ap_int_base(int)' into 'ap_uint&lt;512&gt;::ap_uint(int)'">
-        <args Callee="ap_int_base&lt;512, false&gt;::ap_int_base(int)" Caller="ap_uint&lt;512&gt;::ap_uint(int)"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:333:58" msg_body="Inlining function 'ap_int_base&lt;48, false&gt;::ap_int_base(int)' into 'ap_uint&lt;48&gt;::ap_uint(int)'">
+        <args Callee="ap_int_base&lt;48, false&gt;::ap_int_base(int)" Caller="ap_uint&lt;48&gt;::ap_uint(int)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="ddrBench/src/ddrbenchmark.cpp:31:12" msg_body="Inlining function 'ap_uint&lt;512&gt;::ap_uint(int)' into 'writeData(ap_uint&lt;512&gt;*, int)'">
-        <args Callee="ap_uint&lt;512&gt;::ap_uint(int)" Caller="writeData(ap_uint&lt;512&gt;*, int)"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="MemBench/src/ddrbenchmark.cpp:19:11" msg_body="Inlining function 'ap_uint&lt;48&gt;::ap_uint(int)' into 'writeData(ap_uint&lt;48&gt;*, int)'">
+        <args Callee="ap_uint&lt;48&gt;::ap_uint(int)" Caller="writeData(ap_uint&lt;48&gt;*, int)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67" msg_body="Inlining function 'ssdm_int&lt;32, true&gt;::ssdm_int(int)' into 'ap_int_base&lt;32, true&gt;::ap_int_base(int)'">
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67" msg_body="Inlining function 'ssdm_int&lt;32, true&gt;::ssdm_int(int)' into 'ap_int_base&lt;32, true&gt;::ap_int_base(int)'">
         <args Callee="ssdm_int&lt;32, true&gt;::ssdm_int(int)" Caller="ap_int_base&lt;32, true&gt;::ap_int_base(int)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:2233" msg_body="Inlining function 'ap_int_base&lt;32, true&gt;::ap_int_base(int)' into 'bool operator!=&lt;512, false&gt;(ap_int_base&lt;512, false&gt; const&amp;, int)'">
-        <args Callee="ap_int_base&lt;32, true&gt;::ap_int_base(int)" Caller="bool operator!=&lt;512, false&gt;(ap_int_base&lt;512, false&gt; const&amp;, int)"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:2233" msg_body="Inlining function 'ap_int_base&lt;32, true&gt;::ap_int_base(int)' into 'bool operator!=&lt;48, false&gt;(ap_int_base&lt;48, false&gt; const&amp;, int)'">
+        <args Callee="ap_int_base&lt;32, true&gt;::ap_int_base(int)" Caller="bool operator!=&lt;48, false&gt;(ap_int_base&lt;48, false&gt; const&amp;, int)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:2230" msg_body="Inlining function 'bool ap_int_base&lt;512, false&gt;::operator!=&lt;32, true&gt;(ap_int_base&lt;32, true&gt; const&amp;) const' into 'bool operator!=&lt;512, false&gt;(ap_int_base&lt;512, false&gt; const&amp;, int)'">
-        <args Callee="bool ap_int_base&lt;512, false&gt;::operator!=&lt;32, true&gt;(ap_int_base&lt;32, true&gt; const&amp;) const" Caller="bool operator!=&lt;512, false&gt;(ap_int_base&lt;512, false&gt; const&amp;, int)"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:2230" msg_body="Inlining function 'bool ap_int_base&lt;48, false&gt;::operator!=&lt;32, true&gt;(ap_int_base&lt;32, true&gt; const&amp;) const' into 'bool operator!=&lt;48, false&gt;(ap_int_base&lt;48, false&gt; const&amp;, int)'">
+        <args Callee="bool ap_int_base&lt;48, false&gt;::operator!=&lt;32, true&gt;(ap_int_base&lt;32, true&gt; const&amp;) const" Caller="bool operator!=&lt;48, false&gt;(ap_int_base&lt;48, false&gt; const&amp;, int)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="ddrBench/src/ddrbenchmark.cpp:49:14" msg_body="Inlining function 'bool operator!=&lt;512, false&gt;(ap_int_base&lt;512, false&gt; const&amp;, int)' into 'runBench(ap_uint&lt;512&gt;*, hls::stream&lt;long long, 0&gt;&amp;, int, bool)'">
-        <args Callee="bool operator!=&lt;512, false&gt;(ap_int_base&lt;512, false&gt; const&amp;, int)" Caller="runBench(ap_uint&lt;512&gt;*, hls::stream&lt;long long, 0&gt;&amp;, int, bool)"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="MemBench/src/ddrbenchmark.cpp:38:20" msg_body="Inlining function 'bool operator!=&lt;48, false&gt;(ap_int_base&lt;48, false&gt; const&amp;, int)' into 'runBench(ap_uint&lt;48&gt;*, hls::stream&lt;long long, 0&gt;&amp;, int, bool)'">
+        <args Callee="bool operator!=&lt;48, false&gt;(ap_int_base&lt;48, false&gt; const&amp;, int)" Caller="runBench(ap_uint&lt;48&gt;*, hls::stream&lt;long long, 0&gt;&amp;, int, bool)"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="ddrBench/src/ddrbenchmark.cpp:43:0" msg_body="Inlining function 'writeData(ap_uint&lt;512&gt;*, int)' into 'runBench(ap_uint&lt;512&gt;*, hls::stream&lt;long long, 0&gt;&amp;, int, bool)'">
-        <args Callee="writeData(ap_uint&lt;512&gt;*, int)" Caller="runBench(ap_uint&lt;512&gt;*, hls::stream&lt;long long, 0&gt;&amp;, int, bool)"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="MemBench/src/ddrbenchmark.cpp:32:0" msg_body="Inlining function 'writeData(ap_uint&lt;48&gt;*, int)' into 'runBench(ap_uint&lt;48&gt;*, hls::stream&lt;long long, 0&gt;&amp;, int, bool)'">
+        <args Callee="writeData(ap_uint&lt;48&gt;*, int)" Caller="runBench(ap_uint&lt;48&gt;*, hls::stream&lt;long long, 0&gt;&amp;, int, bool)"/>
     </msg>
-    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="D:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164:13" msg_body="Inlining function '_llvm.fpga.pack.none.i128.sl_i1i64s' into 'countCycles(hls::stream&lt;long long, 0&gt;&amp;, long long*) (.1)'">
-        <args Callee="_llvm.fpga.pack.none.i128.sl_i1i64s" Caller="countCycles(hls::stream&lt;long long, 0&gt;&amp;, long long*) (.1)"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="MemBench/src/ddrbenchmark.cpp:19:9" msg_body="Inlining function '_llvm.fpga.pack.none.i64.i48' into 'runBench(ap_uint&lt;48&gt;*, hls::stream&lt;long long, 0&gt;&amp;, int, bool) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i64.i48" Caller="runBench(ap_uint&lt;48&gt;*, hls::stream&lt;long long, 0&gt;&amp;, int, bool) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1069:20" msg_body="Inlining function '_llvm.fpga.unpack.none.i48.i64' into 'runBench(ap_uint&lt;48&gt;*, hls::stream&lt;long long, 0&gt;&amp;, int, bool) (.1)'">
+        <args Callee="_llvm.fpga.unpack.none.i48.i64" Caller="runBench(ap_uint&lt;48&gt;*, hls::stream&lt;long long, 0&gt;&amp;, int, bool) (.1)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164:13" msg_body="Inlining function '_llvm.fpga.pack.none.i128.sl_i1i64s' into 'countCycles(hls::stream&lt;long long, 0&gt;&amp;, unsigned long long*) (.1)'">
+        <args Callee="_llvm.fpga.pack.none.i128.sl_i1i64s" Caller="countCycles(hls::stream&lt;long long, 0&gt;&amp;, unsigned long long*) (.1)"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

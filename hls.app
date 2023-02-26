@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="com.autoesl.autopilot.project" name="ddrBench" top="ddrBenchmark">
-  <files>
-    <file name="../src/testbench/ddrbenchmark_testbench.cpp" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" blackbox="false" csimflags=" -Wno-unknown-pragmas"/>
-    <file name="ddrBench/src/ddrbenchmark.hpp" sc="0" tb="false" cflags="" blackbox="false" csimflags=""/>
-    <file name="ddrBench/src/ddrbenchmark.cpp" sc="0" tb="false" cflags="" blackbox="false" csimflags=""/>
-  </files>
-  <solutions>
-    <solution name="ddrbench_sol" status="active"/>
-  </solutions>
-  <includePaths/>
-  <libraryPaths/>
-  <Simulation>
-    <SimFlow name="csim" clean="true" csimMode="0" lastCsimMode="0"/>
-  </Simulation>
+<project xmlns="com.autoesl.autopilot.project" name="MemBench" top="ddrBenchmark">
+    <includePaths/>
+    <libraryPaths/>
+    <Simulation>
+        <SimFlow name="csim" clean="true" csimMode="0" lastCsimMode="0"/>
+    </Simulation>
+    <files xmlns="">
+        <file name="../src/testbench/ddrbenchmark_testbench.cpp" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
+        <file name="MemBench/src/ddrbenchmark.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="MemBench/src/ddrbenchmark.hpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+    </files>
+    <solutions xmlns="">
+        <solution name="ddrbench_sol" status="active"/>
+    </solutions>
 </project>
+

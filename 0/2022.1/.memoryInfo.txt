@@ -1,0 +1,76 @@
+
+Nome host:                            LENOVOPC
+Nome SO:                              Microsoft Windows 11 Pro
+Versione SO:                          10.0.22623 N/D build 22623
+Produttore SO:                        Microsoft Corporation
+Configurazione SO:                    Workstation autonoma
+Tipo build SO:                        Multiprocessor Free
+Proprietario registrato:              gbeve2002@outlook.com
+Organizzazione registrata:            
+Numero di serie:                      00330-80000-00000-AA077
+Data di installazione originale:      20/11/2022, 15:01:23
+Tempo di avvio sistema:               18/01/2023, 18:03:35
+Produttore sistema:                   LENOVO
+Modello sistema:                      INVALID
+Tipo sistema:                         x64-based PC
+Processore:                           1 processore(i) installati.
+                                      [01]: Intel64 Family 6 Model 142 Stepping 11 GenuineIntel ~1792 Mhz
+Versione BIOS:                        LENOVO BWCN15WW, 22/06/2020
+Directory Windows:                    C:\Windows
+Directory di sistema:                 C:\Windows\system32
+Dispositivo di avvio:                 \Device\HarddiskVolume3
+Impostazioni locali sistema:          it;Italiano (Italia)
+Impostazioni locali di input:         it;Italiano (Italia)
+Fuso orario:                          (UTC+01:00) Amsterdam, Berlino, Berna, Roma, Stoccolma, Vienna
+Memoria fisica totale:                12.134 MB
+Memoria fisica disponibile:           4.762 MB
+Memoria virtuale: dimensione massima: 16.998 MB
+Memoria virtuale: disponibile:        6.977 MB
+Memoria virtuale: in uso:             10.021 MB
+Posizioni file di paging:             C:\pagefile.sys
+Dominio:                              WORKGROUP
+Server di accesso:                    \\LENOVOPC
+Aggiornamenti rapidi:                 6 Aggiornamenti rapidi installati.
+                                      [01]: KB5020880
+                                      [02]: KB5012170
+                                      [03]: KB5015669
+                                      [04]: KB5018863
+                                      [05]: KB5022364
+                                      [06]: KB5020487
+Schede di rete:                       7 NIC installate.
+                                      [01]: Intel(R) Wireless-AC 9560 160MHz
+                                            Nome connessione: Wi-Fi
+                                            Stato:            Supporto disconnesso
+                                      [02]: Realtek USB GbE Family Controller
+                                            Nome connessione: Ethernet
+                                            DHCP abilitato:   Sç
+                                            Server DHCP:      192.168.0.1
+                                            Indirizzi IP
+                                            [01]: 192.168.0.100
+                                            [02]: fe80::8c7e:872f:b16e:9da2
+                                            [03]: 2a02:670:2020:7e01:78c5:ab19:3c0a:dd40
+                                            [04]: 2a02:670:2020:7e01:9929:72ae:a359:a8e1
+                                      [03]: Bluetooth Device (Personal Area Network)
+                                            Nome connessione: Connessione di rete Bluetooth
+                                            Stato:            Supporto disconnesso
+                                      [04]: VMware Virtual Ethernet Adapter for VMnet1
+                                            Nome connessione: VMware Network Adapter VMnet1
+                                            DHCP abilitato:   Sç
+                                            Server DHCP:      192.168.64.254
+                                            Indirizzi IP
+                                            [01]: 192.168.64.1
+                                            [02]: fe80::a7d7:9225:4a83:76a3
+                                      [05]: VMware Virtual Ethernet Adapter for VMnet8
+                                            Nome connessione: VMware Network Adapter VMnet8
+                                            DHCP abilitato:   Sç
+                                            Server DHCP:      192.168.203.254
+                                            Indirizzi IP
+                                            [01]: 192.168.203.1
+                                            [02]: fe80::c709:ef67:311d:e2fc
+                                      [06]: TAP-Windows Adapter V9 for OpenVPN Connect
+                                            Nome connessione: Connessione alla rete locale (LAN)
+                                            Stato:            Supporto disconnesso
+                                      [07]: TAP-Surfshark Windows Adapter V9
+                                            Nome connessione: Ethernet 3
+                                            Stato:            Supporto disconnesso
+Requisiti Hyper-V:                    Rilevato hypervisor. Le funzionalitÖ necessarie per Hyper-V non verranno visualizzate.

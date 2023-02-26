@@ -16,7 +16,7 @@ generic (
     C_M_AXI_GMEM_ADDR_WIDTH : INTEGER := 64;
     C_M_AXI_GMEM_ID_WIDTH : INTEGER := 1;
     C_M_AXI_GMEM_AWUSER_WIDTH : INTEGER := 1;
-    C_M_AXI_GMEM_DATA_WIDTH : INTEGER := 512;
+    C_M_AXI_GMEM_DATA_WIDTH : INTEGER := 64;
     C_M_AXI_GMEM_WUSER_WIDTH : INTEGER := 1;
     C_M_AXI_GMEM_ARUSER_WIDTH : INTEGER := 1;
     C_M_AXI_GMEM_RUSER_WIDTH : INTEGER := 1;
@@ -152,7 +152,7 @@ end;
 architecture behav of ddrBenchmark is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "ddrBenchmark_ddrBenchmark,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=3873,HLS_SYN_LUT=5571,HLS_VERSION=2022_1}";
+    "ddrBenchmark_ddrBenchmark,hls_ip_2022_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=7.300000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=2566,HLS_SYN_LUT=4610,HLS_VERSION=2022_1}";
     constant C_S_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant C_M_AXI_DATA_WIDTH : INTEGER range 63 downto 0 := 20;
@@ -177,7 +177,7 @@ architecture behav of ddrBenchmark is
     signal gmem_WREADY : STD_LOGIC;
     signal gmem_ARREADY : STD_LOGIC;
     signal gmem_RVALID : STD_LOGIC;
-    signal gmem_RDATA : STD_LOGIC_VECTOR (511 downto 0);
+    signal gmem_RDATA : STD_LOGIC_VECTOR (63 downto 0);
     signal gmem_RLAST : STD_LOGIC;
     signal gmem_RID : STD_LOGIC_VECTOR (0 downto 0);
     signal gmem_RFIFONUM : STD_LOGIC_VECTOR (8 downto 0);
@@ -224,8 +224,8 @@ architecture behav of ddrBenchmark is
     signal runBench_U0_m_axi_gmem_AWREGION : STD_LOGIC_VECTOR (3 downto 0);
     signal runBench_U0_m_axi_gmem_AWUSER : STD_LOGIC_VECTOR (0 downto 0);
     signal runBench_U0_m_axi_gmem_WVALID : STD_LOGIC;
-    signal runBench_U0_m_axi_gmem_WDATA : STD_LOGIC_VECTOR (511 downto 0);
-    signal runBench_U0_m_axi_gmem_WSTRB : STD_LOGIC_VECTOR (63 downto 0);
+    signal runBench_U0_m_axi_gmem_WDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal runBench_U0_m_axi_gmem_WSTRB : STD_LOGIC_VECTOR (7 downto 0);
     signal runBench_U0_m_axi_gmem_WLAST : STD_LOGIC;
     signal runBench_U0_m_axi_gmem_WID : STD_LOGIC_VECTOR (0 downto 0);
     signal runBench_U0_m_axi_gmem_WUSER : STD_LOGIC_VECTOR (0 downto 0);
@@ -352,8 +352,8 @@ architecture behav of ddrBenchmark is
         m_axi_gmem_AWUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
         m_axi_gmem_WVALID : OUT STD_LOGIC;
         m_axi_gmem_WREADY : IN STD_LOGIC;
-        m_axi_gmem_WDATA : OUT STD_LOGIC_VECTOR (511 downto 0);
-        m_axi_gmem_WSTRB : OUT STD_LOGIC_VECTOR (63 downto 0);
+        m_axi_gmem_WDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
+        m_axi_gmem_WSTRB : OUT STD_LOGIC_VECTOR (7 downto 0);
         m_axi_gmem_WLAST : OUT STD_LOGIC;
         m_axi_gmem_WID : OUT STD_LOGIC_VECTOR (0 downto 0);
         m_axi_gmem_WUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
@@ -372,7 +372,7 @@ architecture behav of ddrBenchmark is
         m_axi_gmem_ARUSER : OUT STD_LOGIC_VECTOR (0 downto 0);
         m_axi_gmem_RVALID : IN STD_LOGIC;
         m_axi_gmem_RREADY : OUT STD_LOGIC;
-        m_axi_gmem_RDATA : IN STD_LOGIC_VECTOR (511 downto 0);
+        m_axi_gmem_RDATA : IN STD_LOGIC_VECTOR (63 downto 0);
         m_axi_gmem_RLAST : IN STD_LOGIC;
         m_axi_gmem_RID : IN STD_LOGIC_VECTOR (0 downto 0);
         m_axi_gmem_RFIFONUM : IN STD_LOGIC_VECTOR (8 downto 0);
@@ -625,7 +625,7 @@ architecture behav of ddrBenchmark is
         I_ARLEN : IN STD_LOGIC_VECTOR (31 downto 0);
         I_RVALID : OUT STD_LOGIC;
         I_RREADY : IN STD_LOGIC;
-        I_RDATA : OUT STD_LOGIC_VECTOR (511 downto 0);
+        I_RDATA : OUT STD_LOGIC_VECTOR (63 downto 0);
         I_RFIFONUM : OUT STD_LOGIC_VECTOR (8 downto 0);
         I_AWVALID : IN STD_LOGIC;
         I_AWREADY : OUT STD_LOGIC;
@@ -633,8 +633,8 @@ architecture behav of ddrBenchmark is
         I_AWLEN : IN STD_LOGIC_VECTOR (31 downto 0);
         I_WVALID : IN STD_LOGIC;
         I_WREADY : OUT STD_LOGIC;
-        I_WDATA : IN STD_LOGIC_VECTOR (511 downto 0);
-        I_WSTRB : IN STD_LOGIC_VECTOR (63 downto 0);
+        I_WDATA : IN STD_LOGIC_VECTOR (63 downto 0);
+        I_WSTRB : IN STD_LOGIC_VECTOR (7 downto 0);
         I_BVALID : OUT STD_LOGIC;
         I_BREADY : IN STD_LOGIC );
     end component;
@@ -789,7 +789,7 @@ begin
         C_USER_VALUE => C_M_AXI_GMEM_USER_VALUE,
         C_PROT_VALUE => C_M_AXI_GMEM_PROT_VALUE,
         C_CACHE_VALUE => C_M_AXI_GMEM_CACHE_VALUE,
-        USER_DW => 512,
+        USER_DW => 64,
         USER_AW => 64)
     port map (
         AWVALID => m_axi_gmem_AWVALID,

@@ -1541,7 +1541,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>42bc8cd3</spirit:value>
+            <spirit:value>997bead6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1557,7 +1557,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4baa0882</spirit:value>
+            <spirit:value>5bcfbfff</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1573,7 +1573,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9bad1658</spirit:value>
+            <spirit:value>ce041d2e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1589,7 +1589,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>36eeb9ff</spirit:value>
+            <spirit:value>ce98157d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2203,7 +2203,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXI_GMEM_DATA_WIDTH&apos;)) - 1)">511</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXI_GMEM_DATA_WIDTH&apos;)) - 1)">63</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2220,7 +2220,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXI_GMEM_DATA_WIDTH&apos;)) div 8) - 1)">63</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXI_GMEM_DATA_WIDTH&apos;)) div 8) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2645,7 +2645,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXI_GMEM_DATA_WIDTH&apos;)) - 1)">511</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXI_GMEM_DATA_WIDTH&apos;)) - 1)">63</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3560,7 +3560,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_M_AXI_GMEM_DATA_WIDTH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_GMEM_DATA_WIDTH">512</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXI_GMEM_DATA_WIDTH">64</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_M_AXI_GMEM_AWUSER_WIDTH</spirit:name>
@@ -3969,7 +3969,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/ddrBenchmark.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_73725787</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_f366ff85</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -4134,7 +4134,7 @@
     <spirit:parameter>
       <spirit:name>C_M_AXI_GMEM_DATA_WIDTH</spirit:name>
       <spirit:displayName>Data width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M_AXI_GMEM_DATA_WIDTH" spirit:choiceRef="choice_list_40181835" spirit:order="4" spirit:configGroups="1 m axi gmem (AXI4 Master Interface)">512</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M_AXI_GMEM_DATA_WIDTH" spirit:choiceRef="choice_list_40181835" spirit:order="4" spirit:configGroups="1 m axi gmem (AXI4 Master Interface)">64</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_M_AXI_GMEM_ENABLE_USER_PORTS</spirit:name>
@@ -4367,8 +4367,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Ddrbenchmark</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2112850808</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2023-01-09T21:09:42Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2112919922</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2023-02-26T21:02:44Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -4379,10 +4379,10 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="fe5ec217"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="44e5d250"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="a9aa8180"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="3b9709ca"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="c386ece1"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="512f82b0"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="7a48d83a"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5d9ab1f2"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="c62715a2"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="ada2d9d3"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="a7ca0b1d"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
