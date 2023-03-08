@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'countCycles_Pipeline_count'
 ================================================================
-* Date:           Sun Feb 26 21:56:50 2023
+* Date:           Sun Mar  5 13:46:52 2023
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
 * Project:        MemBench
@@ -97,7 +97,7 @@ ST_2 : Operation 10 [1/1] (3.63ns)   --->   "%counterCmd1_read = nbread i65 @_ss
 ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%p_vld = extractvalue i65 %counterCmd1_read" [C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164]   --->   Operation 11 'extractvalue' 'p_vld' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln8 = br i1 %p_vld, void %while.body, void %while.end.exitStub" [MemBench/src/ddrbenchmark.cpp:8]   --->   Operation 12 'br' 'br_ln8' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%cnt_load_1 = load i64 %cnt" [MemBench/src/ddrbenchmark.cpp:9]   --->   Operation 13 'load' 'cnt_load_1' <Predicate = (!p_vld)> <Delay = 0.00>
-ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%specloopname_ln9 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [MemBench/src/ddrbenchmark.cpp:9]   --->   Operation 14 'specloopname' 'specloopname_ln9' <Predicate = (!p_vld)> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%specloopname_ln9 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17" [MemBench/src/ddrbenchmark.cpp:9]   --->   Operation 14 'specloopname' 'specloopname_ln9' <Predicate = (!p_vld)> <Delay = 0.00>
 ST_2 : Operation 15 [1/1] (3.52ns)   --->   "%cnt_1 = add i64 %cnt_load_1, i64 1" [MemBench/src/ddrbenchmark.cpp:9]   --->   Operation 15 'add' 'cnt_1' <Predicate = (!p_vld)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 16 [1/1] (1.58ns)   --->   "%store_ln8 = store i64 %cnt_1, i64 %cnt" [MemBench/src/ddrbenchmark.cpp:8]   --->   Operation 16 'store' 'store_ln8' <Predicate = (!p_vld)> <Delay = 1.58>
 ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln8 = br void %while.cond" [MemBench/src/ddrbenchmark.cpp:8]   --->   Operation 17 'br' 'br_ln8' <Predicate = (!p_vld)> <Delay = 0.00>
@@ -279,7 +279,7 @@ ret_ln0           (ret          ) [ 000]
 <pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_16"/></StgValue>
+<StgValue><ssdm name="empty_17"/></StgValue>
 </bind>
 </comp>
 

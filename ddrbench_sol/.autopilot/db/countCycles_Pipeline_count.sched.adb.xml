@@ -180,7 +180,7 @@ while.body:0 %cnt_load_1 = load i64 %cnt
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-while.body:1 %specloopname_ln9 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16
+while.body:1 %specloopname_ln9 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln9"/></StgValue>

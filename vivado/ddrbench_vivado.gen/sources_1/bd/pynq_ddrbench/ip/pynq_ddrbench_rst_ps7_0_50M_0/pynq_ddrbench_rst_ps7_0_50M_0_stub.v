@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Wed Jan 18 21:13:12 2023
+// Date        : Sat Mar  4 12:30:23 2023
 // Host        : LenovoPC running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_rst_ps7_0_50M_0/pynq_ddrbench_rst_ps7_0_50M_0_stub.v

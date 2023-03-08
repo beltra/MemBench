@@ -180,7 +180,7 @@ while.body:0 %cnt_load_1 = load i64 %cnt
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-while.body:1 %specloopname_ln9 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16
+while.body:1 %specloopname_ln9 = specloopname void @_ssdm_op_SpecLoopName, void @empty_17
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln9"/></StgValue>
@@ -371,7 +371,7 @@ while.end.exitStub:2 %ret_ln0 = ret
 </dataflow>
 <dataflow id="77" from="_ssdm_op_SpecLoopName" to="specloopname_ln9" fromId="76" toId="14">
 </dataflow>
-<dataflow id="79" from="empty_16" to="specloopname_ln9" fromId="78" toId="14">
+<dataflow id="79" from="empty_17" to="specloopname_ln9" fromId="78" toId="14">
 </dataflow>
 <dataflow id="80" from="cnt_load_1" to="cnt_1" fromId="13" toId="15">
 </dataflow>

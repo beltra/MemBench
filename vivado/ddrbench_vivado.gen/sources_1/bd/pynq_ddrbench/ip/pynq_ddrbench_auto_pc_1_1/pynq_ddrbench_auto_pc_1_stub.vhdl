@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Wed Jan 18 21:13:37 2023
+-- Date        : Sat Mar  4 12:30:46 2023
 -- Host        : LenovoPC running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top pynq_ddrbench_auto_pc_1 -prefix
 --               pynq_ddrbench_auto_pc_1_ pynq_ddrbench_auto_pc_1_stub.vhdl

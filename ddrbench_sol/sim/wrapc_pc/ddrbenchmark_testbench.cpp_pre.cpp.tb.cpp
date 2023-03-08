@@ -68211,8 +68211,8 @@ public:
 }
 # 62 "C:/Xilinx/Vitis_HLS/2022.1/include/hls_stream.h" 2
 # 7 "C:/FPGA/MemBench/src/ddrbenchmark.hpp" 2
-# 17 "C:/FPGA/MemBench/src/ddrbenchmark.hpp"
-const unsigned int max_data_depth = ((2*1024*1024)/32)*8;
+# 16 "C:/FPGA/MemBench/src/ddrbenchmark.hpp"
+const unsigned int max_data_depth = ((1*1024*1024)/32)*8;
 
 void ddrBenchmark(ap_uint<32> *mem, int dataNum, bool rw, uint64_t *res);
 
@@ -68231,9 +68231,9 @@ void compareHWResult(ap_uint<32> *mem, int dataNum, bool *res) {
  bool valid = true;
 
 
- verifyData: for (int i = 0; i < dataNum && valid; i++) {
-
+ verifyData: for (int i = 1; i < dataNum && valid; i++) {
   valid = mem[i] == (ap_uint<32> ) i;
+  std::cout << mem[i] << std::endl;
  }
  *res = valid;
 
@@ -68251,16 +68251,18 @@ void runHWTest(ap_uint<32> *mem, int dataNum, bool rw) {
  uint64_t timeTaken = 0;
  bool valid = false;
 
+
  
 #ifndef HLS_FASTSIM
 #define ddrBenchmark apatb_ddrBenchmark_sw
 #endif
-# 23 "C:/FPGA/MemBench/src/testbench/ddrbenchmark_testbench.cpp"
+# 24 "C:/FPGA/MemBench/src/testbench/ddrbenchmark_testbench.cpp"
 ddrBenchmark(mem, dataNum, rw, &timeTaken);
 #undef ddrBenchmark
-# 23 "C:/FPGA/MemBench/src/testbench/ddrbenchmark_testbench.cpp"
+# 24 "C:/FPGA/MemBench/src/testbench/ddrbenchmark_testbench.cpp"
 
  compareHWResult(mem, dataNum, &valid);
+
 
  if (valid) {
   std::cout << "* Single test *" << std::endl;
@@ -68271,10 +68273,9 @@ ddrBenchmark(mem, dataNum, rw, &timeTaken);
  } else {
   std::cout << "!!! INVALID TEST !!!" << std::endl;
  }
-
 }
 #endif
-# 36 "C:/FPGA/MemBench/src/testbench/ddrbenchmark_testbench.cpp"
+# 37 "C:/FPGA/MemBench/src/testbench/ddrbenchmark_testbench.cpp"
 
 
 
@@ -68283,7 +68284,7 @@ ddrBenchmark(mem, dataNum, rw, &timeTaken);
 extern "C"
 #endif
 void apatb_ddrBenchmark_sw(ap_uint<32> *, int, bool, unsigned long long *);
-# 38 "C:/FPGA/MemBench/src/testbench/ddrbenchmark_testbench.cpp"
+# 39 "C:/FPGA/MemBench/src/testbench/ddrbenchmark_testbench.cpp"
 void runHWTestMultiple(ap_uint<32> *mem, int dataNum, bool rw,
   int totReps) {
 
@@ -68292,27 +68293,29 @@ void runHWTestMultiple(ap_uint<32> *mem, int dataNum, bool rw,
  bool valid = 0;
  int rep = 0;
 
+
  for (int i = 0; i < totReps; i++) {
   valid = 0;
   
 #ifndef HLS_FASTSIM
 #define ddrBenchmark apatb_ddrBenchmark_sw
 #endif
-# 48 "C:/FPGA/MemBench/src/testbench/ddrbenchmark_testbench.cpp"
+# 50 "C:/FPGA/MemBench/src/testbench/ddrbenchmark_testbench.cpp"
 ddrBenchmark(mem, dataNum, rw, &timeTaken);
 #undef ddrBenchmark
-# 48 "C:/FPGA/MemBench/src/testbench/ddrbenchmark_testbench.cpp"
+# 50 "C:/FPGA/MemBench/src/testbench/ddrbenchmark_testbench.cpp"
 
   compareHWResult(mem, dataNum, &valid);
   if (valid) {
    timeTakenAvg += timeTaken;
    rep++;
   } else {
-   std::cout << "Invalid test n. " << i << std::endl;
+   std::cout << "Test n. " << i << "invalid" << std::endl;
   }
  }
 
  timeTakenAvg /= rep;
+
 
  if (rep > 0) {
   std::cout << "* Multiple test *" << std::endl;
@@ -68327,15 +68330,15 @@ ddrBenchmark(mem, dataNum, rw, &timeTaken);
  }
 }
 #endif
-# 71 "C:/FPGA/MemBench/src/testbench/ddrbenchmark_testbench.cpp"
+# 74 "C:/FPGA/MemBench/src/testbench/ddrbenchmark_testbench.cpp"
 
 
 int main(int argc, char *argv[]) {
  std::cout << "** Starting TB **" << std::endl;
 
- ap_uint<32> mem[((2*1024*1024)/32)*8];
+ ap_uint<32> mem[((1*1024*1024)/32)*8];
 
- int dataDim = 8192;
+ int dataDim = 16;
 
 
  runHWTest(mem, dataDim, 1);

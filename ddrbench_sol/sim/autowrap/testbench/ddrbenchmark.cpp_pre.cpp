@@ -68206,8 +68206,8 @@ public:
 }
 # 62 "C:/Xilinx/Vitis_HLS/2022.1/include/hls_stream.h" 2
 # 7 "C:/FPGA/MemBench/src/ddrbenchmark.hpp" 2
-# 17 "C:/FPGA/MemBench/src/ddrbenchmark.hpp"
-const unsigned int max_data_depth = ((2*1024*1024)/32)*8;
+# 16 "C:/FPGA/MemBench/src/ddrbenchmark.hpp"
+const unsigned int max_data_depth = ((1*1024*1024)/32)*8;
 
 void ddrBenchmark(ap_uint<32> *mem, int dataNum, bool rw, uint64_t *res);
 
@@ -68238,13 +68238,14 @@ void writeData(ap_uint<32> *mem, int dataNum) {
   mem[i] = (ap_uint<32> ) i;
  }
 }
-
+# 32 "C:/FPGA/MemBench/src/ddrbenchmark.cpp"
 void readData(ap_uint<32> *mem, int dataNum) {
- ap_uint<32> tmp;
+ ap_uint<32> tmp = 0;
  dataRead: for (int i = 0; i < dataNum; i++) {
-#pragma HLS PIPELINE II=1
-  tmp = mem[i];
+
+  tmp += mem[i];
  }
+ mem[0] = tmp;
 }
 
 void runBench(ap_uint<32> *mem, hls::stream<int64_t> &cmd,
@@ -68254,10 +68255,6 @@ void runBench(ap_uint<32> *mem, hls::stream<int64_t> &cmd,
   writeData(mem, dataNum);
   cmd.write(1);
  } else if (rw == 0) {
-  if (mem[dataNum] != dataNum) {
-
-   writeData(mem, dataNum);
-  }
   cmd.write(0);
   readData(mem, dataNum);
   cmd.write(1);

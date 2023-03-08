@@ -5,11 +5,10 @@
 #include "ap_int.h"
 #include <hls_stream.h>
 
-#define DATA_BITWIDTH 32	 // Single data size in bits
+#define DATA_BITWIDTH 32	// Single data size in bits
+#define MAX_MEM_USE 1		// Max test dim in MB
 
-#define MAX_MEM_USE 2  // Max test dim in MB
-
-#define MAX_TEST_DIM ((MAX_MEM_USE*1024*1024)/DATA_BITWIDTH)*8
+#define MAX_TEST_DIM ((MAX_MEM_USE*1024*1024)/DATA_BITWIDTH)*8	// Calculate the array size to contain the data required
 
 #define WRITE 1
 #define READ 0

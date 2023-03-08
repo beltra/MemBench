@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 # FIFO definition: 
-set ID 20
+set ID 21
 set FifoName ddrBenchmark_fifo_w64_d3_S
 set InstName res_c_U
 set CoreName ap_simcore_fifo
@@ -75,7 +75,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 
 # FIFO definition: 
-set ID 21
+set ID 22
 set FifoName ddrBenchmark_fifo_w64_d2_S
 set InstName counterCmd_U
 set CoreName ap_simcore_fifo
@@ -149,7 +149,7 @@ puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_FIFO, check your pl
 
 
 # FIFO definition: 
-set ID 22
+set ID 23
 set FifoName ddrBenchmark_start_for_countCycles_U0
 set InstName start_for_countCycles_U0_U
 set CoreName ap_simcore_fifo
@@ -289,7 +289,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 23 \
+			id 24 \
 			corename ddrBenchmark_control_axilite \
 			name ddrBenchmark_control_s_axi \
 			ports {$port_control} \

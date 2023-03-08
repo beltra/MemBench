@@ -15,17 +15,17 @@ void countCycles(hls::stream<int64_t> &cmd, uint64_t *out) {
 
 void writeData(ap_uint<DATA_BITWIDTH> *mem, int dataNum) {
 	dataWrite: for (int i = 0; i < dataNum; i++) {
-#pragma HLS PIPELINE II=1
-		mem[i] = (ap_uint<DATA_BITWIDTH> ) i;	// Store a number in the memory
+		mem[i] = (ap_uint<DATA_BITWIDTH> )i;	// Store a number in the memory
 	}
 }
 
 void readData(ap_uint<DATA_BITWIDTH> *mem, int dataNum) {
-	ap_uint<DATA_BITWIDTH> tmp;
+	ap_uint<DATA_BITWIDTH> tmp = 0;
 	dataRead: for (int i = 0; i < dataNum; i++) {
 #pragma HLS PIPELINE II=1
-		tmp = mem[i];	// Read each value and store it (to be overwritten by the next cycle)
+		tmp += (mem[i] == (ap_uint<DATA_BITWIDTH> )i);	// Read each value and store it (to be overwritten by the next cycle)
 	}
+	mem[0] = tmp;
 }
 
 void runBench(ap_uint<DATA_BITWIDTH> *mem, hls::stream<int64_t> &cmd,
@@ -35,10 +35,6 @@ void runBench(ap_uint<DATA_BITWIDTH> *mem, hls::stream<int64_t> &cmd,
 		writeData(mem, dataNum);  // Write data
 		cmd.write(1);  // Stop counting
 	} else if (rw == READ) {
-		if (mem[dataNum] != dataNum) {
-			// Data not already written one time
-			writeData(mem, dataNum);
-		}
 		cmd.write(0);  // Start counting
 		readData(mem, dataNum);  // Read data
 		cmd.write(1);  // Stop counting

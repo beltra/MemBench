@@ -1,6 +1,6 @@
 set SynModuleInfo {
   {SRCNAME entry_proc MODELNAME entry_proc RTLNAME ddrBenchmark_entry_proc}
-  {SRCNAME runBench_Pipeline_dataWrite1 MODELNAME runBench_Pipeline_dataWrite1 RTLNAME ddrBenchmark_runBench_Pipeline_dataWrite1
+  {SRCNAME runBench_Pipeline_dataRead MODELNAME runBench_Pipeline_dataRead RTLNAME ddrBenchmark_runBench_Pipeline_dataRead
     SUBMODULES {
       {MODELNAME ddrBenchmark_flow_control_loop_pipe_sequential_init RTLNAME ddrBenchmark_flow_control_loop_pipe_sequential_init BINDTYPE interface TYPE internal_upc_flow_control INSTNAME ddrBenchmark_flow_control_loop_pipe_sequential_init_U}
     }

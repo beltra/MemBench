@@ -879,6 +879,9 @@
         "parameters": {
           "C_M_AXI_GMEM_DATA_WIDTH": {
             "value": "64"
+          },
+          "C_M_AXI_GMEM_ENABLE_ID_PORTS": {
+            "value": "false"
           }
         },
         "interface_ports": {

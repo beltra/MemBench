@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace C:/FPGA/MemBench/ddrbench_sol opened at Sun Feb 26 21:56:33 +0100 2023
+INFO-FLOW: Workspace C:/FPGA/MemBench/ddrbench_sol opened at Sun Mar 05 13:46:39 +0100 2023
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xc7z020-clg400-1 
@@ -7,7 +7,7 @@ DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2022.1\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2022.1/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
-Command       create_platform done; 1.03 sec.
+Command       create_platform done; 0.831 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
@@ -20,10 +20,10 @@ Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/ut
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.139 sec.
+Command       ap_source done; 0.133 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 1.188 sec.
+Command     set_part done; 0.986 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute     get_config_interface -m_axi_latency 
@@ -37,7 +37,7 @@ Execute     config_export -format=ip_catalog
 Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
 INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
 Execute     config_export -rtl=verilog 
-Command   open_solution done; 1.222 sec.
+Command   open_solution done; 1.029 sec.
 Execute   set_part xc7z020-clg400-1 
 INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
 Execute     create_platform xc7z020-clg400-1 -board  
@@ -51,13 +51,12 @@ Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interfa
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
-Command       ap_source done; 0.113 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.162 sec.
+Command     ap_source done; 0.122 sec.
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.197 sec.
+Command   set_part done; 0.153 sec.
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 Execute   config_export -format ip_catalog -rtl verilog 
@@ -80,7 +79,7 @@ Execute     get_config_compile -skip_transform
 Execute     get_config_compile -pre_tcl 
 Execute     get_config_compile -keep_printf 
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.018 seconds; current allocated memory: 1.009 GB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.022 seconds; current allocated memory: 939.559 MB.
 INFO: [HLS 200-10] Analyzing design file 'MemBench/src/ddrbenchmark.cpp' ... 
 INFO-FLOW: Compiling one TU...
 Execute       get_config_compile -pragma_strict_mode 
@@ -89,40 +88,40 @@ Execute       ap_part_info -name xc7z020-clg400-1 -data info
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang MemBench/src/ddrbenchmark.cpp -foptimization-record-file=C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot C:/Xilinx/Vitis_HLS/2022.1/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.cpp.clang.out.log 2> C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.cpp.clang.err.log 
-Command       ap_eval done; 0.558 sec.
-INFO-FLOW: Done: GCC PP 39 time: 0.6 seconds per iteration
+Command       ap_eval done; 0.356 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.4 seconds per iteration
 Execute       set_directive_top ddrBenchmark -name=ddrBenchmark 
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 INFO-FLOW: Source syntax check for synthesis
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/clang.out.log 2> C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/clang.err.log 
-Command       ap_eval done; 0.893 sec.
+Command       ap_eval done; 0.758 sec.
 Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/.systemc_flag -fix-errors C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.697 sec.
+Command       clang_tidy done; 0.696 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/all.directive.json 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/all.directive.json -fix-errors C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 1.185 sec.
+Command       clang_tidy done; 1.003 sec.
 Execute       clang_tidy xilinx-remove-assert -desc remove-assert C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.594 sec.
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 1.8 seconds per iteration
+Command       clang_tidy done; 0.561 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 1.6 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp std=gnu++14 -target fpga  
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp.clang-tidy.loop-label.err.log 
-Command         ap_eval done; 1.239 sec.
+Command         ap_eval done; 1.177 sec.
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command       clang_tidy done; 1.28 sec.
+Command       clang_tidy done; 1.213 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
-Command       ap_eval done; 0.719 sec.
+Command       ap_eval done; 0.574 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 INFO-FLOW: compiling source code to llvm bc
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.bc -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp.clang.out.log 2> C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.pp.0.cpp.clang.err.log 
-Command       ap_eval done; 0.854 sec.
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 6.918 seconds; current allocated memory: 1.107 GB.
+Command       ap_eval done; 0.682 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.955 seconds; current allocated memory: 1.107 GB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute       run_link_or_opt -out C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.0.bc -args  "C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrbenchmark.g.bc"  
@@ -134,19 +133,19 @@ INFO-FLOW:
 INFO-FLOW: Linking math bc lib
 Execute       run_link_or_opt -out C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.2.m1.bc -args C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsmc++_39.bc 
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsmc++_39.bc -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.2.m1.bc > C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
-Command         ap_eval done; 3.099 sec.
+Command         ap_eval done; 2.64 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 3.102 sec.
+Command       run_link_or_opt done; 2.643 sec.
 Execute       run_link_or_opt -opt -out C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.3.fpc.bc -args C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=ddrBenchmark -reflow-float-conversion 
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=ddrBenchmark -reflow-float-conversion -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.3.fpc.bc > C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
-Command         ap_eval done; 1.509 sec.
+Command         ap_eval done; 1.021 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 1.513 sec.
+Command       run_link_or_opt done; 1.025 sec.
 Execute       run_link_or_opt -out C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.4.m2.bc -args C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libfloatconversion_39.bc 
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libfloatconversion_39.bc -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.4.m2.bc > C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
-Command         ap_eval done; 0.105 sec.
+Command         ap_eval done; 0.101 sec.
 INFO-FLOW: 
-Command       run_link_or_opt done; 0.108 sec.
+Command       run_link_or_opt done; 0.104 sec.
 Execute       run_link_or_opt -opt -out C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.5.gdce.bc -args C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=ddrBenchmark 
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=ddrBenchmark -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.5.gdce.bc > C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
 INFO-FLOW: 
@@ -193,51 +192,54 @@ Execute       is_m_axi_addr64
 Execute       get_clock_period -ns -default 
 INFO-FLOW: Doing LTO.
 Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=ddrBenchmark -mllvm -hls-db-dir -mllvm C:/FPGA/MemBench/ddrbench_sol/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -x ir C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.5.gdce.bc -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.lto.bc -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.ld.0.bc.clang.err.log 
-Command       ap_eval done; 0.473 sec.
-INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi48ELb0EEC2EDq48_j' into 'ap_int_base<48, false>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
-INFO: [HLS 214-131] Inlining function 'ap_int_base<48, false>::ap_int_base(int)' into 'ap_uint<48>::ap_uint(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:333:58)
-INFO: [HLS 214-131] Inlining function 'ap_uint<48>::ap_uint(int)' into 'writeData(ap_uint<48>*, int)' (MemBench/src/ddrbenchmark.cpp:19:11)
-INFO: [HLS 214-131] Inlining function 'ssdm_int<32, true>::ssdm_int(int)' into 'ap_int_base<32, true>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
-INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator!=<48, false>(ap_int_base<48, false> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:2233)
-INFO: [HLS 214-131] Inlining function 'bool ap_int_base<48, false>::operator!=<32, true>(ap_int_base<32, true> const&) const' into 'bool operator!=<48, false>(ap_int_base<48, false> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:2230)
-INFO: [HLS 214-131] Inlining function 'bool operator!=<48, false>(ap_int_base<48, false> const&, int)' into 'runBench(ap_uint<48>*, hls::stream<long long, 0>&, int, bool)' (MemBench/src/ddrbenchmark.cpp:38:20)
-INFO: [HLS 214-178] Inlining function 'writeData(ap_uint<48>*, int)' into 'runBench(ap_uint<48>*, hls::stream<long long, 0>&, int, bool)' (MemBench/src/ddrbenchmark.cpp:32:0)
-INFO: [HLS 214-241] Aggregating maxi variable 'mem' with compact=none mode in 64-bits
-INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 64 in loop 'dataWrite'(MemBench/src/ddrbenchmark.cpp:17:13) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (MemBench/src/ddrbenchmark.cpp:17:13)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i64.i48' into 'runBench(ap_uint<48>*, hls::stream<long long, 0>&, int, bool) (.1)' (MemBench/src/ddrbenchmark.cpp:19:9)
-INFO: [HLS 214-131] Inlining function '_llvm.fpga.unpack.none.i48.i64' into 'runBench(ap_uint<48>*, hls::stream<long long, 0>&, int, bool) (.1)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1069:20)
+Command       ap_eval done; 0.364 sec.
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi256ELb0EEC2EDq256_j' into 'ap_int_base<256, false>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, false>::ap_int_base(int)' into 'ap_uint<256>::ap_uint(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:333:58)
+INFO: [HLS 214-131] Inlining function 'ap_uint<256>::ap_uint(int)' into 'writeData(ap_uint<256>*, int)' (MemBench/src/ddrbenchmark.cpp:18:12)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi1ELb0EEC2EDq1_j' into 'ap_int_base<1, false>::ap_int_base(bool)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:254:68)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(bool)' into 'ap_int_base<256, false>& operator+=<256, false>(ap_int_base<256, false>&, bool)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1767:168)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, false>& ap_int_base<256, false>::operator+=<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<256, false>& operator+=<256, false>(ap_int_base<256, false>&, bool)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1767:165)
+INFO: [HLS 214-131] Inlining function 'ap_uint<256>::ap_uint(int)' into 'readData(ap_uint<256>*, int)' (MemBench/src/ddrbenchmark.cpp:23:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<256, false>& operator+=<256, false>(ap_int_base<256, false>&, bool)' into 'readData(ap_uint<256>*, int)' (MemBench/src/ddrbenchmark.cpp:26:6)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<256, false>::operator==<256, false>(ap_int_base<256, false> const&) const' into 'readData(ap_uint<256>*, int)' (MemBench/src/ddrbenchmark.cpp:26:17)
+INFO: [HLS 214-131] Inlining function 'ap_uint<256>::ap_uint(int)' into 'readData(ap_uint<256>*, int)' (MemBench/src/ddrbenchmark.cpp:26:20)
+INFO: [HLS 214-178] Inlining function 'writeData(ap_uint<256>*, int)' into 'runBench(ap_uint<256>*, hls::stream<long long, 0>&, int, bool)' (MemBench/src/ddrbenchmark.cpp:42:0)
+INFO: [HLS 214-178] Inlining function 'readData(ap_uint<256>*, int)' into 'runBench(ap_uint<256>*, hls::stream<long long, 0>&, int, bool)' (MemBench/src/ddrbenchmark.cpp:42:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'mem' with compact=none mode in 256-bits
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 256 in loop 'dataWrite'(MemBench/src/ddrbenchmark.cpp:17:13) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (MemBench/src/ddrbenchmark.cpp:17:13)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 256 in loop 'dataRead'(MemBench/src/ddrbenchmark.cpp:24:12) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (MemBench/src/ddrbenchmark.cpp:24:12)
 INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i128.sl_i1i64s' into 'countCycles(hls::stream<long long, 0>&, unsigned long long*) (.1)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164:13)
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.971 seconds; current allocated memory: 1.107 GB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.003 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.579 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 1.107 GB.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top ddrBenchmark -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.0.bc -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command         transform done; 0.152 sec.
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.191 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.114 seconds; current allocated memory: 1.107 GB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.1.bc -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.2.prechk.bc -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.107 GB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.g.1.bc to C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp C:/FPGA/MemBench/ddrbench_sol/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -annotate-dataflow-channels -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.o.1.bc -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'dataWrite' (MemBench/src/ddrbenchmark.cpp:17) in function 'runBench' automatically.
 INFO: [XFORM 203-510] Pipelining loop 'count' (MemBench/src/ddrbenchmark.cpp:9) in function 'countCycles' automatically.
-WARNING: [HLS 200-805] An internal stream 'counterCmd' (MemBench/src/ddrbenchmark.cpp:62) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
-WARNING: [HLS 200-786] Detected dataflow-on-top in function  'ddrBenchmark' (MemBench/src/ddrbenchmark.cpp:48:1)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
-INFO: [XFORM 203-712] Applying dataflow to function 'ddrBenchmark' (MemBench/src/ddrbenchmark.cpp:48:1), detected/extracted 3 process function(s): 
+WARNING: [HLS 200-805] An internal stream 'counterCmd' (MemBench/src/ddrbenchmark.cpp:68) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-786] Detected dataflow-on-top in function  'ddrBenchmark' (MemBench/src/ddrbenchmark.cpp:54:1)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
+INFO: [XFORM 203-712] Applying dataflow to function 'ddrBenchmark' (MemBench/src/ddrbenchmark.cpp:54:1), detected/extracted 3 process function(s): 
 	 'entry_proc'
 	 'runBench'
 	 'countCycles'.
-Command         transform done; 0.115 sec.
+Command         transform done; 0.186 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.o.1.tmp.bc -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.184 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.262 seconds; current allocated memory: 1.107 GB.
 Execute         get_config_compile -enable_auto_rewind 
 Execute         get_config_compile -enable_loop_extract 
 INFO-FLOW: Building ssdm...
@@ -246,8 +248,8 @@ WARNING: [HLS 200-1450] Process runBench has both a successor and writes an outp
 Command         transform done; 0.129 sec.
 INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.133 seconds; current allocated memory: 1.107 GB.
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 0.624 sec.
-Command     elaborate done; 13.536 sec.
+Command       opt_and_import_c done; 0.609 sec.
+Command     elaborate done; 11.163 sec.
 Execute     ap_eval exec zip -j C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
@@ -260,16 +262,16 @@ Execute       preproc_iomode -model countCycles
 Execute       preproc_iomode -model countCycles_Pipeline_count 
 Execute       preproc_iomode -model runBench 
 Execute       preproc_iomode -model runBench_Pipeline_dataWrite 
-Execute       preproc_iomode -model runBench_Pipeline_dataWrite1 
+Execute       preproc_iomode -model runBench_Pipeline_dataRead 
 Execute       preproc_iomode -model entry_proc 
 Execute       get_model_list ddrBenchmark -filter all-wo-channel 
-INFO-FLOW: Model list for configure: entry_proc runBench_Pipeline_dataWrite1 runBench_Pipeline_dataWrite runBench countCycles_Pipeline_count countCycles ddrBenchmark
+INFO-FLOW: Model list for configure: entry_proc runBench_Pipeline_dataRead runBench_Pipeline_dataWrite runBench countCycles_Pipeline_count countCycles ddrBenchmark
 INFO-FLOW: Configuring Module : entry_proc ...
 Execute       set_default_model entry_proc 
 Execute       apply_spec_resource_limit entry_proc 
-INFO-FLOW: Configuring Module : runBench_Pipeline_dataWrite1 ...
-Execute       set_default_model runBench_Pipeline_dataWrite1 
-Execute       apply_spec_resource_limit runBench_Pipeline_dataWrite1 
+INFO-FLOW: Configuring Module : runBench_Pipeline_dataRead ...
+Execute       set_default_model runBench_Pipeline_dataRead 
+Execute       apply_spec_resource_limit runBench_Pipeline_dataRead 
 INFO-FLOW: Configuring Module : runBench_Pipeline_dataWrite ...
 Execute       set_default_model runBench_Pipeline_dataWrite 
 Execute       apply_spec_resource_limit runBench_Pipeline_dataWrite 
@@ -285,15 +287,15 @@ Execute       apply_spec_resource_limit countCycles
 INFO-FLOW: Configuring Module : ddrBenchmark ...
 Execute       set_default_model ddrBenchmark 
 Execute       apply_spec_resource_limit ddrBenchmark 
-INFO-FLOW: Model list for preprocess: entry_proc runBench_Pipeline_dataWrite1 runBench_Pipeline_dataWrite runBench countCycles_Pipeline_count countCycles ddrBenchmark
+INFO-FLOW: Model list for preprocess: entry_proc runBench_Pipeline_dataRead runBench_Pipeline_dataWrite runBench countCycles_Pipeline_count countCycles ddrBenchmark
 INFO-FLOW: Preprocessing Module: entry_proc ...
 Execute       set_default_model entry_proc 
 Execute       cdfg_preprocess -model entry_proc 
 Execute       rtl_gen_preprocess entry_proc 
-INFO-FLOW: Preprocessing Module: runBench_Pipeline_dataWrite1 ...
-Execute       set_default_model runBench_Pipeline_dataWrite1 
-Execute       cdfg_preprocess -model runBench_Pipeline_dataWrite1 
-Execute       rtl_gen_preprocess runBench_Pipeline_dataWrite1 
+INFO-FLOW: Preprocessing Module: runBench_Pipeline_dataRead ...
+Execute       set_default_model runBench_Pipeline_dataRead 
+Execute       cdfg_preprocess -model runBench_Pipeline_dataRead 
+Execute       rtl_gen_preprocess runBench_Pipeline_dataRead 
 INFO-FLOW: Preprocessing Module: runBench_Pipeline_dataWrite ...
 Execute       set_default_model runBench_Pipeline_dataWrite 
 Execute       cdfg_preprocess -model runBench_Pipeline_dataWrite 
@@ -314,7 +316,7 @@ INFO-FLOW: Preprocessing Module: ddrBenchmark ...
 Execute       set_default_model ddrBenchmark 
 Execute       cdfg_preprocess -model ddrBenchmark 
 Execute       rtl_gen_preprocess ddrBenchmark 
-INFO-FLOW: Model list for synthesis: entry_proc runBench_Pipeline_dataWrite1 runBench_Pipeline_dataWrite runBench countCycles_Pipeline_count countCycles ddrBenchmark
+INFO-FLOW: Model list for synthesis: entry_proc runBench_Pipeline_dataRead runBench_Pipeline_dataWrite runBench countCycles_Pipeline_count countCycles ddrBenchmark
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -322,7 +324,7 @@ Execute       set_default_model entry_proc
 Execute       schedule -model entry_proc 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.172 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.174 seconds; current allocated memory: 1.107 GB.
 Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/entry_proc.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -335,40 +337,40 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 1.107 GB.
 Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/entry_proc.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
 Execute       db_write -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/entry_proc.bind.adb -f 
 INFO-FLOW: Finish binding entry_proc.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'runBench_Pipeline_dataWrite1' 
+INFO: [HLS 200-42] -- Implementing module 'runBench_Pipeline_dataRead' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       set_default_model runBench_Pipeline_dataWrite1 
-Execute       schedule -model runBench_Pipeline_dataWrite1 
+Execute       set_default_model runBench_Pipeline_dataRead 
+Execute       schedule -model runBench_Pipeline_dataRead 
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'dataWrite'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'dataWrite'
+INFO: [SCHED 204-61] Pipelining loop 'dataRead'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'dataRead'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.091 seconds; current allocated memory: 1.107 GB.
-Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite1.verbose.sched.rpt 
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 1.107 GB.
+Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataRead.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Execute       db_write -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite1.sched.adb -f 
-INFO-FLOW: Finish scheduling runBench_Pipeline_dataWrite1.
-Execute       set_default_model runBench_Pipeline_dataWrite1 
-Execute       bind -model runBench_Pipeline_dataWrite1 
+Execute       db_write -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataRead.sched.adb -f 
+INFO-FLOW: Finish scheduling runBench_Pipeline_dataRead.
+Execute       set_default_model runBench_Pipeline_dataRead 
+Execute       bind -model runBench_Pipeline_dataRead 
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 1.107 GB.
-Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite1.verbose.bind.rpt 
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.058 seconds; current allocated memory: 1.107 GB.
+Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataRead.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Execute       db_write -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite1.bind.adb -f 
-INFO-FLOW: Finish binding runBench_Pipeline_dataWrite1.
+Execute       db_write -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataRead.bind.adb -f 
+INFO-FLOW: Finish binding runBench_Pipeline_dataRead.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'runBench_Pipeline_dataWrite' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -376,9 +378,9 @@ Execute       set_default_model runBench_Pipeline_dataWrite
 Execute       schedule -model runBench_Pipeline_dataWrite 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'dataWrite'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'dataWrite'
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'dataWrite'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.107 GB.
 Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -391,7 +393,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.142 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.043 seconds; current allocated memory: 1.107 GB.
 Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -404,12 +406,10 @@ Execute       set_default_model runBench
 Execute       schedule -model runBench 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.151 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.247 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.091 seconds; current allocated memory: 1.107 GB.
 Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 0.242 sec.
 Execute       db_write -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench.sched.adb -f 
 INFO-FLOW: Finish scheduling runBench.
 Execute       set_default_model runBench 
@@ -419,12 +419,10 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.314 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.6 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 1.107 GB.
 Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 0.187 sec.
 Execute       db_write -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench.bind.adb -f 
 INFO-FLOW: Finish binding runBench.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -436,7 +434,7 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining loop 'count'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'count'
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.305 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.098 seconds; current allocated memory: 1.107 GB.
 Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/countCycles_Pipeline_count.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -449,7 +447,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.072 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 1.107 GB.
 Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/countCycles_Pipeline_count.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -462,7 +460,7 @@ Execute       set_default_model countCycles
 Execute       schedule -model countCycles 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 1.107 GB.
 Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/countCycles.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -475,7 +473,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.101 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 1.107 GB.
 Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/countCycles.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -488,7 +486,7 @@ Execute       set_default_model ddrBenchmark
 Execute       schedule -model ddrBenchmark 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.107 GB.
 Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.verbose.sched.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -501,7 +499,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.117 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 1.107 GB.
 Execute       syn_report -verbosereport -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.verbose.bind.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -510,13 +508,13 @@ INFO-FLOW: Finish binding ddrBenchmark.
 Execute       get_model_list ddrBenchmark -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
 Execute       rtl_gen_preprocess entry_proc 
-Execute       rtl_gen_preprocess runBench_Pipeline_dataWrite1 
+Execute       rtl_gen_preprocess runBench_Pipeline_dataRead 
 Execute       rtl_gen_preprocess runBench_Pipeline_dataWrite 
 Execute       rtl_gen_preprocess runBench 
 Execute       rtl_gen_preprocess countCycles_Pipeline_count 
 Execute       rtl_gen_preprocess countCycles 
 Execute       rtl_gen_preprocess ddrBenchmark 
-INFO-FLOW: Model list for RTL generation: entry_proc runBench_Pipeline_dataWrite1 runBench_Pipeline_dataWrite runBench countCycles_Pipeline_count countCycles ddrBenchmark
+INFO-FLOW: Model list for RTL generation: entry_proc runBench_Pipeline_dataRead runBench_Pipeline_dataWrite runBench countCycles_Pipeline_count countCycles ddrBenchmark
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -526,7 +524,7 @@ Execute       get_config_rtl -module_prefix
 Execute       get_config_rtl -module_auto_prefix 
 Execute       create_rtl_model entry_proc -top_prefix ddrBenchmark_ -sub_prefix ddrBenchmark_ -mg_file C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/entry_proc.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.103 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.079 seconds; current allocated memory: 1.107 GB.
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.rtl_wrap.cfg.tcl 
 Execute       gen_rtl entry_proc -style xilinx -f -lang vhdl -o C:/FPGA/MemBench/ddrbench_sol/syn/vhdl/ddrBenchmark_entry_proc 
 Execute       gen_rtl entry_proc -style xilinx -f -lang vlog -o C:/FPGA/MemBench/ddrbench_sol/syn/verilog/ddrBenchmark_entry_proc 
@@ -543,45 +541,44 @@ Execute       db_write -model entry_proc -f -o C:/FPGA/MemBench/ddrbench_sol/.au
 Execute       db_write -model entry_proc -bindview -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info entry_proc -p C:/FPGA/MemBench/ddrbench_sol/.autopilot/db -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/entry_proc 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'runBench_Pipeline_dataWrite1' 
+INFO: [HLS 200-10] -- Generating RTL for module 'runBench_Pipeline_dataRead' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute       get_config_rtl -module_prefix 
 Execute       get_config_rtl -module_auto_prefix 
 Execute       get_config_rtl -module_prefix 
 Execute       get_config_rtl -module_auto_prefix 
-Execute       create_rtl_model runBench_Pipeline_dataWrite1 -top_prefix ddrBenchmark_ -sub_prefix ddrBenchmark_ -mg_file C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite1.compgen.tcl 
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'runBench_Pipeline_dataWrite1' pipeline 'dataWrite' pipeline type 'loop pipeline'
-WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWVALID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWADDR' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWID' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWLEN' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWSIZE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWBURST' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWLOCK' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWCACHE' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWPROT' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWQOS' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWREGION' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_AWUSER' to 0.
-WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite1/m_axi_gmem_BREADY' to 0.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'runBench_Pipeline_dataWrite1'.
-Command       create_rtl_model done; 0.213 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.312 seconds; current allocated memory: 1.107 GB.
+Execute       create_rtl_model runBench_Pipeline_dataRead -top_prefix ddrBenchmark_ -sub_prefix ddrBenchmark_ -mg_file C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataRead.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'runBench_Pipeline_dataRead' pipeline 'dataRead' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runBench_Pipeline_dataRead'.
+Command       create_rtl_model done; 0.122 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.179 seconds; current allocated memory: 1.107 GB.
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.rtl_wrap.cfg.tcl 
-Execute       gen_rtl runBench_Pipeline_dataWrite1 -style xilinx -f -lang vhdl -o C:/FPGA/MemBench/ddrbench_sol/syn/vhdl/ddrBenchmark_runBench_Pipeline_dataWrite1 
-Execute       gen_rtl runBench_Pipeline_dataWrite1 -style xilinx -f -lang vlog -o C:/FPGA/MemBench/ddrbench_sol/syn/verilog/ddrBenchmark_runBench_Pipeline_dataWrite1 
-Execute       syn_report -csynth -model runBench_Pipeline_dataWrite1 -o C:/FPGA/MemBench/ddrbench_sol/syn/report/runBench_Pipeline_dataWrite1_csynth.rpt 
+Execute       gen_rtl runBench_Pipeline_dataRead -style xilinx -f -lang vhdl -o C:/FPGA/MemBench/ddrbench_sol/syn/vhdl/ddrBenchmark_runBench_Pipeline_dataRead 
+Execute       gen_rtl runBench_Pipeline_dataRead -style xilinx -f -lang vlog -o C:/FPGA/MemBench/ddrbench_sol/syn/verilog/ddrBenchmark_runBench_Pipeline_dataRead 
+Execute       syn_report -csynth -model runBench_Pipeline_dataRead -o C:/FPGA/MemBench/ddrbench_sol/syn/report/runBench_Pipeline_dataRead_csynth.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Execute       syn_report -rtlxml -model runBench_Pipeline_dataWrite1 -o C:/FPGA/MemBench/ddrbench_sol/syn/report/runBench_Pipeline_dataWrite1_csynth.xml 
+Execute       syn_report -rtlxml -model runBench_Pipeline_dataRead -o C:/FPGA/MemBench/ddrbench_sol/syn/report/runBench_Pipeline_dataRead_csynth.xml 
 Execute         get_solution -flow_target
 Execute           get_solution -flow_target 
-Execute       syn_report -verbosereport -model runBench_Pipeline_dataWrite1 -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite1.verbose.rpt 
+Execute       syn_report -verbosereport -model runBench_Pipeline_dataRead -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataRead.verbose.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Execute       db_write -model runBench_Pipeline_dataWrite1 -f -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite1.adb 
-Execute       db_write -model runBench_Pipeline_dataWrite1 -bindview -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/design.bindinfo.xml 
-Execute       gen_tb_info runBench_Pipeline_dataWrite1 -p C:/FPGA/MemBench/ddrbench_sol/.autopilot/db -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite1 
+Execute       db_write -model runBench_Pipeline_dataRead -f -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataRead.adb 
+Execute       db_write -model runBench_Pipeline_dataRead -bindview -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info runBench_Pipeline_dataRead -p C:/FPGA/MemBench/ddrbench_sol/.autopilot/db -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataRead 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'runBench_Pipeline_dataWrite' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -605,8 +602,8 @@ WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/
 WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWUSER' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_BREADY' to 0.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'runBench_Pipeline_dataWrite'.
-Command       create_rtl_model done; 0.213 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 1.107 GB.
+Command       create_rtl_model done; 0.153 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.303 seconds; current allocated memory: 1.107 GB.
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.rtl_wrap.cfg.tcl 
 Execute       gen_rtl runBench_Pipeline_dataWrite -style xilinx -f -lang vhdl -o C:/FPGA/MemBench/ddrbench_sol/syn/vhdl/ddrBenchmark_runBench_Pipeline_dataWrite 
 Execute       gen_rtl runBench_Pipeline_dataWrite -style xilinx -f -lang vlog -o C:/FPGA/MemBench/ddrbench_sol/syn/verilog/ddrBenchmark_runBench_Pipeline_dataWrite 
@@ -631,7 +628,7 @@ Execute       get_config_rtl -module_prefix
 Execute       get_config_rtl -module_auto_prefix 
 Execute       create_rtl_model runBench -top_prefix ddrBenchmark_ -sub_prefix ddrBenchmark_ -mg_file C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'runBench'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.193 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.157 seconds; current allocated memory: 1.107 GB.
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.rtl_wrap.cfg.tcl 
 Execute       gen_rtl runBench -style xilinx -f -lang vhdl -o C:/FPGA/MemBench/ddrbench_sol/syn/vhdl/ddrBenchmark_runBench 
 Execute       gen_rtl runBench -style xilinx -f -lang vlog -o C:/FPGA/MemBench/ddrbench_sol/syn/verilog/ddrBenchmark_runBench 
@@ -644,7 +641,6 @@ Execute           get_solution -flow_target
 Execute       syn_report -verbosereport -model runBench -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench.verbose.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
-Command       syn_report done; 0.13 sec.
 Execute       db_write -model runBench -f -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench.adb 
 Execute       db_write -model runBench -bindview -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/design.bindinfo.xml 
 Execute       gen_tb_info runBench -p C:/FPGA/MemBench/ddrbench_sol/.autopilot/db -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench 
@@ -658,7 +654,7 @@ Execute       get_config_rtl -module_auto_prefix
 Execute       create_rtl_model countCycles_Pipeline_count -top_prefix ddrBenchmark_ -sub_prefix ddrBenchmark_ -mg_file C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/countCycles_Pipeline_count.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'countCycles_Pipeline_count' pipeline 'count' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'countCycles_Pipeline_count'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.372 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.201 seconds; current allocated memory: 1.107 GB.
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.rtl_wrap.cfg.tcl 
 Execute       gen_rtl countCycles_Pipeline_count -style xilinx -f -lang vhdl -o C:/FPGA/MemBench/ddrbench_sol/syn/vhdl/ddrBenchmark_countCycles_Pipeline_count 
 Execute       gen_rtl countCycles_Pipeline_count -style xilinx -f -lang vlog -o C:/FPGA/MemBench/ddrbench_sol/syn/verilog/ddrBenchmark_countCycles_Pipeline_count 
@@ -683,7 +679,7 @@ Execute       get_config_rtl -module_prefix
 Execute       get_config_rtl -module_auto_prefix 
 Execute       create_rtl_model countCycles -top_prefix ddrBenchmark_ -sub_prefix ddrBenchmark_ -mg_file C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/countCycles.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'countCycles'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.116 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.089 seconds; current allocated memory: 1.107 GB.
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.rtl_wrap.cfg.tcl 
 Execute       gen_rtl countCycles -style xilinx -f -lang vhdl -o C:/FPGA/MemBench/ddrbench_sol/syn/vhdl/ddrBenchmark_countCycles 
 Execute       gen_rtl countCycles -style xilinx -f -lang vlog -o C:/FPGA/MemBench/ddrbench_sol/syn/verilog/ddrBenchmark_countCycles 
@@ -716,8 +712,8 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'ddrBenchmark/res' to 's_ax
 INFO: [RTGEN 206-500] Setting interface mode on function 'ddrBenchmark' to 's_axilite & ap_ctrl_hs'.
 INFO: [RTGEN 206-100] Bundling port 'mem', 'dataNum', 'rw', 'res' and 'return' to AXI-Lite port control.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'ddrBenchmark'.
-Command       create_rtl_model done; 0.152 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.259 seconds; current allocated memory: 1.107 GB.
+Command       create_rtl_model done; 0.104 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.182 seconds; current allocated memory: 1.107 GB.
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.rtl_wrap.cfg.tcl 
 Execute       gen_rtl ddrBenchmark -istop -style xilinx -f -lang vhdl -o C:/FPGA/MemBench/ddrbench_sol/syn/vhdl/ddrBenchmark 
 Execute       gen_rtl ddrBenchmark -istop -style xilinx -f -lang vlog -o C:/FPGA/MemBench/ddrbench_sol/syn/verilog/ddrBenchmark 
@@ -735,6 +731,7 @@ Execute       db_write -model ddrBenchmark -bindview -o C:/FPGA/MemBench/ddrbenc
 Execute       gen_tb_info ddrBenchmark -p C:/FPGA/MemBench/ddrbench_sol/.autopilot/db -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark 
 Execute       export_constraint_db -f -tool general -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.constraint.tcl 
 Execute       syn_report -designview -model ddrBenchmark -o C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.design.xml 
+Command       syn_report done; 0.122 sec.
 Execute       syn_report -csynthDesign -model ddrBenchmark -o C:/FPGA/MemBench/ddrbench_sol/syn/report/csynth.rpt 
 Execute         AP::get_flow_target_display_name
 Execute           get_solution -flow_target 
@@ -748,11 +745,11 @@ Execute       get_config_rtl -module_prefix
 Execute       get_config_rtl -module_prefix 
 Execute       get_config_rtl -module_auto_prefix 
 Execute       sc_get_portdomain ddrBenchmark 
-INFO-FLOW: Model list for RTL component generation: entry_proc runBench_Pipeline_dataWrite1 runBench_Pipeline_dataWrite runBench countCycles_Pipeline_count countCycles ddrBenchmark
+INFO-FLOW: Model list for RTL component generation: entry_proc runBench_Pipeline_dataRead runBench_Pipeline_dataWrite runBench countCycles_Pipeline_count countCycles ddrBenchmark
 INFO-FLOW: Handling components in module [entry_proc] ... 
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/entry_proc.compgen.tcl 
-INFO-FLOW: Handling components in module [runBench_Pipeline_dataWrite1] ... 
-Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite1.compgen.tcl 
+INFO-FLOW: Handling components in module [runBench_Pipeline_dataRead] ... 
+Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataRead.compgen.tcl 
 INFO-FLOW: Found component ddrBenchmark_flow_control_loop_pipe_sequential_init.
 INFO-FLOW: Append model ddrBenchmark_flow_control_loop_pipe_sequential_init
 INFO-FLOW: Handling components in module [runBench_Pipeline_dataWrite] ... 
@@ -782,14 +779,14 @@ INFO-FLOW: Append model ddrBenchmark_results_m_axi
 INFO-FLOW: Found component ddrBenchmark_control_s_axi.
 INFO-FLOW: Append model ddrBenchmark_control_s_axi
 INFO-FLOW: Append model entry_proc
-INFO-FLOW: Append model runBench_Pipeline_dataWrite1
+INFO-FLOW: Append model runBench_Pipeline_dataRead
 INFO-FLOW: Append model runBench_Pipeline_dataWrite
 INFO-FLOW: Append model runBench
 INFO-FLOW: Append model countCycles_Pipeline_count
 INFO-FLOW: Append model countCycles
 INFO-FLOW: Append model ddrBenchmark
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: ddrBenchmark_flow_control_loop_pipe_sequential_init ddrBenchmark_flow_control_loop_pipe_sequential_init ddrBenchmark_flow_control_loop_pipe_sequential_init ddrBenchmark_fifo_w64_d3_S ddrBenchmark_fifo_w64_d2_S ddrBenchmark_start_for_countCycles_U0 ddrBenchmark_gmem_m_axi ddrBenchmark_results_m_axi ddrBenchmark_control_s_axi entry_proc runBench_Pipeline_dataWrite1 runBench_Pipeline_dataWrite runBench countCycles_Pipeline_count countCycles ddrBenchmark
+INFO-FLOW: All models in this session: ddrBenchmark_flow_control_loop_pipe_sequential_init ddrBenchmark_flow_control_loop_pipe_sequential_init ddrBenchmark_flow_control_loop_pipe_sequential_init ddrBenchmark_fifo_w64_d3_S ddrBenchmark_fifo_w64_d2_S ddrBenchmark_start_for_countCycles_U0 ddrBenchmark_gmem_m_axi ddrBenchmark_results_m_axi ddrBenchmark_control_s_axi entry_proc runBench_Pipeline_dataRead runBench_Pipeline_dataWrite runBench countCycles_Pipeline_count countCycles ddrBenchmark
 INFO-FLOW: Generating C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/autopilot.rtl.models.txt file...
 INFO-FLOW: To file: write model ddrBenchmark_flow_control_loop_pipe_sequential_init
 INFO-FLOW: To file: write model ddrBenchmark_flow_control_loop_pipe_sequential_init
@@ -801,7 +798,7 @@ INFO-FLOW: To file: write model ddrBenchmark_gmem_m_axi
 INFO-FLOW: To file: write model ddrBenchmark_results_m_axi
 INFO-FLOW: To file: write model ddrBenchmark_control_s_axi
 INFO-FLOW: To file: write model entry_proc
-INFO-FLOW: To file: write model runBench_Pipeline_dataWrite1
+INFO-FLOW: To file: write model runBench_Pipeline_dataRead
 INFO-FLOW: To file: write model runBench_Pipeline_dataWrite
 INFO-FLOW: To file: write model runBench
 INFO-FLOW: To file: write model countCycles_Pipeline_count
@@ -839,7 +836,7 @@ Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/ut
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.117 sec.
+Command       ap_source done; 0.111 sec.
 INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
 INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/vhdl' dstVlogDir='C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/vlog' tclDir='C:/FPGA/MemBench/ddrbench_sol/.autopilot/db' modelList='ddrBenchmark_flow_control_loop_pipe_sequential_init
 ddrBenchmark_flow_control_loop_pipe_sequential_init
@@ -851,7 +848,7 @@ ddrBenchmark_gmem_m_axi
 ddrBenchmark_results_m_axi
 ddrBenchmark_control_s_axi
 entry_proc
-runBench_Pipeline_dataWrite1
+runBench_Pipeline_dataRead
 runBench_Pipeline_dataWrite
 runBench
 countCycles_Pipeline_count
@@ -864,7 +861,7 @@ Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/entry_proc.compgen.tcl 
-Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite1.compgen.tcl 
+Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataRead.compgen.tcl 
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite.compgen.tcl 
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench.compgen.tcl 
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/countCycles_Pipeline_count.compgen.tcl 
@@ -880,13 +877,14 @@ Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_countCycles_U0_U(ddrBenchmark_start_for_countCycles_U0)' using Shift Registers.
 Execute         source ./control.slave.tcl 
-Command       ap_source done; 0.148 sec.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.797 seconds; current allocated memory: 1.107 GB.
+Command       ap_source done; 0.137 sec.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.854 seconds; current allocated memory: 1.107 GB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='ddrBenchmark_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml bind info
 INFO-FLOW: No bind nodes found for module_name entry_proc
+INFO-FLOW: No bind nodes found for module_name runBench
 INFO-FLOW: No bind nodes found for module_name countCycles
 INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml config info
@@ -1061,7 +1059,7 @@ Execute       get_config_rtl -reset_async
 Execute       get_config_rtl -reset_level 
 Execute       get_config_schedule -enable_dsp_full_reg 
 Execute       get_config_unroll -tripcount_threshold 
-INFO-FLOW: Done: create_csynth_xml config info time: 0.2 seconds per iteration
+INFO-FLOW: Done: create_csynth_xml config info time: 0.1 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml write xml
 INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=C:/FPGA/MemBench/ddrbench_sol/syn/report/csynth.xml
@@ -1075,7 +1073,7 @@ ddrBenchmark_gmem_m_axi
 ddrBenchmark_results_m_axi
 ddrBenchmark_control_s_axi
 entry_proc
-runBench_Pipeline_dataWrite1
+runBench_Pipeline_dataRead
 runBench_Pipeline_dataWrite
 runBench
 countCycles_Pipeline_count
@@ -1103,7 +1101,7 @@ Execute       get_config_export -taxonomy
 Execute       get_config_export -description 
 Execute       get_config_export -display_name 
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/entry_proc.tbgen.tcl 
-Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite1.tbgen.tcl 
+Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataRead.tbgen.tcl 
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite.tbgen.tcl 
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench.tbgen.tcl 
 Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/countCycles_Pipeline_count.tbgen.tcl 
@@ -1123,7 +1121,7 @@ Execute       source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.
 Execute       get_config_export -ip_xdc_file 
 Execute       get_config_export -ip_xdc_ooc_file 
 Execute       get_config_debug -directory 
-INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE ddrBenchmark LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_m_axi_U SOURCE {} VARIABLE {} MODULE ddrBenchmark LOOP {} BUNDLEDNAME gmem DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME results_m_axi_U SOURCE {} VARIABLE {} MODULE ddrBenchmark LOOP {} BUNDLEDNAME results DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST ddrBenchmark MODULE2INSTS {ddrBenchmark ddrBenchmark entry_proc entry_proc_U0 runBench runBench_U0 runBench_Pipeline_dataWrite1 grp_runBench_Pipeline_dataWrite1_fu_119 runBench_Pipeline_dataWrite grp_runBench_Pipeline_dataWrite_fu_127 countCycles countCycles_U0 countCycles_Pipeline_count grp_countCycles_Pipeline_count_fu_90} INST2MODULE {ddrBenchmark ddrBenchmark entry_proc_U0 entry_proc runBench_U0 runBench grp_runBench_Pipeline_dataWrite1_fu_119 runBench_Pipeline_dataWrite1 grp_runBench_Pipeline_dataWrite_fu_127 runBench_Pipeline_dataWrite countCycles_U0 countCycles grp_countCycles_Pipeline_count_fu_90 countCycles_Pipeline_count} INSTDATA {ddrBenchmark {DEPTH 1 CHILDREN {entry_proc_U0 runBench_U0 countCycles_U0}} entry_proc_U0 {DEPTH 2 CHILDREN {}} runBench_U0 {DEPTH 2 CHILDREN {grp_runBench_Pipeline_dataWrite1_fu_119 grp_runBench_Pipeline_dataWrite_fu_127}} grp_runBench_Pipeline_dataWrite1_fu_119 {DEPTH 3 CHILDREN {}} grp_runBench_Pipeline_dataWrite_fu_127 {DEPTH 3 CHILDREN {}} countCycles_U0 {DEPTH 2 CHILDREN grp_countCycles_Pipeline_count_fu_90} grp_countCycles_Pipeline_count_fu_90 {DEPTH 3 CHILDREN {}}} MODULEDATA {runBench_Pipeline_dataWrite1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln17_fu_100_p2 SOURCE MemBench/src/ddrbenchmark.cpp:17 VARIABLE add_ln17 LOOP dataWrite BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} runBench_Pipeline_dataWrite {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln17_fu_100_p2 SOURCE MemBench/src/ddrbenchmark.cpp:17 VARIABLE add_ln17 LOOP dataWrite BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} runBench {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1069_fu_168_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1069} VARIABLE add_ln1069 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} countCycles_Pipeline_count {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME cnt_1_fu_69_p2 SOURCE MemBench/src/ddrbenchmark.cpp:9 VARIABLE cnt_1 LOOP count BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} ddrBenchmark {BINDINFO {{BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME res_c_U SOURCE MemBench/src/ddrbenchmark.cpp:60 VARIABLE res_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME counterCmd_U SOURCE MemBench/src/ddrbenchmark.cpp:62 VARIABLE counterCmd LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}}} AREA {DSP 0 BRAM 0 URAM 0}} entry_proc {AREA {DSP 0 BRAM 0 URAM 0}} countCycles {AREA {DSP 0 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE ddrBenchmark LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem_m_axi_U SOURCE {} VARIABLE {} MODULE ddrBenchmark LOOP {} BUNDLEDNAME gmem DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME results_m_axi_U SOURCE {} VARIABLE {} MODULE ddrBenchmark LOOP {} BUNDLEDNAME results DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST ddrBenchmark MODULE2INSTS {ddrBenchmark ddrBenchmark entry_proc entry_proc_U0 runBench runBench_U0 runBench_Pipeline_dataRead grp_runBench_Pipeline_dataRead_fu_139 runBench_Pipeline_dataWrite grp_runBench_Pipeline_dataWrite_fu_148 countCycles countCycles_U0 countCycles_Pipeline_count grp_countCycles_Pipeline_count_fu_90} INST2MODULE {ddrBenchmark ddrBenchmark entry_proc_U0 entry_proc runBench_U0 runBench grp_runBench_Pipeline_dataRead_fu_139 runBench_Pipeline_dataRead grp_runBench_Pipeline_dataWrite_fu_148 runBench_Pipeline_dataWrite countCycles_U0 countCycles grp_countCycles_Pipeline_count_fu_90 countCycles_Pipeline_count} INSTDATA {ddrBenchmark {DEPTH 1 CHILDREN {entry_proc_U0 runBench_U0 countCycles_U0}} entry_proc_U0 {DEPTH 2 CHILDREN {}} runBench_U0 {DEPTH 2 CHILDREN {grp_runBench_Pipeline_dataRead_fu_139 grp_runBench_Pipeline_dataWrite_fu_148}} grp_runBench_Pipeline_dataRead_fu_139 {DEPTH 3 CHILDREN {}} grp_runBench_Pipeline_dataWrite_fu_148 {DEPTH 3 CHILDREN {}} countCycles_U0 {DEPTH 2 CHILDREN grp_countCycles_Pipeline_count_fu_90} grp_countCycles_Pipeline_count_fu_90 {DEPTH 3 CHILDREN {}}} MODULEDATA {runBench_Pipeline_dataRead {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_fu_109_p2 SOURCE MemBench/src/ddrbenchmark.cpp:24 VARIABLE add_ln24 LOOP dataRead BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tmp_V_1_fu_140_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE tmp_V_1 LOOP dataRead BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} runBench_Pipeline_dataWrite {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln17_fu_100_p2 SOURCE MemBench/src/ddrbenchmark.cpp:17 VARIABLE add_ln17 LOOP dataWrite BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} countCycles_Pipeline_count {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME cnt_1_fu_69_p2 SOURCE MemBench/src/ddrbenchmark.cpp:9 VARIABLE cnt_1 LOOP count BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} ddrBenchmark {BINDINFO {{BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME res_c_U SOURCE MemBench/src/ddrbenchmark.cpp:66 VARIABLE res_c LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME counterCmd_U SOURCE MemBench/src/ddrbenchmark.cpp:68 VARIABLE counterCmd LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}}} AREA {DSP 0 BRAM 0 URAM 0}} entry_proc {AREA {DSP 0 BRAM 0 URAM 0}} runBench {AREA {DSP 0 BRAM 0 URAM 0}} countCycles {AREA {DSP 0 BRAM 0 URAM 0}}}}'
 INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
 Execute       send_msg_by_id INFO @200-1603@%s  and missed bursts 
 INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
@@ -1131,17 +1129,17 @@ INFO-FLOW: Running: gen_csynth_sec_pragma
 INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.513 seconds; current allocated memory: 1.107 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.965 seconds; current allocated memory: 1.107 GB.
 INFO: [VHDL 208-304] Generating VHDL RTL for ddrBenchmark.
 INFO: [VLOG 209-307] Generating Verilog RTL for ddrBenchmark.
 Execute       syn_report -model ddrBenchmark -printsummary 
 INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
-Command     autosyn done; 6.504 sec.
-Command   csynth_design done; 20.143 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 20.143 seconds; current allocated memory: 115.125 MB.
-Command ap_source done; 21.61 sec.
+Command     autosyn done; 4.16 sec.
+Command   csynth_design done; 15.43 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 15.43 seconds; current allocated memory: 207.227 MB.
+Command ap_source done; 16.668 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace C:/FPGA/MemBench/ddrbench_sol opened at Sun Feb 26 21:57:02 +0100 2023
+INFO-FLOW: Workspace C:/FPGA/MemBench/ddrbench_sol opened at Sun Mar 05 13:47:02 +0100 2023
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xc7z020-clg400-1 
@@ -1150,7 +1148,7 @@ DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2022.1\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2022.1/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
-Command       create_platform done; 1.112 sec.
+Command       create_platform done; 0.71 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
@@ -1161,13 +1159,12 @@ Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/inter
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.131 sec.
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.189 sec.
+Command       ap_source done; 0.114 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 1.332 sec.
+Command     set_part done; 0.843 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute     get_config_interface -m_axi_latency 
@@ -1181,7 +1178,7 @@ Execute     config_export -format=ip_catalog
 Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
 INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
 Execute     config_export -rtl=verilog 
-Command   open_solution done; 1.373 sec.
+Command   open_solution done; 0.872 sec.
 Execute   set_part xc7z020-clg400-1 
 INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
 Execute     create_platform xc7z020-clg400-1 -board  
@@ -1195,13 +1192,12 @@ Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interfa
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
-Command       ap_source done; 0.111 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.168 sec.
+Command     ap_source done; 0.126 sec.
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.211 sec.
+Command   set_part done; 0.156 sec.
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 Execute   config_export -format ip_catalog -rtl verilog 
@@ -1265,10 +1261,9 @@ Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interfa
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
-Command       ap_source done; 0.118 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.179 sec.
+Command     ap_source done; 0.114 sec.
 INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
 INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=ddrBenchmark xml_exists=0
 Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.rtl_wrap.cfg.tcl 
@@ -1296,7 +1291,7 @@ ddrBenchmark_gmem_m_axi
 ddrBenchmark_results_m_axi
 ddrBenchmark_control_s_axi
 entry_proc
-runBench_Pipeline_dataWrite1
+runBench_Pipeline_dataRead
 runBench_Pipeline_dataWrite
 runBench
 countCycles_Pipeline_count
@@ -1326,299 +1321,7 @@ Execute     get_config_export -taxonomy
 Execute     get_config_export -description 
 Execute     get_config_export -display_name 
 Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/entry_proc.tbgen.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite1.tbgen.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite.tbgen.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench.tbgen.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/countCycles_Pipeline_count.tbgen.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/countCycles.tbgen.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.tbgen.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     get_solution -flow_target 
-Execute     get_config_rtl -kernel_profile 
-Execute     get_config_rtl -kernel_profile 
-Execute     get_config_rtl -stall_sig_gen 
-Execute     get_config_rtl -profile 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.constraint.tcl 
-Execute     sc_get_clocks ddrBenchmark 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-Execute     get_config_export -ip_xdc_file 
-Execute     get_config_export -ip_xdc_ooc_file 
-Execute     get_config_debug -directory 
-Execute     get_config_rtl -deadlock_detection 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.tbgen.tcl 
-Execute     get_config_rtl -deadlock_detection 
-Execute     get_config_rtl -deadlock_detection 
-Execute     get_config_rtl -module_prefix 
-INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to ddrBenchmark
-Execute     get_config_rtl -deadlock_detection 
-INFO-FLOW: DBG:PUTS:       copy ip_driver_dir 1_0 C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/driver
-Execute     get_config_export -format 
-INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.tbgen.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.compgen.dataonly.tcl 
-Execute     get_config_interface -s_axilite_interrupt_mode 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.compgen.dataonly.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-Execute     get_config_debug -directory 
-INFO-FLOW: DBG:PUTS:       generate_top_info
-INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=ddrBenchmark
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.rtl_wrap.cfg.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.rtl_wrap.cfg.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.rtl_wrap.cfg.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.tbgen.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.tbgen.tcl 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.tbgen.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-Execute     get_config_export -ip_xdc_ooc_file 
-Execute     get_config_export -ip_xdc_file 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.constraint.tcl 
-INFO-FLOW: DBG:PUTS:       generate_ipi_example_script
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-INFO-FLOW: DBG:PUTS:       generate_syn_sh
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:PUTS:       generate_imp_constraints
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.constraint.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.tbgen.tcl 
-INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-INFO-FLOW: DBG:PUTS: read_platform_lib C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
-Command       ap_source done; 0.122 sec.
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.17 sec.
-INFO-FLOW: DBG:PUTS:     IP package: exec C:/FPGA/MemBench/ddrbench_sol/impl/ip/pack.bat
-INFO-FLOW: DBG:PUTS:     IP package: success C:/FPGA/MemBench/ddrbench_sol/impl/ip/pack.bat
-Execute     get_config_export -output 
-Execute     send_msg_by_id INFO @200-802@%s MemBench/ddrbench_sol/impl/export.zip 
-INFO: [HLS 200-802] Generated output file MemBench/ddrbench_sol/impl/export.zip
-Command   export_design done; 17.505 sec.
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 17.505 seconds; current allocated memory: 200.684 MB.
-Command ap_source done; 19.135 sec.
-Execute cleanup_all 
-INFO-FLOW: Workspace C:/FPGA/MemBench/ddrbench_sol opened at Sun Feb 26 22:02:30 +0100 2023
-Execute     ap_set_clock -name default -period 10 -default=false 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-Execute     set_part xc7z020-clg400-1 
-Execute       create_platform xc7z020-clg400-1 -board  
-DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2022.1\lib\win64.o\librdi_hlsvwrap.dll
-DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2022.1/data/parts/arch.xml
-DBG:HLSDevice: init success
-INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
-Command       create_platform done; 0.938 sec.
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute           source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.115 sec.
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.16 sec.
-Execute       ap_part_info -name xc7z020-clg400-1 -data info 
-Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 1.122 sec.
-Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
-INFO: [HLS 200-1505] Using flow_target 'vivado'
-Execute     get_config_interface -m_axi_latency 
-Execute     get_config_interface -m_axi_alignment_byte_size 
-Execute     get_config_interface -m_axi_max_widen_bitwidth 
-Execute     get_config_interface -default_interface 
-Execute     get_config_rtl -register_reset_num 
-Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
-INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
-Execute     config_export -format=ip_catalog 
-Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
-INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
-Execute     config_export -rtl=verilog 
-Command   open_solution done; 1.158 sec.
-Execute   set_part xc7z020-clg400-1 
-INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
-Execute     create_platform xc7z020-clg400-1 -board  
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
-Command       ap_source done; 0.11 sec.
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.156 sec.
-Execute     ap_part_info -name xc7z020-clg400-1 -data info 
-Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.197 sec.
-Execute   create_clock -period 10 -name default 
-INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-Execute   config_export -format ip_catalog -rtl verilog 
-INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
-Execute   source ./MemBench/ddrbench_sol/directives.tcl 
-INFO: [HLS 200-1510] Running: source ./MemBench/ddrbench_sol/directives.tcl
-Execute     set_directive_top -name ddrBenchmark ddrBenchmark 
-INFO: [HLS 200-1510] Running: set_directive_top -name ddrBenchmark ddrBenchmark 
-Execute   export_design -rtl verilog -format ip_catalog 
-INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
-Execute     get_config_export -description 
-Execute     get_config_export -display_name 
-Execute     get_config_export -ipname 
-Execute     get_config_export -library 
-Execute     get_config_export -output 
-Execute     get_config_export -taxonomy 
-Execute     get_config_export -vendor 
-Execute     get_config_export -version 
-Execute     get_config_export -xo 
-Execute     config_export -format=ip_catalog -rtl=verilog 
-INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-Execute     get_config_export -vivado_clock 
-Execute     get_top 
-Execute     get_config_export -ipname 
-Execute     get_config_export -xo 
-Execute     get_config_export -format 
-Execute     get_config_rtl -module_auto_prefix 
-Execute     get_config_export -xo 
-Execute     get_config_export -format 
-Execute     get_solution -flow_target 
-Execute     get_config_export -xo 
-Execute     get_config_export -format 
-INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
-INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
-INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
-INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
-Execute     get_config_export -xo 
-Execute     get_config_export -format 
-Execute     get_config_export -ip_xdc_file 
-Execute     get_config_export -ip_xdc_ooc_file 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:PUTS: read_platform_lib C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
-Command       ap_source done; 0.122 sec.
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
-Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.174 sec.
-INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
-INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=ddrBenchmark xml_exists=1
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.rtl_wrap.cfg.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.rtl_wrap.cfg.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.rtl_wrap.cfg.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.tbgen.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.tbgen.tcl 
-Execute     get_config_rtl -deadlock_detection 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.tbgen.tcl 
-Execute     get_config_rtl -deadlock_detection 
-Execute     get_config_rtl -deadlock_detection 
-Execute     get_config_rtl -module_prefix 
-INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to ddrBenchmark
-Execute     get_config_rtl -deadlock_detection 
-INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=6
-INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=16 #gSsdmPorts=0
-INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='ddrBenchmark_flow_control_loop_pipe_sequential_init
-ddrBenchmark_flow_control_loop_pipe_sequential_init
-ddrBenchmark_flow_control_loop_pipe_sequential_init
-ddrBenchmark_fifo_w64_d3_S
-ddrBenchmark_fifo_w64_d2_S
-ddrBenchmark_start_for_countCycles_U0
-ddrBenchmark_gmem_m_axi
-ddrBenchmark_results_m_axi
-ddrBenchmark_control_s_axi
-entry_proc
-runBench_Pipeline_dataWrite1
-runBench_Pipeline_dataWrite
-runBench
-countCycles_Pipeline_count
-countCycles
-ddrBenchmark
-' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
-Execute     source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/global.setting.tcl 
-Execute     get_solution -flow_target 
-Execute     get_config_export -xo 
-Execute     get_config_export -format 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/top-io-be.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.tbgen.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.compgen.dataonly.tcl 
-Execute     get_config_interface -s_axilite_interrupt_mode 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.compgen.dataonly.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.rtl_wrap.cfg.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/ddrBenchmark.compgen.dataonly.tcl 
-Execute     get_config_export -format 
-Execute     get_config_export -vendor 
-Execute     get_config_export -library 
-Execute     get_config_export -version 
-Execute     get_config_export -ipname 
-Execute     get_config_export -taxonomy 
-Execute     get_config_export -description 
-Execute     get_config_export -display_name 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/entry_proc.tbgen.tcl 
-Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite1.tbgen.tcl 
+Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataRead.tbgen.tcl 
 Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench_Pipeline_dataWrite.tbgen.tcl 
 Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/runBench.tbgen.tcl 
 Execute     source C:/FPGA/MemBench/ddrbench_sol/.autopilot/db/countCycles_Pipeline_count.tbgen.tcl 
@@ -1714,13 +1417,13 @@ Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.136 sec.
+Command     ap_source done; 0.118 sec.
 INFO-FLOW: DBG:PUTS:     IP package: exec C:/FPGA/MemBench/ddrbench_sol/impl/ip/pack.bat
 INFO-FLOW: DBG:PUTS:     IP package: success C:/FPGA/MemBench/ddrbench_sol/impl/ip/pack.bat
 Execute     get_config_export -output 
 Execute     send_msg_by_id INFO @200-802@%s MemBench/ddrbench_sol/impl/export.zip 
 INFO: [HLS 200-802] Generated output file MemBench/ddrbench_sol/impl/export.zip
-Command   export_design done; 13.124 sec.
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 13.124 seconds; current allocated memory: 216.855 MB.
-Command ap_source done; 14.521 sec.
+Command   export_design done; 11.8 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 11.8 seconds; current allocated memory: 239.051 MB.
+Command ap_source done; 12.874 sec.
 Execute cleanup_all 

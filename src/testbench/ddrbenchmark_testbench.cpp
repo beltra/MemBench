@@ -7,8 +7,9 @@ void compareHWResult(ap_uint<DATA_BITWIDTH> *mem, int dataNum, bool *res) {
 	bool valid = true;
 
 	// Check if data in memory is correctly written
-	verifyData: for (int i = 0; i < dataNum && valid; i++) {
+	verifyData: for (int i = 1; i < dataNum && valid; i++) {
 		valid = mem[i] == (ap_uint<DATA_BITWIDTH> ) i;
+		std::cout <<  mem[i] << std::endl;
 	}
 	*res = valid;
 
@@ -77,7 +78,7 @@ int main(int argc, char *argv[]) {
 
 	ap_uint<DATA_BITWIDTH> mem[MAX_TEST_DIM];
 
-	int dataDim = 8192;
+	int dataDim = 16;
 
 #ifndef MULTIPLE_TEST
 	runHWTest(mem, dataDim, WRITE);

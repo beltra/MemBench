@@ -1,6 +1,405 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sun Mar  5 13:47:48 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112929466) to (Rev. 2112929507)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sun Mar  5 13:07:31 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928321) to (Rev. 2112929466)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 18:02:10 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928273) to (Rev. 2112928321)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 17:15:28 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928258) to (Rev. 2112928273)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 16:58:56 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928234) to (Rev. 2112928258)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 16:34:47 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928214) to (Rev. 2112928234)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 16:15:07 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928162) to (Rev. 2112928214)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 15:24:37 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928138) to (Rev. 2112928162)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 15:00:34 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928113) to (Rev. 2112928138)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 14:34:09 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928104) to (Rev. 2112928113)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 14:25:32 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928092) to (Rev. 2112928104)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 14:13:23 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928084) to (Rev. 2112928092)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 14:05:03 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928057) to (Rev. 2112928084)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 13:37:54 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928047) to (Rev. 2112928057)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 13:28:38 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928031) to (Rev. 2112928047)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 13:14:02 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928021) to (Rev. 2112928031)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 13:02:19 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112928010) to (Rev. 2112928021)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 12:51:37 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112927986) to (Rev. 2112928010)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Sat Mar  4 12:26:58 2023
+| Host         : LenovoPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'pynq_ddrbench_ddrBenchmark_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of pynq_ddrbench_ddrBenchmark_0_0 (xilinx.com:hls:ddrBenchmark:1.0) from (Rev. 2112919922) to (Rev. 2112927986)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
 | Date         : Sun Feb 26 22:06:14 2023
 | Host         : LenovoPC running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

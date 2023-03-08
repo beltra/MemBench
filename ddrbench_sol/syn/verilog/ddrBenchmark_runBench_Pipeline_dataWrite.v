@@ -61,7 +61,7 @@ module ddrBenchmark_runBench_Pipeline_dataWrite (
         m_axi_gmem_BID,
         m_axi_gmem_BUSER,
         sext_ln17,
-        trunc_ln17_2
+        trunc_ln17_1
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
@@ -87,8 +87,8 @@ output  [3:0] m_axi_gmem_AWREGION;
 output  [0:0] m_axi_gmem_AWUSER;
 output   m_axi_gmem_WVALID;
 input   m_axi_gmem_WREADY;
-output  [63:0] m_axi_gmem_WDATA;
-output  [7:0] m_axi_gmem_WSTRB;
+output  [255:0] m_axi_gmem_WDATA;
+output  [31:0] m_axi_gmem_WSTRB;
 output   m_axi_gmem_WLAST;
 output  [0:0] m_axi_gmem_WID;
 output  [0:0] m_axi_gmem_WUSER;
@@ -107,7 +107,7 @@ output  [3:0] m_axi_gmem_ARREGION;
 output  [0:0] m_axi_gmem_ARUSER;
 input   m_axi_gmem_RVALID;
 output   m_axi_gmem_RREADY;
-input  [63:0] m_axi_gmem_RDATA;
+input  [255:0] m_axi_gmem_RDATA;
 input   m_axi_gmem_RLAST;
 input  [0:0] m_axi_gmem_RID;
 input  [8:0] m_axi_gmem_RFIFONUM;
@@ -118,8 +118,8 @@ output   m_axi_gmem_BREADY;
 input  [1:0] m_axi_gmem_BRESP;
 input  [0:0] m_axi_gmem_BID;
 input  [0:0] m_axi_gmem_BUSER;
-input  [60:0] sext_ln17;
-input  [30:0] trunc_ln17_2;
+input  [58:0] sext_ln17;
+input  [30:0] trunc_ln17_1;
 
 reg ap_idle;
 reg m_axi_gmem_WVALID;
@@ -324,7 +324,7 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign icmp_ln17_fu_94_p2 = ((ap_sig_allocacmp_i_1 == trunc_ln17_2) ? 1'b1 : 1'b0);
+assign icmp_ln17_fu_94_p2 = ((ap_sig_allocacmp_i_1 == trunc_ln17_1) ? 1'b1 : 1'b0);
 
 assign m_axi_gmem_ARADDR = 64'd0;
 
@@ -384,7 +384,7 @@ assign m_axi_gmem_WID = 1'd0;
 
 assign m_axi_gmem_WLAST = 1'b0;
 
-assign m_axi_gmem_WSTRB = 8'd255;
+assign m_axi_gmem_WSTRB = 32'd4294967295;
 
 assign m_axi_gmem_WUSER = 1'd0;
 

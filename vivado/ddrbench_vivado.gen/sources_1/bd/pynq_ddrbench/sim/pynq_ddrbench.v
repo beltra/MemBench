@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Sun Feb 26 22:06:34 2023
+//Date        : Sun Mar  5 13:48:10 2023
 //Host        : LenovoPC running 64-bit major release  (build 9200)
 //Command     : generate_target pynq_ddrbench.bd
 //Design      : pynq_ddrbench

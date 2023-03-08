@@ -8,7 +8,7 @@ ddrBenchmark_gmem_m_axi
 ddrBenchmark_results_m_axi
 ddrBenchmark_control_s_axi
 entry_proc
-runBench_Pipeline_dataWrite1
+runBench_Pipeline_dataRead
 runBench_Pipeline_dataWrite
 runBench
 countCycles_Pipeline_count

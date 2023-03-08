@@ -34,10 +34,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1701995892</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>64</bitwidth>
+					<bitwidth>256</bitwidth>
 				</Value>
 				<direction>2</direction>
 				<if_type>4</if_type>
@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953391988</coreId>
+						<coreId>1702129263</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1701995892</coreId>
+						<coreId>1702129263</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -142,7 +142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953391988</coreId>
+						<coreId>1702129263</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -178,7 +178,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1701995892</coreId>
+						<coreId>7959657</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -214,7 +214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1043345418</coreId>
+						<coreId>536894769</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -239,7 +239,7 @@
 						<name>res_read</name>
 						<fileName>MemBench/src/ddrbenchmark.cpp</fileName>
 						<fileDirectory>C:\FPGA</fileDirectory>
-						<lineNumber>60</lineNumber>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>ddrBenchmark</contextFuncName>
 						<contextNormFuncName>ddrBenchmark</contextNormFuncName>
 						<inlineStackInfo>
@@ -255,7 +255,7 @@
 											<first>MemBench/src/ddrbenchmark.cpp</first>
 											<second>ddrBenchmark</second>
 										</first>
-										<second>60</second>
+										<second>66</second>
 									</item>
 								</second>
 							</item>
@@ -268,7 +268,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1920298835</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -296,7 +296,7 @@
 						<name>rw_read</name>
 						<fileName>MemBench/src/ddrbenchmark.cpp</fileName>
 						<fileDirectory>C:\FPGA</fileDirectory>
-						<lineNumber>60</lineNumber>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>ddrBenchmark</contextFuncName>
 						<contextNormFuncName>ddrBenchmark</contextNormFuncName>
 						<inlineStackInfo>
@@ -312,7 +312,7 @@
 											<first>MemBench/src/ddrbenchmark.cpp</first>
 											<second>ddrBenchmark</second>
 										</first>
-										<second>60</second>
+										<second>66</second>
 									</item>
 								</second>
 							</item>
@@ -325,7 +325,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>790785133</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -353,7 +353,7 @@
 						<name>dataNum_read</name>
 						<fileName>MemBench/src/ddrbenchmark.cpp</fileName>
 						<fileDirectory>C:\FPGA</fileDirectory>
-						<lineNumber>60</lineNumber>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>ddrBenchmark</contextFuncName>
 						<contextNormFuncName>ddrBenchmark</contextNormFuncName>
 						<inlineStackInfo>
@@ -369,7 +369,7 @@
 											<first>MemBench/src/ddrbenchmark.cpp</first>
 											<second>ddrBenchmark</second>
 										</first>
-										<second>60</second>
+										<second>66</second>
 									</item>
 								</second>
 							</item>
@@ -382,7 +382,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1885415024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -410,7 +410,7 @@
 						<name>mem_read</name>
 						<fileName>MemBench/src/ddrbenchmark.cpp</fileName>
 						<fileDirectory>C:\FPGA</fileDirectory>
-						<lineNumber>60</lineNumber>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>ddrBenchmark</contextFuncName>
 						<contextNormFuncName>ddrBenchmark</contextNormFuncName>
 						<inlineStackInfo>
@@ -426,7 +426,7 @@
 											<first>MemBench/src/ddrbenchmark.cpp</first>
 											<second>ddrBenchmark</second>
 										</first>
-										<second>60</second>
+										<second>66</second>
 									</item>
 								</second>
 							</item>
@@ -439,7 +439,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1931489312</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -467,7 +467,7 @@
 						<name>res_c</name>
 						<fileName>MemBench/src/ddrbenchmark.cpp</fileName>
 						<fileDirectory>C:\FPGA</fileDirectory>
-						<lineNumber>60</lineNumber>
+						<lineNumber>66</lineNumber>
 						<contextFuncName>ddrBenchmark</contextFuncName>
 						<contextNormFuncName>ddrBenchmark</contextNormFuncName>
 						<inlineStackInfo>
@@ -483,7 +483,7 @@
 											<first>MemBench/src/ddrbenchmark.cpp</first>
 											<second>ddrBenchmark</second>
 										</first>
-										<second>60</second>
+										<second>66</second>
 									</item>
 								</second>
 							</item>
@@ -496,7 +496,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>60217216</coreId>
+						<coreId>1684955424</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -523,7 +523,7 @@
 						<name>counterCmd</name>
 						<fileName>MemBench/src/ddrbenchmark.cpp</fileName>
 						<fileDirectory>C:\FPGA</fileDirectory>
-						<lineNumber>62</lineNumber>
+						<lineNumber>68</lineNumber>
 						<contextFuncName>ddrBenchmark</contextFuncName>
 						<contextNormFuncName>ddrBenchmark</contextNormFuncName>
 						<inlineStackInfo>
@@ -539,7 +539,7 @@
 											<first>MemBench/src/ddrbenchmark.cpp</first>
 											<second>ddrBenchmark</second>
 										</first>
-										<second>62</second>
+										<second>68</second>
 									</item>
 								</second>
 							</item>
@@ -552,7 +552,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1031040613</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -576,187 +576,6 @@
 					<Obj>
 						<type>0</type>
 						<id>34</id>
-						<name>_ln60</name>
-						<fileName>MemBench/src/ddrbenchmark.cpp</fileName>
-						<fileDirectory>C:\FPGA</fileDirectory>
-						<lineNumber>60</lineNumber>
-						<contextFuncName>ddrBenchmark</contextFuncName>
-						<contextNormFuncName>ddrBenchmark</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\FPGA</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>MemBench/src/ddrbenchmark.cpp</first>
-											<second>ddrBenchmark</second>
-										</first>
-										<second>60</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>54</item>
-					<item>55</item>
-					<item>56</item>
-				</oprand_edges>
-				<opcode>call</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.63</m_delay>
-				<m_topoIndex>7</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_14">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>35</id>
-						<name>_ln64</name>
-						<fileName>MemBench/src/ddrbenchmark.cpp</fileName>
-						<fileDirectory>C:\FPGA</fileDirectory>
-						<lineNumber>64</lineNumber>
-						<contextFuncName>ddrBenchmark</contextFuncName>
-						<contextNormFuncName>ddrBenchmark</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\FPGA</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>MemBench/src/ddrbenchmark.cpp</first>
-											<second>ddrBenchmark</second>
-										</first>
-										<second>64</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>6</count>
-					<item_version>0</item_version>
-					<item>58</item>
-					<item>59</item>
-					<item>60</item>
-					<item>61</item>
-					<item>62</item>
-					<item>63</item>
-				</oprand_edges>
-				<opcode>call</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.63</m_delay>
-				<m_topoIndex>8</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_15">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>36</id>
-						<name>_ln65</name>
-						<fileName>MemBench/src/ddrbenchmark.cpp</fileName>
-						<fileDirectory>C:\FPGA</fileDirectory>
-						<lineNumber>65</lineNumber>
-						<contextFuncName>ddrBenchmark</contextFuncName>
-						<contextNormFuncName>ddrBenchmark</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\FPGA</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>MemBench/src/ddrbenchmark.cpp</first>
-											<second>ddrBenchmark</second>
-										</first>
-										<second>65</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>757082483</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>0</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>7</count>
-					<item_version>0</item_version>
-					<item>65</item>
-					<item>66</item>
-					<item>67</item>
-					<item>68</item>
-					<item>380</item>
-					<item>381</item>
-					<item>382</item>
-				</oprand_edges>
-				<opcode>call</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>9</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_16">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>37</id>
 						<name>_ln66</name>
 						<fileName>MemBench/src/ddrbenchmark.cpp</fileName>
 						<fileDirectory>C:\FPGA</fileDirectory>
@@ -789,7 +608,188 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330007625</coreId>
+						<coreId>1953721967</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>54</item>
+					<item>55</item>
+					<item>56</item>
+				</oprand_edges>
+				<opcode>call</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>3.63</m_delay>
+				<m_topoIndex>7</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_14">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>35</id>
+						<name>_ln70</name>
+						<fileName>MemBench/src/ddrbenchmark.cpp</fileName>
+						<fileDirectory>C:\FPGA</fileDirectory>
+						<lineNumber>70</lineNumber>
+						<contextFuncName>ddrBenchmark</contextFuncName>
+						<contextNormFuncName>ddrBenchmark</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\FPGA</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>MemBench/src/ddrbenchmark.cpp</first>
+											<second>ddrBenchmark</second>
+										</first>
+										<second>70</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>1797268061</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>6</count>
+					<item_version>0</item_version>
+					<item>58</item>
+					<item>59</item>
+					<item>60</item>
+					<item>61</item>
+					<item>62</item>
+					<item>63</item>
+				</oprand_edges>
+				<opcode>call</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>7.30</m_delay>
+				<m_topoIndex>8</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_15">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>36</id>
+						<name>_ln71</name>
+						<fileName>MemBench/src/ddrbenchmark.cpp</fileName>
+						<fileDirectory>C:\FPGA</fileDirectory>
+						<lineNumber>71</lineNumber>
+						<contextFuncName>ddrBenchmark</contextFuncName>
+						<contextNormFuncName>ddrBenchmark</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\FPGA</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>MemBench/src/ddrbenchmark.cpp</first>
+											<second>ddrBenchmark</second>
+										</first>
+										<second>71</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>997485606</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>0</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>7</count>
+					<item_version>0</item_version>
+					<item>65</item>
+					<item>66</item>
+					<item>67</item>
+					<item>68</item>
+					<item>380</item>
+					<item>381</item>
+					<item>382</item>
+				</oprand_edges>
+				<opcode>call</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>9</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_16">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>37</id>
+						<name>_ln72</name>
+						<fileName>MemBench/src/ddrbenchmark.cpp</fileName>
+						<fileDirectory>C:\FPGA</fileDirectory>
+						<lineNumber>72</lineNumber>
+						<contextFuncName>ddrBenchmark</contextFuncName>
+						<contextNormFuncName>ddrBenchmark</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\FPGA</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>MemBench/src/ddrbenchmark.cpp</first>
+											<second>ddrBenchmark</second>
+										</first>
+										<second>72</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>539107901</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -834,7 +834,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1629882942</coreId>
+						<coreId>980447331</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -865,7 +865,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953391988</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -896,7 +896,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1043345454</coreId>
+						<coreId>1868767232</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -927,7 +927,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1953391988</coreId>
+						<coreId>4228300630</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -961,7 +961,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>4294967292</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -1482,21 +1482,21 @@
 		<item>
 			<first>35</first>
 			<second>
-				<first>1</first>
+				<first>2</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>36</first>
 			<second>
-				<first>3</first>
+				<first>4</first>
 				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>37</first>
 			<second>
-				<first>4</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -1508,7 +1508,7 @@
 			<first>38</first>
 			<second class_id="41" tracking_level="0" version="0">
 				<first>0</first>
-				<second>4</second>
+				<second>5</second>
 			</second>
 		</item>
 	</bblk_ent_exit>

@@ -68206,8 +68206,8 @@ public:
 }
 # 62 "C:/Xilinx/Vitis_HLS/2022.1/include/hls_stream.h" 2
 # 7 "C:/FPGA/MemBench/src/ddrbenchmark.hpp" 2
-# 17 "C:/FPGA/MemBench/src/ddrbenchmark.hpp"
-const unsigned int max_data_depth = ((2*1024*1024)/32)*8;
+# 16 "C:/FPGA/MemBench/src/ddrbenchmark.hpp"
+const unsigned int max_data_depth = ((1*1024*1024)/32)*8;
 
 void ddrBenchmark(ap_uint<32> *mem, int dataNum, bool rw, uint64_t *res);
 
@@ -68226,9 +68226,9 @@ void compareHWResult(ap_uint<32> *mem, int dataNum, bool *res) {
  bool valid = true;
 
 
- verifyData: for (int i = 0; i < dataNum && valid; i++) {
-
+ verifyData: for (int i = 1; i < dataNum && valid; i++) {
   valid = mem[i] == (ap_uint<32> ) i;
+  std::cout << mem[i] << std::endl;
  }
  *res = valid;
 
@@ -68239,8 +68239,10 @@ void runHWTest(ap_uint<32> *mem, int dataNum, bool rw) {
  uint64_t timeTaken = 0;
  bool valid = false;
 
+
  ddrBenchmark(mem, dataNum, rw, &timeTaken);
  compareHWResult(mem, dataNum, &valid);
+
 
  if (valid) {
   std::cout << "* Single test *" << std::endl;
@@ -68251,7 +68253,6 @@ void runHWTest(ap_uint<32> *mem, int dataNum, bool rw) {
  } else {
   std::cout << "!!! INVALID TEST !!!" << std::endl;
  }
-
 }
 
 void runHWTestMultiple(ap_uint<32> *mem, int dataNum, bool rw,
@@ -68262,6 +68263,7 @@ void runHWTestMultiple(ap_uint<32> *mem, int dataNum, bool rw,
  bool valid = 0;
  int rep = 0;
 
+
  for (int i = 0; i < totReps; i++) {
   valid = 0;
   ddrBenchmark(mem, dataNum, rw, &timeTaken);
@@ -68270,11 +68272,12 @@ void runHWTestMultiple(ap_uint<32> *mem, int dataNum, bool rw,
    timeTakenAvg += timeTaken;
    rep++;
   } else {
-   std::cout << "Invalid test n. " << i << std::endl;
+   std::cout << "Test n. " << i << "invalid" << std::endl;
   }
  }
 
  timeTakenAvg /= rep;
+
 
  if (rep > 0) {
   std::cout << "* Multiple test *" << std::endl;
@@ -68292,9 +68295,9 @@ void runHWTestMultiple(ap_uint<32> *mem, int dataNum, bool rw,
 int main(int argc, char *argv[]) {
  std::cout << "** Starting TB **" << std::endl;
 
- ap_uint<32> mem[((2*1024*1024)/32)*8];
+ ap_uint<32> mem[((1*1024*1024)/32)*8];
 
- int dataDim = 8192;
+ int dataDim = 16;
 
 
  runHWTest(mem, dataDim, 1);

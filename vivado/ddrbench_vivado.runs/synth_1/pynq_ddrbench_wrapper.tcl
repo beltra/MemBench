@@ -96,7 +96,7 @@ set_property used_in_implementation false [get_files -all c:/FPGA/MemBench/vivad
 set_property used_in_implementation false [get_files -all c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_rst_ps7_0_50M_0/pynq_ddrbench_rst_ps7_0_50M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_rst_ps7_0_50M_0/pynq_ddrbench_rst_ps7_0_50M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_xbar_0_1/pynq_ddrbench_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_ddrBenchmark_0_0_1/constraints/ddrBenchmark_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_ddrBenchmark_0_0/constraints/ddrBenchmark_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_auto_pc_0_1/pynq_ddrbench_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/ip/pynq_ddrbench_auto_pc_1_1/pynq_ddrbench_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/FPGA/MemBench/vivado/ddrbench_vivado.gen/sources_1/bd/pynq_ddrbench/pynq_ddrbench_ooc.xdc]

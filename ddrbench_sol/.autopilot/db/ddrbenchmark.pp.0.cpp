@@ -31434,15 +31434,15 @@ class stream : public stream<__STREAM_T__, 0> {
 # 62 "C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\\hls_stream.h" 2
 # 7 "MemBench/src/ddrbenchmark.hpp" 2
 # 16 "MemBench/src/ddrbenchmark.hpp"
-const unsigned int max_data_depth = ((64*1024*1024)/48)*8;
+const unsigned int max_data_depth = ((64*1024*1024)/256)*8;
 
-__attribute__((sdx_kernel("ddrBenchmark", 0))) void ddrBenchmark(ap_uint<48> *mem, int dataNum, bool rw, uint64_t *res);
+__attribute__((sdx_kernel("ddrBenchmark", 0))) void ddrBenchmark(ap_uint<256> *mem, int dataNum, bool rw, uint64_t *res);
 
-void writeData(ap_uint<48> *mem, int dataNum);
-void readData(ap_uint<48> *mem, int dataNum);
+void writeData(ap_uint<256> *mem, int dataNum);
+void readData(ap_uint<256> *mem, int dataNum);
 
 void countCycles(hls::stream<int64_t> &cmd, uint64_t *out);
-void runBench(ap_uint<48> *mem, hls::stream<int64_t> &cmd,
+void runBench(ap_uint<256> *mem, hls::stream<int64_t> &cmd,
   int dataNum, bool rw);
 # 2 "MemBench/src/ddrbenchmark.cpp" 2
 
@@ -31459,46 +31459,42 @@ void countCycles(hls::stream<int64_t> &cmd, uint64_t *out) {
  *out = cnt;
 }
 
-void writeData(ap_uint<48> *mem, int dataNum) {
+void writeData(ap_uint<256> *mem, int dataNum) {
  dataWrite: for (int i = 0; i < dataNum; i++) {
-#pragma HLS PIPELINE II=1
- mem[i] = (ap_uint<48> ) i;
+  mem[i] = (ap_uint<256> )i;
  }
 }
 
-void readData(ap_uint<48> *mem, int dataNum) {
- ap_uint<48> tmp;
+void readData(ap_uint<256> *mem, int dataNum) {
+ ap_uint<256> tmp = 0;
  dataRead: for (int i = 0; i < dataNum; i++) {
 #pragma HLS PIPELINE II=1
- tmp = mem[i];
+ tmp += (mem[i] == (ap_uint<256> )i);
  }
+ mem[0] = tmp;
 }
-
-void runBench(ap_uint<48> *mem, hls::stream<int64_t> &cmd,
+# 41 "MemBench/src/ddrbenchmark.cpp"
+void runBench(ap_uint<256> *mem, hls::stream<int64_t> &cmd,
   int dataNum, bool rw) {
  if (rw == 1) {
   cmd.write(0);
   writeData(mem, dataNum);
   cmd.write(1);
  } else if (rw == 0) {
-  if (mem[dataNum] != dataNum) {
-
-   writeData(mem, dataNum);
-  }
   cmd.write(0);
   readData(mem, dataNum);
   cmd.write(1);
  }
 }
 
-__attribute__((sdx_kernel("ddrBenchmark", 0))) void ddrBenchmark(ap_uint<48> *mem, int dataNum, bool rw, uint64_t *res) {
+__attribute__((sdx_kernel("ddrBenchmark", 0))) void ddrBenchmark(ap_uint<256> *mem, int dataNum, bool rw, uint64_t *res) {
 #line 16 "C:/FPGA/MemBench/ddrbench_sol/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=ddrBenchmark
-# 48 "MemBench/src/ddrbenchmark.cpp"
+# 54 "MemBench/src/ddrbenchmark.cpp"
 
 #line 6 "C:/FPGA/MemBench/ddrbench_sol/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=ddrBenchmark
-# 48 "MemBench/src/ddrbenchmark.cpp"
+# 54 "MemBench/src/ddrbenchmark.cpp"
 
 
 #pragma HLS INTERFACE m_axi port=mem depth=max_data_depth bundle=gmem offset=slave
