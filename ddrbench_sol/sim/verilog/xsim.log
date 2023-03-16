@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# xsim v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Mar 13 14:24:16 2023
+# Process ID: 18316
+# Current directory: C:/FPGA/MemBench/ddrbench_sol/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/ddrBenchmark/xsim_script.tcl}
+# Log file: C:/FPGA/MemBench/ddrbench_sol/sim/verilog/xsim.log
+# Journal file: C:/FPGA/MemBench/ddrbench_sol/sim/verilog\xsim.jou
+# Running On: LenovoPC, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 12723 MB
+#-----------------------------------------------------------
+source xsim.dir/ddrBenchmark/xsim_script.tcl
+# xsim {ddrBenchmark} -autoloadwcfg -tclbatch {ddrBenchmark.tcl}
+Time resolution is 1 ps
+source ddrBenchmark.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 2 [n/a] @ "125000"
+// RTL Simulation : 1 / 2 [n/a] @ "1425000"
+// RTL Simulation : 2 / 2 [n/a] @ "2355000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 2415 ns : File "C:/FPGA/MemBench/ddrbench_sol/sim/verilog/ddrBenchmark.autotb.v" Line 588
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Mar 13 14:24:22 2023...

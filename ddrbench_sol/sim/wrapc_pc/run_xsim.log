@@ -228,7 +228,7 @@ source ddrBenchmark.tcl
 ////////////////////////////////////////////////////////////////////////////////////
 $finish called at time : 2415 ns : File "C:/FPGA/MemBench/ddrbench_sol/sim/verilog/ddrBenchmark.autotb.v" Line 588
 ## quit
-INFO: [Common 17-206] Exiting xsim at Sat Mar  4 17:45:09 2023...
+INFO: [Common 17-206] Exiting xsim at Mon Mar 13 14:24:22 2023...
 ** Starting TB **
 1
 2

@@ -68239,16 +68239,15 @@ void countCycles(hls::stream<int64_t> &cmd, uint64_t *out) {
 
 void writeData(ap_uint<32> *mem, int dataNum) {
  dataWrite: for (int i = 0; i < dataNum; i++) {
-#pragma HLS PIPELINE II=1
-  mem[i] = (ap_uint<32> ) i;
+  mem[i] = (ap_uint<32> )i;
  }
 }
-# 32 "C:/FPGA/MemBench/src/ddrbenchmark.cpp"
+
 void readData(ap_uint<32> *mem, int dataNum) {
  ap_uint<32> tmp = 0;
  dataRead: for (int i = 0; i < dataNum; i++) {
-
-  tmp += mem[i];
+#pragma HLS PIPELINE II=1
+  tmp += (mem[i] == (ap_uint<32> )i);
  }
  mem[0] = tmp;
 }
@@ -68305,5 +68304,5 @@ apatb_ddrBenchmark_ir(mem, dataNum, rw, res);
 return ;
 }
 #endif
-# 72 "C:/FPGA/MemBench/src/ddrbenchmark.cpp"
+# 62 "C:/FPGA/MemBench/src/ddrbenchmark.cpp"
 

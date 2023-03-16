@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1678020413241">
-  <ports id="1" name="gmem" type="PortType" coreId="11" bitwidth="256" direction="DirOut" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1678713799099">
+  <ports id="1" name="gmem" type="PortType" coreId="0" bitwidth="32" direction="DirOut" iftype="IfTypeFifo">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <ports id="2" name="sext_ln17" type="PortType" coreId="0" bitwidth="59">
+  <ports id="2" name="sext_ln17" type="PortType" coreId="0" bitwidth="62">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="3" name="trunc_ln17_1" type="PortType" coreId="543517794" bitwidth="31">
+  <ports id="3" name="trunc_ln17_1" type="PortType" coreId="1953391988" bitwidth="31">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="32" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.1"/>
@@ -29,26 +29,26 @@
   <edges id="59" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
   <edges id="60" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
   <edges id="61" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
-  <edges id="109" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
-  <edges id="110" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
-  <edges id="111" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
-  <edges id="112" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
-  <edges id="113" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
-  <edges id="114" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
-  <edges id="115" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="110" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="111" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="112" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="113" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="114" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="115" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="116" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
   <blocks id="11" name="newFuncRoot" type="BlockType">
     <controlOutputObjs>for.inc.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="i" originalName="op" coreId="404763784" bitwidth="31" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="i" originalName="i" coreId="0" bitwidth="31" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="trunc_ln17_1_read" coreId="0" bitwidth="31" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="trunc_ln17_1_read" coreId="4294967295" bitwidth="31" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
       <dataInputObjs>trunc_ln17_1</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="sext_ln17_read" coreId="0" bitwidth="59" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="sext_ln17_read" coreId="0" bitwidth="62" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataInputObjs>sext_ln17</dataInputObjs>
       <dataOutputObjs>sext</dataOutputObjs>
     </node_objs>
@@ -56,15 +56,15 @@
       <dataInputObjs>read</dataInputObjs>
       <dataOutputObjs>getelementptr</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i_write_ln0" coreId="253890560" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="br_ln0" coreId="4294967295" opcode="br" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="br_ln0" coreId="0" opcode="br" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
       <controlInputObjs>for.inc.i</controlInputObjs>
     </node_objs>
   </blocks>
-  <blocks id="27" name="_Z9writeDataP7ap_uintILi256EEi.exit.loopexit.exitStub" type="BlockType">
+  <blocks id="27" name="_Z9writeDataP7ap_uintILi32EEi.exit.loopexit.exitStub" type="BlockType">
     <controlInputObjs>for.inc.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <node_objs xsi:type="cdfg:CdfgNode" id="26" name="_ln0" coreId="0" opcode="ret" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1"/>
@@ -75,7 +75,7 @@
       <controlInputObjs>for.inc.i.split</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
-      <controlOutputObjs>_Z9writeDataP7ap_uintILi256EEi.exit.loopexit.exitStub</controlOutputObjs>
+      <controlOutputObjs>_Z9writeDataP7ap_uintILi32EEi.exit.loopexit.exitStub</controlOutputObjs>
       <controlOutputObjs>for.inc.i.split</controlOutputObjs>
       <node_objs xsi:type="cdfg:CdfgNode" id="12" name="i_1" lineNumber="17" originalName="i" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreId="0" contextFuncName="writeData" bitwidth="31" opcode="load" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="17" fileDirectory="C:\FPGA" functionName="writeData"/>
@@ -84,29 +84,29 @@
         <dataOutputObjs>add</dataOutputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="gmem_addr" lineNumber="17" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreId="0" contextFuncName="writeData" bitwidth="256" opcode="getelementptr" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="gmem_addr" lineNumber="17" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreId="872415232" contextFuncName="writeData" bitwidth="32" opcode="getelementptr" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="17" fileDirectory="C:\FPGA" functionName="writeData"/>
         <dataInputObjs>sext</dataInputObjs>
         <dataOutputObjs>gmem</dataOutputObjs>
         <dataOutputObjs>write</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="icmp_ln17" lineNumber="17" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="icmp_ln17_fu_94_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="writeData" bitwidth="1" opcode="icmp" m_display="0" m_delay="2.47" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="icmp_ln17" lineNumber="17" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="icmp_ln17_fu_96_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="writeData" bitwidth="1" opcode="icmp" m_display="0" m_delay="2.47" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="17" fileDirectory="C:\FPGA" functionName="writeData"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="add_ln17" lineNumber="17" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="add_ln17_fu_100_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="writeData" bitwidth="31" opcode="add" m_display="0" m_delay="2.52" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="add_ln17" lineNumber="17" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="add_ln17_fu_102_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="writeData" bitwidth="31" opcode="add" m_display="0" m_delay="2.52" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="17" fileDirectory="C:\FPGA" functionName="writeData"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln17" lineNumber="17" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreId="0" contextFuncName="writeData" opcode="br" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln17" lineNumber="17" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreId="322" contextFuncName="writeData" opcode="br" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="17" fileDirectory="C:\FPGA" functionName="writeData"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>for.inc.i.split</controlInputObjs>
-        <controlInputObjs>_Z9writeDataP7ap_uintILi256EEi.exit.loopexit.exitStub</controlInputObjs>
+        <controlInputObjs>_Z9writeDataP7ap_uintILi32EEi.exit.loopexit.exitStub</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="MemBench/src/ddrbenchmark.cpp">
         <validLinenumbers>17</validLinenumbers>
@@ -116,8 +116,8 @@
       <controlInputObjs>for.inc.i</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.inc.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="zext_ln260" lineNumber="260" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" fileDirectory=".." rtlName="m_axi_gmem_WDATA" coreId="0" contextFuncName="ap_int_base" bitwidth="256" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h" linenumber="260" fileDirectory="C:\FPGA" functionName="ap_int_base"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="zext_ln18" lineNumber="18" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="m_axi_gmem_WDATA" coreId="0" contextFuncName="writeData" bitwidth="32" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="18" fileDirectory="C:\FPGA" functionName="writeData"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>write</dataOutputObjs>
       </node_objs>
@@ -132,7 +132,7 @@
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="br_ln17" lineNumber="17" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreId="0" contextFuncName="writeData" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="br_ln17" lineNumber="17" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreId="3621216858" contextFuncName="writeData" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="17" fileDirectory="C:\FPGA" functionName="writeData"/>
         <controlInputObjs>for.inc.i</controlInputObjs>
       </node_objs>
@@ -140,57 +140,54 @@
         <validLinenumbers>18</validLinenumbers>
         <validLinenumbers>17</validLinenumbers>
       </fileValidLineNumbers>
-      <fileValidLineNumbers fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h">
-        <validLinenumbers>260</validLinenumbers>
-      </fileValidLineNumbers>
     </basic_blocks>
   </regions>
   <ScheduleInfo time="0"/>
   <ScheduleInfo time="1"/>
-  <regnodes realName="gmem_addr_reg_127">
+  <regnodes realName="gmem_addr_reg_129">
     <nodeIds>13</nodeIds>
   </regnodes>
-  <regnodes realName="i_1_reg_122">
+  <regnodes realName="i_1_reg_124">
     <nodeIds>12</nodeIds>
   </regnodes>
-  <regnodes realName="i_reg_115">
+  <regnodes realName="i_reg_117">
     <nodeIds>4</nodeIds>
   </regnodes>
-  <expressionNodes realName="sext_ln17_cast_fu_76">
-    <nodeIds>7</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln260_fu_111">
-    <nodeIds>21</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="add_ln17_fu_100">
-    <nodeIds>17</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="gmem_addr_fu_88">
-    <nodeIds>13</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="i_fu_52">
-    <nodeIds>4</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln17_fu_94">
+  <expressionNodes realName="icmp_ln17_fu_96">
     <nodeIds>15</nodeIds>
   </expressionNodes>
-  <ioNodes realName="store_ln17_store_fu_106">
-    <nodeIds>23</nodeIds>
+  <expressionNodes realName="add_ln17_fu_102">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln17_cast_fu_78">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_54">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln18_fu_113">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem_addr_fu_90">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="sext_ln17_read_read_fu_64">
+    <nodeIds>6</nodeIds>
   </ioNodes>
-  <ioNodes realName="trunc_ln17_1_read_read_fu_56">
-    <nodeIds>5</nodeIds>
-  </ioNodes>
-  <ioNodes realName="store_ln0_store_fu_80">
-    <nodeIds>9</nodeIds>
-  </ioNodes>
-  <ioNodes realName="i_1_load_fu_85">
-    <nodeIds>12</nodeIds>
-  </ioNodes>
-  <ioNodes realName="write_ln18_write_fu_68">
+  <ioNodes realName="write_ln18_write_fu_70">
     <nodeIds>22</nodeIds>
   </ioNodes>
-  <ioNodes realName="sext_ln17_read_read_fu_62">
-    <nodeIds>6</nodeIds>
+  <ioNodes realName="store_ln0_store_fu_82">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_1_load_fu_87">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioNodes realName="trunc_ln17_1_read_read_fu_58">
+    <nodeIds>5</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln17_store_fu_108">
+    <nodeIds>23</nodeIds>
   </ioNodes>
   <ioPorts name="gmem">
     <contents name="write">

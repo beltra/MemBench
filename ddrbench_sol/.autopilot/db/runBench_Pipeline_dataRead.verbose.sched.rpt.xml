@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'runBench_Pipeline_dataRead'" level="0">
-<item name = "Date">Sun Mar  5 13:46:51 2023
+<item name = "Date">Mon Mar 13 14:23:16 2023
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">MemBench</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">5, ?, 50.000 ns, ?, 5, ?, no</column>
+<column name="">4, ?, 40.000 ns, ?, 4, ?, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- dataRead">3, ?, 4, 1, 1, 1 ~ ?, yes</column>
+<column name="- dataRead">2, ?, 3, 1, 1, 1 ~ ?, yes</column>
 </table>
 </item>
 </section>

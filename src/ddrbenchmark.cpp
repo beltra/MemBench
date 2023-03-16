@@ -15,7 +15,7 @@ void countCycles(hls::stream<int64_t> &cmd, uint64_t *out) {
 
 void writeData(ap_uint<DATA_BITWIDTH> *mem, int dataNum) {
 	dataWrite: for (int i = 0; i < dataNum; i++) {
-		mem[i] = (ap_uint<DATA_BITWIDTH> )i;	// Store a number in the memory
+		mem[i] = (ap_uint<DATA_BITWIDTH> )i;	// Store a sequential number in the array
 	}
 }
 
@@ -23,9 +23,9 @@ void readData(ap_uint<DATA_BITWIDTH> *mem, int dataNum) {
 	ap_uint<DATA_BITWIDTH> tmp = 0;
 	dataRead: for (int i = 0; i < dataNum; i++) {
 #pragma HLS PIPELINE II=1
-		tmp += (mem[i] == (ap_uint<DATA_BITWIDTH> )i);	// Read each value and store it (to be overwritten by the next cycle)
+		tmp += (mem[i] == (ap_uint<DATA_BITWIDTH> )i);	// Read each value and if vaild add one to a tmp variable
 	}
-	mem[0] = tmp;
+	mem[0] = tmp; // Save the value
 }
 
 void runBench(ap_uint<DATA_BITWIDTH> *mem, hls::stream<int64_t> &cmd,

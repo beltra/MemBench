@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'ddrBenchmark'" level="0">
-<item name = "Date">Sun Mar  5 13:46:53 2023
+<item name = "Date">Mon Mar 13 14:23:20 2023
 </item>
 <item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
 <item name = "Project">MemBench</item>
@@ -52,12 +52,12 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 14, -</column>
 <column name="FIFO">-, -, 198, 136, -</column>
-<column name="Instance">0, -, 2921, 4830, -</column>
+<column name="Instance">0, -, 2327, 4283, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 18, -</column>
 <column name="Register">-, -, 2, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">0, 0, 2, 9, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, 2, 8, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -67,9 +67,9 @@
 <column name="control_s_axi_U">control_s_axi, 0, 0, 221, 362, 0</column>
 <column name="countCycles_U0">countCycles, 0, 0, 203, 225, 0</column>
 <column name="entry_proc_U0">entry_proc, 0, 0, 3, 29, 0</column>
-<column name="gmem_m_axi_U">gmem_m_axi, 0, 0, 1087, 1790, 0</column>
+<column name="gmem_m_axi_U">gmem_m_axi, 0, 0, 718, 1318, 0</column>
 <column name="results_m_axi_U">results_m_axi, 0, 0, 772, 1504, 0</column>
-<column name="runBench_U0">runBench, 0, 0, 635, 920, 0</column>
+<column name="runBench_U0">runBench, 0, 0, 410, 845, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -151,8 +151,8 @@
 <column name="m_axi_gmem_AWUSER">out, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_WVALID">out, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_WREADY">in, 1, m_axi, gmem, pointer</column>
-<column name="m_axi_gmem_WDATA">out, 256, m_axi, gmem, pointer</column>
-<column name="m_axi_gmem_WSTRB">out, 32, m_axi, gmem, pointer</column>
+<column name="m_axi_gmem_WDATA">out, 32, m_axi, gmem, pointer</column>
+<column name="m_axi_gmem_WSTRB">out, 4, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_WLAST">out, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_WID">out, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_WUSER">out, 1, m_axi, gmem, pointer</column>
@@ -171,7 +171,7 @@
 <column name="m_axi_gmem_ARUSER">out, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_RVALID">in, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_RREADY">out, 1, m_axi, gmem, pointer</column>
-<column name="m_axi_gmem_RDATA">in, 256, m_axi, gmem, pointer</column>
+<column name="m_axi_gmem_RDATA">in, 32, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_RLAST">in, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_RID">in, 1, m_axi, gmem, pointer</column>
 <column name="m_axi_gmem_RUSER">in, 1, m_axi, gmem, pointer</column>

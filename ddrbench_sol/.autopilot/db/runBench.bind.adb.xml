@@ -289,9 +289,9 @@ entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %co
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="11" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<Node id="11" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %gmem, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 2097152, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0
+entry:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 262144, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -306,10 +306,10 @@ entry:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %g
 
 <Node id="14" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-entry:8 %br_ln43 = br i1 %rw_read, void %if.then4, void %if.then
+entry:8 %br_ln33 = br i1 %rw_read, void %if.then4, void %if.then
 
 ]]></Node>
-<StgValue><ssdm name="br_ln43"/></StgValue>
+<StgValue><ssdm name="br_ln33"/></StgValue>
 </operation>
 
 <operation id="34" st_id="2" stage="1" lat="1">
@@ -322,7 +322,7 @@ entry:8 %br_ln43 = br i1 %rw_read, void %if.then4, void %if.then
 
 <Node id="16" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-if.then4:0 %br_ln24 = br i1 %icmp_ln17, void %_Z8readDataP7ap_uintILi256EEi.exit, void %for.body.lr.ph.i4
+if.then4:0 %br_ln24 = br i1 %icmp_ln17, void %_Z8readDataP7ap_uintILi32EEi.exit, void %for.body.lr.ph.i4
 
 ]]></Node>
 <StgValue><ssdm name="br_ln24"/></StgValue>
@@ -337,9 +337,9 @@ if.then4:0 %br_ln24 = br i1 %icmp_ln17, void %_Z8readDataP7ap_uintILi256EEi.exit
 </and_exp></or_exp>
 </condition>
 
-<Node id="19" bw="59" op_0_bw="59" op_1_bw="64" op_2_bw="32" op_3_bw="32">
+<Node id="19" bw="62" op_0_bw="62" op_1_bw="64" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-for.body.lr.ph.i4:1 %trunc_ln1 = partselect i59 @_ssdm_op_PartSelect.i59.i64.i32.i32, i64 %mem_read, i32 5, i32 63
+for.body.lr.ph.i4:1 %trunc_ln1 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %mem_read, i32 2, i32 63
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln1"/></StgValue>
@@ -354,9 +354,9 @@ for.body.lr.ph.i4:1 %trunc_ln1 = partselect i59 @_ssdm_op_PartSelect.i59.i64.i32
 </and_exp></or_exp>
 </condition>
 
-<Node id="20" bw="64" op_0_bw="59">
+<Node id="20" bw="64" op_0_bw="62">
 <![CDATA[
-for.body.lr.ph.i4:2 %sext_ln24 = sext i59 %trunc_ln1
+for.body.lr.ph.i4:2 %sext_ln24 = sext i62 %trunc_ln1
 
 ]]></Node>
 <StgValue><ssdm name="sext_ln24"/></StgValue>
@@ -371,9 +371,9 @@ for.body.lr.ph.i4:2 %sext_ln24 = sext i59 %trunc_ln1
 </and_exp></or_exp>
 </condition>
 
-<Node id="21" bw="256" op_0_bw="256" op_1_bw="64">
+<Node id="21" bw="32" op_0_bw="32" op_1_bw="64">
 <![CDATA[
-for.body.lr.ph.i4:3 %gmem_addr_1 = getelementptr i256 %gmem, i64 %sext_ln24
+for.body.lr.ph.i4:3 %gmem_addr_1 = getelementptr i32 %gmem, i64 %sext_ln24
 
 ]]></Node>
 <StgValue><ssdm name="gmem_addr_1"/></StgValue>
@@ -388,9 +388,9 @@ for.body.lr.ph.i4:3 %gmem_addr_1 = getelementptr i256 %gmem, i64 %sext_ln24
 </and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="32">
+<Node id="22" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i256, i256 %gmem_addr_1, i32 %dataNum_read
+for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %dataNum_read
 
 ]]></Node>
 <StgValue><ssdm name="empty_26"/></StgValue>
@@ -406,7 +406,7 @@ for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i256, i256 
 
 <Node id="38" bw="0" op_0_bw="1" op_1_bw="0" op_2_bw="0">
 <![CDATA[
-if.then:0 %br_ln17 = br i1 %icmp_ln17, void %_Z9writeDataP7ap_uintILi256EEi.exit, void %for.body.lr.ph.i
+if.then:0 %br_ln17 = br i1 %icmp_ln17, void %_Z9writeDataP7ap_uintILi32EEi.exit, void %for.body.lr.ph.i
 
 ]]></Node>
 <StgValue><ssdm name="br_ln17"/></StgValue>
@@ -421,9 +421,9 @@ if.then:0 %br_ln17 = br i1 %icmp_ln17, void %_Z9writeDataP7ap_uintILi256EEi.exit
 </and_exp></or_exp>
 </condition>
 
-<Node id="41" bw="59" op_0_bw="59" op_1_bw="64" op_2_bw="32" op_3_bw="32">
+<Node id="41" bw="62" op_0_bw="62" op_1_bw="64" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-for.body.lr.ph.i:1 %trunc_ln = partselect i59 @_ssdm_op_PartSelect.i59.i64.i32.i32, i64 %mem_read, i32 5, i32 63
+for.body.lr.ph.i:1 %trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %mem_read, i32 2, i32 63
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln"/></StgValue>
@@ -438,9 +438,9 @@ for.body.lr.ph.i:1 %trunc_ln = partselect i59 @_ssdm_op_PartSelect.i59.i64.i32.i
 </and_exp></or_exp>
 </condition>
 
-<Node id="42" bw="64" op_0_bw="59">
+<Node id="42" bw="64" op_0_bw="62">
 <![CDATA[
-for.body.lr.ph.i:2 %sext_ln17 = sext i59 %trunc_ln
+for.body.lr.ph.i:2 %sext_ln17 = sext i62 %trunc_ln
 
 ]]></Node>
 <StgValue><ssdm name="sext_ln17"/></StgValue>
@@ -455,9 +455,9 @@ for.body.lr.ph.i:2 %sext_ln17 = sext i59 %trunc_ln
 </and_exp></or_exp>
 </condition>
 
-<Node id="43" bw="256" op_0_bw="256" op_1_bw="64">
+<Node id="43" bw="32" op_0_bw="32" op_1_bw="64">
 <![CDATA[
-for.body.lr.ph.i:3 %gmem_addr = getelementptr i256 %gmem, i64 %sext_ln17
+for.body.lr.ph.i:3 %gmem_addr = getelementptr i32 %gmem, i64 %sext_ln17
 
 ]]></Node>
 <StgValue><ssdm name="gmem_addr"/></StgValue>
@@ -472,9 +472,9 @@ for.body.lr.ph.i:3 %gmem_addr = getelementptr i256 %gmem, i64 %sext_ln17
 </and_exp></or_exp>
 </condition>
 
-<Node id="44" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="32">
+<Node id="44" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.body.lr.ph.i:4 %empty = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i256, i256 %gmem_addr, i32 %dataNum_read
+for.body.lr.ph.i:4 %empty = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %gmem_addr, i32 %dataNum_read
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -505,9 +505,9 @@ for.body.lr.ph.i4:0 %trunc_ln24 = trunc i32 %dataNum_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="32">
+<Node id="22" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i256, i256 %gmem_addr_1, i32 %dataNum_read
+for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %dataNum_read
 
 ]]></Node>
 <StgValue><ssdm name="empty_26"/></StgValue>
@@ -523,9 +523,9 @@ for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i256, i256 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="32">
+<Node id="22" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i256, i256 %gmem_addr_1, i32 %dataNum_read
+for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %dataNum_read
 
 ]]></Node>
 <StgValue><ssdm name="empty_26"/></StgValue>
@@ -541,9 +541,9 @@ for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i256, i256 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="32">
+<Node id="22" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i256, i256 %gmem_addr_1, i32 %dataNum_read
+for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %dataNum_read
 
 ]]></Node>
 <StgValue><ssdm name="empty_26"/></StgValue>
@@ -559,9 +559,9 @@ for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i256, i256 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="32">
+<Node id="22" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i256, i256 %gmem_addr_1, i32 %dataNum_read
+for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %dataNum_read
 
 ]]></Node>
 <StgValue><ssdm name="empty_26"/></StgValue>
@@ -577,9 +577,9 @@ for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i256, i256 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="32">
+<Node id="22" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i256, i256 %gmem_addr_1, i32 %dataNum_read
+for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %dataNum_read
 
 ]]></Node>
 <StgValue><ssdm name="empty_26"/></StgValue>
@@ -595,9 +595,9 @@ for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i256, i256 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="32">
+<Node id="22" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i256, i256 %gmem_addr_1, i32 %dataNum_read
+for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i32 %dataNum_read
 
 ]]></Node>
 <StgValue><ssdm name="empty_26"/></StgValue>
@@ -613,9 +613,9 @@ for.body.lr.ph.i4:4 %empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i256, i256 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="23" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="59" op_3_bw="31" op_4_bw="31" op_5_bw="0">
+<Node id="23" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="62" op_3_bw="31" op_4_bw="31" op_5_bw="0">
 <![CDATA[
-for.body.lr.ph.i4:5 %call_ln24 = call void @runBench_Pipeline_dataRead, i256 %gmem, i59 %trunc_ln1, i31 %trunc_ln24, i31 %tmp_V_loc
+for.body.lr.ph.i4:5 %call_ln24 = call void @runBench_Pipeline_dataRead, i32 %gmem, i62 %trunc_ln1, i31 %trunc_ln24, i31 %tmp_V_loc
 
 ]]></Node>
 <StgValue><ssdm name="call_ln24"/></StgValue>
@@ -631,9 +631,9 @@ for.body.lr.ph.i4:5 %call_ln24 = call void @runBench_Pipeline_dataRead, i256 %gm
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="23" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="59" op_3_bw="31" op_4_bw="31" op_5_bw="0">
+<Node id="23" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="62" op_3_bw="31" op_4_bw="31" op_5_bw="0">
 <![CDATA[
-for.body.lr.ph.i4:5 %call_ln24 = call void @runBench_Pipeline_dataRead, i256 %gmem, i59 %trunc_ln1, i31 %trunc_ln24, i31 %tmp_V_loc
+for.body.lr.ph.i4:5 %call_ln24 = call void @runBench_Pipeline_dataRead, i32 %gmem, i62 %trunc_ln1, i31 %trunc_ln24, i31 %tmp_V_loc
 
 ]]></Node>
 <StgValue><ssdm name="call_ln24"/></StgValue>
@@ -668,7 +668,7 @@ for.body.lr.ph.i4:6 %tmp_V_loc_load = load i31 %tmp_V_loc
 
 <Node id="25" bw="0" op_0_bw="0">
 <![CDATA[
-for.body.lr.ph.i4:7 %br_ln0 = br void %_Z8readDataP7ap_uintILi256EEi.exit
+for.body.lr.ph.i4:7 %br_ln0 = br void %_Z8readDataP7ap_uintILi32EEi.exit
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -681,9 +681,9 @@ for.body.lr.ph.i4:7 %br_ln0 = br void %_Z8readDataP7ap_uintILi256EEi.exit
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="29" bw="59" op_0_bw="59" op_1_bw="64" op_2_bw="32" op_3_bw="32">
+<Node id="29" bw="62" op_0_bw="62" op_1_bw="64" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-_Z8readDataP7ap_uintILi256EEi.exit:2 %trunc_ln2 = partselect i59 @_ssdm_op_PartSelect.i59.i64.i32.i32, i64 %mem_read, i32 5, i32 63
+_Z8readDataP7ap_uintILi32EEi.exit:2 %trunc_ln2 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %mem_read, i32 2, i32 63
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln2"/></StgValue>
@@ -696,9 +696,9 @@ _Z8readDataP7ap_uintILi256EEi.exit:2 %trunc_ln2 = partselect i59 @_ssdm_op_PartS
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="30" bw="64" op_0_bw="59">
+<Node id="30" bw="64" op_0_bw="62">
 <![CDATA[
-_Z8readDataP7ap_uintILi256EEi.exit:3 %sext_ln28 = sext i59 %trunc_ln2
+_Z8readDataP7ap_uintILi32EEi.exit:3 %sext_ln28 = sext i62 %trunc_ln2
 
 ]]></Node>
 <StgValue><ssdm name="sext_ln28"/></StgValue>
@@ -711,9 +711,9 @@ _Z8readDataP7ap_uintILi256EEi.exit:3 %sext_ln28 = sext i59 %trunc_ln2
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="31" bw="256" op_0_bw="256" op_1_bw="64">
+<Node id="31" bw="32" op_0_bw="32" op_1_bw="64">
 <![CDATA[
-_Z8readDataP7ap_uintILi256EEi.exit:4 %gmem_addr_2 = getelementptr i256 %gmem, i64 %sext_ln28
+_Z8readDataP7ap_uintILi32EEi.exit:4 %gmem_addr_2 = getelementptr i32 %gmem, i64 %sext_ln28
 
 ]]></Node>
 <StgValue><ssdm name="gmem_addr_2"/></StgValue>
@@ -726,9 +726,9 @@ _Z8readDataP7ap_uintILi256EEi.exit:4 %gmem_addr_2 = getelementptr i256 %gmem, i6
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="32" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="32" op_3_bw="0">
+<Node id="32" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-_Z8readDataP7ap_uintILi256EEi.exit:5 %gmem_addr_2_req = writereq i1 @_ssdm_op_WriteReq.m_axi.i256P1A, i256 %gmem_addr_2, i32 1
+_Z8readDataP7ap_uintILi32EEi.exit:5 %gmem_addr_2_req = writereq i1 @_ssdm_op_WriteReq.m_axi.i32P1A, i32 %gmem_addr_2, i32 1
 
 ]]></Node>
 <StgValue><ssdm name="gmem_addr_2_req"/></StgValue>
@@ -746,7 +746,7 @@ _Z8readDataP7ap_uintILi256EEi.exit:5 %gmem_addr_2_req = writereq i1 @_ssdm_op_Wr
 
 <Node id="27" bw="31" op_0_bw="31" op_1_bw="0" op_2_bw="31" op_3_bw="0">
 <![CDATA[
-_Z8readDataP7ap_uintILi256EEi.exit:0 %tmp_0_lcssa_i = phi i31 %tmp_V_loc_load, void %for.body.lr.ph.i4, i31 0, void %if.then4
+_Z8readDataP7ap_uintILi32EEi.exit:0 %tmp_0_lcssa_i = phi i31 %tmp_V_loc_load, void %for.body.lr.ph.i4, i31 0, void %if.then4
 
 ]]></Node>
 <StgValue><ssdm name="tmp_0_lcssa_i"/></StgValue>
@@ -759,9 +759,9 @@ _Z8readDataP7ap_uintILi256EEi.exit:0 %tmp_0_lcssa_i = phi i31 %tmp_V_loc_load, v
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="28" bw="256" op_0_bw="31">
+<Node id="28" bw="32" op_0_bw="31">
 <![CDATA[
-_Z8readDataP7ap_uintILi256EEi.exit:1 %zext_ln28 = zext i31 %tmp_0_lcssa_i
+_Z8readDataP7ap_uintILi32EEi.exit:1 %zext_ln28 = zext i31 %tmp_0_lcssa_i
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln28"/></StgValue>
@@ -774,9 +774,9 @@ _Z8readDataP7ap_uintILi256EEi.exit:1 %zext_ln28 = zext i31 %tmp_0_lcssa_i
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="33" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="256" op_3_bw="32" op_4_bw="0" op_5_bw="0">
+<Node id="33" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="4" op_4_bw="0" op_5_bw="0">
 <![CDATA[
-_Z8readDataP7ap_uintILi256EEi.exit:6 %write_ln28 = write void @_ssdm_op_Write.m_axi.i256P1A, i256 %gmem_addr_2, i256 %zext_ln28, i32 4294967295
+_Z8readDataP7ap_uintILi32EEi.exit:6 %write_ln28 = write void @_ssdm_op_Write.m_axi.i32P1A, i32 %gmem_addr_2, i32 %zext_ln28, i4 15
 
 ]]></Node>
 <StgValue><ssdm name="write_ln28"/></StgValue>
@@ -791,7 +791,7 @@ _Z8readDataP7ap_uintILi256EEi.exit:6 %write_ln28 = write void @_ssdm_op_Write.m_
 
 <Node id="35" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="0">
 <![CDATA[
-_Z8readDataP7ap_uintILi256EEi.exit:8 %write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %counterCmd1, i64 1
+_Z8readDataP7ap_uintILi32EEi.exit:8 %write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %counterCmd1, i64 1
 
 ]]></Node>
 <StgValue><ssdm name="write_ln174"/></StgValue>
@@ -807,9 +807,9 @@ _Z8readDataP7ap_uintILi256EEi.exit:8 %write_ln174 = write void @_ssdm_op_Write.a
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="34" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="0" op_3_bw="0">
+<Node id="34" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-_Z8readDataP7ap_uintILi256EEi.exit:7 %gmem_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i256P1A, i256 %gmem_addr_2
+_Z8readDataP7ap_uintILi32EEi.exit:7 %gmem_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %gmem_addr_2
 
 ]]></Node>
 <StgValue><ssdm name="gmem_addr_2_resp"/></StgValue>
@@ -825,9 +825,9 @@ _Z8readDataP7ap_uintILi256EEi.exit:7 %gmem_addr_2_resp = writeresp i1 @_ssdm_op_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="34" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="0" op_3_bw="0">
+<Node id="34" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-_Z8readDataP7ap_uintILi256EEi.exit:7 %gmem_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i256P1A, i256 %gmem_addr_2
+_Z8readDataP7ap_uintILi32EEi.exit:7 %gmem_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %gmem_addr_2
 
 ]]></Node>
 <StgValue><ssdm name="gmem_addr_2_resp"/></StgValue>
@@ -843,9 +843,9 @@ _Z8readDataP7ap_uintILi256EEi.exit:7 %gmem_addr_2_resp = writeresp i1 @_ssdm_op_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="34" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="0" op_3_bw="0">
+<Node id="34" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-_Z8readDataP7ap_uintILi256EEi.exit:7 %gmem_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i256P1A, i256 %gmem_addr_2
+_Z8readDataP7ap_uintILi32EEi.exit:7 %gmem_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %gmem_addr_2
 
 ]]></Node>
 <StgValue><ssdm name="gmem_addr_2_resp"/></StgValue>
@@ -861,9 +861,9 @@ _Z8readDataP7ap_uintILi256EEi.exit:7 %gmem_addr_2_resp = writeresp i1 @_ssdm_op_
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="34" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="0" op_3_bw="0">
+<Node id="34" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-_Z8readDataP7ap_uintILi256EEi.exit:7 %gmem_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i256P1A, i256 %gmem_addr_2
+_Z8readDataP7ap_uintILi32EEi.exit:7 %gmem_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %gmem_addr_2
 
 ]]></Node>
 <StgValue><ssdm name="gmem_addr_2_resp"/></StgValue>
@@ -880,9 +880,9 @@ _Z8readDataP7ap_uintILi256EEi.exit:7 %gmem_addr_2_resp = writeresp i1 @_ssdm_op_
 </and_exp></or_exp>
 </condition>
 
-<Node id="34" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="0" op_3_bw="0">
+<Node id="34" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-_Z8readDataP7ap_uintILi256EEi.exit:7 %gmem_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i256P1A, i256 %gmem_addr_2
+_Z8readDataP7ap_uintILi32EEi.exit:7 %gmem_addr_2_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i32P1A, i32 %gmem_addr_2
 
 ]]></Node>
 <StgValue><ssdm name="gmem_addr_2_resp"/></StgValue>
@@ -898,7 +898,7 @@ _Z8readDataP7ap_uintILi256EEi.exit:7 %gmem_addr_2_resp = writeresp i1 @_ssdm_op_
 
 <Node id="36" bw="0" op_0_bw="0">
 <![CDATA[
-_Z8readDataP7ap_uintILi256EEi.exit:9 %br_ln0 = br void %if.end7
+_Z8readDataP7ap_uintILi32EEi.exit:9 %br_ln0 = br void %if.end7
 
 ]]></Node>
 <StgValue><ssdm name="br_ln0"/></StgValue>
@@ -913,10 +913,10 @@ _Z8readDataP7ap_uintILi256EEi.exit:9 %br_ln0 = br void %if.end7
 
 <Node id="52" bw="0">
 <![CDATA[
-if.end7:0 %ret_ln52 = ret
+if.end7:0 %ret_ln42 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln52"/></StgValue>
+<StgValue><ssdm name="ret_ln42"/></StgValue>
 </operation>
 </state>
 
@@ -944,9 +944,9 @@ for.body.lr.ph.i:0 %trunc_ln17 = trunc i32 %dataNum_read
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="45" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="59" op_3_bw="31" op_4_bw="0">
+<Node id="45" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="62" op_3_bw="31" op_4_bw="0">
 <![CDATA[
-for.body.lr.ph.i:5 %call_ln17 = call void @runBench_Pipeline_dataWrite, i256 %gmem, i59 %trunc_ln, i31 %trunc_ln17
+for.body.lr.ph.i:5 %call_ln17 = call void @runBench_Pipeline_dataWrite, i32 %gmem, i62 %trunc_ln, i31 %trunc_ln17
 
 ]]></Node>
 <StgValue><ssdm name="call_ln17"/></StgValue>
@@ -962,9 +962,9 @@ for.body.lr.ph.i:5 %call_ln17 = call void @runBench_Pipeline_dataWrite, i256 %gm
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="45" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="59" op_3_bw="31" op_4_bw="0">
+<Node id="45" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="62" op_3_bw="31" op_4_bw="0">
 <![CDATA[
-for.body.lr.ph.i:5 %call_ln17 = call void @runBench_Pipeline_dataWrite, i256 %gmem, i59 %trunc_ln, i31 %trunc_ln17
+for.body.lr.ph.i:5 %call_ln17 = call void @runBench_Pipeline_dataWrite, i32 %gmem, i62 %trunc_ln, i31 %trunc_ln17
 
 ]]></Node>
 <StgValue><ssdm name="call_ln17"/></StgValue>
@@ -980,9 +980,9 @@ for.body.lr.ph.i:5 %call_ln17 = call void @runBench_Pipeline_dataWrite, i256 %gm
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="0">
+<Node id="46" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-for.body.lr.ph.i:6 %empty_25 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i256, i256 %gmem_addr
+for.body.lr.ph.i:6 %empty_25 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr
 
 ]]></Node>
 <StgValue><ssdm name="empty_25"/></StgValue>
@@ -998,9 +998,9 @@ for.body.lr.ph.i:6 %empty_25 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i256, i2
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="0">
+<Node id="46" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-for.body.lr.ph.i:6 %empty_25 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i256, i256 %gmem_addr
+for.body.lr.ph.i:6 %empty_25 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr
 
 ]]></Node>
 <StgValue><ssdm name="empty_25"/></StgValue>
@@ -1016,9 +1016,9 @@ for.body.lr.ph.i:6 %empty_25 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i256, i2
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="0">
+<Node id="46" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-for.body.lr.ph.i:6 %empty_25 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i256, i256 %gmem_addr
+for.body.lr.ph.i:6 %empty_25 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr
 
 ]]></Node>
 <StgValue><ssdm name="empty_25"/></StgValue>
@@ -1034,9 +1034,9 @@ for.body.lr.ph.i:6 %empty_25 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i256, i2
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="0">
+<Node id="46" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-for.body.lr.ph.i:6 %empty_25 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i256, i256 %gmem_addr
+for.body.lr.ph.i:6 %empty_25 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr
 
 ]]></Node>
 <StgValue><ssdm name="empty_25"/></StgValue>
@@ -1053,9 +1053,9 @@ for.body.lr.ph.i:6 %empty_25 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i256, i2
 </and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="1" op_0_bw="1" op_1_bw="256" op_2_bw="0">
+<Node id="46" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="0">
 <![CDATA[
-for.body.lr.ph.i:6 %empty_25 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i256, i256 %gmem_addr
+for.body.lr.ph.i:6 %empty_25 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr
 
 ]]></Node>
 <StgValue><ssdm name="empty_25"/></StgValue>
@@ -1071,7 +1071,7 @@ for.body.lr.ph.i:6 %empty_25 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i256, i2
 
 <Node id="47" bw="0" op_0_bw="0">
 <![CDATA[
-for.body.lr.ph.i:7 %br_ln174 = br void %_Z9writeDataP7ap_uintILi256EEi.exit
+for.body.lr.ph.i:7 %br_ln174 = br void %_Z9writeDataP7ap_uintILi32EEi.exit
 
 ]]></Node>
 <StgValue><ssdm name="br_ln174"/></StgValue>
@@ -1086,7 +1086,7 @@ for.body.lr.ph.i:7 %br_ln174 = br void %_Z9writeDataP7ap_uintILi256EEi.exit
 
 <Node id="49" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="0">
 <![CDATA[
-_Z9writeDataP7ap_uintILi256EEi.exit:0 %write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %counterCmd1, i64 1
+_Z9writeDataP7ap_uintILi32EEi.exit:0 %write_ln174 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %counterCmd1, i64 1
 
 ]]></Node>
 <StgValue><ssdm name="write_ln174"/></StgValue>
@@ -1101,10 +1101,10 @@ _Z9writeDataP7ap_uintILi256EEi.exit:0 %write_ln174 = write void @_ssdm_op_Write.
 
 <Node id="50" bw="0" op_0_bw="0">
 <![CDATA[
-_Z9writeDataP7ap_uintILi256EEi.exit:1 %br_ln47 = br void %if.end7
+_Z9writeDataP7ap_uintILi32EEi.exit:1 %br_ln37 = br void %if.end7
 
 ]]></Node>
-<StgValue><ssdm name="br_ln47"/></StgValue>
+<StgValue><ssdm name="br_ln37"/></StgValue>
 </operation>
 </state>
 </state_list>
@@ -1230,11 +1230,11 @@ _Z9writeDataP7ap_uintILi256EEi.exit:1 %br_ln47 = br void %if.end7
 </dataflow>
 <dataflow id="180" from="StgValue_126" to="specinterface_ln0" fromId="126" toId="32">
 </dataflow>
-<dataflow id="181" from="rw_read" to="br_ln43" fromId="29" toId="33">
+<dataflow id="181" from="rw_read" to="br_ln33" fromId="29" toId="33">
 </dataflow>
 <dataflow id="182" from="icmp_ln17" to="br_ln24" fromId="28" toId="34">
 </dataflow>
-<dataflow id="184" from="_ssdm_op_PartSelect.i59.i64.i32.i32" to="trunc_ln1" fromId="183" toId="35">
+<dataflow id="184" from="_ssdm_op_PartSelect.i62.i64.i32.i32" to="trunc_ln1" fromId="183" toId="35">
 </dataflow>
 <dataflow id="185" from="mem_read" to="trunc_ln1" fromId="30" toId="35">
 </dataflow>
@@ -1248,7 +1248,7 @@ _Z9writeDataP7ap_uintILi256EEi.exit:1 %br_ln47 = br void %if.end7
 </dataflow>
 <dataflow id="192" from="sext_ln24" to="gmem_addr_1" fromId="36" toId="37">
 </dataflow>
-<dataflow id="194" from="_ssdm_op_ReadReq.m_axi.p1i256" to="empty_26" fromId="193" toId="38">
+<dataflow id="194" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_26" fromId="193" toId="38">
 </dataflow>
 <dataflow id="195" from="gmem_addr_1" to="empty_26" fromId="37" toId="38">
 </dataflow>
@@ -1256,7 +1256,7 @@ _Z9writeDataP7ap_uintILi256EEi.exit:1 %br_ln47 = br void %if.end7
 </dataflow>
 <dataflow id="197" from="icmp_ln17" to="br_ln17" fromId="28" toId="39">
 </dataflow>
-<dataflow id="198" from="_ssdm_op_PartSelect.i59.i64.i32.i32" to="trunc_ln" fromId="183" toId="40">
+<dataflow id="198" from="_ssdm_op_PartSelect.i62.i64.i32.i32" to="trunc_ln" fromId="183" toId="40">
 </dataflow>
 <dataflow id="199" from="mem_read" to="trunc_ln" fromId="30" toId="40">
 </dataflow>
@@ -1270,7 +1270,7 @@ _Z9writeDataP7ap_uintILi256EEi.exit:1 %br_ln47 = br void %if.end7
 </dataflow>
 <dataflow id="204" from="sext_ln17" to="gmem_addr" fromId="41" toId="42">
 </dataflow>
-<dataflow id="206" from="_ssdm_op_WriteReq.m_axi.p1i256" to="empty" fromId="205" toId="43">
+<dataflow id="206" from="_ssdm_op_WriteReq.m_axi.p1i32" to="empty" fromId="205" toId="43">
 </dataflow>
 <dataflow id="207" from="gmem_addr" to="empty" fromId="42" toId="43">
 </dataflow>
@@ -1278,37 +1278,37 @@ _Z9writeDataP7ap_uintILi256EEi.exit:1 %br_ln47 = br void %if.end7
 </dataflow>
 <dataflow id="209" from="dataNum_read" to="trunc_ln24" fromId="25" toId="44">
 </dataflow>
-<dataflow id="210" from="_ssdm_op_ReadReq.m_axi.p1i256" to="empty_26" fromId="193" toId="45">
+<dataflow id="210" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_26" fromId="193" toId="45">
 </dataflow>
 <dataflow id="211" from="gmem_addr_1" to="empty_26" fromId="37" toId="45">
 </dataflow>
 <dataflow id="212" from="dataNum_read" to="empty_26" fromId="25" toId="45">
 </dataflow>
-<dataflow id="213" from="_ssdm_op_ReadReq.m_axi.p1i256" to="empty_26" fromId="193" toId="46">
+<dataflow id="213" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_26" fromId="193" toId="46">
 </dataflow>
 <dataflow id="214" from="gmem_addr_1" to="empty_26" fromId="37" toId="46">
 </dataflow>
 <dataflow id="215" from="dataNum_read" to="empty_26" fromId="25" toId="46">
 </dataflow>
-<dataflow id="216" from="_ssdm_op_ReadReq.m_axi.p1i256" to="empty_26" fromId="193" toId="47">
+<dataflow id="216" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_26" fromId="193" toId="47">
 </dataflow>
 <dataflow id="217" from="gmem_addr_1" to="empty_26" fromId="37" toId="47">
 </dataflow>
 <dataflow id="218" from="dataNum_read" to="empty_26" fromId="25" toId="47">
 </dataflow>
-<dataflow id="219" from="_ssdm_op_ReadReq.m_axi.p1i256" to="empty_26" fromId="193" toId="48">
+<dataflow id="219" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_26" fromId="193" toId="48">
 </dataflow>
 <dataflow id="220" from="gmem_addr_1" to="empty_26" fromId="37" toId="48">
 </dataflow>
 <dataflow id="221" from="dataNum_read" to="empty_26" fromId="25" toId="48">
 </dataflow>
-<dataflow id="222" from="_ssdm_op_ReadReq.m_axi.p1i256" to="empty_26" fromId="193" toId="49">
+<dataflow id="222" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_26" fromId="193" toId="49">
 </dataflow>
 <dataflow id="223" from="gmem_addr_1" to="empty_26" fromId="37" toId="49">
 </dataflow>
 <dataflow id="224" from="dataNum_read" to="empty_26" fromId="25" toId="49">
 </dataflow>
-<dataflow id="225" from="_ssdm_op_ReadReq.m_axi.p1i256" to="empty_26" fromId="193" toId="50">
+<dataflow id="225" from="_ssdm_op_ReadReq.m_axi.p1i32" to="empty_26" fromId="193" toId="50">
 </dataflow>
 <dataflow id="226" from="gmem_addr_1" to="empty_26" fromId="37" toId="50">
 </dataflow>
@@ -1336,7 +1336,7 @@ _Z9writeDataP7ap_uintILi256EEi.exit:1 %br_ln47 = br void %if.end7
 </dataflow>
 <dataflow id="239" from="tmp_V_loc" to="tmp_V_loc_load" fromId="26" toId="53">
 </dataflow>
-<dataflow id="240" from="_ssdm_op_PartSelect.i59.i64.i32.i32" to="trunc_ln2" fromId="183" toId="55">
+<dataflow id="240" from="_ssdm_op_PartSelect.i62.i64.i32.i32" to="trunc_ln2" fromId="183" toId="55">
 </dataflow>
 <dataflow id="241" from="mem_read" to="trunc_ln2" fromId="30" toId="55">
 </dataflow>
@@ -1350,7 +1350,7 @@ _Z9writeDataP7ap_uintILi256EEi.exit:1 %br_ln47 = br void %if.end7
 </dataflow>
 <dataflow id="246" from="sext_ln28" to="gmem_addr_2" fromId="56" toId="57">
 </dataflow>
-<dataflow id="248" from="_ssdm_op_WriteReq.m_axi.i256P1A" to="gmem_addr_2_req" fromId="247" toId="58">
+<dataflow id="248" from="_ssdm_op_WriteReq.m_axi.i32P1A" to="gmem_addr_2_req" fromId="247" toId="58">
 </dataflow>
 <dataflow id="249" from="gmem_addr_2" to="gmem_addr_2_req" fromId="57" toId="58">
 </dataflow>
@@ -1375,93 +1375,93 @@ _Z9writeDataP7ap_uintILi256EEi.exit:1 %br_ln47 = br void %if.end7
 </dataflow>
 <dataflow id="257" from="tmp_0_lcssa_i" to="zext_ln28" fromId="59" toId="60">
 </dataflow>
-<dataflow id="259" from="_ssdm_op_Write.m_axi.i256P1A" to="write_ln28" fromId="258" toId="61">
+<dataflow id="259" from="_ssdm_op_Write.m_axi.i32P1A" to="write_ln28" fromId="258" toId="61">
 </dataflow>
 <dataflow id="260" from="gmem_addr_2" to="write_ln28" fromId="57" toId="61">
 </dataflow>
 <dataflow id="261" from="zext_ln28" to="write_ln28" fromId="60" toId="61">
 </dataflow>
-<dataflow id="262" from="StgValue_154" to="write_ln28" fromId="154" toId="61">
+<dataflow id="263" from="StgValue_262" to="write_ln28" fromId="262" toId="61">
 </dataflow>
-<dataflow id="263" from="_ssdm_op_Write.ap_fifo.volatile.i64P0A" to="write_ln174" fromId="120" toId="62">
+<dataflow id="264" from="_ssdm_op_Write.ap_fifo.volatile.i64P0A" to="write_ln174" fromId="120" toId="62">
 </dataflow>
-<dataflow id="264" from="counterCmd1" to="write_ln174" fromId="112" toId="62">
+<dataflow id="265" from="counterCmd1" to="write_ln174" fromId="112" toId="62">
 </dataflow>
-<dataflow id="265" from="StgValue_118" to="write_ln174" fromId="118" toId="62">
+<dataflow id="266" from="StgValue_118" to="write_ln174" fromId="118" toId="62">
 </dataflow>
-<dataflow id="267" from="_ssdm_op_WriteResp.m_axi.i256P1A" to="gmem_addr_2_resp" fromId="266" toId="63">
+<dataflow id="268" from="_ssdm_op_WriteResp.m_axi.i32P1A" to="gmem_addr_2_resp" fromId="267" toId="63">
 </dataflow>
-<dataflow id="268" from="gmem_addr_2" to="gmem_addr_2_resp" fromId="57" toId="63">
+<dataflow id="269" from="gmem_addr_2" to="gmem_addr_2_resp" fromId="57" toId="63">
 </dataflow>
-<dataflow id="269" from="_ssdm_op_WriteResp.m_axi.i256P1A" to="gmem_addr_2_resp" fromId="266" toId="64">
+<dataflow id="270" from="_ssdm_op_WriteResp.m_axi.i32P1A" to="gmem_addr_2_resp" fromId="267" toId="64">
 </dataflow>
-<dataflow id="270" from="gmem_addr_2" to="gmem_addr_2_resp" fromId="57" toId="64">
+<dataflow id="271" from="gmem_addr_2" to="gmem_addr_2_resp" fromId="57" toId="64">
 </dataflow>
-<dataflow id="271" from="_ssdm_op_WriteResp.m_axi.i256P1A" to="gmem_addr_2_resp" fromId="266" toId="65">
+<dataflow id="272" from="_ssdm_op_WriteResp.m_axi.i32P1A" to="gmem_addr_2_resp" fromId="267" toId="65">
 </dataflow>
-<dataflow id="272" from="gmem_addr_2" to="gmem_addr_2_resp" fromId="57" toId="65">
+<dataflow id="273" from="gmem_addr_2" to="gmem_addr_2_resp" fromId="57" toId="65">
 </dataflow>
-<dataflow id="273" from="_ssdm_op_WriteResp.m_axi.i256P1A" to="gmem_addr_2_resp" fromId="266" toId="66">
+<dataflow id="274" from="_ssdm_op_WriteResp.m_axi.i32P1A" to="gmem_addr_2_resp" fromId="267" toId="66">
 </dataflow>
-<dataflow id="274" from="gmem_addr_2" to="gmem_addr_2_resp" fromId="57" toId="66">
+<dataflow id="275" from="gmem_addr_2" to="gmem_addr_2_resp" fromId="57" toId="66">
 </dataflow>
-<dataflow id="275" from="_ssdm_op_WriteResp.m_axi.i256P1A" to="gmem_addr_2_resp" fromId="266" toId="67">
+<dataflow id="276" from="_ssdm_op_WriteResp.m_axi.i32P1A" to="gmem_addr_2_resp" fromId="267" toId="67">
 </dataflow>
-<dataflow id="276" from="gmem_addr_2" to="gmem_addr_2_resp" fromId="57" toId="67">
+<dataflow id="277" from="gmem_addr_2" to="gmem_addr_2_resp" fromId="57" toId="67">
 </dataflow>
-<dataflow id="277" from="dataNum_read" to="trunc_ln17" fromId="25" toId="70">
+<dataflow id="278" from="dataNum_read" to="trunc_ln17" fromId="25" toId="70">
 </dataflow>
-<dataflow id="279" from="runBench_Pipeline_dataWrite" to="call_ln17" fromId="278" toId="71">
+<dataflow id="280" from="runBench_Pipeline_dataWrite" to="call_ln17" fromId="279" toId="71">
 </dataflow>
-<dataflow id="280" from="gmem" to="call_ln17" fromId="110" toId="71">
+<dataflow id="281" from="gmem" to="call_ln17" fromId="110" toId="71">
 </dataflow>
-<dataflow id="281" from="trunc_ln" to="call_ln17" fromId="40" toId="71">
+<dataflow id="282" from="trunc_ln" to="call_ln17" fromId="40" toId="71">
 </dataflow>
-<dataflow id="282" from="trunc_ln17" to="call_ln17" fromId="70" toId="71">
+<dataflow id="283" from="trunc_ln17" to="call_ln17" fromId="70" toId="71">
 </dataflow>
-<dataflow id="283" from="runBench_Pipeline_dataWrite" to="call_ln17" fromId="278" toId="72">
+<dataflow id="284" from="runBench_Pipeline_dataWrite" to="call_ln17" fromId="279" toId="72">
 </dataflow>
-<dataflow id="284" from="gmem" to="call_ln17" fromId="110" toId="72">
+<dataflow id="285" from="gmem" to="call_ln17" fromId="110" toId="72">
 </dataflow>
-<dataflow id="285" from="trunc_ln" to="call_ln17" fromId="40" toId="72">
+<dataflow id="286" from="trunc_ln" to="call_ln17" fromId="40" toId="72">
 </dataflow>
-<dataflow id="286" from="trunc_ln17" to="call_ln17" fromId="70" toId="72">
+<dataflow id="287" from="trunc_ln17" to="call_ln17" fromId="70" toId="72">
 </dataflow>
-<dataflow id="288" from="_ssdm_op_WriteResp.m_axi.p1i256" to="empty_25" fromId="287" toId="73">
+<dataflow id="289" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_25" fromId="288" toId="73">
 </dataflow>
-<dataflow id="289" from="gmem_addr" to="empty_25" fromId="42" toId="73">
+<dataflow id="290" from="gmem_addr" to="empty_25" fromId="42" toId="73">
 </dataflow>
-<dataflow id="290" from="_ssdm_op_WriteResp.m_axi.p1i256" to="empty_25" fromId="287" toId="74">
+<dataflow id="291" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_25" fromId="288" toId="74">
 </dataflow>
-<dataflow id="291" from="gmem_addr" to="empty_25" fromId="42" toId="74">
+<dataflow id="292" from="gmem_addr" to="empty_25" fromId="42" toId="74">
 </dataflow>
-<dataflow id="292" from="_ssdm_op_WriteResp.m_axi.p1i256" to="empty_25" fromId="287" toId="75">
+<dataflow id="293" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_25" fromId="288" toId="75">
 </dataflow>
-<dataflow id="293" from="gmem_addr" to="empty_25" fromId="42" toId="75">
+<dataflow id="294" from="gmem_addr" to="empty_25" fromId="42" toId="75">
 </dataflow>
-<dataflow id="294" from="_ssdm_op_WriteResp.m_axi.p1i256" to="empty_25" fromId="287" toId="76">
+<dataflow id="295" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_25" fromId="288" toId="76">
 </dataflow>
-<dataflow id="295" from="gmem_addr" to="empty_25" fromId="42" toId="76">
+<dataflow id="296" from="gmem_addr" to="empty_25" fromId="42" toId="76">
 </dataflow>
-<dataflow id="296" from="_ssdm_op_WriteResp.m_axi.p1i256" to="empty_25" fromId="287" toId="77">
+<dataflow id="297" from="_ssdm_op_WriteResp.m_axi.p1i32" to="empty_25" fromId="288" toId="77">
 </dataflow>
-<dataflow id="297" from="gmem_addr" to="empty_25" fromId="42" toId="77">
+<dataflow id="298" from="gmem_addr" to="empty_25" fromId="42" toId="77">
 </dataflow>
-<dataflow id="298" from="_ssdm_op_Write.ap_fifo.volatile.i64P0A" to="write_ln174" fromId="120" toId="79">
+<dataflow id="299" from="_ssdm_op_Write.ap_fifo.volatile.i64P0A" to="write_ln174" fromId="120" toId="79">
 </dataflow>
-<dataflow id="299" from="counterCmd1" to="write_ln174" fromId="112" toId="79">
+<dataflow id="300" from="counterCmd1" to="write_ln174" fromId="112" toId="79">
 </dataflow>
-<dataflow id="300" from="StgValue_118" to="write_ln174" fromId="118" toId="79">
+<dataflow id="301" from="StgValue_118" to="write_ln174" fromId="118" toId="79">
 </dataflow>
-<dataflow id="301" from="rw_read" to="StgValue_2" fromId="29" toId="2">
+<dataflow id="302" from="rw_read" to="StgValue_2" fromId="29" toId="2">
 </dataflow>
-<dataflow id="302" from="icmp_ln17" to="StgValue_2" fromId="28" toId="2">
+<dataflow id="303" from="icmp_ln17" to="StgValue_2" fromId="28" toId="2">
 </dataflow>
-<dataflow id="303" from="icmp_ln17" to="StgValue_11" fromId="28" toId="11">
+<dataflow id="304" from="icmp_ln17" to="StgValue_11" fromId="28" toId="11">
 </dataflow>
-<dataflow id="304" from="rw_read" to="StgValue_17" fromId="29" toId="17">
+<dataflow id="305" from="rw_read" to="StgValue_17" fromId="29" toId="17">
 </dataflow>
-<dataflow id="305" from="icmp_ln17" to="StgValue_24" fromId="28" toId="24">
+<dataflow id="306" from="icmp_ln17" to="StgValue_24" fromId="28" toId="24">
 </dataflow>
 </dataflows>
 

@@ -3,21 +3,21 @@ source_filename = "llvm-link"
 target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:2048-i4096:4096-n8:16:32:64-S128-v16:16-v24:32-v32:32-v48:64-v96:128-v192:256-v256:256-v512:512-v1024:1024"
 target triple = "fpga64-xilinx-none"
 
-%"struct.ap_uint<256>" = type { %"struct.ap_int_base<256, false>" }
-%"struct.ap_int_base<256, false>" = type { %"struct.ssdm_int<256, false>" }
-%"struct.ssdm_int<256, false>" = type { i256 }
+%"struct.ap_uint<32>" = type { %"struct.ap_int_base<32, false>" }
+%"struct.ap_int_base<32, false>" = type { %"struct.ssdm_int<32, false>" }
+%"struct.ssdm_int<32, false>" = type { i32 }
 
 ; Function Attrs: noinline
-define void @apatb_ddrBenchmark_ir(%"struct.ap_uint<256>"* noalias nocapture nonnull %mem, i32 %dataNum, i1 zeroext %rw, i64* noalias nocapture nonnull %res) local_unnamed_addr #0 {
+define void @apatb_ddrBenchmark_ir(%"struct.ap_uint<32>"* noalias nocapture nonnull %mem, i32 %dataNum, i1 zeroext %rw, i64* noalias nocapture nonnull %res) local_unnamed_addr #0 {
 entry:
-  %malloccall = call i8* @malloc(i64 67108864)
-  %mem_copy = bitcast i8* %malloccall to [2097152 x i256]*
+  %malloccall = call i8* @malloc(i64 1048576)
+  %mem_copy = bitcast i8* %malloccall to [262144 x i32]*
   %res_copy = alloca i64, align 512
-  %0 = bitcast %"struct.ap_uint<256>"* %mem to [2097152 x %"struct.ap_uint<256>"]*
-  call fastcc void @copy_in([2097152 x %"struct.ap_uint<256>"]* nonnull %0, [2097152 x i256]* %mem_copy, i64* nonnull %res, i64* nonnull align 512 %res_copy)
-  %1 = getelementptr [2097152 x i256], [2097152 x i256]* %mem_copy, i32 0, i32 0
-  call void @apatb_ddrBenchmark_hw(i256* %1, i32 %dataNum, i1 %rw, i64* %res_copy)
-  call void @copy_back([2097152 x %"struct.ap_uint<256>"]* %0, [2097152 x i256]* %mem_copy, i64* %res, i64* %res_copy)
+  %0 = bitcast %"struct.ap_uint<32>"* %mem to [262144 x %"struct.ap_uint<32>"]*
+  call fastcc void @copy_in([262144 x %"struct.ap_uint<32>"]* nonnull %0, [262144 x i32]* %mem_copy, i64* nonnull %res, i64* nonnull align 512 %res_copy)
+  %1 = getelementptr [262144 x i32], [262144 x i32]* %mem_copy, i32 0, i32 0
+  call void @apatb_ddrBenchmark_hw(i32* %1, i32 %dataNum, i1 %rw, i64* %res_copy)
+  call void @copy_back([262144 x %"struct.ap_uint<32>"]* %0, [262144 x i32]* %mem_copy, i64* %res, i64* %res_copy)
   call void @free(i8* %malloccall)
   ret void
 }
@@ -25,18 +25,18 @@ entry:
 declare noalias i8* @malloc(i64) local_unnamed_addr
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @copy_in([2097152 x %"struct.ap_uint<256>"]* noalias readonly, [2097152 x i256]* noalias, i64* noalias readonly, i64* noalias align 512) unnamed_addr #1 {
+define internal fastcc void @copy_in([262144 x %"struct.ap_uint<32>"]* noalias readonly, [262144 x i32]* noalias, i64* noalias readonly, i64* noalias align 512) unnamed_addr #1 {
 entry:
-  call fastcc void @"onebyonecpy_hls.p0a2097152struct.ap_uint<256>"([2097152 x i256]* %1, [2097152 x %"struct.ap_uint<256>"]* %0)
+  call fastcc void @"onebyonecpy_hls.p0a262144struct.ap_uint<32>"([262144 x i32]* %1, [262144 x %"struct.ap_uint<32>"]* %0)
   call fastcc void @onebyonecpy_hls.p0i64(i64* align 512 %3, i64* %2)
   ret void
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @"onebyonecpy_hls.p0a2097152struct.ap_uint<256>"([2097152 x i256]* noalias, [2097152 x %"struct.ap_uint<256>"]* noalias readonly) unnamed_addr #2 {
+define internal fastcc void @"onebyonecpy_hls.p0a262144struct.ap_uint<32>"([262144 x i32]* noalias, [262144 x %"struct.ap_uint<32>"]* noalias readonly) unnamed_addr #2 {
 entry:
-  %2 = icmp eq [2097152 x i256]* %0, null
-  %3 = icmp eq [2097152 x %"struct.ap_uint<256>"]* %1, null
+  %2 = icmp eq [262144 x i32]* %0, null
+  %3 = icmp eq [262144 x %"struct.ap_uint<32>"]* %1, null
   %4 = or i1 %2, %3
   br i1 %4, label %ret, label %copy
 
@@ -45,12 +45,12 @@ copy:                                             ; preds = %entry
 
 for.loop:                                         ; preds = %for.loop, %copy
   %for.loop.idx7 = phi i64 [ 0, %copy ], [ %for.loop.idx.next, %for.loop ]
-  %src.addr.0.0.05 = getelementptr [2097152 x %"struct.ap_uint<256>"], [2097152 x %"struct.ap_uint<256>"]* %1, i64 0, i64 %for.loop.idx7, i32 0, i32 0, i32 0
-  %5 = getelementptr [2097152 x i256], [2097152 x i256]* %0, i64 0, i64 %for.loop.idx7
-  %6 = load i256, i256* %src.addr.0.0.05, align 32
-  store i256 %6, i256* %5, align 32
+  %src.addr.0.0.05 = getelementptr [262144 x %"struct.ap_uint<32>"], [262144 x %"struct.ap_uint<32>"]* %1, i64 0, i64 %for.loop.idx7, i32 0, i32 0, i32 0
+  %5 = getelementptr [262144 x i32], [262144 x i32]* %0, i64 0, i64 %for.loop.idx7
+  %6 = load i32, i32* %src.addr.0.0.05, align 4
+  store i32 %6, i32* %5, align 4
   %for.loop.idx.next = add nuw nsw i64 %for.loop.idx7, 1
-  %exitcond = icmp ne i64 %for.loop.idx.next, 2097152
+  %exitcond = icmp ne i64 %for.loop.idx.next, 262144
   br i1 %exitcond, label %for.loop, label %ret
 
 ret:                                              ; preds = %for.loop, %entry
@@ -75,9 +75,9 @@ ret:                                              ; preds = %copy, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @copy_out([2097152 x %"struct.ap_uint<256>"]* noalias, [2097152 x i256]* noalias readonly, i64* noalias, i64* noalias readonly align 512) unnamed_addr #3 {
+define internal fastcc void @copy_out([262144 x %"struct.ap_uint<32>"]* noalias, [262144 x i32]* noalias readonly, i64* noalias, i64* noalias readonly align 512) unnamed_addr #3 {
 entry:
-  call fastcc void @"onebyonecpy_hls.p0a2097152struct.ap_uint<256>.6"([2097152 x %"struct.ap_uint<256>"]* %0, [2097152 x i256]* %1)
+  call fastcc void @"onebyonecpy_hls.p0a262144struct.ap_uint<32>.6"([262144 x %"struct.ap_uint<32>"]* %0, [262144 x i32]* %1)
   call fastcc void @onebyonecpy_hls.p0i64(i64* %2, i64* align 512 %3)
   ret void
 }
@@ -85,10 +85,10 @@ entry:
 declare void @free(i8*) local_unnamed_addr
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @"onebyonecpy_hls.p0a2097152struct.ap_uint<256>.6"([2097152 x %"struct.ap_uint<256>"]* noalias, [2097152 x i256]* noalias readonly) unnamed_addr #2 {
+define internal fastcc void @"onebyonecpy_hls.p0a262144struct.ap_uint<32>.6"([262144 x %"struct.ap_uint<32>"]* noalias, [262144 x i32]* noalias readonly) unnamed_addr #2 {
 entry:
-  %2 = icmp eq [2097152 x %"struct.ap_uint<256>"]* %0, null
-  %3 = icmp eq [2097152 x i256]* %1, null
+  %2 = icmp eq [262144 x %"struct.ap_uint<32>"]* %0, null
+  %3 = icmp eq [262144 x i32]* %1, null
   %4 = or i1 %2, %3
   br i1 %4, label %ret, label %copy
 
@@ -97,41 +97,41 @@ copy:                                             ; preds = %entry
 
 for.loop:                                         ; preds = %for.loop, %copy
   %for.loop.idx7 = phi i64 [ 0, %copy ], [ %for.loop.idx.next, %for.loop ]
-  %5 = getelementptr [2097152 x i256], [2097152 x i256]* %1, i64 0, i64 %for.loop.idx7
-  %dst.addr.0.0.06 = getelementptr [2097152 x %"struct.ap_uint<256>"], [2097152 x %"struct.ap_uint<256>"]* %0, i64 0, i64 %for.loop.idx7, i32 0, i32 0, i32 0
-  %6 = load i256, i256* %5, align 32
-  store i256 %6, i256* %dst.addr.0.0.06, align 32
+  %5 = getelementptr [262144 x i32], [262144 x i32]* %1, i64 0, i64 %for.loop.idx7
+  %dst.addr.0.0.06 = getelementptr [262144 x %"struct.ap_uint<32>"], [262144 x %"struct.ap_uint<32>"]* %0, i64 0, i64 %for.loop.idx7, i32 0, i32 0, i32 0
+  %6 = load i32, i32* %5, align 4
+  store i32 %6, i32* %dst.addr.0.0.06, align 4
   %for.loop.idx.next = add nuw nsw i64 %for.loop.idx7, 1
-  %exitcond = icmp ne i64 %for.loop.idx.next, 2097152
+  %exitcond = icmp ne i64 %for.loop.idx.next, 262144
   br i1 %exitcond, label %for.loop, label %ret
 
 ret:                                              ; preds = %for.loop, %entry
   ret void
 }
 
-declare void @apatb_ddrBenchmark_hw(i256*, i32, i1, i64*)
+declare void @apatb_ddrBenchmark_hw(i32*, i32, i1, i64*)
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @copy_back([2097152 x %"struct.ap_uint<256>"]* noalias, [2097152 x i256]* noalias readonly, i64* noalias, i64* noalias readonly align 512) unnamed_addr #3 {
+define internal fastcc void @copy_back([262144 x %"struct.ap_uint<32>"]* noalias, [262144 x i32]* noalias readonly, i64* noalias, i64* noalias readonly align 512) unnamed_addr #3 {
 entry:
-  call fastcc void @"onebyonecpy_hls.p0a2097152struct.ap_uint<256>.6"([2097152 x %"struct.ap_uint<256>"]* %0, [2097152 x i256]* %1)
+  call fastcc void @"onebyonecpy_hls.p0a262144struct.ap_uint<32>.6"([262144 x %"struct.ap_uint<32>"]* %0, [262144 x i32]* %1)
   call fastcc void @onebyonecpy_hls.p0i64(i64* %2, i64* align 512 %3)
   ret void
 }
 
-define void @ddrBenchmark_hw_stub_wrapper(i256*, i32, i1, i64*) #4 {
+define void @ddrBenchmark_hw_stub_wrapper(i32*, i32, i1, i64*) #4 {
 entry:
-  %malloccall = tail call i8* @malloc(i64 67108864)
-  %4 = bitcast i8* %malloccall to [2097152 x %"struct.ap_uint<256>"]*
-  %5 = bitcast i256* %0 to [2097152 x i256]*
-  call void @copy_out([2097152 x %"struct.ap_uint<256>"]* %4, [2097152 x i256]* %5, i64* null, i64* %3)
-  %6 = bitcast [2097152 x %"struct.ap_uint<256>"]* %4 to %"struct.ap_uint<256>"*
-  call void @ddrBenchmark_hw_stub(%"struct.ap_uint<256>"* %6, i32 %1, i1 %2, i64* %3)
-  call void @copy_in([2097152 x %"struct.ap_uint<256>"]* %4, [2097152 x i256]* %5, i64* null, i64* %3)
+  %malloccall = tail call i8* @malloc(i64 1048576)
+  %4 = bitcast i8* %malloccall to [262144 x %"struct.ap_uint<32>"]*
+  %5 = bitcast i32* %0 to [262144 x i32]*
+  call void @copy_out([262144 x %"struct.ap_uint<32>"]* %4, [262144 x i32]* %5, i64* null, i64* %3)
+  %6 = bitcast [262144 x %"struct.ap_uint<32>"]* %4 to %"struct.ap_uint<32>"*
+  call void @ddrBenchmark_hw_stub(%"struct.ap_uint<32>"* %6, i32 %1, i1 %2, i64* %3)
+  call void @copy_in([262144 x %"struct.ap_uint<32>"]* %4, [262144 x i32]* %5, i64* null, i64* %3)
   ret void
 }
 
-declare void @ddrBenchmark_hw_stub(%"struct.ap_uint<256>"*, i32, i1, i64*)
+declare void @ddrBenchmark_hw_stub(%"struct.ap_uint<32>"*, i32, i1, i64*)
 
 attributes #0 = { noinline "fpga.wrapper.func"="wrapper" }
 attributes #1 = { argmemonly noinline norecurse "fpga.wrapper.func"="copyin" }

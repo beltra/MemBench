@@ -202,10 +202,10 @@ entry:3 %mem_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %mem
 
 <Node id="34" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-entry:27 %call_ln66 = call void @entry_proc, i64 %res_read, i64 %res_c
+entry:27 %call_ln56 = call void @entry_proc, i64 %res_read, i64 %res_c
 
 ]]></Node>
-<StgValue><ssdm name="call_ln66"/></StgValue>
+<StgValue><ssdm name="call_ln56"/></StgValue>
 </operation>
 </state>
 
@@ -218,12 +218,12 @@ entry:27 %call_ln66 = call void @entry_proc, i64 %res_read, i64 %res_c
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="35" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="64" op_3_bw="64" op_4_bw="32" op_5_bw="1">
+<Node id="35" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="64" op_4_bw="32" op_5_bw="1">
 <![CDATA[
-entry:28 %call_ln70 = call void @runBench, i256 %gmem, i64 %mem_read, i64 %counterCmd, i32 %dataNum_read, i1 %rw_read
+entry:28 %call_ln60 = call void @runBench, i32 %gmem, i64 %mem_read, i64 %counterCmd, i32 %dataNum_read, i1 %rw_read
 
 ]]></Node>
-<StgValue><ssdm name="call_ln70"/></StgValue>
+<StgValue><ssdm name="call_ln60"/></StgValue>
 </operation>
 </state>
 
@@ -236,12 +236,12 @@ entry:28 %call_ln70 = call void @runBench, i256 %gmem, i64 %mem_read, i64 %count
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="35" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="64" op_3_bw="64" op_4_bw="32" op_5_bw="1">
+<Node id="35" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="64" op_4_bw="32" op_5_bw="1">
 <![CDATA[
-entry:28 %call_ln70 = call void @runBench, i256 %gmem, i64 %mem_read, i64 %counterCmd, i32 %dataNum_read, i1 %rw_read
+entry:28 %call_ln60 = call void @runBench, i32 %gmem, i64 %mem_read, i64 %counterCmd, i32 %dataNum_read, i1 %rw_read
 
 ]]></Node>
-<StgValue><ssdm name="call_ln70"/></StgValue>
+<StgValue><ssdm name="call_ln60"/></StgValue>
 </operation>
 </state>
 
@@ -256,10 +256,10 @@ entry:28 %call_ln70 = call void @runBench, i256 %gmem, i64 %mem_read, i64 %count
 
 <Node id="36" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64" op_4_bw="0" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-entry:29 %call_ln71 = call void @countCycles, i64 %counterCmd, i64 %results, i64 %res_c
+entry:29 %call_ln61 = call void @countCycles, i64 %counterCmd, i64 %results, i64 %res_c
 
 ]]></Node>
-<StgValue><ssdm name="call_ln71"/></StgValue>
+<StgValue><ssdm name="call_ln61"/></StgValue>
 </operation>
 </state>
 
@@ -289,10 +289,10 @@ entry:5 %empty = specchannel i32 @_ssdm_op_SpecChannel, void @res_c_str, i32 1, 
 
 <Node id="13" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:6 %specinterface_ln66 = specinterface void @_ssdm_op_SpecInterface, i64 %res_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0
+entry:6 %specinterface_ln56 = specinterface void @_ssdm_op_SpecInterface, i64 %res_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0
 
 ]]></Node>
-<StgValue><ssdm name="specinterface_ln66"/></StgValue>
+<StgValue><ssdm name="specinterface_ln56"/></StgValue>
 </operation>
 
 <operation id="23" st_id="6" stage="1" lat="1">
@@ -304,10 +304,10 @@ entry:6 %specinterface_ln66 = specinterface void @_ssdm_op_SpecInterface, i64 %r
 
 <Node id="14" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0">
 <![CDATA[
-entry:7 %specdataflowpipeline_ln66 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_0
+entry:7 %specdataflowpipeline_ln56 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_0
 
 ]]></Node>
-<StgValue><ssdm name="specdataflowpipeline_ln66"/></StgValue>
+<StgValue><ssdm name="specdataflowpipeline_ln56"/></StgValue>
 </operation>
 
 <operation id="24" st_id="6" stage="1" lat="1">
@@ -319,10 +319,10 @@ entry:7 %specdataflowpipeline_ln66 = specdataflowpipeline void @_ssdm_op_SpecDat
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-entry:8 %spectopmodule_ln54 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_14
+entry:8 %spectopmodule_ln44 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_14
 
 ]]></Node>
-<StgValue><ssdm name="spectopmodule_ln54"/></StgValue>
+<StgValue><ssdm name="spectopmodule_ln44"/></StgValue>
 </operation>
 
 <operation id="25" st_id="6" stage="1" lat="1">
@@ -332,9 +332,9 @@ entry:8 %spectopmodule_ln54 = spectopmodule void @_ssdm_op_SpecTopModule, void @
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="16" bw="0" op_0_bw="0" op_1_bw="256" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
+<Node id="16" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:9 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %gmem, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 2097152, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0
+entry:9 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 262144, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -347,9 +347,9 @@ entry:9 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i256 %g
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="17" bw="0" op_0_bw="0" op_1_bw="256">
+<Node id="17" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-entry:10 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i256 %gmem
+entry:10 %specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
@@ -589,10 +589,10 @@ entry:26 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %c
 
 <Node id="36" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64" op_4_bw="0" op_5_bw="0" op_6_bw="0">
 <![CDATA[
-entry:29 %call_ln71 = call void @countCycles, i64 %counterCmd, i64 %results, i64 %res_c
+entry:29 %call_ln61 = call void @countCycles, i64 %counterCmd, i64 %results, i64 %res_c
 
 ]]></Node>
-<StgValue><ssdm name="call_ln71"/></StgValue>
+<StgValue><ssdm name="call_ln61"/></StgValue>
 </operation>
 
 <operation id="43" st_id="6" stage="1" lat="1">
@@ -604,10 +604,10 @@ entry:29 %call_ln71 = call void @countCycles, i64 %counterCmd, i64 %results, i64
 
 <Node id="37" bw="0">
 <![CDATA[
-entry:30 %ret_ln72 = ret
+entry:30 %ret_ln62 = ret
 
 ]]></Node>
-<StgValue><ssdm name="ret_ln72"/></StgValue>
+<StgValue><ssdm name="ret_ln62"/></StgValue>
 </operation>
 </state>
 </state_list>
@@ -672,43 +672,43 @@ entry:30 %ret_ln72 = ret
 </dataflow>
 <dataflow id="77" from="mem" to="mem_read" fromId="52" toId="16">
 </dataflow>
-<dataflow id="79" from="entry_proc" to="call_ln66" fromId="78" toId="17">
+<dataflow id="79" from="entry_proc" to="call_ln56" fromId="78" toId="17">
 </dataflow>
-<dataflow id="80" from="res_read" to="call_ln66" fromId="13" toId="17">
+<dataflow id="80" from="res_read" to="call_ln56" fromId="13" toId="17">
 </dataflow>
-<dataflow id="81" from="res_c" to="call_ln66" fromId="11" toId="17">
+<dataflow id="81" from="res_c" to="call_ln56" fromId="11" toId="17">
 </dataflow>
-<dataflow id="83" from="runBench" to="call_ln70" fromId="82" toId="18">
+<dataflow id="83" from="runBench" to="call_ln60" fromId="82" toId="18">
 </dataflow>
-<dataflow id="84" from="gmem" to="call_ln70" fromId="50" toId="18">
+<dataflow id="84" from="gmem" to="call_ln60" fromId="50" toId="18">
 </dataflow>
-<dataflow id="85" from="mem_read" to="call_ln70" fromId="16" toId="18">
+<dataflow id="85" from="mem_read" to="call_ln60" fromId="16" toId="18">
 </dataflow>
-<dataflow id="86" from="counterCmd" to="call_ln70" fromId="12" toId="18">
+<dataflow id="86" from="counterCmd" to="call_ln60" fromId="12" toId="18">
 </dataflow>
-<dataflow id="87" from="dataNum_read" to="call_ln70" fromId="15" toId="18">
+<dataflow id="87" from="dataNum_read" to="call_ln60" fromId="15" toId="18">
 </dataflow>
-<dataflow id="88" from="rw_read" to="call_ln70" fromId="14" toId="18">
+<dataflow id="88" from="rw_read" to="call_ln60" fromId="14" toId="18">
 </dataflow>
-<dataflow id="89" from="runBench" to="call_ln70" fromId="82" toId="19">
+<dataflow id="89" from="runBench" to="call_ln60" fromId="82" toId="19">
 </dataflow>
-<dataflow id="90" from="gmem" to="call_ln70" fromId="50" toId="19">
+<dataflow id="90" from="gmem" to="call_ln60" fromId="50" toId="19">
 </dataflow>
-<dataflow id="91" from="mem_read" to="call_ln70" fromId="16" toId="19">
+<dataflow id="91" from="mem_read" to="call_ln60" fromId="16" toId="19">
 </dataflow>
-<dataflow id="92" from="counterCmd" to="call_ln70" fromId="12" toId="19">
+<dataflow id="92" from="counterCmd" to="call_ln60" fromId="12" toId="19">
 </dataflow>
-<dataflow id="93" from="dataNum_read" to="call_ln70" fromId="15" toId="19">
+<dataflow id="93" from="dataNum_read" to="call_ln60" fromId="15" toId="19">
 </dataflow>
-<dataflow id="94" from="rw_read" to="call_ln70" fromId="14" toId="19">
+<dataflow id="94" from="rw_read" to="call_ln60" fromId="14" toId="19">
 </dataflow>
-<dataflow id="96" from="countCycles" to="call_ln71" fromId="95" toId="20">
+<dataflow id="96" from="countCycles" to="call_ln61" fromId="95" toId="20">
 </dataflow>
-<dataflow id="97" from="counterCmd" to="call_ln71" fromId="12" toId="20">
+<dataflow id="97" from="counterCmd" to="call_ln61" fromId="12" toId="20">
 </dataflow>
-<dataflow id="98" from="results" to="call_ln71" fromId="51" toId="20">
+<dataflow id="98" from="results" to="call_ln61" fromId="51" toId="20">
 </dataflow>
-<dataflow id="99" from="res_c" to="call_ln71" fromId="11" toId="20">
+<dataflow id="99" from="res_c" to="call_ln61" fromId="11" toId="20">
 </dataflow>
 <dataflow id="101" from="_ssdm_op_SpecChannel" to="empty" fromId="100" toId="21">
 </dataflow>
@@ -728,55 +728,55 @@ entry:30 %ret_ln72 = ret
 </dataflow>
 <dataflow id="114" from="res_c" to="empty" fromId="11" toId="21">
 </dataflow>
-<dataflow id="116" from="_ssdm_op_SpecInterface" to="specinterface_ln66" fromId="115" toId="22">
+<dataflow id="116" from="_ssdm_op_SpecInterface" to="specinterface_ln56" fromId="115" toId="22">
 </dataflow>
-<dataflow id="117" from="res_c" to="specinterface_ln66" fromId="11" toId="22">
+<dataflow id="117" from="res_c" to="specinterface_ln56" fromId="11" toId="22">
 </dataflow>
-<dataflow id="119" from="ap_fifo_str" to="specinterface_ln66" fromId="118" toId="22">
+<dataflow id="119" from="ap_fifo_str" to="specinterface_ln56" fromId="118" toId="22">
 </dataflow>
-<dataflow id="120" from="StgValue_111" to="specinterface_ln66" fromId="111" toId="22">
+<dataflow id="120" from="StgValue_111" to="specinterface_ln56" fromId="111" toId="22">
 </dataflow>
-<dataflow id="121" from="StgValue_111" to="specinterface_ln66" fromId="111" toId="22">
+<dataflow id="121" from="StgValue_111" to="specinterface_ln56" fromId="111" toId="22">
 </dataflow>
-<dataflow id="122" from="p_str" to="specinterface_ln66" fromId="106" toId="22">
+<dataflow id="122" from="p_str" to="specinterface_ln56" fromId="106" toId="22">
 </dataflow>
-<dataflow id="123" from="StgValue_111" to="specinterface_ln66" fromId="111" toId="22">
+<dataflow id="123" from="StgValue_111" to="specinterface_ln56" fromId="111" toId="22">
 </dataflow>
-<dataflow id="124" from="StgValue_111" to="specinterface_ln66" fromId="111" toId="22">
+<dataflow id="124" from="StgValue_111" to="specinterface_ln56" fromId="111" toId="22">
 </dataflow>
-<dataflow id="125" from="p_str" to="specinterface_ln66" fromId="106" toId="22">
+<dataflow id="125" from="p_str" to="specinterface_ln56" fromId="106" toId="22">
 </dataflow>
-<dataflow id="126" from="p_str" to="specinterface_ln66" fromId="106" toId="22">
+<dataflow id="126" from="p_str" to="specinterface_ln56" fromId="106" toId="22">
 </dataflow>
-<dataflow id="127" from="p_str" to="specinterface_ln66" fromId="106" toId="22">
+<dataflow id="127" from="p_str" to="specinterface_ln56" fromId="106" toId="22">
 </dataflow>
-<dataflow id="129" from="StgValue_128" to="specinterface_ln66" fromId="128" toId="22">
+<dataflow id="129" from="StgValue_128" to="specinterface_ln56" fromId="128" toId="22">
 </dataflow>
-<dataflow id="130" from="StgValue_128" to="specinterface_ln66" fromId="128" toId="22">
+<dataflow id="130" from="StgValue_128" to="specinterface_ln56" fromId="128" toId="22">
 </dataflow>
-<dataflow id="132" from="StgValue_131" to="specinterface_ln66" fromId="131" toId="22">
+<dataflow id="132" from="StgValue_131" to="specinterface_ln56" fromId="131" toId="22">
 </dataflow>
-<dataflow id="133" from="StgValue_131" to="specinterface_ln66" fromId="131" toId="22">
+<dataflow id="133" from="StgValue_131" to="specinterface_ln56" fromId="131" toId="22">
 </dataflow>
-<dataflow id="134" from="p_str" to="specinterface_ln66" fromId="106" toId="22">
+<dataflow id="134" from="p_str" to="specinterface_ln56" fromId="106" toId="22">
 </dataflow>
-<dataflow id="135" from="p_str" to="specinterface_ln66" fromId="106" toId="22">
+<dataflow id="135" from="p_str" to="specinterface_ln56" fromId="106" toId="22">
 </dataflow>
-<dataflow id="137" from="StgValue_136" to="specinterface_ln66" fromId="136" toId="22">
+<dataflow id="137" from="StgValue_136" to="specinterface_ln56" fromId="136" toId="22">
 </dataflow>
-<dataflow id="138" from="StgValue_111" to="specinterface_ln66" fromId="111" toId="22">
+<dataflow id="138" from="StgValue_111" to="specinterface_ln56" fromId="111" toId="22">
 </dataflow>
-<dataflow id="140" from="_ssdm_op_SpecDataflowPipeline" to="specdataflowpipeline_ln66" fromId="139" toId="23">
+<dataflow id="140" from="_ssdm_op_SpecDataflowPipeline" to="specdataflowpipeline_ln56" fromId="139" toId="23">
 </dataflow>
-<dataflow id="141" from="StgValue_136" to="specdataflowpipeline_ln66" fromId="136" toId="23">
+<dataflow id="141" from="StgValue_136" to="specdataflowpipeline_ln56" fromId="136" toId="23">
 </dataflow>
-<dataflow id="142" from="StgValue_111" to="specdataflowpipeline_ln66" fromId="111" toId="23">
+<dataflow id="142" from="StgValue_111" to="specdataflowpipeline_ln56" fromId="111" toId="23">
 </dataflow>
-<dataflow id="144" from="empty_0" to="specdataflowpipeline_ln66" fromId="143" toId="23">
+<dataflow id="144" from="empty_0" to="specdataflowpipeline_ln56" fromId="143" toId="23">
 </dataflow>
-<dataflow id="146" from="_ssdm_op_SpecTopModule" to="spectopmodule_ln54" fromId="145" toId="24">
+<dataflow id="146" from="_ssdm_op_SpecTopModule" to="spectopmodule_ln44" fromId="145" toId="24">
 </dataflow>
-<dataflow id="148" from="empty_14" to="spectopmodule_ln54" fromId="147" toId="24">
+<dataflow id="148" from="empty_14" to="spectopmodule_ln44" fromId="147" toId="24">
 </dataflow>
 <dataflow id="149" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="115" toId="25">
 </dataflow>
@@ -1268,13 +1268,13 @@ entry:30 %ret_ln72 = ret
 </dataflow>
 <dataflow id="410" from="StgValue_111" to="specinterface_ln0" fromId="111" toId="41">
 </dataflow>
-<dataflow id="411" from="countCycles" to="call_ln71" fromId="95" toId="42">
+<dataflow id="411" from="countCycles" to="call_ln61" fromId="95" toId="42">
 </dataflow>
-<dataflow id="412" from="counterCmd" to="call_ln71" fromId="12" toId="42">
+<dataflow id="412" from="counterCmd" to="call_ln61" fromId="12" toId="42">
 </dataflow>
-<dataflow id="413" from="results" to="call_ln71" fromId="51" toId="42">
+<dataflow id="413" from="results" to="call_ln61" fromId="51" toId="42">
 </dataflow>
-<dataflow id="414" from="res_c" to="call_ln71" fromId="11" toId="42">
+<dataflow id="414" from="res_c" to="call_ln61" fromId="11" toId="42">
 </dataflow>
 </dataflows>
 

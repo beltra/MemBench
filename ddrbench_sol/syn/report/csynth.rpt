@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'ddrBenchmark'
 ================================================================
 + General Information: 
-    * Date:           Sun Mar  5 13:46:54 2023
+    * Date:           Mon Mar 13 14:23:20 2023
     * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
     * Project:        MemBench
     * Solution:       ddrbench_sol (Vivado IP Flow Target)
@@ -19,11 +19,11 @@
     |             Modules             | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
     |             & Loops             | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
     +---------------------------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
-    |+ ddrBenchmark*                  |     -|  0.00|        -|       -|         -|        -|     -|  dataflow|     -|   -|  3121 (2%)|  4998 (9%)|    -|
+    |+ ddrBenchmark*                  |     -|  0.00|        -|       -|         -|        -|     -|  dataflow|     -|   -|  2527 (2%)|  4451 (8%)|    -|
     | + entry_proc                    |     -|  3.67|        0|   0.000|         -|        0|     -|        no|     -|   -|    3 (~0%)|   29 (~0%)|    -|
-    | + runBench                      |     -|  0.00|        -|       -|         -|        -|     -|        no|     -|   -|  635 (~0%)|   920 (1%)|    -|
-    |  + runBench_Pipeline_dataRead   |     -|  0.00|        -|       -|         -|        -|     -|        no|     -|   -|  390 (~0%)|  246 (~0%)|    -|
-    |   o dataRead                    |     -|  7.30|        -|       -|         4|        1|     -|       yes|     -|   -|          -|          -|    -|
+    | + runBench                      |     -|  0.00|        -|       -|         -|        -|     -|        no|     -|   -|  410 (~0%)|   845 (1%)|    -|
+    |  + runBench_Pipeline_dataRead   |     -|  0.00|        -|       -|         -|        -|     -|        no|     -|   -|  162 (~0%)|  171 (~0%)|    -|
+    |   o dataRead                    |     -|  7.30|        -|       -|         3|        1|     -|       yes|     -|   -|          -|          -|    -|
     |  + runBench_Pipeline_dataWrite  |     -|  0.00|        -|       -|         -|        -|     -|        no|     -|   -|   65 (~0%)|  104 (~0%)|    -|
     |   o dataWrite                   |     -|  7.30|        -|       -|         2|        1|     -|       yes|     -|   -|          -|          -|    -|
     | + countCycles                   |     -|  0.00|        -|       -|         -|        -|     -|        no|     -|   -|  203 (~0%)|  225 (~0%)|    -|
@@ -40,7 +40,7 @@
 | Interface     | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
 |               | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
 +---------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
-| m_axi_gmem    | 256 -> 256 | 64            | 0       | slave  | 1        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_gmem    | 32 -> 32   | 64            | 0       | slave  | 1        | 0         | 16           | 16           | 16          | 16          |
 | m_axi_results | 64 -> 64   | 64            | 0       | slave  | 1        | 0         | 16           | 16           | 16          | 16          |
 +---------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
 
@@ -85,7 +85,7 @@
 +----------+-----------+-------------------------+
 | Argument | Direction | Datatype                |
 +----------+-----------+-------------------------+
-| mem      | inout     | ap_uint<256>*           |
+| mem      | inout     | ap_uint<32>*            |
 | dataNum  | in        | int                     |
 | rw       | in        | bool                    |
 | res      | out       | long long unsigned int* |
@@ -115,17 +115,17 @@
 +--------------+-----------+-----------+----------+-------+-------------------------------------+
 | HW Interface | Loop      | Direction | Length   | Width | Location                            |
 +--------------+-----------+-----------+----------+-------+-------------------------------------+
-| m_axi_gmem   | dataWrite | write     | variable | 256   | MemBench/src/ddrbenchmark.cpp:17:13 |
-| m_axi_gmem   | dataRead  | read      | variable | 256   | MemBench/src/ddrbenchmark.cpp:24:12 |
+| m_axi_gmem   | dataWrite | write     | variable | 32    | MemBench/src/ddrbenchmark.cpp:17:13 |
+| m_axi_gmem   | dataRead  | read      | variable | 32    | MemBench/src/ddrbenchmark.cpp:24:12 |
 +--------------+-----------+-----------+----------+-------+-------------------------------------+
 
 * Inferred Bursts and Widening Missed
-+--------------+----------+-----------+--------------------------------------------------------------------------------------------------------+------------+-------------------------------------+
-| HW Interface | Variable | Loop      | Problem                                                                                                | Resolution | Location                            |
-+--------------+----------+-----------+--------------------------------------------------------------------------------------------------------+------------+-------------------------------------+
-| m_axi_gmem   | mem      | dataWrite | Could not widen since type i256 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | MemBench/src/ddrbenchmark.cpp:17:13 |
-| m_axi_gmem   | mem      | dataRead  | Could not widen since type i256 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | MemBench/src/ddrbenchmark.cpp:24:12 |
-+--------------+----------+-----------+--------------------------------------------------------------------------------------------------------+------------+-------------------------------------+
++--------------+----------+-----------+-------------------------------------------------------------------------------------------------------+------------+-------------------------------------+
+| HW Interface | Variable | Loop      | Problem                                                                                               | Resolution | Location                            |
++--------------+----------+-----------+-------------------------------------------------------------------------------------------------------+------------+-------------------------------------+
+| m_axi_gmem   | mem      | dataWrite | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | MemBench/src/ddrbenchmark.cpp:17:13 |
+| m_axi_gmem   | mem      | dataRead  | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | MemBench/src/ddrbenchmark.cpp:24:12 |
++--------------+----------+-----------+-------------------------------------------------------------------------------------------------------+------------+-------------------------------------+
 
     * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
 
@@ -139,9 +139,9 @@
 |  + runBench                     | 0   |        |          |     |        |         |
 |   + runBench_Pipeline_dataRead  | 0   |        |          |     |        |         |
 |     add_ln24_fu_109_p2          | -   |        | add_ln24 | add | fabric | 0       |
-|     tmp_V_1_fu_140_p2           | -   |        | tmp_V_1  | add | fabric | 0       |
+|     tmp_V_1_fu_141_p2           | -   |        | tmp_V_1  | add | fabric | 0       |
 |   + runBench_Pipeline_dataWrite | 0   |        |          |     |        |         |
-|     add_ln17_fu_100_p2          | -   |        | add_ln17 | add | fabric | 0       |
+|     add_ln17_fu_102_p2          | -   |        | add_ln17 | add | fabric | 0       |
 |  + countCycles                  | 0   |        |          |     |        |         |
 |   + countCycles_Pipeline_count  | 0   |        |          |     |        |         |
 |     cnt_1_fu_69_p2              | -   |        | cnt_1    | add | fabric | 0       |
@@ -168,14 +168,14 @@
 | Type      | Options                                                      | Location                                                  |
 +-----------+--------------------------------------------------------------+-----------------------------------------------------------+
 | pipeline  | II=1                                                         | MemBench/src/ddrbenchmark.cpp:25 in readdata              |
-| interface | m_axi port=mem depth=max_data_depth bundle=gmem offset=slave | MemBench/src/ddrbenchmark.cpp:56 in ddrbenchmark, mem     |
-| interface | m_axi port=res depth=1 bundle=results offset=slave           | MemBench/src/ddrbenchmark.cpp:57 in ddrbenchmark, res     |
-| interface | s_axilite register port=mem bundle=control                   | MemBench/src/ddrbenchmark.cpp:59 in ddrbenchmark, mem     |
-| interface | s_axilite register port=res bundle=control                   | MemBench/src/ddrbenchmark.cpp:60 in ddrbenchmark, res     |
-| interface | s_axilite register port=dataNum bundle=control               | MemBench/src/ddrbenchmark.cpp:62 in ddrbenchmark, dataNum |
-| interface | s_axilite register port=rw bundle=control                    | MemBench/src/ddrbenchmark.cpp:63 in ddrbenchmark, rw      |
-| interface | s_axilite register port=return bundle=control                | MemBench/src/ddrbenchmark.cpp:64 in ddrbenchmark, return  |
-| dataflow  |                                                              | MemBench/src/ddrbenchmark.cpp:66 in ddrbenchmark          |
+| interface | m_axi port=mem depth=max_data_depth bundle=gmem offset=slave | MemBench/src/ddrbenchmark.cpp:46 in ddrbenchmark, mem     |
+| interface | m_axi port=res depth=1 bundle=results offset=slave           | MemBench/src/ddrbenchmark.cpp:47 in ddrbenchmark, res     |
+| interface | s_axilite register port=mem bundle=control                   | MemBench/src/ddrbenchmark.cpp:49 in ddrbenchmark, mem     |
+| interface | s_axilite register port=res bundle=control                   | MemBench/src/ddrbenchmark.cpp:50 in ddrbenchmark, res     |
+| interface | s_axilite register port=dataNum bundle=control               | MemBench/src/ddrbenchmark.cpp:52 in ddrbenchmark, dataNum |
+| interface | s_axilite register port=rw bundle=control                    | MemBench/src/ddrbenchmark.cpp:53 in ddrbenchmark, rw      |
+| interface | s_axilite register port=return bundle=control                | MemBench/src/ddrbenchmark.cpp:54 in ddrbenchmark, return  |
+| dataflow  |                                                              | MemBench/src/ddrbenchmark.cpp:56 in ddrbenchmark          |
 +-----------+--------------------------------------------------------------+-----------------------------------------------------------+
 
 

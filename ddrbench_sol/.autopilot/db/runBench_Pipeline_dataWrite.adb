@@ -34,10 +34,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>11</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>256</bitwidth>
+            <bitwidth>32</bitwidth>
           </Value>
           <direction>1</direction>
           <if_type>4</if_type>
@@ -73,7 +73,7 @@
               <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>59</bitwidth>
+            <bitwidth>62</bitwidth>
           </Value>
           <direction>0</direction>
           <if_type>0</if_type>
@@ -106,7 +106,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>543517794</coreId>
+              <coreId>1953391988</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>31</bitwidth>
@@ -138,7 +138,7 @@
                 <count>0</count>
                 <item_version>0</item_version>
               </inlineStackInfo>
-              <originalName>op</originalName>
+              <originalName>i</originalName>
               <rtlName/>
               <control/>
               <opType/>
@@ -146,7 +146,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>404763784</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>31</bitwidth>
@@ -188,7 +188,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>4294967295</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>31</bitwidth>
@@ -234,7 +234,7 @@
               <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>59</bitwidth>
+            <bitwidth>62</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -316,7 +316,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>253890560</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -359,7 +359,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>4294967295</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -424,7 +424,7 @@
             <count>2</count>
             <item_version>0</item_version>
             <item>41</item>
-            <item>113</item>
+            <item>114</item>
           </oprand_edges>
           <opcode>load</opcode>
           <m_Display>0</m_Display>
@@ -472,10 +472,10 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>872415232</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>256</bitwidth>
+            <bitwidth>32</bitwidth>
           </Value>
           <oprand_edges>
             <count>2</count>
@@ -522,7 +522,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>icmp_ln17_fu_94_p2</rtlName>
+              <rtlName>icmp_ln17_fu_96_p2</rtlName>
               <control>auto</control>
               <opType>icmp</opType>
               <implIndex>auto</implIndex>
@@ -579,7 +579,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>add_ln17_fu_100_p2</rtlName>
+              <rtlName>add_ln17_fu_102_p2</rtlName>
               <control>auto</control>
               <opType>add</opType>
               <implIndex>fabric</implIndex>
@@ -643,7 +643,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>322</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -669,12 +669,12 @@
             <Obj>
               <type>0</type>
               <id>21</id>
-              <name>zext_ln260</name>
-              <fileName>C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h</fileName>
+              <name>zext_ln18</name>
+              <fileName>MemBench/src/ddrbenchmark.cpp</fileName>
               <fileDirectory>..</fileDirectory>
-              <lineNumber>260</lineNumber>
-              <contextFuncName>ap_int_base</contextFuncName>
-              <contextNormFuncName>ap_int_base</contextNormFuncName>
+              <lineNumber>18</lineNumber>
+              <contextFuncName>writeData</contextFuncName>
+              <contextNormFuncName>writeData</contextNormFuncName>
               <inlineStackInfo>
                 <count>1</count>
                 <item_version>0</item_version>
@@ -685,10 +685,10 @@
                     <item_version>0</item_version>
                     <item>
                       <first>
-                        <first>C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h</first>
-                        <second>ap_int_base</second>
+                        <first>MemBench/src/ddrbenchmark.cpp</first>
+                        <second>writeData</second>
                       </first>
-                      <second>260</second>
+                      <second>18</second>
                     </item>
                   </second>
                 </item>
@@ -704,7 +704,7 @@
               <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>256</bitwidth>
+            <bitwidth>32</bitwidth>
           </Value>
           <oprand_edges>
             <count>1</count>
@@ -826,8 +826,8 @@
             <item_version>0</item_version>
             <item>59</item>
             <item>60</item>
-            <item>114</item>
             <item>115</item>
+            <item>116</item>
           </oprand_edges>
           <opcode>store</opcode>
           <m_Display>0</m_Display>
@@ -875,7 +875,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>3621216858</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>0</bitwidth>
@@ -962,7 +962,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>62</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -993,7 +993,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>7536748</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>31</bitwidth>
@@ -1024,7 +1024,7 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>0</coreId>
+              <coreId>1953391988</coreId>
               <rtlModuleName/>
             </Obj>
             <bitwidth>31</bitwidth>
@@ -1055,13 +1055,13 @@
               <coreName/>
               <isStorage>0</isStorage>
               <storageDepth>0</storageDepth>
-              <coreId>1702129263</coreId>
+              <coreId>0</coreId>
               <rtlModuleName/>
             </Obj>
-            <bitwidth>32</bitwidth>
+            <bitwidth>4</bitwidth>
           </Value>
           <const_type>0</const_type>
-          <content>4294967295</content>
+          <content>15</content>
         </item>
       </consts>
       <blocks class_id="17" tracking_level="0" version="0">
@@ -1176,7 +1176,7 @@
           <Obj>
             <type>3</type>
             <id>27</id>
-            <name>_Z9writeDataP7ap_uintILi256EEi.exit.loopexit.exitStub</name>
+            <name>_Z9writeDataP7ap_uintILi32EEi.exit.loopexit.exitStub</name>
             <fileName/>
             <fileDirectory/>
             <lineNumber>0</lineNumber>
@@ -1376,49 +1376,49 @@
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_52">
-          <id>109</id>
+          <id>110</id>
           <edge_type>2</edge_type>
           <source_obj>11</source_obj>
           <sink_obj>19</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_53">
-          <id>110</id>
+          <id>111</id>
           <edge_type>2</edge_type>
           <source_obj>19</source_obj>
           <sink_obj>27</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_54">
-          <id>111</id>
+          <id>112</id>
           <edge_type>2</edge_type>
           <source_obj>19</source_obj>
           <sink_obj>25</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_55">
-          <id>112</id>
+          <id>113</id>
           <edge_type>2</edge_type>
           <source_obj>25</source_obj>
           <sink_obj>19</sink_obj>
           <is_back_edge>1</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_56">
-          <id>113</id>
+          <id>114</id>
           <edge_type>4</edge_type>
           <source_obj>9</source_obj>
           <sink_obj>12</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_57">
-          <id>114</id>
+          <id>115</id>
           <edge_type>4</edge_type>
           <source_obj>9</source_obj>
           <sink_obj>23</sink_obj>
           <is_back_edge>0</is_back_edge>
         </item>
         <item class_id_reference="20" object_id="_58">
-          <id>115</id>
+          <id>116</id>
           <edge_type>4</edge_type>
           <source_obj>12</source_obj>
           <sink_obj>23</sink_obj>
@@ -1680,7 +1680,7 @@
         <count>4</count>
         <item_version>0</item_version>
         <item>
-          <first>add_ln17_fu_100_p2 ( + ) </first>
+          <first>add_ln17_fu_102_p2 ( + ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -1749,7 +1749,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln17_fu_94_p2 ( icmp ) </first>
+          <first>icmp_ln17_fu_96_p2 ( icmp ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -1876,7 +1876,7 @@
           </second>
         </item>
         <item>
-          <first>i_fu_52</first>
+          <first>i_fu_54</first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -1960,7 +1960,7 @@
           </second>
         </item>
         <item>
-          <first>i_1_reg_122</first>
+          <first>i_1_reg_124</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -1979,7 +1979,7 @@
           </second>
         </item>
         <item>
-          <first>i_fu_52</first>
+          <first>i_fu_54</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -2017,7 +2017,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="40" tracking_level="0" version="0">
-          <first>add_ln17_fu_100_p2 ( + ) </first>
+          <first>add_ln17_fu_102_p2 ( + ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -2025,7 +2025,7 @@
           </second>
         </item>
         <item>
-          <first>icmp_ln17_fu_94_p2 ( icmp ) </first>
+          <first>icmp_ln17_fu_96_p2 ( icmp ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -2219,7 +2219,7 @@
       <count>12</count>
       <item_version>0</item_version>
       <item class_id="51" tracking_level="0" version="0">
-        <first>52</first>
+        <first>54</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2227,7 +2227,7 @@
         </second>
       </item>
       <item>
-        <first>56</first>
+        <first>58</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2235,7 +2235,7 @@
         </second>
       </item>
       <item>
-        <first>62</first>
+        <first>64</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2243,7 +2243,7 @@
         </second>
       </item>
       <item>
-        <first>68</first>
+        <first>70</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2251,7 +2251,7 @@
         </second>
       </item>
       <item>
-        <first>76</first>
+        <first>78</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2259,7 +2259,7 @@
         </second>
       </item>
       <item>
-        <first>80</first>
+        <first>82</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2267,7 +2267,7 @@
         </second>
       </item>
       <item>
-        <first>85</first>
+        <first>87</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2275,7 +2275,7 @@
         </second>
       </item>
       <item>
-        <first>88</first>
+        <first>90</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2283,7 +2283,7 @@
         </second>
       </item>
       <item>
-        <first>94</first>
+        <first>96</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2291,7 +2291,7 @@
         </second>
       </item>
       <item>
-        <first>100</first>
+        <first>102</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2299,7 +2299,7 @@
         </second>
       </item>
       <item>
-        <first>106</first>
+        <first>108</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2307,7 +2307,7 @@
         </second>
       </item>
       <item>
-        <first>111</first>
+        <first>113</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2319,7 +2319,7 @@
       <count>6</count>
       <item_version>0</item_version>
       <item class_id="54" tracking_level="0" version="0">
-        <first>add_ln17_fu_100</first>
+        <first>add_ln17_fu_102</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2327,7 +2327,7 @@
         </second>
       </item>
       <item>
-        <first>gmem_addr_fu_88</first>
+        <first>gmem_addr_fu_90</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2335,7 +2335,7 @@
         </second>
       </item>
       <item>
-        <first>i_fu_52</first>
+        <first>i_fu_54</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2343,7 +2343,7 @@
         </second>
       </item>
       <item>
-        <first>icmp_ln17_fu_94</first>
+        <first>icmp_ln17_fu_96</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2351,7 +2351,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln17_cast_fu_76</first>
+        <first>sext_ln17_cast_fu_78</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2359,7 +2359,7 @@
         </second>
       </item>
       <item>
-        <first>zext_ln260_fu_111</first>
+        <first>zext_ln18_fu_113</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2375,7 +2375,7 @@
       <count>6</count>
       <item_version>0</item_version>
       <item>
-        <first>i_1_load_fu_85</first>
+        <first>i_1_load_fu_87</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2383,7 +2383,7 @@
         </second>
       </item>
       <item>
-        <first>sext_ln17_read_read_fu_62</first>
+        <first>sext_ln17_read_read_fu_64</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2391,7 +2391,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln0_store_fu_80</first>
+        <first>store_ln0_store_fu_82</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2399,7 +2399,7 @@
         </second>
       </item>
       <item>
-        <first>store_ln17_store_fu_106</first>
+        <first>store_ln17_store_fu_108</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2407,7 +2407,7 @@
         </second>
       </item>
       <item>
-        <first>trunc_ln17_1_read_read_fu_56</first>
+        <first>trunc_ln17_1_read_read_fu_58</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2415,7 +2415,7 @@
         </second>
       </item>
       <item>
-        <first>write_ln18_write_fu_68</first>
+        <first>write_ln18_write_fu_70</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2435,7 +2435,7 @@
       <count>3</count>
       <item_version>0</item_version>
       <item>
-        <first>115</first>
+        <first>117</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2443,7 +2443,7 @@
         </second>
       </item>
       <item>
-        <first>122</first>
+        <first>124</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2451,7 +2451,7 @@
         </second>
       </item>
       <item>
-        <first>127</first>
+        <first>129</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2463,7 +2463,7 @@
       <count>3</count>
       <item_version>0</item_version>
       <item>
-        <first>gmem_addr_reg_127</first>
+        <first>gmem_addr_reg_129</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2471,7 +2471,7 @@
         </second>
       </item>
       <item>
-        <first>i_1_reg_122</first>
+        <first>i_1_reg_124</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -2479,7 +2479,7 @@
         </second>
       </item>
       <item>
-        <first>i_reg_115</first>
+        <first>i_reg_117</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

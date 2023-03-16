@@ -30125,3 +30125,281 @@ INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 INFO: [HLS 200-802] Generated output file MemBench/ddrbench_sol/impl/export.zip
 INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 11.8 seconds; current allocated memory: 239.051 MB.
 INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 13.438 seconds; peak allocated memory: 1.115 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./MemBench/ddrbench_sol/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name ddrBenchmark ddrBenchmark 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.033 seconds; current allocated memory: 1.109 GB.
+INFO: [HLS 200-10] Analyzing design file 'MemBench/src/ddrbenchmark.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 7.288 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'ssdm_int<32, false>::ssdm_int(unsigned int)' into 'ap_int_base<32, false>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::ap_int_base(int)' into 'ap_uint<32>::ap_uint(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:333:58)
+INFO: [HLS 214-131] Inlining function 'ap_uint<32>::ap_uint(int)' into 'writeData(ap_uint<32>*, int)' (MemBench/src/ddrbenchmark.cpp:18:12)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi1ELb0EEC2EDq1_j' into 'ap_int_base<1, false>::ap_int_base(bool)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:254:68)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(bool)' into 'ap_int_base<32, false>& operator+=<32, false>(ap_int_base<32, false>&, bool)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1767:168)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>& ap_int_base<32, false>::operator+=<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<32, false>& operator+=<32, false>(ap_int_base<32, false>&, bool)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1767:165)
+INFO: [HLS 214-131] Inlining function 'ap_uint<32>::ap_uint(int)' into 'readData(ap_uint<32>*, int)' (MemBench/src/ddrbenchmark.cpp:23:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>& operator+=<32, false>(ap_int_base<32, false>&, bool)' into 'readData(ap_uint<32>*, int)' (MemBench/src/ddrbenchmark.cpp:26:6)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<32, false>::operator==<32, false>(ap_int_base<32, false> const&) const' into 'readData(ap_uint<32>*, int)' (MemBench/src/ddrbenchmark.cpp:26:17)
+INFO: [HLS 214-131] Inlining function 'ap_uint<32>::ap_uint(int)' into 'readData(ap_uint<32>*, int)' (MemBench/src/ddrbenchmark.cpp:26:20)
+INFO: [HLS 214-178] Inlining function 'writeData(ap_uint<32>*, int)' into 'runBench(ap_uint<32>*, hls::stream<long long, 0>&, int, bool)' (MemBench/src/ddrbenchmark.cpp:32:0)
+INFO: [HLS 214-178] Inlining function 'readData(ap_uint<32>*, int)' into 'runBench(ap_uint<32>*, hls::stream<long long, 0>&, int, bool)' (MemBench/src/ddrbenchmark.cpp:32:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'mem' with compact=none mode in 32-bits
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'dataWrite'(MemBench/src/ddrbenchmark.cpp:17:13) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (MemBench/src/ddrbenchmark.cpp:17:13)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'dataRead'(MemBench/src/ddrbenchmark.cpp:24:12) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (MemBench/src/ddrbenchmark.cpp:24:12)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i128.sl_i1i64s' into 'countCycles(hls::stream<long long, 0>&, unsigned long long*) (.1)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:164:13)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.71 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.207 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.114 seconds; current allocated memory: 1.110 GB.
+INFO: [XFORM 203-510] Pipelining loop 'dataWrite' (MemBench/src/ddrbenchmark.cpp:17) in function 'runBench' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'count' (MemBench/src/ddrbenchmark.cpp:9) in function 'countCycles' automatically.
+WARNING: [HLS 200-805] An internal stream 'counterCmd' (MemBench/src/ddrbenchmark.cpp:58) with default size can result in deadlock. Please consider resizing the stream using the directive 'set_directive_stream' or the 'HLS stream' pragma.
+WARNING: [HLS 200-786] Detected dataflow-on-top in function  'ddrBenchmark' (MemBench/src/ddrbenchmark.cpp:44:1)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
+INFO: [XFORM 203-712] Applying dataflow to function 'ddrBenchmark' (MemBench/src/ddrbenchmark.cpp:44:1), detected/extracted 3 process function(s): 
+	 'entry_proc'
+	 'runBench'
+	 'countCycles'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.335 seconds; current allocated memory: 1.110 GB.
+WARNING: [HLS 200-1450] Process runBench has both a successor and writes an output to its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this output via a successor process.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.212 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ddrBenchmark' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.244 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.059 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runBench_Pipeline_dataRead' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'dataRead'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'dataRead'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.082 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.075 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runBench_Pipeline_dataWrite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'dataWrite'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'dataWrite'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.066 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'runBench' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.098 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.141 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'countCycles_Pipeline_count' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'count'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'count'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.104 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.054 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'countCycles' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.075 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.112 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ddrBenchmark' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.098 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runBench_Pipeline_dataRead' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'runBench_Pipeline_dataRead' pipeline 'dataRead' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataRead/m_axi_gmem_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runBench_Pipeline_dataRead'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.352 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runBench_Pipeline_dataWrite' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'runBench_Pipeline_dataWrite' pipeline 'dataWrite' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'runBench_Pipeline_dataWrite/m_axi_gmem_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runBench_Pipeline_dataWrite'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.629 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'runBench' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'runBench'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.261 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'countCycles_Pipeline_count' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'countCycles_Pipeline_count' pipeline 'count' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'countCycles_Pipeline_count'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.292 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'countCycles' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'countCycles'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.121 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ddrBenchmark' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ddrBenchmark/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ddrBenchmark/results' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ddrBenchmark/mem' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ddrBenchmark/dataNum' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ddrBenchmark/rw' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ddrBenchmark/res' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on function 'ddrBenchmark' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'mem', 'dataNum', 'rw', 'res' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ddrBenchmark'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.346 seconds; current allocated memory: 1.110 GB.
+INFO: [RTMG 210-285] Implementing FIFO 'res_c_U(ddrBenchmark_fifo_w64_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'counterCmd_U(ddrBenchmark_fifo_w64_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_countCycles_U0_U(ddrBenchmark_start_for_countCycles_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.936 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.039 seconds; current allocated memory: 1.110 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for ddrBenchmark.
+INFO: [VLOG 209-307] Generating Verilog RTL for ddrBenchmark.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 18.635 seconds; current allocated memory: 8.480 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 2 seconds. Total elapsed time: 21.17 seconds; peak allocated memory: 1.110 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./MemBench/ddrbench_sol/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name ddrBenchmark ddrBenchmark 
+INFO: [HLS 200-1510] Running: cosim_design 
+WARNING: [COSIM 212-384] This design has internal non-blocking FIFO/Stream accesses, which may result in mismatches or simulation hanging.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+WARNING: [HLS 200-616] This design uses AXI slave interface in dataflow mode, which can result in simulation dead-lock and/or mismatching results (due to AXI slave FIFO sizing).
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 48.401 seconds; current allocated memory: 46.957 MB.
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 3 seconds. Total elapsed time: 52.878 seconds; peak allocated memory: 1.112 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./MemBench/ddrbench_sol/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name ddrBenchmark ddrBenchmark 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file MemBench/ddrbench_sol/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 16.52 seconds; current allocated memory: 138.586 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 2 seconds. Total elapsed time: 18.738 seconds; peak allocated memory: 1.116 GB.

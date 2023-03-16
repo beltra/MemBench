@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1678020414091">
-  <ports id="1" name="gmem" type="PortType" coreId="1701995892" bitwidth="256" direction="DirInOut" iftype="IfTypeFifo">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1678713800240">
+  <ports id="1" name="gmem" type="PortType" coreId="1953391988" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
     <dataInputObjs>call</dataInputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="results" type="PortType" coreId="1702129263" bitwidth="64" direction="DirOut" iftype="IfTypeFifo">
+  <ports id="2" name="results" type="PortType" coreId="1953391988" bitwidth="64" direction="DirOut" iftype="IfTypeFifo">
     <dataInputObjs>call</dataInputObjs>
   </ports>
-  <ports id="3" name="mem" type="PortType" coreId="1702129263" bitwidth="64">
+  <ports id="3" name="mem" type="PortType" coreId="1953391988" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="4" name="dataNum" type="PortType" originalName="dataNum" coreId="1702129263" bitwidth="32">
+  <ports id="4" name="dataNum" type="PortType" originalName="dataNum" coreId="1701995892" bitwidth="32">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="5" name="rw" type="PortType" originalName="rw" coreId="7959657" bitwidth="1">
+  <ports id="5" name="rw" type="PortType" originalName="rw" coreId="842085169" bitwidth="1">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
-  <ports id="6" name="res" type="PortType" originalName="res" coreId="536894769" bitwidth="64">
+  <ports id="6" name="res" type="PortType" originalName="res" coreId="997420912" bitwidth="64">
     <dataOutputObjs>read</dataOutputObjs>
   </ports>
   <edges id="41" source_obj="//@ports.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
@@ -39,46 +39,46 @@
   <edges id="-59" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@ports.0"/>
   <regions anchor_node="-1" region_type="16" typeName="Dataflow" iiViolation="" id="130" RegionName="ddrBenchmark">
     <basic_blocks id="38" name="ddrBenchmark" type="BlockType">
-      <node_objs xsi:type="cdfg:CdfgNode" id="7" name="res_read" lineNumber="66" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="ddrBenchmark" bitwidth="64" opcode="read" nodeLatency="1" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="66" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="7" name="res_read" lineNumber="56" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="ddrBenchmark" bitwidth="64" opcode="read" nodeLatency="1" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="56" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
         <dataInputObjs>res</dataInputObjs>
         <dataOutputObjs>call</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="8" name="rw_read" lineNumber="66" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="ddrBenchmark" bitwidth="1" opcode="read" nodeLatency="1" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="66" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="8" name="rw_read" lineNumber="56" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="ddrBenchmark" bitwidth="1" opcode="read" nodeLatency="1" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="56" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
         <dataInputObjs>rw</dataInputObjs>
         <dataOutputObjs>call</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="dataNum_read" lineNumber="66" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="ddrBenchmark" bitwidth="32" opcode="read" nodeLatency="1" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="66" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="dataNum_read" lineNumber="56" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="ddrBenchmark" bitwidth="32" opcode="read" nodeLatency="1" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="56" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
         <dataInputObjs>dataNum</dataInputObjs>
         <dataOutputObjs>call</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="mem_read" lineNumber="66" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="ddrBenchmark" bitwidth="64" opcode="read" nodeLatency="1" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="66" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="mem_read" lineNumber="56" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="ddrBenchmark" bitwidth="64" opcode="read" nodeLatency="1" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="56" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
         <dataInputObjs>mem</dataInputObjs>
         <dataOutputObjs>call</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="res_c" lineNumber="66" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="res_c_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="ddrBenchmark" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="66" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="res_c" lineNumber="56" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="res_c_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="ddrBenchmark" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="56" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
         <dataOutputObjs>call</dataOutputObjs>
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="counterCmd" lineNumber="68" originalName="counterCmd" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="counterCmd_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="ddrBenchmark" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="68" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="counterCmd" lineNumber="58" originalName="counterCmd" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="counterCmd_U" coreName="FIFO_SRL" implIndex="srl" control="no" opType="fifo" coreId="81" contextFuncName="ddrBenchmark" bitwidth="64" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="58" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
         <dataOutputObjs>call</dataOutputObjs>
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="_ln66" lineNumber="66" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="entry_proc_U0" coreId="1953721967" contextFuncName="ddrBenchmark" opcode="call" nodeLabel="1.0" m_display="0" m_delay="3.63" m_topoIndex="7" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="66" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="_ln56" lineNumber="56" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="entry_proc_U0" coreId="859465774" contextFuncName="ddrBenchmark" opcode="call" nodeLabel="1.0" m_display="0" m_delay="3.63" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="56" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>entry_proc</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="_ln70" lineNumber="70" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="runBench_U0" coreId="1797268061" contextFuncName="ddrBenchmark" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="7.3" m_topoIndex="8" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="70" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="_ln60" lineNumber="60" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="runBench_U0" coreId="1702043749" contextFuncName="ddrBenchmark" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="7.3" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="60" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
         <dataInputObjs>gmem</dataInputObjs>
         <dataInputObjs>read</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
@@ -87,22 +87,22 @@
         <dataOutputObjs>gmem</dataOutputObjs>
         <constName>runBench</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="_ln71" lineNumber="71" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="countCycles_U0" coreId="997485606" contextFuncName="ddrBenchmark" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="71" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="_ln61" lineNumber="61" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." rtlName="countCycles_U0" coreId="1953391988" contextFuncName="ddrBenchmark" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="61" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>results</dataOutputObjs>
         <constName>countCycles</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="_ln72" lineNumber="72" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreId="539107901" contextFuncName="ddrBenchmark" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="72" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="_ln62" lineNumber="62" fileName="MemBench/src/ddrbenchmark.cpp" fileDirectory=".." coreId="825368659" contextFuncName="ddrBenchmark" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="MemBench/src/ddrbenchmark.cpp" linenumber="62" fileDirectory="C:\FPGA" functionName="ddrBenchmark"/>
       </node_objs>
       <fileValidLineNumbers fileName="MemBench/src/ddrbenchmark.cpp">
-        <validLinenumbers>66</validLinenumbers>
-        <validLinenumbers>68</validLinenumbers>
-        <validLinenumbers>70</validLinenumbers>
-        <validLinenumbers>71</validLinenumbers>
-        <validLinenumbers>72</validLinenumbers>
+        <validLinenumbers>56</validLinenumbers>
+        <validLinenumbers>58</validLinenumbers>
+        <validLinenumbers>60</validLinenumbers>
+        <validLinenumbers>61</validLinenumbers>
+        <validLinenumbers>62</validLinenumbers>
       </fileValidLineNumbers>
     </basic_blocks>
   </regions>
@@ -136,7 +136,7 @@
   <moduleNodes realName="grp_countCycles_fu_139">
     <nodeIds>36</nodeIds>
   </moduleNodes>
-  <moduleNodes realName="call_ln66_entry_proc_fu_122">
+  <moduleNodes realName="call_ln56_entry_proc_fu_122">
     <nodeIds>34</nodeIds>
   </moduleNodes>
   <moduleNodes realName="grp_runBench_fu_129">
